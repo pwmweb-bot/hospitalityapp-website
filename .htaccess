@@ -1,0 +1,72 @@
+# HospitalityApp marketing site — Apache config for 20i
+#
+# Force HTTPS, strip .html for clean URLs, serve AASA / assetlinks
+# with the right Content-Type, set sensible security headers.
+
+# ── Force HTTPS ─────────────────────────────────────────────
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Force HTTPS (20i terminates TLS at the edge; HTTP_X_FORWARDED_PROTO
+# tells us the original scheme).
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Force apex (no www) — comment out if you prefer www.
+RewriteCond %{HTTP_HOST} ^www\.hospitalityapp\.co\.uk$ [NC]
+RewriteRule ^(.*)$ https://hospitalityapp.co.uk/$1 [R=301,L]
+
+# Strip trailing slash from non-directory URLs.
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# Hide .html on internal-pretty URLs.
+# 1) Redirect /features.html → /features for canonical hygiene.
+RewriteCond %{THE_REQUEST} \s/+([^.\s]+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# 2) Internally rewrite /features → /features.html.
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+</IfModule>
+
+# ── MIME / Content-Type fixes ───────────────────────────────
+<IfModule mod_mime.c>
+AddType application/json .json
+# Apple's AASA file has no extension. Use SetEnvIf + Header to fix the
+# content type on this exact path.
+</IfModule>
+
+<IfModule mod_headers.c>
+# AASA: must be served as application/json, no extension.
+<Files "apple-app-site-association">
+  Header set Content-Type "application/json"
+</Files>
+
+# Security headers on every response.
+Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "DENY"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Permissions-Policy "geolocation=(), camera=(), microphone=()"
+
+# Long-cache the static assets but never the HTML (it's fast to revalidate
+# and keeps the site fresh on deploys).
+<FilesMatch "\.(css|js|svg|png|jpg|jpeg|webp|ico|woff2)$">
+  Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+<FilesMatch "\.html$">
+  Header set Cache-Control "public, max-age=0, must-revalidate"
+</FilesMatch>
+</IfModule>
+
+# ── Compression ─────────────────────────────────────────────
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml application/xml
+</IfModule>
+
+# ── Pretty error pages (optional — falls back to default) ──
+ErrorDocument 404 /index.html

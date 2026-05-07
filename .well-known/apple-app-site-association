@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["TEAMID.co.uk.hospitalities.staff"],
+        "components": [
+          {
+            "/": "/StaffOnboarding*",
+            "comment": "Open the staff invite welcome flow in the native app when installed."
+          }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["TEAMID.co.uk.hospitalities.staff"]
+  }
+}
