@@ -662,17 +662,20 @@ p { margin: 0 0 1em; }
   .phone { width: 240px; }
 }
 
-/* Hero phone — slightly smaller and sits in a horizontal layout */
+/* Hero phone — sits to the right of the text from tablet width up. */
 .hero-phone {
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
   align-items: center;
 }
-@media (min-width: 880px) {
-  .hero-phone { grid-template-columns: 1.4fr 1fr; gap: 56px; }
+@media (min-width: 700px) {
+  .hero-phone { grid-template-columns: 1.4fr 1fr; gap: 48px; }
 }
-.hero-phone .phone { justify-self: center; width: 260px; }
+.hero-phone .phone { justify-self: center; width: 220px; }
+@media (max-width: 480px) {
+  .hero-phone .phone { width: 180px; }
+}
 
 /* ── CTA band ────────────────────────────────────────────── */
 
