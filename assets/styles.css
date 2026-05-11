@@ -615,6 +615,64 @@ p { margin: 0 0 1em; }
   color: var(--ink-4);
   font-size: 12px;
 }
+/* When a real screenshot lives inside, kill the dashed-card styling. */
+.feature-row__media:has(.phone) {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  min-height: 0;
+}
+
+/* ── Phone frame mockup ─────────────────────────────────── */
+
+.phone {
+  width: 280px;
+  max-width: 100%;
+  aspect-ratio: 1206 / 2622;
+  background: #1a1612;
+  border-radius: 38px;
+  padding: 8px;
+  box-shadow:
+    0 1px 0 oklch(0.92 0.008 60),
+    0 24px 60px -28px oklch(0.10 0.012 60 / 0.35),
+    0 6px 16px -6px oklch(0.10 0.012 60 / 0.18);
+  position: relative;
+}
+.phone::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 78px;
+  height: 22px;
+  background: #0f0c0a;
+  border-radius: 14px;
+  z-index: 2;
+}
+.phone img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 30px;
+  display: block;
+}
+@media (max-width: 760px) {
+  .phone { width: 240px; }
+}
+
+/* Hero phone — slightly smaller and sits in a horizontal layout */
+.hero-phone {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+@media (min-width: 880px) {
+  .hero-phone { grid-template-columns: 1.4fr 1fr; gap: 56px; }
+}
+.hero-phone .phone { justify-self: center; width: 260px; }
 
 /* ── CTA band ────────────────────────────────────────────── */
 
