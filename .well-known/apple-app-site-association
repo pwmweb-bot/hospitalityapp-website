@@ -3,7 +3,7 @@
     "apps": [],
     "details": [
       {
-        "appIDs": ["TEAMID.co.uk.hospitalities.staff"],
+        "appIDs": ["S5H94XQTAG.co.uk.hospitalities.staff"],
         "components": [
           {
             "/": "/StaffOnboarding*",
@@ -14,6 +14,6 @@
     ]
   },
   "webcredentials": {
-    "apps": ["TEAMID.co.uk.hospitalities.staff"]
+    "apps": ["S5H94XQTAG.co.uk.hospitalities.staff"]
   }
 }
