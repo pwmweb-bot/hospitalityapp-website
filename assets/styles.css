@@ -662,19 +662,19 @@ p { margin: 0 0 1em; }
   .phone { width: 240px; }
 }
 
-/* Hero phone — sits to the right of the text from tablet width up. */
+/* Hero phone — small, top-aligned with the headline, sits to the right. */
 .hero-phone {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
-  align-items: center;
+  gap: 24px;
+  align-items: start;
 }
-@media (min-width: 700px) {
-  .hero-phone { grid-template-columns: 1.4fr 1fr; gap: 48px; }
+@media (min-width: 600px) {
+  .hero-phone { grid-template-columns: 2fr 1fr; gap: 40px; }
 }
-.hero-phone .phone { justify-self: center; width: 220px; }
-@media (max-width: 480px) {
-  .hero-phone .phone { width: 180px; }
+.hero-phone .phone { justify-self: end; width: 160px; }
+@media (max-width: 599px) {
+  .hero-phone .phone { justify-self: center; width: 140px; }
 }
 
 /* ── CTA band ────────────────────────────────────────────── */
