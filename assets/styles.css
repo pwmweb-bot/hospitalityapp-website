@@ -695,22 +695,27 @@ p { margin: 0 0 1em; }
 .phone {
   width: 280px;
   max-width: 100%;
-  aspect-ratio: 1290 / 2796;
+  /* Aspect ratio crops the top ~7% of the screenshot, hiding the iOS
+     status bar + Dynamic Island that's baked into the simulator PNG.
+     Source image is 1290 / 2796; we use 1290 / 2600 to clip the top. */
+  aspect-ratio: 1290 / 2600;
   background: #1a1612;
   border-radius: 38px;
   padding: 6px;
+  overflow: hidden;
   box-shadow:
     0 1px 0 oklch(0.92 0.008 60),
     0 24px 60px -28px oklch(0.10 0.012 60 / 0.35),
     0 6px 16px -6px oklch(0.10 0.012 60 / 0.18);
   position: relative;
 }
-/* No CSS-drawn notch — the screenshot images already include the Dynamic Island. */
+/* Screenshots include the iOS chrome (status bar + Dynamic Island).
+   We use object-fit: cover + bottom anchoring to crop that top section. */
 .phone img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: top;
+  object-fit: cover;
+  object-position: 50% 100%;
   border-radius: 32px;
   display: block;
 }
@@ -731,7 +736,7 @@ p { margin: 0 0 1em; }
 @media (min-width: 960px) {
   .hero-phone { grid-template-columns: 1.25fr 1fr; gap: 64px; }
 }
-.phone--hero { aspect-ratio: 1290 / 2796; }
+.phone--hero { aspect-ratio: 1290 / 2600; }
 
 /* Stack: main phone + a rotated rota fragment behind it (editorial layout). */
 .hero-phone-stack {
@@ -847,7 +852,7 @@ p { margin: 0 0 1em; }
   justify-self: end;
   width: 100%;
   max-width: 320px;
-  aspect-ratio: 1290 / 2796;
+  aspect-ratio: 1290 / 2600;
   position: relative;
 }
 .tour-screen {
@@ -856,8 +861,8 @@ p { margin: 0 0 1em; }
   width: 100%;
   height: 100%;
   border-radius: 32px;
-  object-fit: contain;
-  object-position: top;
+  object-fit: cover;
+  object-position: 50% 100%;
   opacity: 0;
   transition: opacity 500ms ease;
   pointer-events: none;
@@ -999,7 +1004,7 @@ p { margin: 0 0 1em; }
   justify-self: center;
   width: 100%;
   max-width: 280px;
-  aspect-ratio: 1290 / 2796;
+  aspect-ratio: 1290 / 2600;
   transition: transform 300ms ease;
 }
 .tour-card:hover .tour-card__phone { transform: translateY(-4px); }
