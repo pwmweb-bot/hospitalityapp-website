@@ -698,7 +698,7 @@ p { margin: 0 0 1em; }
   /* Aspect ratio crops the top ~7% of the screenshot, hiding the iOS
      status bar + Dynamic Island that's baked into the simulator PNG.
      Source image is 1290 / 2796; we use 1290 / 2600 to clip the top. */
-  aspect-ratio: 1290 / 2600;
+  aspect-ratio: 1290 / 2350;
   background: #1a1612;
   border-radius: 38px;
   padding: 6px;
@@ -736,7 +736,7 @@ p { margin: 0 0 1em; }
 @media (min-width: 960px) {
   .hero-phone { grid-template-columns: 1.25fr 1fr; gap: 64px; }
 }
-.phone--hero { aspect-ratio: 1290 / 2600; }
+.phone--hero { aspect-ratio: 1290 / 2350; }
 
 /* Stack: main phone + a rotated rota fragment behind it (editorial layout). */
 .hero-phone-stack {
@@ -852,7 +852,7 @@ p { margin: 0 0 1em; }
   justify-self: end;
   width: 100%;
   max-width: 320px;
-  aspect-ratio: 1290 / 2600;
+  aspect-ratio: 1290 / 2350;
   position: relative;
 }
 .tour-screen {
@@ -1004,7 +1004,7 @@ p { margin: 0 0 1em; }
   justify-self: center;
   width: 100%;
   max-width: 280px;
-  aspect-ratio: 1290 / 2600;
+  aspect-ratio: 1290 / 2350;
   transition: transform 300ms ease;
 }
 .tour-card:hover .tour-card__phone { transform: translateY(-4px); }
