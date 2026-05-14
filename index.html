@@ -136,14 +136,105 @@
       </div>
     </section>
 
-    <!-- Tour the app — slide deck of screens with explainers -->
-    <section class="section section-tight tour" id="tour">
+    <!-- Tour the app — sticky scroll: phone + copy stay pinned, content swaps -->
+    <section class="section section-tight tour-sticky" id="tour" aria-label="Tour the app">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Tour the app</span>
           <h2>Five screens. One source of truth.</h2>
-          <p>Every persona — staff, manager, owner — uses the same app. The view changes; the data doesn't.</p>
+          <p>Every persona — staff, manager, owner — uses the same app. The view changes; the data doesn't. <span class="muted">Scroll on.</span></p>
         </div>
+      </div>
+
+      <div class="tour-sticky__wrap">
+        <!-- Pinned viewer: stays in viewport while user scrolls past triggers -->
+        <div class="tour-sticky__pinned">
+          <div class="container tour-sticky__layout">
+            <div class="tour-sticky__phone phone" aria-hidden="true">
+              <img class="tour-screen is-active" src="/assets/images/screens/today.png" alt="" width="1290" height="2796" loading="lazy" decoding="async" data-step="0" />
+              <img class="tour-screen" src="/assets/images/screens/rota.png" alt="" width="1290" height="2796" loading="lazy" decoding="async" data-step="1" />
+              <img class="tour-screen" src="/assets/images/screens/team.png" alt="" width="1290" height="2796" loading="lazy" decoding="async" data-step="2" />
+              <img class="tour-screen" src="/assets/images/screens/inbox.png" alt="" width="1290" height="2796" loading="lazy" decoding="async" data-step="3" />
+              <img class="tour-screen" src="/assets/images/screens/me.png" alt="" width="1290" height="2796" loading="lazy" decoding="async" data-step="4" />
+            </div>
+
+            <div class="tour-sticky__copy">
+              <article class="tour-step is-active" data-step="0">
+                <span class="eyebrow">Your morning round</span>
+                <h3>Open the app, see what needs you.</h3>
+                <p>Shifts that need cover, missed clock-outs, takings still to log — surfaced before you tap a tab. The duty manager's morning starts here, in 30 seconds.</p>
+                <ul class="tour-step__list">
+                  <li>Who's in · who's late · who's on shift</li>
+                  <li>Tasks that need a decision</li>
+                  <li>Labour-cost running total against target</li>
+                </ul>
+              </article>
+              <article class="tour-step" data-step="1">
+                <span class="eyebrow">Never roster a sick staff member</span>
+                <h3>The rota cross-checks itself against leave.</h3>
+                <p>The only rota app that compares every shift against approved time-off and sick days. Conflicts get a <strong>NEEDS COVER</strong> badge and a <em>Find cover</em> button — one tap to swap in someone who's actually available.</p>
+                <ul class="tour-step__list">
+                  <li>Conflicts flagged before they become no-shows</li>
+                  <li>One-tap reassign to an available teammate</li>
+                  <li>Weekly templates, swap requests, drag-free planning</li>
+                </ul>
+              </article>
+              <article class="tour-step" data-step="2">
+                <span class="eyebrow">Invite + go</span>
+                <h3>From email invite to clocked-in in under a minute.</h3>
+                <p>Email invites land in the inbox, staff accept on their phone, the rota knows their role from day one. Pending status shows you who hasn't joined yet.</p>
+                <ul class="tour-step__list">
+                  <li>Role-based permissions</li>
+                  <li>Pending / active status at a glance</li>
+                  <li>Soft-block on unaccepted invites</li>
+                </ul>
+              </article>
+              <article class="tour-step" data-step="3">
+                <span class="eyebrow">Approvals without the group chat</span>
+                <h3>Swaps, time-off and notices in one inbox.</h3>
+                <p>Every approval the manager needs to make ends up here. One tap to approve and the rota updates automatically. Announcements reach the whole team without WhatsApp.</p>
+                <ul class="tour-step__list">
+                  <li>Swap and time-off requests</li>
+                  <li>1:1 messages with each staff member</li>
+                  <li>Venue-wide notices with read receipts</li>
+                </ul>
+              </article>
+              <article class="tour-step" data-step="4">
+                <span class="eyebrow">Every staff member's app</span>
+                <h3>Pay, hours and compliance, in their pocket.</h3>
+                <p>Staff see their week's earnings, log compliance checks, request time off and update their details — all from the same Me screen. Less paperwork for the manager, more clarity for the team.</p>
+                <ul class="tour-step__list">
+                  <li>Week + month earnings to date</li>
+                  <li>Compliance checks with photo evidence</li>
+                  <li>Time-off requests, contacts, change password</li>
+                </ul>
+              </article>
+            </div>
+
+            <ol class="tour-sticky__dots" role="tablist" aria-label="Tour progress">
+              <li><button type="button" class="tour-dot is-active" data-step="0" aria-label="Today screen" aria-current="true"></button></li>
+              <li><button type="button" class="tour-dot" data-step="1" aria-label="Rota screen"></button></li>
+              <li><button type="button" class="tour-dot" data-step="2" aria-label="Team screen"></button></li>
+              <li><button type="button" class="tour-dot" data-step="3" aria-label="Inbox screen"></button></li>
+              <li><button type="button" class="tour-dot" data-step="4" aria-label="Me screen"></button></li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Invisible scroll triggers that drive which step is active -->
+        <div class="tour-sticky__triggers" aria-hidden="true">
+          <div class="tour-trigger" data-step="0"></div>
+          <div class="tour-trigger" data-step="1"></div>
+          <div class="tour-trigger" data-step="2"></div>
+          <div class="tour-trigger" data-step="3"></div>
+          <div class="tour-trigger" data-step="4"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fallback grid used on mobile / no-JS / reduced-motion -->
+    <section class="section section-tight tour-fallback" aria-hidden="true">
+      <div class="container">
         <div class="tour-grid">
           <article class="tour-card">
             <div class="tour-card__phone phone">

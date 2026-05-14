@@ -822,7 +822,166 @@ p { margin: 0 0 1em; }
   line-height: 1.45;
 }
 
-/* ── Tour-the-app section (below hero) ───────────────────── */
+/* ── Tour-the-app section: sticky scroll-driven slideshow ─── */
+.tour-sticky { padding-bottom: 0; }
+.tour-sticky__wrap {
+  position: relative;
+  margin-top: 32px;
+}
+.tour-sticky__pinned {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+.tour-sticky__layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  width: 100%;
+}
+.tour-sticky__phone {
+  justify-self: end;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1290 / 2796;
+  position: relative;
+}
+.tour-screen {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 32px;
+  object-fit: contain;
+  object-position: top;
+  opacity: 0;
+  transition: opacity 500ms ease;
+  pointer-events: none;
+}
+.tour-screen.is-active { opacity: 1; pointer-events: auto; }
+.tour-sticky__copy {
+  position: relative;
+  min-height: 360px;
+}
+.tour-step {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 500ms ease, transform 500ms ease;
+  pointer-events: none;
+}
+.tour-step.is-active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.tour-step .eyebrow { margin-bottom: 12px; }
+.tour-step h3 {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3vw, 36px);
+  line-height: 1.15;
+  margin: 4px 0 14px;
+}
+.tour-step p {
+  color: var(--ink-2);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 48ch;
+  margin: 0;
+}
+.tour-step strong { color: var(--burgundy); }
+.tour-step__list {
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+.tour-step__list li {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.5;
+}
+.tour-step__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 8px;
+  height: 1px;
+  background: var(--brand-accent);
+}
+
+/* Progress dots column */
+.tour-sticky__dots {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+.tour-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 0;
+  padding: 0;
+  background: oklch(0.85 0.008 60);
+  cursor: pointer;
+  transition: background 250ms ease, transform 250ms ease, height 250ms ease;
+}
+.tour-dot:hover { background: var(--ink-4); }
+.tour-dot:focus-visible {
+  outline: 2px solid var(--brand-accent);
+  outline-offset: 3px;
+}
+.tour-dot.is-active {
+  background: var(--brand-accent);
+  height: 22px;
+  border-radius: 4px;
+}
+
+/* Invisible scroll triggers — each one is ~90vh of scroll length */
+.tour-sticky__triggers {
+  position: relative;
+  z-index: 0;
+  margin-top: -100vh; /* pull up so first trigger overlaps with pinned start */
+}
+.tour-trigger {
+  height: 90vh;
+}
+
+/* Fallback section (used on mobile / reduced-motion) ───────── */
+.tour-fallback { display: none; }
+@media (max-width: 880px) {
+  .tour-sticky__wrap { display: none; }
+  .tour-fallback { display: block; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tour-sticky__wrap { display: none; }
+  .tour-fallback { display: block; }
+  .tour-screen { transition: none; }
+  .tour-step { transition: none; }
+}
+
+/* ── Tour-the-app section (legacy grid, used as fallback) ─── */
 .tour-grid {
   display: flex;
   flex-direction: column;
