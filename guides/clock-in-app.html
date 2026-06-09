@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clock-in app for staff — UK hospitality time &amp; attendance | HospitalityApp</title>
+  <meta name="description" content="A clock-in app for UK hospitality staff: photo or PIN clock-in, geo / QR / NFC verification, anti buddy-punching, hours feed payroll directly. Sign up free." />
+  <link rel="canonical" href="https://hospitalityapp.co.uk/guides/clock-in-app" />
+  <link rel="alternate" hreflang="en-GB" href="https://hospitalityapp.co.uk/guides/clock-in-app" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:title" content="Clock-in app for staff — UK hospitality | HospitalityApp" />
+  <meta property="og:description" content="Photo or PIN clock-in, geo / QR / NFC verification, anti buddy-punching, hours feed payroll directly. Built for UK hospitality." />
+  <meta property="og:url" content="https://hospitalityapp.co.uk/guides/clock-in-app" />
+  <meta property="og:image" content="https://hospitalityapp.co.uk/assets/images/og/home.png" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#F5F1E8" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Clock-in app for staff — UK hospitality time &amp; attendance",
+        "author": { "@type": "Organization", "name": "HospitalityApp" },
+        "publisher": { "@type": "Organization", "name": "HospitalityApp", "url": "https://hospitalityapp.co.uk/" },
+        "datePublished": "2026-06-09",
+        "dateModified": "2026-06-09",
+        "image": "https://hospitalityapp.co.uk/assets/images/og/home.png",
+        "mainEntityOfPage": "https://hospitalityapp.co.uk/guides/clock-in-app"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hospitalityapp.co.uk/" },
+          { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://hospitalityapp.co.uk/guides/" },
+          { "@type": "ListItem", "position": 3, "name": "Clock-in app", "item": "https://hospitalityapp.co.uk/guides/clock-in-app" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What is a clock-in app for staff?", "acceptedAnswer": { "@type": "Answer", "text": "A clock-in app is software that records when staff start and finish each shift, replacing paper timesheets and spreadsheet-based hour tracking. For hospitality, the best clock-in apps run on a shared tablet behind the bar or in the kitchen and let staff verify themselves with a photo, PIN, QR code or NFC tag — then feed the recorded hours straight into the payroll export at the end of the week." } },
+          { "@type": "Question", "name": "How do you stop buddy-punching with a clock-in app?", "acceptedAnswer": { "@type": "Answer", "text": "Buddy-punching is when one staff member clocks in for another. The defences, in order of strength, are: (1) a photo selfie taken at the moment of clock-in (the manager spot-checks the gallery); (2) a personal PIN tied to the staff record (cheap but easy to share); (3) a geo-fence so clock-in only works inside the venue's GPS perimeter; (4) NFC tags issued per staff member, scanned at the till. HospitalityApp supports all four, configurable per venue." } },
+          { "@type": "Question", "name": "Is a digital clock-in legal in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. UK law (Working Time Regulations 1998) requires employers to keep adequate records of working hours, but doesn't mandate paper. Digital records with timestamps and tamper-evident storage are widely accepted by HMRC and ACAS — a clock-in app actually produces better-quality records than handwritten timesheets." } },
+          { "@type": "Question", "name": "How does the clock-in app feed payroll?", "acceptedAnswer": { "@type": "Answer", "text": "Clock-in and clock-out timestamps generate the actual hours worked per shift. The payroll export multiplies those hours by each staff member's hourly rate, calculates labour-cost percentage against takings, and produces a CSV your payroll provider (or bookkeeper) imports directly. No re-keying, no manual calculator work, no end-of-week discrepancy hunts." } },
+          { "@type": "Question", "name": "What if a staff member forgets to clock out?", "acceptedAnswer": { "@type": "Answer", "text": "A common Sunday-morning headache. HospitalityApp auto-flags any shift that's still open 30 minutes after the scheduled end and notifies the duty manager. Managers can edit a forgotten clock-out from the manager inbox; every edit is logged with who and when, so the audit trail stays clean." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand-lockup" href="/">
+        <span class="brand-lockup__mark" aria-hidden="true"></span>
+        <span>HospitalityApp</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-toggle__icon"></span>
+      </button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="/features">Features</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/for/">For venues</a>
+        <a href="/guides/">Guides</a>
+        <span class="nav-cta">
+          <a class="btn btn-secondary" href="https://my.hospitalityapp.co.uk/login">Sign in</a>
+          <a class="btn" href="https://my.hospitalityapp.co.uk/login">Sign up free</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__inner">
+        <span class="eyebrow">Guide · Clock-in</span>
+        <h1 class="hero__title">A clock-in app that hates buddy-punching.</h1>
+        <p class="hero__sub">Photo or PIN at the moment of clock-in. Geo, QR or NFC verification. Honest hours, captured at the bar or kitchen pass, fed straight into your payroll export. The end of the Sunday-morning timesheet hunt.</p>
+        <div class="hero__cta">
+          <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Sign up free</a>
+          <a class="btn btn-secondary btn-large" href="/features#staff">See payroll detail</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">What it is</span>
+          <h2>Clock-in app, defined.</h2>
+          <p>A clock-in app is software that records when staff start and finish each shift, replacing paper timesheets and spreadsheet-based hour tracking. For hospitality, the best clock-in apps run on a shared tablet behind the bar or in the kitchen — the bartender taps their face, hits clock in, gets back to pouring. At the end of the week the recorded hours feed straight into the payroll export, no re-keying.</p>
+          <p>The reason it matters: even a five-person team running on paper timesheets loses a few hours a week to estimation, illegible handwriting and the staff member who "forgot" to write down their start time. Over a year that's the difference between a profitable Q1 and a "we'll catch up in summer" Q1.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">The six features</span>
+          <h2>What a hospitality clock-in app should do.</h2>
+        </div>
+        <div class="modules">
+          <article class="module-card"><h3>1 · Multiple verification methods</h3><p>Photo, PIN, QR code on the rota, NFC tag at the till. Different venues lean different ways; one tool covers all four so you don't pick a tech you'll outgrow.</p></article>
+          <article class="module-card"><h3>2 · Geo-fence</h3><p>Optional GPS perimeter — clock-in only works inside the venue postcode. Stops the "I clocked in from home" claim before it lands.</p></article>
+          <article class="module-card"><h3>3 · Anti buddy-punching</h3><p>Photo selfie at clock-in, visible in the duty manager's daily review. One spot-check finds the friend who's been clocking in their flatmate.</p></article>
+          <article class="module-card"><h3>4 · Forgotten clock-out catcher</h3><p>Shift open past scheduled end +30min? Manager gets a notification. Edit from the inbox, audit trail records the edit.</p></article>
+          <article class="module-card"><h3>5 · Hours feed payroll directly</h3><p>Clock-in/out timestamps × hourly rate = wages. Labour-cost % calculated against today's takings. CSV export ready for your payroll provider.</p></article>
+          <article class="module-card"><h3>6 · Mobile or shared tablet</h3><p>Staff use their own phone, or share a venue tablet near the door. The shared-tablet flow is the one that actually gets used in busy bars.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Buddy-punching, ranked</span>
+          <h2>Four ways to stop the friend-of-a-friend clock-in.</h2>
+          <p>In strength order. Most venues run two or three of these in combination — the photo + geo-fence pair is enough for almost everyone.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>1 · PIN</summary>
+            <p>Each staff member has a 4-digit PIN. Quick, cheap, but shareable — a determined buddy-puncher just asks for the PIN. Useful as a baseline; not a real defence on its own.</p>
+          </details>
+          <details>
+            <summary>2 · Photo selfie at clock-in</summary>
+            <p>The phone or tablet camera takes a still at the moment of clock-in. Manager reviews the gallery each morning. A single spot-check catches the obvious cases; the deterrent effect kills the rest.</p>
+          </details>
+          <details>
+            <summary>3 · Geo-fence (GPS perimeter)</summary>
+            <p>Clock-in only works inside a defined radius of the venue postcode. The "I clocked in from home" defence collapses. Pairs naturally with photo selfie — geo-fence stops remote clock-in, selfie stops the in-venue friend.</p>
+          </details>
+          <details>
+            <summary>4 · NFC tag</summary>
+            <p>Each staff member gets a physical NFC tag (key fob or card). Tap to clock in or out. Highest friction to fake — has to physically be at the venue, has to physically hold the tag. Overkill for most pubs; standard for larger hotels.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How HospitalityApp does it</span>
+          <h2>Clock-in built into the same app as the rota.</h2>
+          <p>Photo, PIN, geo, NFC — all four, configurable per venue. Hours feed the payroll export and the labour-cost % automatically. From £49/venue/mo on Essentials (clock-in is part of the time &amp; attendance module included in every plan). <a href="/pricing">Full pricing</a>.</p>
+        </div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Sign up free</a>
+          <a class="btn btn-secondary btn-large" href="/features#staff">See payroll detail</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">FAQ</span>
+          <h2>Clock-in apps, asked &amp; answered.</h2>
+        </div>
+        <div class="faq">
+          <details><summary>What is a clock-in app for staff?</summary><p>Software that records when staff start and finish each shift, replacing paper timesheets. The best hospitality clock-in apps run on a shared tablet behind the bar and feed hours straight into payroll.</p></details>
+          <details><summary>How do you stop buddy-punching?</summary><p>Photo selfie at clock-in (manager spot-checks), PIN (baseline), geo-fence (GPS perimeter), NFC tag (highest friction). Two or three combined defeats almost all attempts.</p></details>
+          <details><summary>Is a digital clock-in legal in the UK?</summary><p>Yes. Working Time Regulations 1998 require adequate records, but don't mandate paper. Digital with tamper-evident timestamps is widely accepted by HMRC and ACAS.</p></details>
+          <details><summary>How does the clock-in app feed payroll?</summary><p>Timestamps × hourly rate = wages. CSV export ready for any UK payroll provider. Labour-cost % calculated live against takings.</p></details>
+          <details><summary>What if a staff member forgets to clock out?</summary><p>Auto-flagged 30 minutes after scheduled shift end; manager edits from the inbox, edit logged with who and when.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Related guides</span>
+          <h2>Read next.</h2>
+        </div>
+        <div class="modules">
+          <article class="module-card">
+            <h3>Hospitality rota app</h3>
+            <p>The scheduling end of the same data — clock-in records prove the rota was worked, the rota feeds the schedule clock-in expects.</p>
+            <a href="/guides/hospitality-rota-app">Read the guide</a>
+          </article>
+          <article class="module-card">
+            <h3>Pub rota software</h3>
+            <p>Role chips, sports-event templates and licensing on file — for pubs specifically.</p>
+            <a href="/guides/pub-rota-software">Read the guide</a>
+          </article>
+          <article class="module-card">
+            <h3>Restaurant staff scheduling</h3>
+            <p>Kitchen + FOH on one rota, role-aware templates, swap inbox.</p>
+            <a href="/guides/restaurant-staff-scheduling">Read the guide</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="cta-band">
+          <span class="eyebrow" style="color: oklch(0.85 0.008 60);">Open in 10 minutes</span>
+          <h2>Take honest hours tonight.</h2>
+          <p>Sign up free, set the venue's clock-in method, watch the timesheet build itself. Sunday morning gets shorter.</p>
+          <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Sign up free</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="brand-lockup" href="/">
+            <span class="brand-lockup__mark" aria-hidden="true"></span>
+            <span>HospitalityApp</span>
+          </a>
+          <p>Rota, compliance and payroll for every kind of UK hospitality venue.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/features">Features</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="https://my.hospitalityapp.co.uk/login">Sign in</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>For venues</h4>
+          <ul>
+            <li><a href="/for/pubs">Pubs</a></li>
+            <li><a href="/for/bars">Bars</a></li>
+            <li><a href="/for/restaurants">Restaurants</a></li>
+            <li><a href="/for/cafes">Cafés</a></li>
+            <li><a href="/for/coffee-shops">Coffee shops</a></li>
+            <li><a href="/for/hotels">Hotels</a></li>
+            <li><a href="/for/bnbs">B&amp;Bs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="mailto:hello@hospitalityapp.co.uk">Contact</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__legal">
+        <span>© <span class="js-year">2026</span> HospitalityApp Ltd · Made in the UK</span>
+        <span>v0.1 · Beta</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/main.js" defer></script>
+</body>
+</html>

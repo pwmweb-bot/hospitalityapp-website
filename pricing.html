@@ -30,7 +30,7 @@
           { "@type": "Offer", "name": "Essentials", "price": "49", "priceCurrency": "GBP", "url": "https://hospitalityapp.co.uk/pricing", "availability": "https://schema.org/InStock", "description": "Rota, time &amp; attendance, leave, comms, basic checklists. 10 staff included." },
           { "@type": "Offer", "name": "Professional", "price": "99", "priceCurrency": "GBP", "url": "https://hospitalityapp.co.uk/pricing", "availability": "https://schema.org/InStock", "description": "Adds advanced scheduling, full compliance suite and payroll. 20 staff included." },
           { "@type": "Offer", "name": "Complete · Venue OS", "price": "149", "priceCurrency": "GBP", "url": "https://hospitalityapp.co.uk/pricing", "availability": "https://schema.org/InStock", "description": "Adds till / POS and kitchen display. 30 staff included." },
-          { "@type": "Offer", "name": "Till add-on (POS + KDS)", "price": "59", "priceCurrency": "GBP", "url": "https://hospitalityapp.co.uk/pricing", "availability": "https://schema.org/InStock", "description": "Add POS and kitchen display to Essentials or Professional." }
+          { "@type": "Offer", "name": "Till add-on (POS + KDS)", "price": "59", "priceCurrency": "GBP", "url": "https://hospitalityapp.co.uk/pricing", "availability": "https://schema.org/InStock", "description": "Add POS and kitchen display to the Professional plan." }
         ]
       },
       {
@@ -39,8 +39,8 @@
           { "@type": "Question", "name": "What does &quot;per venue&quot; mean?", "acceptedAnswer": { "@type": "Answer", "text": "One physical site under one licence. A pub with one address is one venue. A small group with three sites pays per venue, with volume discounts at five and ten venues." } },
           { "@type": "Question", "name": "Do I need a card for the trial?", "acceptedAnswer": { "@type": "Answer", "text": "The 14-day trial is free. We do ask for card details up front because it materially improves trial→paid conversion and removes friction at the end of the trial. You can cancel any time during the trial and you will not be charged." } },
           { "@type": "Question", "name": "Which features are available during the trial?", "acceptedAnswer": { "@type": "Answer", "text": "Every trial starts on Complete (the full Venue OS) so you can feel the till, kitchen display and full compliance suite. At the end of the trial we downgrade you to the plan you chose at signup — or to Complete if you do not pick one." } },
-          { "@type": "Question", "name": "How does the POS add-on work?", "acceptedAnswer": { "@type": "Answer", "text": "The POS add-on is £59 per venue per month and unlocks the till and kitchen display on Essentials or Professional. If you choose Complete, the POS and KDS are already included — no add-on needed." } },
-          { "@type": "Question", "name": "What happens above the included staff allowance?", "acceptedAnswer": { "@type": "Answer", "text": "Essentials includes 10 active staff (+£3 per extra), Professional includes 20 (+£3.50 per extra), Complete includes 30 (+£3.50 per extra). Staff who have not clocked in within 60 days do not count. Staff use the app for free." } },
+          { "@type": "Question", "name": "How does the POS add-on work?", "acceptedAnswer": { "@type": "Answer", "text": "The POS add-on is £59 per venue per month and adds the till and kitchen display to the Professional plan (£99 + £59 = £158 total). It isn't available on Essentials because the till needs full compliance and the labour-cost / payroll integration that only sit in Professional. If you choose Complete (£149), the till and KDS are already included — no add-on needed." } },
+          { "@type": "Question", "name": "What happens above the included staff allowance?", "acceptedAnswer": { "@type": "Answer", "text": "Each plan includes an active-staff allowance — Essentials 10, Professional 20, Complete 30. &quot;Active staff&quot; means team members with an active account on your venue (deactivated leavers don't count). Per-staff overage above the allowance is published at +£3 (Essentials) and +£3.50 (Professional and Complete) per extra staff per month, but is not auto-billed today — if your venue grows past the allowance we'll talk to you about it at renewal, not mid-cycle. Staff use the app for free." } },
           { "@type": "Question", "name": "Can I pay annually?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Annual billing gives you two months free (Essentials £490/year, Professional £990/year, Complete £1,490/year). Switch at any renewal." } },
           { "@type": "Question", "name": "Do you offer multi-venue or group discounts?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Groups of five or more venues get 15% off the published per-venue rate. Groups of ten or more get 25% off. Multi-venue customers also get cross-venue dashboards and central admin included." } },
           { "@type": "Question", "name": "VAT?", "acceptedAnswer": { "@type": "Answer", "text": "All published prices are excluding VAT. UK VAT-registered businesses can reclaim through the usual route." } },
@@ -146,7 +146,7 @@
             <div style="font-size: 13px; color: var(--ink-3); margin-top: 4px;">Or £590/year</div>
           </div>
         </div>
-        <p style="color: var(--ink-3); margin: 0; font-size: 14.5px; max-width: 720px;">Adds the till / POS module and kitchen display to <strong>Essentials</strong> or <strong>Professional</strong>. Already included on Complete — no add-on needed. Same price either way; we just don't make you take Complete to get the till.</p>
+        <p style="color: var(--ink-3); margin: 0; font-size: 14.5px; max-width: 720px;">Adds the till / POS module and kitchen display to the <strong>Professional</strong> plan (£99 + £59 = £158 total). Not available on Essentials — the till needs the full compliance and labour-cost suite that only sit in Professional. Already included on Complete — no add-on needed.</p>
       </article>
     </section>
 
@@ -154,7 +154,7 @@
       <div class="section-head">
         <span class="eyebrow">What's in each plan</span>
         <h2>The full comparison.</h2>
-        <p>Module-by-module. The POS add-on column shows what you'd get if you added the £59 till on Essentials or Professional.</p>
+        <p>Module-by-module. The POS add-on column shows what Professional becomes with the £59 till on top (£158 total).</p>
       </div>
       <table class="compare">
         <thead>
@@ -163,7 +163,7 @@
             <th>Essentials</th>
             <th>Professional</th>
             <th>Complete</th>
-            <th>+ POS add-on</th>
+            <th>Pro + POS add-on</th>
           </tr>
         </thead>
         <tbody>
@@ -172,17 +172,17 @@
           <tr><th scope="row">Leave &amp; holiday tracking</th><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
           <tr><th scope="row">Team comms, events, announcements</th><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
           <tr><th scope="row">Basic daily task checklists</th><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
-          <tr><th scope="row">Advanced scheduling (swaps, offers, AI)</th><td class="is-no">—</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td>Plan-dependent</td></tr>
-          <tr><th scope="row">Full compliance — 10 categories, digests</th><td class="is-no">—</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td>Plan-dependent</td></tr>
-          <tr><th scope="row">Payroll report, payroll email, labour %</th><td class="is-no">—</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td>Plan-dependent</td></tr>
+          <tr><th scope="row">Advanced scheduling (swaps, offers, AI)</th><td class="is-no">—</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
+          <tr><th scope="row">Full compliance — 10 categories, digests</th><td class="is-no">—</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
+          <tr><th scope="row">Payroll report, payroll email, labour %</th><td class="is-no">—</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
           <tr><th scope="row">Till / POS — pub, bar, restaurant, café</th><td class="is-no">—</td><td class="is-no">—</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
           <tr><th scope="row">Kitchen display (KDS)</th><td class="is-no">—</td><td class="is-no">—</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
           <tr><th scope="row">Allergen prompts at the till</th><td class="is-no">—</td><td class="is-no">—</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
           <tr><th scope="row">Refusal log access from the till</th><td class="is-no">—</td><td class="is-no">—</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
-          <tr><th scope="row">Included active staff</th><td>10</td><td>20</td><td>30</td><td>Plan + add-on</td></tr>
-          <tr><th scope="row">Extra staff price</th><td>+£3</td><td>+£3.50</td><td>+£3.50</td><td>Plan-dependent</td></tr>
-          <tr><th scope="row">Monthly price (per venue, +VAT)</th><td><strong>£49</strong></td><td><strong>£99</strong></td><td><strong>£149</strong></td><td><strong>+£59</strong></td></tr>
-          <tr><th scope="row">Annual price (2 months free)</th><td>£490</td><td>£990</td><td>£1,490</td><td>+£590</td></tr>
+          <tr><th scope="row">Included active staff</th><td>10</td><td>20</td><td>30</td><td>20</td></tr>
+          <tr><th scope="row">Extra staff price</th><td>+£3</td><td>+£3.50</td><td>+£3.50</td><td>+£3.50</td></tr>
+          <tr><th scope="row">Monthly price (per venue, +VAT)</th><td><strong>£49</strong></td><td><strong>£99</strong></td><td><strong>£149</strong></td><td><strong>£158</strong></td></tr>
+          <tr><th scope="row">Annual price (2 months free)</th><td>£490</td><td>£990</td><td>£1,490</td><td>£1,580</td></tr>
         </tbody>
       </table>
     </section>
@@ -262,11 +262,11 @@
           </details>
           <details>
             <summary>How does the POS add-on work?</summary>
-            <p>The POS add-on is £59 per venue per month and unlocks the till and kitchen display on Essentials or Professional. If you choose Complete, the POS and KDS are already included — no add-on needed.</p>
+            <p>£59 per venue per month, available on Professional only (£99 + £59 = £158 total). It isn't sold on Essentials because the till needs the full compliance and labour-cost / payroll integration that only sit in Professional. If you choose Complete (£149), the till and KDS are already included — no add-on needed.</p>
           </details>
           <details>
             <summary>What happens above the included staff allowance?</summary>
-            <p>Essentials includes 10 active staff (+£3 per extra), Professional includes 20 (+£3.50), Complete includes 30 (+£3.50). Staff who haven't clocked in within 60 days don't count. Staff use the app for free.</p>
+            <p>Each plan includes an active-staff allowance — Essentials 10, Professional 20, Complete 30. "Active staff" means team members with an active account on your venue (deactivated leavers don't count). Per-staff overage above the allowance is published at +£3 (Essentials) and +£3.50 (Professional and Complete), but is <strong>not auto-billed today</strong> — if your venue grows past the allowance we'll talk to you about it at renewal, not mid-cycle. Staff use the app for free.</p>
           </details>
           <details>
             <summary>Can I pay annually?</summary>
