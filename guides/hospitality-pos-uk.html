@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hospitality POS for UK independents — pub, bar, restaurant, café till | HospitalityApp</title>
+  <meta name="description" content="A hospitality POS / till app built for UK independents. Drinks-led menus for pubs and bars, allergen prompts for restaurants, fast café service. No monthly hardware fees. Sign up free." />
+  <link rel="canonical" href="https://hospitalityapp.co.uk/guides/hospitality-pos-uk" />
+  <link rel="alternate" hreflang="en-GB" href="https://hospitalityapp.co.uk/guides/hospitality-pos-uk" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:title" content="Hospitality POS for UK independents | HospitalityApp" />
+  <meta property="og:description" content="The till app for UK pubs, bars, restaurants and cafés. Built into the same app as your rota, compliance and payroll." />
+  <meta property="og:url" content="https://hospitalityapp.co.uk/guides/hospitality-pos-uk" />
+  <meta property="og:image" content="https://hospitalityapp.co.uk/assets/images/screens/till.png" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#F5F1E8" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Hospitality POS for UK independents — the till app explained",
+        "author": { "@type": "Organization", "name": "HospitalityApp" },
+        "publisher": { "@type": "Organization", "name": "HospitalityApp", "url": "https://hospitalityapp.co.uk/" },
+        "datePublished": "2026-06-09",
+        "dateModified": "2026-06-09",
+        "image": "https://hospitalityapp.co.uk/assets/images/screens/till.png",
+        "mainEntityOfPage": "https://hospitalityapp.co.uk/guides/hospitality-pos-uk"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hospitalityapp.co.uk/" },
+          { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://hospitalityapp.co.uk/guides/" },
+          { "@type": "ListItem", "position": 3, "name": "Hospitality POS UK", "item": "https://hospitalityapp.co.uk/guides/hospitality-pos-uk" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What is a hospitality POS?", "acceptedAnswer": { "@type": "Answer", "text": "A hospitality POS (point of sale) — sometimes called an EPOS, electronic point of sale, or simply a till app — is the software bar and waiting staff use to take orders, send them to the kitchen or bar, take payment and record the sale. A hospitality POS is built for the rhythms of pubs, restaurants and cafés: drinks-led menus with half-pint and pint pricing, course management, allergen prompts at the till, split-bill payments, table service and table maps." } },
+          { "@type": "Question", "name": "How much does a hospitality POS cost in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "UK independent venues typically pay £30–£90 per till per month for software, plus £400–£1,200 per terminal for hardware if buying outright (or £15–£40 per terminal per month on lease). Card-processing fees are separate, usually 1.0–1.7% per transaction. HospitalityApp includes the till in the Complete plan at £149 per venue per month — or add it to Professional (£99/mo) for £59 — with no per-terminal fees; bring any iPad or Android tablet." } },
+          { "@type": "Question", "name": "Do I need a separate EPOS or can my rota app run the till?", "acceptedAnswer": { "@type": "Answer", "text": "Traditionally these have been separate products. An all-in-one platform like HospitalityApp runs the till inside the same app as your rota, compliance records and payroll — which means staff records, allergen matrices and labour-cost calculations stay in sync without an integration layer. For most UK independents under three sites this is simpler, cheaper and removes the data drift you get between separate tools." } },
+          { "@type": "Question", "name": "Does a pub need a different POS to a restaurant?", "acceptedAnswer": { "@type": "Answer", "text": "The same underlying till engine works for both, but the menu, payment and compliance flows should differ. A pub till leads with the drinks page (half/pint pricing, cellar tie-in, refusal log access). A restaurant till leads with course management, allergen sign-off at the till and kitchen printer routing. HospitalityApp ships pub, bar, restaurant and café modes that change the till's layout, default menu structure and compliance prompts automatically based on your venue type." } },
+          { "@type": "Question", "name": "Can the POS integrate with my existing payment processor?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — HospitalityApp's till is processor-agnostic and works with Stripe, SumUp, Square, Zettle (where allowed) and standalone card terminals. The till records the sale; the processor handles the card swipe. This means you keep your existing card-machine contract and can switch processors without changing tills." } },
+          { "@type": "Question", "name": "Does the till handle Natasha's Law allergen labelling?", "acceptedAnswer": { "@type": "Answer", "text": "The till holds the allergen matrix per menu item — so when a server adds a salad to a customer's order, the till displays the allergens present and prompts the server to confirm verbal allergen disclosure. For PPDS (prepacked for direct sale) labelling — the label that goes on the takeaway sandwich — the till can drive a label printer or hand off to your existing labelling system. Either way the allergen data lives in one place." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand-lockup" href="/">
+        <span class="brand-lockup__mark" aria-hidden="true"></span>
+        <span>HospitalityApp</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-toggle__icon"></span>
+      </button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="/features">Features</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/for/">For venues</a>
+        <a href="/guides/">Guides</a>
+        <span class="nav-cta">
+          <a class="btn btn-secondary" href="https://my.hospitalityapp.co.uk/login">Sign in</a>
+          <a class="btn" href="https://my.hospitalityapp.co.uk/login">Sign up free</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__inner">
+        <span class="eyebrow">Guide · Till / POS</span>
+        <h1 class="hero__title">Hospitality POS for UK independents.</h1>
+        <p class="hero__sub">A till app built for pubs, bars, restaurants and cafés — drinks-led menus, allergen prompts, integrated takings, no monthly hardware fees. Inside the same app as your rota and compliance file.</p>
+        <div class="hero__cta">
+          <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Sign up free</a>
+          <a class="btn btn-secondary btn-large" href="/pricing">See pricing</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <figure style="margin: 0; background: var(--bone-2); border: 1px solid var(--line); border-radius: var(--r-xl); padding: 24px; text-align: center;">
+          <img src="/assets/images/screens/till.png" alt="The HospitalityApp till in pub mode, showing the Crown &amp; Anchor's draught menu — Camden Hells, Neck Oil IPA, Guinness, Madrí, Birra Moretti, Aspall Cider and Camden Pale — with half-pint and pint pricing, plus a Counter sale of one Guinness half (£3.20) and one Neck Oil IPA half (£3.30) totalling £6.50." width="1180" height="720" loading="eager" style="max-width: 100%; height: auto; border-radius: var(--r-lg); border: 1px solid var(--line); box-shadow: 0 12px 32px -16px oklch(0.10 0.012 60 / 0.18);" />
+          <figcaption style="margin-top: 14px; font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3);">The till in pub mode — Counter sale at the Crown &amp; Anchor</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">What it is</span>
+          <h2>Hospitality POS, defined.</h2>
+          <p>A hospitality POS — point of sale — is the software bar and waiting staff use to take orders, send them to the kitchen or bar, take payment and record the sale. Some people call it an EPOS (electronic point of sale), some call it a till app. Same thing.</p>
+          <p>What makes a <em>hospitality</em> POS different from a generic retail till is the rhythm of the work it has to handle: drinks-led menus with half-pint and pint pricing, course management for restaurants, allergen prompts at the moment of order, split-bill payments, table service, refusal logs for licensed premises. A till built for clothing retail won't survive a Saturday night in a busy pub.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">The eight features</span>
+          <h2>What a hospitality POS should do.</h2>
+          <p>If your current till is missing three or more of these, it wasn't built for the job.</p>
+        </div>
+        <div class="modules">
+          <article class="module-card"><h3>1 · Drinks-led menu pages</h3><p>Categories that match a bar's brain — Draught, Bottles &amp; Cans, Wine, Spirits, Cocktails, Soft &amp; Mixers. Half and pint pricing on one card, not buried in a sub-menu.</p></article>
+          <article class="module-card"><h3>2 · Course management</h3><p>For restaurants — starters fire to the pass, mains hold, desserts on demand. Kitchen sees what's ordered and what's pending.</p></article>
+          <article class="module-card"><h3>3 · Allergen prompts at the till</h3><p>Server taps an item that contains nuts, the till prompts: "Has the guest confirmed no allergy?" Natasha's-Law ready, server-trained-and-logged.</p></article>
+          <article class="module-card"><h3>4 · Split bills, the easy way</h3><p>Split evenly, split by item, split by seat. Bar staff don't open a calculator. Service flows; tips don't get awkward.</p></article>
+          <article class="module-card"><h3>5 · Refusal log access</h3><p>Bar staff hit "Refused — under-25 no ID" without leaving the till. Licensing log builds itself; test-purchase season stays calm.</p></article>
+          <article class="module-card"><h3>6 · Card terminal agnostic</h3><p>Works with Stripe, SumUp, Square, Zettle or your existing standalone terminal. The till records the sale; the processor takes the card.</p></article>
+          <article class="module-card"><h3>7 · Discount + note flow</h3><p>Staff discount, NHS rate, comp drinks — applied at line or whole-bill level, logged with reason, exportable for the owner's review.</p></article>
+          <article class="module-card"><h3>8 · Takings sync with payroll</h3><p>Every sale feeds the daily takings total, which feeds the labour-cost %, which feeds the payroll export. No re-keying, no end-of-week reconciliation.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">By venue type</span>
+          <h2>The same till engine, three different modes.</h2>
+          <p>Setup picks your venue type; the till's layout, default menu structure and compliance prompts change automatically.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Pub mode — drinks-led, fast counter service</summary>
+            <p>Default landing page is Draught. Half + pint pricing on the same card. Cellar checks accessible from a side button. Refusal log one tap away. Sports-event "second-screen" mode shows tab management for crowded fixtures. The Crown &amp; Anchor screenshot above is the till in pub mode.</p>
+          </details>
+          <details>
+            <summary>Restaurant mode — course management, table service</summary>
+            <p>Default landing is the dining-room table map. Courses fire in waves (starter → main → dessert) with kitchen printer routing. Allergen prompt is mandatory before the order sends. Split-bill flow is built for the "we'll split the wine but I had the steak" reality.</p>
+          </details>
+          <details>
+            <summary>Café mode — fast counter, modifier-heavy menu</summary>
+            <p>Default landing is Coffee + Pastries. Modifiers (oat milk, extra shot, decaf) chain in three taps. Fast tab management for the morning rush. PPDS labels print at the till if a label printer is connected.</p>
+          </details>
+          <details>
+            <summary>Bar mode — cocktails, late-night, door staff</summary>
+            <p>Default landing is Cocktails. Spec-card per cocktail visible to staff (recipe + glassware). Pre-mix vs made-to-order flagged. Door-staff handover at close-time runs through the till. Late-night refreshment evidence pack builds itself.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">The cost question</span>
+          <h2>What a UK independent actually pays.</h2>
+          <p>The published prices for hospitality POS in the UK look reasonable — until you add the per-terminal fee, the integration fee and the support fee. Here's what you're actually buying.</p>
+        </div>
+        <div class="modules">
+          <article class="module-card">
+            <h3>Traditional EPOS</h3>
+            <p style="color: var(--ink-3); font-size: 14px;">£45–£89/mo software + £400–£1,200 per terminal (or £15–£40/mo lease) + integration fees + card-processor lock-in. Industry standard for groups; expensive overhead for independents.</p>
+          </article>
+          <article class="module-card">
+            <h3>Standalone iPad POS</h3>
+            <p style="color: var(--ink-3); font-size: 14px;">£20–£75/mo + tablet you provide + their card processor (locked in). Cheaper at sticker price; doesn't talk to your rota or compliance system. Two tools, two bills, two sources of truth.</p>
+          </article>
+          <article class="module-card" style="border-color: var(--brand-accent);">
+            <h3>HospitalityApp all-in-one</h3>
+            <p style="color: var(--ink-3); font-size: 14px;">£149/venue/mo Complete includes till + KDS + rota + full compliance + payroll. Or £99 Professional + £59 till add-on (£158). Bring any iPad or Android tablet — no per-terminal fees. Processor-agnostic.</p>
+          </article>
+        </div>
+        <p style="margin-top: 24px; font-size: 14px; color: var(--ink-3); max-width: 720px;">Prices ex-VAT, accurate June 2026; verify with each provider. The biggest cost most independents overlook isn't the till hardware — it's the integration tax of running rota, compliance and till on three separate systems. Annual billing on any tier saves you two months. See <a href="/pricing">full pricing</a>.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">FAQ</span>
+          <h2>Hospitality POS, asked &amp; answered.</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>What is a hospitality POS?</summary>
+            <p>Software for taking orders, sending them to the kitchen or bar, taking payment and recording the sale — built for the rhythms of pubs, restaurants and cafés (drinks-led menus, course management, allergens, split bills, refusal logs).</p>
+          </details>
+          <details>
+            <summary>How much does a hospitality POS cost in the UK?</summary>
+            <p>Typically £30–£90 per till per month for software, £400–£1,200 per terminal for hardware (or £15–£40 per month leased), plus 1.0–1.7% card-processing fees. HospitalityApp includes the till on the Complete plan at £149/venue/mo, or as a £59 add-on to Professional (£99/mo). No per-terminal fees either way.</p>
+          </details>
+          <details>
+            <summary>Do I need a separate EPOS or can my rota app run the till?</summary>
+            <p>All-in-one platforms like HospitalityApp run the till inside the same app as rota, compliance and payroll. Staff records, allergen matrices and labour-cost calculations stay in sync without an integration layer.</p>
+          </details>
+          <details>
+            <summary>Does a pub need a different POS to a restaurant?</summary>
+            <p>Same engine, different modes. Pub mode leads with Draught and half/pint pricing; restaurant mode leads with course management and allergen sign-off at the till; café mode leads with modifier-heavy fast service.</p>
+          </details>
+          <details>
+            <summary>Can the POS integrate with my existing payment processor?</summary>
+            <p>Yes — HospitalityApp's till is processor-agnostic. Works with Stripe, SumUp, Square, Zettle (where allowed) and standalone terminals. Keep your existing card machine and contract.</p>
+          </details>
+          <details>
+            <summary>Does the till handle Natasha's Law allergen labelling?</summary>
+            <p>The till holds the allergen matrix per menu item and prompts the server before order send. For PPDS labelling it drives a label printer or hands off to your existing labelling system. Allergen data lives in one place.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Related guides</span>
+          <h2>Read next.</h2>
+        </div>
+        <div class="modules">
+          <article class="module-card">
+            <h3>Pub till app</h3>
+            <p>Coming soon — the pub-specific guide to till setup, cellar tie-in and refusal-log workflow.</p>
+            <a href="/for/pubs">For pubs overview</a>
+          </article>
+          <article class="module-card">
+            <h3>Menu management software</h3>
+            <p>Coming soon — one menu, every channel. Till, dine-in, takeaway; allergen matrix stays in sync.</p>
+            <a href="/guides/food-hygiene-compliance">Food hygiene overview</a>
+          </article>
+          <article class="module-card">
+            <h3>Alcohol licensing records</h3>
+            <p>Refusal log, Challenge 25, DPS notice — what the licensing officer asks for, made digital.</p>
+            <a href="/guides/alcohol-licensing-records">Read the guide</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="cta-band">
+          <span class="eyebrow" style="color: oklch(0.85 0.008 60);">Open in 10 minutes</span>
+          <h2>Try the till tonight.</h2>
+          <p>Sign up free, set up your menu, take your first sale. If it doesn't beat what you're using now in a week, walk away.</p>
+          <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Sign up free</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="brand-lockup" href="/">
+            <span class="brand-lockup__mark" aria-hidden="true"></span>
+            <span>HospitalityApp</span>
+          </a>
+          <p>Rota, compliance and payroll for every kind of UK hospitality venue.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/features">Features</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="https://my.hospitalityapp.co.uk/login">Sign in</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>For venues</h4>
+          <ul>
+            <li><a href="/for/pubs">Pubs</a></li>
+            <li><a href="/for/bars">Bars</a></li>
+            <li><a href="/for/restaurants">Restaurants</a></li>
+            <li><a href="/for/cafes">Cafés</a></li>
+            <li><a href="/for/coffee-shops">Coffee shops</a></li>
+            <li><a href="/for/hotels">Hotels</a></li>
+            <li><a href="/for/bnbs">B&amp;Bs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="mailto:hello@hospitalityapp.co.uk">Contact</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__legal">
+        <span>© <span class="js-year">2026</span> HospitalityApp Ltd · Made in the UK</span>
+        <span>v0.1 · Beta</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/main.js" defer></script>
+</body>
+</html>

@@ -3,39 +3,141 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://hospitalityapp.co.uk/</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://hospitalityapp.co.uk/features</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://hospitalityapp.co.uk/pricing</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hospitalityapp.co.uk/for/</loc>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://hospitalityapp.co.uk/for/pubs</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hospitalityapp.co.uk/for/bars</loc>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hospitalityapp.co.uk/for/restaurants</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hospitalityapp.co.uk/for/cafes</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hospitalityapp.co.uk/for/coffee-shops</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hospitalityapp.co.uk/for/hotels</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hospitalityapp.co.uk/for/bnbs</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hospitalityapp.co.uk/guides/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hospitalityapp.co.uk/guides/hospitality-pos-uk</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hospitalityapp.co.uk/guides/pub-till-app</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hospitalityapp.co.uk/guides/pub-rota-software</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hospitalityapp.co.uk/guides/restaurant-staff-scheduling</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hospitalityapp.co.uk/guides/hospitality-rota-app</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hospitalityapp.co.uk/guides/food-hygiene-compliance</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hospitalityapp.co.uk/guides/haccp-app</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hospitalityapp.co.uk/guides/alcohol-licensing-records</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hospitalityapp.co.uk/guides/cellar-checks-app</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hospitalityapp.co.uk/guides/fridge-temperature-log</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hospitalityapp.co.uk/guides/closing-shift-checklist</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://hospitalityapp.co.uk/privacy</loc>

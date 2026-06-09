@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pricing — Hospitality rota software pricing | HospitalityApp</title>
-  <meta name="description" content="From £39 per venue per month. Three plans — Starter, Growth, Multi-site. 14-day free trial, no card needed. Cancel any time." />
+  <title>Pricing — From £49/venue. Rota, compliance, till &amp; payroll | HospitalityApp</title>
+  <meta name="description" content="Three plans for UK hospitality. Essentials £49, Professional £99, Complete (with till + KDS) £149 per venue per month. POS add-on £59. Annual = 2 months free. 14-day free trial." />
   <link rel="canonical" href="https://hospitalityapp.co.uk/pricing" />
   <link rel="alternate" hreflang="en-GB" href="https://hospitalityapp.co.uk/pricing" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta property="og:title" content="Pricing | HospitalityApp" />
-  <meta property="og:description" content="From £39 per venue per month. 14-day free trial. Built for independent UK hospitality." />
+  <meta property="og:title" content="Pricing — From £49/venue/mo | HospitalityApp" />
+  <meta property="og:description" content="Essentials £49 · Professional £99 · Complete £149 per venue per month, +VAT. POS add-on £59. Annual = 2 months free. 14-day free trial." />
   <meta property="og:url" content="https://hospitalityapp.co.uk/pricing" />
   <meta property="og:image" content="https://hospitalityapp.co.uk/assets/images/og/pricing.png" />
   <meta property="og:type" content="website" />
@@ -20,14 +20,33 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "HospitalityApp",
-    "description": "Rota, compliance and payroll for UK hospitality.",
-    "brand": { "@type": "Brand", "name": "HospitalityApp" },
-    "offers": [
-      { "@type": "Offer", "name": "Starter", "price": "39", "priceCurrency": "GBP", "url": "https://hospitalityapp.co.uk/pricing", "availability": "https://schema.org/InStock" },
-      { "@type": "Offer", "name": "Growth", "price": "79", "priceCurrency": "GBP", "url": "https://hospitalityapp.co.uk/pricing", "availability": "https://schema.org/InStock" },
-      { "@type": "Offer", "name": "Multi-site", "priceCurrency": "GBP", "url": "https://hospitalityapp.co.uk/pricing", "availability": "https://schema.org/InStock" }
+    "@graph": [
+      {
+        "@type": "Product",
+        "name": "HospitalityApp",
+        "description": "Rota, compliance, till and payroll for UK hospitality. Three plans plus optional POS add-on.",
+        "brand": { "@type": "Brand", "name": "HospitalityApp" },
+        "offers": [
+          { "@type": "Offer", "name": "Essentials", "price": "49", "priceCurrency": "GBP", "url": "https://hospitalityapp.co.uk/pricing", "availability": "https://schema.org/InStock", "description": "Rota, time &amp; attendance, leave, comms, basic checklists. 10 staff included." },
+          { "@type": "Offer", "name": "Professional", "price": "99", "priceCurrency": "GBP", "url": "https://hospitalityapp.co.uk/pricing", "availability": "https://schema.org/InStock", "description": "Adds advanced scheduling, full compliance suite and payroll. 20 staff included." },
+          { "@type": "Offer", "name": "Complete · Venue OS", "price": "149", "priceCurrency": "GBP", "url": "https://hospitalityapp.co.uk/pricing", "availability": "https://schema.org/InStock", "description": "Adds till / POS and kitchen display. 30 staff included." },
+          { "@type": "Offer", "name": "Till add-on (POS + KDS)", "price": "59", "priceCurrency": "GBP", "url": "https://hospitalityapp.co.uk/pricing", "availability": "https://schema.org/InStock", "description": "Add POS and kitchen display to Essentials or Professional." }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What does &quot;per venue&quot; mean?", "acceptedAnswer": { "@type": "Answer", "text": "One physical site under one licence. A pub with one address is one venue. A small group with three sites pays per venue, with volume discounts at five and ten venues." } },
+          { "@type": "Question", "name": "Do I need a card for the trial?", "acceptedAnswer": { "@type": "Answer", "text": "The 14-day trial is free. We do ask for card details up front because it materially improves trial→paid conversion and removes friction at the end of the trial. You can cancel any time during the trial and you will not be charged." } },
+          { "@type": "Question", "name": "Which features are available during the trial?", "acceptedAnswer": { "@type": "Answer", "text": "Every trial starts on Complete (the full Venue OS) so you can feel the till, kitchen display and full compliance suite. At the end of the trial we downgrade you to the plan you chose at signup — or to Complete if you do not pick one." } },
+          { "@type": "Question", "name": "How does the POS add-on work?", "acceptedAnswer": { "@type": "Answer", "text": "The POS add-on is £59 per venue per month and unlocks the till and kitchen display on Essentials or Professional. If you choose Complete, the POS and KDS are already included — no add-on needed." } },
+          { "@type": "Question", "name": "What happens above the included staff allowance?", "acceptedAnswer": { "@type": "Answer", "text": "Essentials includes 10 active staff (+£3 per extra), Professional includes 20 (+£3.50 per extra), Complete includes 30 (+£3.50 per extra). Staff who have not clocked in within 60 days do not count. Staff use the app for free." } },
+          { "@type": "Question", "name": "Can I pay annually?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Annual billing gives you two months free (Essentials £490/year, Professional £990/year, Complete £1,490/year). Switch at any renewal." } },
+          { "@type": "Question", "name": "Do you offer multi-venue or group discounts?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Groups of five or more venues get 15% off the published per-venue rate. Groups of ten or more get 25% off. Multi-venue customers also get cross-venue dashboards and central admin included." } },
+          { "@type": "Question", "name": "VAT?", "acceptedAnswer": { "@type": "Answer", "text": "All published prices are excluding VAT. UK VAT-registered businesses can reclaim through the usual route." } },
+          { "@type": "Question", "name": "What about my data if I cancel?", "acceptedAnswer": { "@type": "Answer", "text": "You can export everything (staff, rota, compliance logs, takings, till sales) at any time. After cancellation we keep the data for 30 days in case you change your mind, then delete it." } }
+        ]
+      }
     ]
   }
   </script>
@@ -47,9 +66,8 @@
       <nav class="nav" id="primary-nav" aria-label="Primary">
         <a href="/features">Features</a>
         <a href="/pricing" aria-current="page">Pricing</a>
-        <a href="/for/pubs">For pubs</a>
-        <a href="/for/restaurants">For restaurants</a>
-        <a href="/for/cafes">For cafés</a>
+        <a href="/for/">For venues</a>
+        <a href="/guides/">Guides</a>
         <span class="nav-cta">
           <a class="btn btn-secondary" href="https://my.hospitalityapp.co.uk/login">Sign in</a>
           <a class="btn" href="https://my.hospitalityapp.co.uk/login">Sign up free</a>
@@ -61,97 +79,135 @@
   <main id="main">
     <section class="hero">
       <div class="container hero__inner">
-        <span class="eyebrow">Simple, public pricing</span>
-        <h1 class="hero__title">From £39 per venue.<br />Free for 14 days.</h1>
-        <p class="hero__sub">No setup fee. No card needed to start. Cancel any time.</p>
+        <span class="eyebrow">Public, simple pricing</span>
+        <h1 class="hero__title">From £49 per venue.<br />Free for 14 days.</h1>
+        <p class="hero__sub">Three plans, one optional add-on. Annual saves you two months. No setup fee. Cancel any time during the trial.</p>
       </div>
     </section>
 
-    <section class="container" style="padding-bottom: var(--section-y);">
+    <section class="container" style="padding-bottom: 24px;">
       <div class="tiers">
         <article class="tier">
-          <span class="eyebrow">Starter</span>
-          <div class="tier__price">£39 <small>/ venue / month</small></div>
-          <p class="muted">For one independent venue with up to 15 active staff.</p>
+          <span class="eyebrow">Essentials</span>
+          <div class="tier__price">£49 <small>/ venue / month</small></div>
+          <p class="muted">Or £490/year (save 2 months). For tiny venues and single operators.</p>
           <ul>
-            <li>Rota with shift templates &amp; role tasks</li>
-            <li>Compliance — all 10 categories</li>
-            <li>Photo evidence &amp; renewal tracking</li>
-            <li>Daily / weekly takings logging</li>
-            <li>Labour-cost % with target band</li>
-            <li>Itemised payroll CSV export</li>
+            <li>Staff rota with shift templates</li>
+            <li>Time &amp; attendance — geo, QR, NFC clock-in</li>
+            <li>Leave &amp; holiday tracking</li>
+            <li>Team comms — DMs, announcements, events</li>
+            <li>Basic daily task checklists</li>
+            <li>10 active staff included, then +£3 each</li>
             <li>Native iOS &amp; Android apps</li>
             <li>UK email support</li>
           </ul>
-          <a class="btn" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
+          <a class="btn btn-secondary" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
         </article>
 
         <article class="tier tier--feature">
-          <span class="eyebrow">Growth</span>
-          <div class="tier__price">£79 <small>/ venue / month</small></div>
-          <p class="muted">For a busy single venue or one with a manager team.</p>
+          <span class="eyebrow">Professional</span>
+          <div class="tier__price">£99 <small>/ venue / month</small></div>
+          <p class="muted">Or £990/year (save 2 months). The standard pub, café or restaurant pick.</p>
           <ul>
-            <li>Everything in Starter</li>
-            <li>Unlimited active staff</li>
-            <li>Swap-request approvals inbox</li>
-            <li>Time-off request approvals</li>
-            <li>Role-task template library</li>
-            <li>Compliance daily digest</li>
-            <li>Insurance &amp; licence renewal alerts</li>
+            <li>Everything in Essentials</li>
+            <li>Advanced scheduling — swaps, offers, availability, rota analysis</li>
+            <li>Full compliance suite — 10 categories, photo evidence, digests, renewal alerts</li>
+            <li>Payroll report + payroll email + takings &amp; labour-cost %</li>
+            <li>20 active staff included, then +£3.50 each</li>
             <li>Priority email support</li>
           </ul>
           <a class="btn" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
         </article>
 
         <article class="tier">
-          <span class="eyebrow">Multi-site</span>
-          <div class="tier__price">Talk to us</div>
-          <p class="muted">For 2+ venues with a head-office function.</p>
+          <span class="eyebrow">Complete · Venue OS</span>
+          <div class="tier__price">£149 <small>/ venue / month</small></div>
+          <p class="muted">Or £1,490/year (save 2 months). Full-service venues running the till.</p>
           <ul>
-            <li>Everything in Growth</li>
-            <li>Cross-venue dashboards</li>
-            <li>Central staff &amp; compliance admin</li>
-            <li>Group-level labour-cost reporting</li>
-            <li>Custom onboarding &amp; data import</li>
-            <li>SLA + named account manager</li>
-            <li>SSO on request</li>
+            <li>Everything in Professional</li>
+            <li>Till / POS — pub, bar, restaurant and café modes</li>
+            <li>Kitchen display (KDS) — stations, routing, prep tickets</li>
+            <li>Live sales, receipts, VAT handling</li>
+            <li>Allergen prompts &amp; refusal log at the till</li>
+            <li>30 active staff included, then +£3.50 each</li>
           </ul>
-          <a class="btn btn-secondary" href="mailto:hello@hospitalityapp.co.uk?subject=HospitalityApp%20multi-site">Email hello@</a>
+          <a class="btn btn-secondary" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
         </article>
       </div>
+
+      <article class="card" style="margin-top: 22px; display: grid; gap: 14px; padding: 28px;">
+        <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: baseline; justify-content: space-between;">
+          <div>
+            <span class="eyebrow">Add-on</span>
+            <h3 style="margin: 4px 0 0; font-family: var(--serif); font-size: 26px; color: var(--ink);">Till add-on (POS + KDS)</h3>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-family: var(--serif); font-size: 32px; color: var(--ink); line-height: 1;">+£59 <small style="font-family: var(--sans); font-size: 14px; color: var(--ink-3); font-weight: 500;">/ venue / month</small></div>
+            <div style="font-size: 13px; color: var(--ink-3); margin-top: 4px;">Or £590/year</div>
+          </div>
+        </div>
+        <p style="color: var(--ink-3); margin: 0; font-size: 14.5px; max-width: 720px;">Adds the till / POS module and kitchen display to <strong>Essentials</strong> or <strong>Professional</strong>. Already included on Complete — no add-on needed. Same price either way; we just don't make you take Complete to get the till.</p>
+      </article>
     </section>
 
-    <section class="container">
+    <section class="container" style="padding-bottom: var(--section-y);">
       <div class="section-head">
         <span class="eyebrow">What's in each plan</span>
         <h2>The full comparison.</h2>
+        <p>Module-by-module. The POS add-on column shows what you'd get if you added the £59 till on Essentials or Professional.</p>
       </div>
       <table class="compare">
         <thead>
           <tr>
-            <th>Feature</th>
-            <th>Starter</th>
-            <th>Growth</th>
-            <th>Multi-site</th>
+            <th>Module</th>
+            <th>Essentials</th>
+            <th>Professional</th>
+            <th>Complete</th>
+            <th>+ POS add-on</th>
           </tr>
         </thead>
         <tbody>
-          <tr><th scope="row">Active staff</th><td>15</td><td>Unlimited</td><td>Unlimited</td></tr>
-          <tr><th scope="row">Venues per account</th><td>1</td><td>1</td><td>2+</td></tr>
-          <tr><th scope="row">Rota &amp; shift templates</th><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
-          <tr><th scope="row">Compliance — 10 categories</th><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
-          <tr><th scope="row">Photo evidence</th><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
-          <tr><th scope="row">Daily compliance digest</th><td class="is-no">—</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
-          <tr><th scope="row">Renewal alerts</th><td class="is-no">—</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
-          <tr><th scope="row">Swap-request inbox</th><td class="is-no">—</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
-          <tr><th scope="row">Time-off requests</th><td class="is-no">—</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
-          <tr><th scope="row">Role-task templates</th><td class="is-no">—</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
-          <tr><th scope="row">Cross-venue dashboards</th><td class="is-no">—</td><td class="is-no">—</td><td class="is-yes">Yes</td></tr>
-          <tr><th scope="row">Central admin</th><td class="is-no">—</td><td class="is-no">—</td><td class="is-yes">Yes</td></tr>
-          <tr><th scope="row">SLA &amp; named contact</th><td class="is-no">—</td><td class="is-no">—</td><td class="is-yes">Yes</td></tr>
-          <tr><th scope="row">SSO</th><td class="is-no">—</td><td class="is-no">—</td><td class="is-yes">On request</td></tr>
+          <tr><th scope="row">Staff rota &amp; shift templates</th><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
+          <tr><th scope="row">Time &amp; attendance (geo / QR / NFC)</th><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
+          <tr><th scope="row">Leave &amp; holiday tracking</th><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
+          <tr><th scope="row">Team comms, events, announcements</th><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
+          <tr><th scope="row">Basic daily task checklists</th><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
+          <tr><th scope="row">Advanced scheduling (swaps, offers, AI)</th><td class="is-no">—</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td>Plan-dependent</td></tr>
+          <tr><th scope="row">Full compliance — 10 categories, digests</th><td class="is-no">—</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td>Plan-dependent</td></tr>
+          <tr><th scope="row">Payroll report, payroll email, labour %</th><td class="is-no">—</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td><td>Plan-dependent</td></tr>
+          <tr><th scope="row">Till / POS — pub, bar, restaurant, café</th><td class="is-no">—</td><td class="is-no">—</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
+          <tr><th scope="row">Kitchen display (KDS)</th><td class="is-no">—</td><td class="is-no">—</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
+          <tr><th scope="row">Allergen prompts at the till</th><td class="is-no">—</td><td class="is-no">—</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
+          <tr><th scope="row">Refusal log access from the till</th><td class="is-no">—</td><td class="is-no">—</td><td class="is-yes">Yes</td><td class="is-yes">Yes</td></tr>
+          <tr><th scope="row">Included active staff</th><td>10</td><td>20</td><td>30</td><td>Plan + add-on</td></tr>
+          <tr><th scope="row">Extra staff price</th><td>+£3</td><td>+£3.50</td><td>+£3.50</td><td>Plan-dependent</td></tr>
+          <tr><th scope="row">Monthly price (per venue, +VAT)</th><td><strong>£49</strong></td><td><strong>£99</strong></td><td><strong>£149</strong></td><td><strong>+£59</strong></td></tr>
+          <tr><th scope="row">Annual price (2 months free)</th><td>£490</td><td>£990</td><td>£1,490</td><td>+£590</td></tr>
         </tbody>
       </table>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Group &amp; founder pricing</span>
+          <h2>Discounts that aren't on a sales call.</h2>
+        </div>
+        <div class="modules">
+          <article class="module-card">
+            <h3>5+ venues</h3>
+            <p>15% off the per-venue rate. Cross-venue dashboards and central staff/compliance admin included.</p>
+          </article>
+          <article class="module-card">
+            <h3>10+ venues</h3>
+            <p>25% off the per-venue rate. SLA, named account manager, custom onboarding, SSO on request.</p>
+          </article>
+          <article class="module-card">
+            <h3>Founder cohort</h3>
+            <p>The next ten venues to sign up get 50% off for 12 months, locked. Named "Founder" on your account. <a href="mailto:hello@hospitalityapp.co.uk?subject=Founder%20cohort">Email us</a>.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section class="section">
@@ -194,19 +250,31 @@
         <div class="faq">
           <details>
             <summary>What does "per venue" mean?</summary>
-            <p>One physical site under one licence. A pub with one address is one venue. A small group with three sites would pick Multi-site.</p>
+            <p>One physical site under one licence. A pub with one address is one venue. A small group with three sites pays per venue, with volume discounts at five and ten venues.</p>
           </details>
           <details>
             <summary>Do I need a card for the trial?</summary>
-            <p>No. The 14-day free trial works on Starter and Growth without entering payment details. We'll email you before the trial ends.</p>
+            <p>The 14-day trial is free. We do ask for card details up front because it materially improves trial→paid conversion and removes friction at the end of the trial. You can cancel any time during the trial and you will not be charged.</p>
           </details>
           <details>
-            <summary>Can I switch plans?</summary>
-            <p>Yes — upgrade or downgrade any time. We pro-rate on the next bill.</p>
+            <summary>Which features are available during the trial?</summary>
+            <p>Every trial starts on Complete (the full Venue OS) so you can feel the till, kitchen display and full compliance suite. At the end of the trial we downgrade you to the plan you chose at signup — or to Complete if you don't pick one.</p>
           </details>
           <details>
-            <summary>Are staff seats charged?</summary>
-            <p>No. Staff use the app for free. You're charged per active venue, not per user.</p>
+            <summary>How does the POS add-on work?</summary>
+            <p>The POS add-on is £59 per venue per month and unlocks the till and kitchen display on Essentials or Professional. If you choose Complete, the POS and KDS are already included — no add-on needed.</p>
+          </details>
+          <details>
+            <summary>What happens above the included staff allowance?</summary>
+            <p>Essentials includes 10 active staff (+£3 per extra), Professional includes 20 (+£3.50), Complete includes 30 (+£3.50). Staff who haven't clocked in within 60 days don't count. Staff use the app for free.</p>
+          </details>
+          <details>
+            <summary>Can I pay annually?</summary>
+            <p>Yes. Annual billing gives you two months free — Essentials £490/yr, Professional £990/yr, Complete £1,490/yr. Switch at any renewal.</p>
+          </details>
+          <details>
+            <summary>Do you offer multi-venue or group discounts?</summary>
+            <p>Yes. Five or more venues = 15% off the per-venue rate. Ten or more = 25% off. Multi-venue customers also get cross-venue dashboards and central admin included.</p>
           </details>
           <details>
             <summary>VAT?</summary>
@@ -214,7 +282,7 @@
           </details>
           <details>
             <summary>What about my data if I cancel?</summary>
-            <p>You can export everything (staff, rota, compliance logs, takings) at any time. After cancellation we keep the data for 30 days in case you change your mind, then delete it.</p>
+            <p>You can export everything (staff, rota, compliance logs, takings, till sales) at any time. After cancellation we keep the data for 30 days in case you change your mind, then delete it.</p>
           </details>
         </div>
       </div>
@@ -223,9 +291,9 @@
     <section class="section section-tight">
       <div class="container">
         <div class="cta-band">
-          <span class="eyebrow" style="color: oklch(0.85 0.008 60);">Try it free</span>
+          <span class="eyebrow" style="color: oklch(0.85 0.008 60);">Try the full Venue OS free</span>
           <h2>14 days to convince you.</h2>
-          <p>If it isn't paying for itself in saved labour cost by day 7, walk away.</p>
+          <p>Every trial starts on Complete — till, kitchen display, full compliance, the lot. If it isn't earning its keep by day 7, walk away.</p>
           <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
         </div>
       </div>
@@ -240,22 +308,27 @@
             <span class="brand-lockup__mark" aria-hidden="true"></span>
             <span>HospitalityApp</span>
           </a>
-          <p>Rota, compliance and payroll for independent UK pubs, restaurants and cafés.</p>
+          <p>Rota, compliance and payroll for every kind of UK hospitality venue.</p>
         </div>
         <div>
           <h4>Product</h4>
           <ul>
             <li><a href="/features">Features</a></li>
             <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/guides/">Guides</a></li>
             <li><a href="https://my.hospitalityapp.co.uk/login">Sign in</a></li>
           </ul>
         </div>
         <div>
-          <h4>For</h4>
+          <h4>For venues</h4>
           <ul>
             <li><a href="/for/pubs">Pubs</a></li>
+            <li><a href="/for/bars">Bars</a></li>
             <li><a href="/for/restaurants">Restaurants</a></li>
             <li><a href="/for/cafes">Cafés</a></li>
+            <li><a href="/for/coffee-shops">Coffee shops</a></li>
+            <li><a href="/for/hotels">Hotels</a></li>
+            <li><a href="/for/bnbs">B&amp;Bs</a></li>
           </ul>
         </div>
         <div>

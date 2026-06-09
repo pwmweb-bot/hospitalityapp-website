@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restaurant staff scheduling — kitchen + FOH rota done right | HospitalityApp</title>
+  <meta name="description" content="A guide to restaurant staff scheduling: role-aware shift templates for kitchen and front-of-house, swap-request inbox, labour-cost % live, allergen-trained sign-offs." />
+  <link rel="canonical" href="https://hospitalityapp.co.uk/guides/restaurant-staff-scheduling" />
+  <link rel="alternate" hreflang="en-GB" href="https://hospitalityapp.co.uk/guides/restaurant-staff-scheduling" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:title" content="Restaurant staff scheduling | HospitalityApp" />
+  <meta property="og:description" content="Kitchen and front-of-house on one rota — role chips, swap inbox, labour-cost % live." />
+  <meta property="og:url" content="https://hospitalityapp.co.uk/guides/restaurant-staff-scheduling" />
+  <meta property="og:image" content="https://hospitalityapp.co.uk/assets/images/og/restaurants.png" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#F5F1E8" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is restaurant staff scheduling?", "acceptedAnswer": { "@type": "Answer", "text": "Restaurant staff scheduling is the practice of building shift rotas that match the kitchen brigade and front-of-house team to forecast covers, with role-aware templates, swap-request workflows and live labour-cost percentage as takings come in. Done well, it keeps payroll inside band without leaving the chef short on a Saturday." } },
+      { "@type": "Question", "name": "What's a good labour-cost % for a UK restaurant?", "acceptedAnswer": { "@type": "Answer", "text": "Most independent UK restaurants target 25–32% labour cost as a percentage of net sales. Fine-dining and small-plates concepts run higher; high-volume gastropubs run lower. The number that matters is the trend against your own previous quarter, not an industry benchmark." } },
+      { "@type": "Question", "name": "Do you need different rota tools for kitchen and FOH?", "acceptedAnswer": { "@type": "Answer", "text": "No. One rota with role chips — KP, CDP, sous, FOH, host, runner — handles both. Splitting the tools doubles your admin and breaks swap workflows: a CDP can't cover a host's shift, but a host might cover a runner's." } },
+      { "@type": "Question", "name": "How do you handle tronc in restaurant scheduling?", "acceptedAnswer": { "@type": "Answer", "text": "Tronc distribution is handled by your payroll provider, not the rota app. The rota's job is to produce an accurate timesheet (hours by staff member, by day) — your tronc rules apply on top of that. HospitalityApp exports the timesheet CSV ready for any UK payroll provider." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand-lockup" href="/">
+        <span class="brand-lockup__mark" aria-hidden="true"></span>
+        <span>HospitalityApp</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-toggle__icon"></span>
+      </button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="/features">Features</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/for/">For venues</a>
+        <a href="/guides/">Guides</a>
+        <span class="nav-cta">
+          <a class="btn btn-secondary" href="https://my.hospitalityapp.co.uk/login">Sign in</a>
+          <a class="btn" href="https://my.hospitalityapp.co.uk/login">Sign up free</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__inner">
+        <span class="eyebrow">Guide · Rota</span>
+        <h1 class="hero__title">Restaurant staff scheduling, done properly.</h1>
+        <p class="hero__sub">Kitchen and front-of-house on one rota, role-aware templates, the swap inbox that handles the chef who texts at 4pm. A working guide for independent UK restaurants who'd rather plate dinner than rebuild a spreadsheet.</p>
+        <div class="hero__cta">
+          <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Sign up free</a>
+          <a class="btn btn-secondary btn-large" href="/for/restaurants">For restaurants overview</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">What it is</span>
+          <h2>Restaurant staff scheduling, defined.</h2>
+          <p>Restaurant staff scheduling is the practice of building shift rotas that match the kitchen brigade and front-of-house team to forecast covers, with role-aware templates, swap-request workflows and live labour-cost percentage as takings come in. Done well, it keeps payroll inside band without leaving the chef short on a Saturday.</p>
+          <p>Done badly, it's three WhatsApp groups, a Sunday-night spreadsheet, and a manager who finds out about the no-show 20 minutes before service.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">The principles</span>
+          <h2>Six rules that make restaurant scheduling work.</h2>
+        </div>
+        <div class="modules">
+          <article class="module-card"><h3>1 · One rota, all roles</h3><p>Kitchen + FOH on one screen. Role chips — KP, CDP, sous, head chef, server, host, runner — assigned to shifts.</p></article>
+          <article class="module-card"><h3>2 · Templates beat blanks</h3><p>"Friday dinner" with the standard brigade saved once, dropped on every Friday. Edit the exceptions, not the whole thing.</p></article>
+          <article class="module-card"><h3>3 · Schedule against covers</h3><p>Last Friday's covers + this Friday's bookings + the weather = your starting point. Not last Friday alone.</p></article>
+          <article class="module-card"><h3>4 · Swap inbox, not group chat</h3><p>Staff post swaps, role-matched colleagues see them, manager approves with one tap. The chat thread disappears.</p></article>
+          <article class="module-card"><h3>5 · Labour-cost % live</h3><p>Today's labour cost calculated from today's rota and yesterday's takings. If it's drifting, you spot it at 3pm, not at month-end.</p></article>
+          <article class="module-card"><h3>6 · Training on the staff record</h3><p>Allergen-trained, level 2 food handler, manual handling — all sit on the staff record. Schedule the trained, not the available.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">The trap</span>
+          <h2>Where restaurant scheduling breaks down.</h2>
+        </div>
+        <div class="faq">
+          <details><summary>"I'll just copy last week."</summary><p>Last week's rota included Tuesday off for half the kitchen because of a wedding. Copy without checking and you'll be short a CDP next Tuesday. Templates by service-day beat copy-paste-by-week every time.</p></details>
+          <details><summary>"WhatsApp's fine for swaps."</summary><p>WhatsApp's fine until two people swap into the same shift and nobody told the duty manager. Swap inbox with approval workflow stops the double-book at the source.</p></details>
+          <details><summary>"Labour cost is a payroll problem."</summary><p>Labour cost is a Tuesday afternoon problem. By Friday, it's structural. By month-end, it's the difference between profit and loss. Live tracking is the only way to manage it.</p></details>
+          <details><summary>"My chef does the kitchen rota separately."</summary><p>Then your chef's rota doesn't see the swap requests from FOH and your FOH rota doesn't see when the kitchen calls in a third KP. One rota, role chips. The chef still owns the kitchen line — they just write it in the same place.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How HospitalityApp does it</span>
+          <h2>Kitchen + FOH, one rota, every service.</h2>
+          <p>Role chips, service-day templates, swap inbox and labour-cost % live as takings come in. Compliance and payroll export sit alongside. From £49 per restaurant per month on Essentials; most kitchens pick Professional (£99) or Complete (£149 with the till + KDS). 14-day free trial.</p>
+        </div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Sign up free</a>
+          <a class="btn btn-secondary btn-large" href="/for/restaurants">See the restaurants playbook</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">FAQ</span>
+          <h2>Restaurant scheduling, asked &amp; answered.</h2>
+        </div>
+        <div class="faq">
+          <details><summary>What is restaurant staff scheduling?</summary><p>The practice of building shift rotas that match the brigade and FOH team to forecast covers, with role-aware templates, swap workflows and live labour-cost %.</p></details>
+          <details><summary>What's a good labour-cost % for a UK restaurant?</summary><p>Most independents target 25–32% labour cost vs net sales. The number that matters is the trend against your own previous quarter, not an industry benchmark.</p></details>
+          <details><summary>Do you need different tools for kitchen and FOH?</summary><p>No. One rota with role chips covers both. Splitting tools doubles admin and breaks swap workflows.</p></details>
+          <details><summary>How do you handle tronc?</summary><p>Tronc is handled by your payroll provider on top of the rota's timesheet. HospitalityApp exports the timesheet CSV ready for any UK payroll provider.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="cta-band">
+          <span class="eyebrow" style="color: oklch(0.85 0.008 60);">Open in 10 minutes</span>
+          <h2>Try it on this Friday.</h2>
+          <p>Sign up free, build a Friday-dinner template, post a swap request, watch labour % update. If it doesn't earn its keep by Sunday, walk away.</p>
+          <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Sign up free</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="brand-lockup" href="/">
+            <span class="brand-lockup__mark" aria-hidden="true"></span>
+            <span>HospitalityApp</span>
+          </a>
+          <p>Rota, compliance and payroll for every kind of UK hospitality venue.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/features">Features</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="https://my.hospitalityapp.co.uk/login">Sign in</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>For venues</h4>
+          <ul>
+            <li><a href="/for/pubs">Pubs</a></li>
+            <li><a href="/for/bars">Bars</a></li>
+            <li><a href="/for/restaurants">Restaurants</a></li>
+            <li><a href="/for/cafes">Cafés</a></li>
+            <li><a href="/for/coffee-shops">Coffee shops</a></li>
+            <li><a href="/for/hotels">Hotels</a></li>
+            <li><a href="/for/bnbs">B&amp;Bs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="mailto:hello@hospitalityapp.co.uk">Contact</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__legal">
+        <span>© <span class="js-year">2026</span> HospitalityApp Ltd · Made in the UK</span>
+        <span>v0.1 · Beta</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/main.js" defer></script>
+</body>
+</html>

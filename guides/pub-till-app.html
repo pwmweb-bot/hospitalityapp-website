@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pub till app — drinks-led EPOS for UK pubs &amp; wet-led bars | HospitalityApp</title>
+  <meta name="description" content="A pub till app built for UK independents: drinks-led menu with half/pint pricing, cellar tie-in, refusal log at the bar, sports-event mode. No per-terminal fees. Sign up free." />
+  <link rel="canonical" href="https://hospitalityapp.co.uk/guides/pub-till-app" />
+  <link rel="alternate" hreflang="en-GB" href="https://hospitalityapp.co.uk/guides/pub-till-app" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:title" content="Pub till app — the drinks-led EPOS | HospitalityApp" />
+  <meta property="og:description" content="A till app built for UK pubs. Drinks-led menu, half/pint pricing, cellar tie-in, refusal log, sports-event mode." />
+  <meta property="og:url" content="https://hospitalityapp.co.uk/guides/pub-till-app" />
+  <meta property="og:image" content="https://hospitalityapp.co.uk/assets/images/screens/till.png" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#F5F1E8" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Pub till app — the drinks-led EPOS for UK pubs",
+        "author": { "@type": "Organization", "name": "HospitalityApp" },
+        "publisher": { "@type": "Organization", "name": "HospitalityApp", "url": "https://hospitalityapp.co.uk/" },
+        "datePublished": "2026-06-09",
+        "dateModified": "2026-06-09",
+        "image": "https://hospitalityapp.co.uk/assets/images/screens/till.png",
+        "mainEntityOfPage": "https://hospitalityapp.co.uk/guides/pub-till-app"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hospitalityapp.co.uk/" },
+          { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://hospitalityapp.co.uk/guides/" },
+          { "@type": "ListItem", "position": 3, "name": "Pub till app", "item": "https://hospitalityapp.co.uk/guides/pub-till-app" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What is a pub till app?", "acceptedAnswer": { "@type": "Answer", "text": "A pub till app is point-of-sale software designed for the rhythms of pub work — a drinks-led menu with half-pint and pint pricing on the same card, fast counter service, cellar-check access from the till, a refusal log a tap away, and a sports-event mode that flips the layout for fixture days. It runs on an iPad or Android tablet behind the bar, replacing legacy EPOS terminals." } },
+          { "@type": "Question", "name": "Is there a free pub till app in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "Several UK till providers offer a free tier — usually limited by transaction volume, feature set or to a single terminal — and most require you to use their card processor (which is where they make their money). HospitalityApp isn't free, but the Complete plan at £149 per venue per month includes the till plus rota, compliance, payroll and kitchen display, and stays processor-agnostic so you keep your existing card-machine contract. If you only want the till alongside Professional features, that's £99 + £59 add-on. The 14-day free trial gives you full Complete features." } },
+          { "@type": "Question", "name": "Does the pub till handle cask vs keg vs cocktails differently?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Each product type is a category with its own card layout — Draught for cask + keg with half/pint pricing, Bottles &amp; Cans for packaged, Wine with bottle/175ml/250ml glass sizes, Spirits with single/double measures, Cocktails with optional spec-card display, Soft &amp; Mixers for the chasers. The till also tracks line-clean dates and gas levels through the same compliance file the brewery rep wants to see." } },
+          { "@type": "Question", "name": "Can bar staff log a refused sale from the till?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — refusal log entry is one tap away on the bar interface. Staff log date, time, reason (under-18, intoxicated, no ID), ID type checked and optional photo. The entry feeds the alcohol licensing compliance file automatically, building the evidence pack the licensing officer asks for on a test-purchase visit." } },
+          { "@type": "Question", "name": "What about Six Nations, Champions League, big-fixture nights?", "acceptedAnswer": { "@type": "Answer", "text": "Sports-event mode flips the till layout for fixture days — bigger touch targets, faster categories, a tab-management strip across the top for table-numbered drink groups. Combine with the sports-event rota template (double-handed bar, glass collector, door staff) from the rota module and the night runs itself." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand-lockup" href="/">
+        <span class="brand-lockup__mark" aria-hidden="true"></span>
+        <span>HospitalityApp</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-toggle__icon"></span>
+      </button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="/features">Features</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/for/">For venues</a>
+        <a href="/guides/">Guides</a>
+        <span class="nav-cta">
+          <a class="btn btn-secondary" href="https://my.hospitalityapp.co.uk/login">Sign in</a>
+          <a class="btn" href="https://my.hospitalityapp.co.uk/login">Sign up free</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__inner">
+        <span class="eyebrow">Guide · Till / POS</span>
+        <h1 class="hero__title">The pub till that knows it's a pub.</h1>
+        <p class="hero__sub">Drinks-led pages, half and pint on the same card, cellar checks one tap away, refusal log at the bar. A pub EPOS built for UK independents — not a retail till with a beer skin on top.</p>
+        <div class="hero__cta">
+          <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Sign up free</a>
+          <a class="btn btn-secondary btn-large" href="/for/pubs">For pubs overview</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <figure style="margin: 0; background: var(--bone-2); border: 1px solid var(--line); border-radius: var(--r-xl); padding: 24px; text-align: center;">
+          <img src="/assets/images/screens/till.png" alt="The Crown &amp; Anchor's pub till in HospitalityApp — Draught category open with 8 lines including Camden Hells, Neck Oil IPA, Guinness, Madrí, Birra Moretti, Aspall Cider, Camden Pale and Guinness 0.0, each with half and pint pricing. Counter sale shows 1 Guinness ½ at £3.20 and 1 Neck Oil IPA ½ at £3.30, total £6.50." width="1180" height="720" loading="eager" style="max-width: 100%; height: auto; border-radius: var(--r-lg); border: 1px solid var(--line); box-shadow: 0 12px 32px -16px oklch(0.10 0.012 60 / 0.18);" />
+          <figcaption style="margin-top: 14px; font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3);">The till on a Friday night — a real pub menu, a real Counter sale</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">What it is</span>
+          <h2>Pub till app, defined.</h2>
+          <p>A pub till app is point-of-sale software designed for the rhythms of pub work — a drinks-led menu with half-pint and pint pricing on the same card, fast counter service, cellar-check access from the till, a refusal log a tap away, and a sports-event mode that flips the layout for fixture days. It runs on an iPad or Android tablet behind the bar, replacing legacy EPOS terminals that were built for retail and grafted onto hospitality afterwards.</p>
+          <p>The difference matters. A retail till with a beer skin doesn't know that a half is half the price of a pint, that Cask Marque audits expect a cellar log, that Friday-night service collapses if the second bartender has to navigate three menus to pour a round.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">The seven features</span>
+          <h2>What a pub till should do.</h2>
+          <p>Use this as the checklist when you're shopping. Anything missing three or more wasn't built for the trade.</p>
+        </div>
+        <div class="modules">
+          <article class="module-card"><h3>1 · Half + pint on one card</h3><p>The fundamental pub-till test. Both prices visible, both tappable, both feeding the same product code. Not a sub-menu, not a modifier, not a separate SKU.</p></article>
+          <article class="module-card"><h3>2 · Drinks-led category order</h3><p>Draught first. Bottles &amp; cans second. Wine, spirits, cocktails, mixers, then food. Match the bar's brain; staff find what they need in under a second.</p></article>
+          <article class="module-card"><h3>3 · Refusal log from the till</h3><p>Bar staff refuse a sale, tap a "Refused" button on the till, log reason + ID type. Entry feeds the alcohol licensing file. Test-purchase season looks after itself.</p></article>
+          <article class="module-card"><h3>4 · Cellar checks one tap away</h3><p>Daily line-clean, gas level, cellar temp — accessible from the till's side button. The brewery rep walks in, you tap export, hand them the PDF.</p></article>
+          <article class="module-card"><h3>5 · Sports-event mode</h3><p>Six Nations Saturday flips the layout — bigger touch targets, tab strip for grouped rounds, faster categories. The Champions League final isn't the night to discover your till's limits.</p></article>
+          <article class="module-card"><h3>6 · Card-processor agnostic</h3><p>Use Stripe, SumUp, Square, Zettle or your existing standalone terminal. The till records the sale; your card machine takes the card. Keep your existing rate.</p></article>
+          <article class="module-card"><h3>7 · Takings feed labour cost</h3><p>Every pint sold updates today's takings, which updates today's labour-cost %. Spot the Wednesday wobble at 3pm, not at month-end.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">A Friday night, scripted</span>
+          <h2>What service looks like on the till.</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>17:00 · Pre-shift open</summary>
+            <p>Duty manager opens the till. Daily compliance prompts surface: fridge temps, cellar gas, line clean if due. Each photographed, each logged. Cash float counted, recorded against opening reading. Bar staff clock in via the till using PIN or face.</p>
+          </details>
+          <details>
+            <summary>19:30 · Two-deep at the bar</summary>
+            <p>Half of Guinness, pint of Neck Oil — three taps. The half/pint card means no fumbling. Card payment via SumUp terminal connected over Bluetooth. Total updates the night's takings in real time. Bartender moves to the next customer.</p>
+          </details>
+          <details>
+            <summary>21:00 · ID check, then refused sale</summary>
+            <p>Customer orders. Bartender asks for ID. ID looks off. Bartender taps "Refused" on the till — picks "Suspected fake ID", time-stamped, brief note, optional photo of the bottle they were going to pour. Entry lands in the licensing file. Customer leaves; bartender moves on.</p>
+          </details>
+          <details>
+            <summary>23:00 · Last orders, then close</summary>
+            <p>Tab strip across the top shows open tabs. Bartender closes each one. Final Z-read run from the till. Takings figure auto-populates today's total. Closing checklist runs through the till: kitchen off, music off, bins out, alarm armed — each photographed.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Cost vs traditional EPOS</span>
+          <h2>What a tied pub pays vs an independent.</h2>
+        </div>
+        <div class="modules">
+          <article class="module-card">
+            <h3>Brewery-supplied EPOS</h3>
+            <p style="color: var(--ink-3); font-size: 14px;">Often "free" with a tied agreement. Real cost: locked into the brewery's stocklist, the brewery's card processor, the brewery's reporting schedule. Renegotiating the tie means migrating tills.</p>
+          </article>
+          <article class="module-card">
+            <h3>Standalone pub EPOS</h3>
+            <p style="color: var(--ink-3); font-size: 14px;">£45–£89/mo software + £400–£1,200 per terminal + integration fees. Decent if you have three tills and a head office. Heavy overhead for a single-site free house.</p>
+          </article>
+          <article class="module-card" style="border-color: var(--brand-accent);">
+            <h3>HospitalityApp till</h3>
+            <p style="color: var(--ink-3); font-size: 14px;">£149/pub/mo Complete — till, KDS, rota, full compliance, payroll. Or £99 Professional + £59 till add-on (£158). Bring any iPad or Android tablet. Processor-agnostic — keep your existing card machine. No tie, no migration fee.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">FAQ</span>
+          <h2>Pub till apps, asked &amp; answered.</h2>
+        </div>
+        <div class="faq">
+          <details><summary>What is a pub till app?</summary><p>POS software built for pub work — drinks-led menu with half/pint pricing, cellar tie-in, refusal log access, sports-event mode. Runs on iPad or Android tablet behind the bar.</p></details>
+          <details><summary>Is there a free pub till app in the UK?</summary><p>Several offer a free tier, usually with caveats (single terminal, locked-in card processor). HospitalityApp: Complete £149/mo includes till + KDS + rota + full compliance + payroll, or add the till to Professional (£99 + £59 = £158). 14-day free trial.</p></details>
+          <details><summary>Does the pub till handle cask vs keg vs cocktails differently?</summary><p>Yes — each is a category with its own card layout. Cellar tie-in tracks line-clean and gas levels alongside.</p></details>
+          <details><summary>Can bar staff log a refused sale from the till?</summary><p>Yes — refusal log is one tap. Feeds the alcohol licensing compliance file automatically.</p></details>
+          <details><summary>What about Six Nations / Champions League nights?</summary><p>Sports-event mode flips the layout for fixture days — bigger touch targets, tab strip for grouped rounds. Combine with the sports-event rota template.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Related guides</span>
+          <h2>Read next.</h2>
+        </div>
+        <div class="modules">
+          <article class="module-card">
+            <h3>Cellar checks app</h3>
+            <p>Daily line clean, gas, cellar temp — the brewery rep's questions, answered before they're asked.</p>
+            <a href="/guides/cellar-checks-app">Read the guide</a>
+          </article>
+          <article class="module-card">
+            <h3>Alcohol licensing records</h3>
+            <p>Refusal log, Challenge 25, DPS notice — what the licensing officer asks for on every visit.</p>
+            <a href="/guides/alcohol-licensing-records">Read the guide</a>
+          </article>
+          <article class="module-card">
+            <h3>Pub rota software</h3>
+            <p>Role chips, sports-event templates, swap inbox — the rota that runs a Saturday night.</p>
+            <a href="/guides/pub-rota-software">Read the guide</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="cta-band">
+          <span class="eyebrow" style="color: oklch(0.85 0.008 60);">Open in 10 minutes</span>
+          <h2>Pour a half on it.</h2>
+          <p>Sign up free, set up the Draught page, take your first pint sale. If it doesn't beat what you're using now by Sunday, walk away.</p>
+          <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Sign up free</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="brand-lockup" href="/">
+            <span class="brand-lockup__mark" aria-hidden="true"></span>
+            <span>HospitalityApp</span>
+          </a>
+          <p>Rota, compliance and payroll for every kind of UK hospitality venue.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/features">Features</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="https://my.hospitalityapp.co.uk/login">Sign in</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>For venues</h4>
+          <ul>
+            <li><a href="/for/pubs">Pubs</a></li>
+            <li><a href="/for/bars">Bars</a></li>
+            <li><a href="/for/restaurants">Restaurants</a></li>
+            <li><a href="/for/cafes">Cafés</a></li>
+            <li><a href="/for/coffee-shops">Coffee shops</a></li>
+            <li><a href="/for/hotels">Hotels</a></li>
+            <li><a href="/for/bnbs">B&amp;Bs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="mailto:hello@hospitalityapp.co.uk">Contact</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__legal">
+        <span>© <span class="js-year">2026</span> HospitalityApp Ltd · Made in the UK</span>
+        <span>v0.1 · Beta</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/main.js" defer></script>
+</body>
+</html>
