@@ -7,15 +7,16 @@ The product app lives at `my.hospitalityapp.co.uk` (separate Vercel project).
 
 ## Editing
 
-This repo is a snapshot deploy target. The source-of-truth lives in the
-`venuebase` monorepo at `apps/marketing/public/`. To update:
+**This repo is the source of truth for the marketing site.** Edit the HTML
+here directly. (The old `venuebase/apps/marketing/public/` copy is stale and
+abandoned — do NOT `cp -R` from it; it would wipe the newer pages.)
 
-1. Edit in the monorepo.
-2. Copy the contents across:
-   ```
-   cp -R /path/to/venuebase/apps/marketing/public/. /path/to/hospitalityapp-website/
-   ```
-3. Commit + push. 20i pulls automatically.
+To update and deploy:
+
+1. Edit the HTML here, commit to `main`.
+2. Run `./scripts/deploy.sh` — it pushes to GitHub, then SSHes to 20i and
+   `git pull`s the live web root (`~/site-source`). 20i's own auto-pull has
+   been unreliable, so the script makes the server pull explicit.
 
 ## Pages
 
