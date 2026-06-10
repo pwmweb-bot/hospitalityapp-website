@@ -17,6 +17,65 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#F5F1E8" />
   <link rel="stylesheet" href="/assets/styles.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hospitalityapp.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "For venues",
+          "item": "https://hospitalityapp.co.uk/for/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Pubs",
+          "item": "https://hospitalityapp.co.uk/for/pubs"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you handle the brewery's BPI / EPOS data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not directly — takings are entered as gross daily / weekly figures so the app stays EPOS-agnostic. Most pubs find that's faster than wiring a feed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can my DPS sign off compliance entries?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Anyone with a manager flag on the staff record can approve, log and edit. Staff (non-managers) can log entries but can't change the structure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What about underage refusals — do you log those?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The alcohol licensing category includes a refusal log entry with date, time, reason and optional photo. Inspectors will ask; this is where it lives."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -138,6 +197,22 @@
             <summary>What about underage refusals — do you log those?</summary>
             <p>Yes. The alcohol licensing category includes a refusal log entry with date, time, reason and optional photo. Inspectors will ask; this is where it lives.</p>
           </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Guides</span>
+          <h2>Guides for pubs.</h2>
+          <p>Practical, no-fluff guides for running pubs on HospitalityApp.</p>
+        </div>
+        <div class="modules">
+          <article class="module-card"><h3><a href="/guides/pub-till-app">Pub till app</a></h3><p>Read the guide &rarr;</p></article>
+          <article class="module-card"><h3><a href="/guides/pub-rota-software">Pub rota software</a></h3><p>Read the guide &rarr;</p></article>
+          <article class="module-card"><h3><a href="/guides/cellar-checks-app">Cellar checks app</a></h3><p>Read the guide &rarr;</p></article>
+          <article class="module-card"><h3><a href="/guides/alcohol-licensing-records">Alcohol licensing records</a></h3><p>Read the guide &rarr;</p></article>
         </div>
       </div>
     </section>

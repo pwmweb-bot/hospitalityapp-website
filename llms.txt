@@ -1,0 +1,49 @@
+# HospitalityApp
+
+> The all-in-one operations app for independent UK hospitality — pubs, bars, restaurants, cafés, coffee shops, hotels and B&Bs. One app for staff rota, compliance records, till/POS, kitchen display, menu, clock-in, daily takings and payroll-ready timesheets. Built for owner-operators, not enterprise chains.
+
+HospitalityApp is a UK SaaS product. The marketing site is hospitalityapp.co.uk; the product itself runs at my.hospitalityapp.co.uk (iOS, Android and web). Pricing is per venue, per month, with a free trial: Essentials £49, Professional £99, Complete · Venue OS £149, plus an optional Till add-on (POS + KDS) £59. There are no per-terminal or per-user fees.
+
+## What it does
+- Staff rota & shift scheduling: drag-and-drop rota, role chips, open shifts, staff availability, shift-swap requests with manager approval, shift offers, time-off and holiday tracking.
+- Clock-in: photo or 4-digit PIN clock-in to deter buddy-punching; ad-hoc clock-in; timesheets reconcile against the rota.
+- Compliance records: food safety/HACCP with photo evidence, fridge/cellar temperature logs, alcohol-licensing records and refusal logs, fire safety, allergens, health & safety — all photo-evidenced and export-ready for inspectors.
+- Till / POS: counter and table service for pubs, bars, restaurants and cafés; half/pint and measure pricing; per-item VAT; email receipts.
+- Kitchen display (KDS): station routing and prep tickets.
+- Menu management across till and dine-in channels.
+- Takings & labour: daily takings entry, labour-cost percentage, payroll-ready timesheet CSV export.
+- Team comms: noticeboard, broadcasts, direct messages, push notifications.
+- Daily task checklists: opening, mid-shift and closing routines.
+- Multi-site dashboard and reports.
+
+## Key pages
+- [Home](https://hospitalityapp.co.uk/): overview and primary features.
+- [Features](https://hospitalityapp.co.uk/features): full feature list by area.
+- [Pricing](https://hospitalityapp.co.uk/pricing): plans, the Till add-on, and FAQs.
+
+## By venue type
+- [Pubs](https://hospitalityapp.co.uk/for/pubs)
+- [Bars](https://hospitalityapp.co.uk/for/bars)
+- [Restaurants](https://hospitalityapp.co.uk/for/restaurants)
+- [Cafés](https://hospitalityapp.co.uk/for/cafes)
+- [Coffee shops](https://hospitalityapp.co.uk/for/coffee-shops)
+- [Hotels](https://hospitalityapp.co.uk/for/hotels)
+- [B&Bs](https://hospitalityapp.co.uk/for/bnbs)
+
+## Guides
+- [Hospitality POS (UK)](https://hospitalityapp.co.uk/guides/hospitality-pos-uk)
+- [Pub till app](https://hospitalityapp.co.uk/guides/pub-till-app)
+- [Pub rota software](https://hospitalityapp.co.uk/guides/pub-rota-software)
+- [Restaurant staff scheduling](https://hospitalityapp.co.uk/guides/restaurant-staff-scheduling)
+- [Hospitality rota app](https://hospitalityapp.co.uk/guides/hospitality-rota-app)
+- [Food hygiene compliance](https://hospitalityapp.co.uk/guides/food-hygiene-compliance)
+- [HACCP app](https://hospitalityapp.co.uk/guides/haccp-app)
+- [Alcohol licensing records](https://hospitalityapp.co.uk/guides/alcohol-licensing-records)
+- [Cellar checks app](https://hospitalityapp.co.uk/guides/cellar-checks-app)
+- [Fridge temperature log](https://hospitalityapp.co.uk/guides/fridge-temperature-log)
+- [Closing shift checklist](https://hospitalityapp.co.uk/guides/closing-shift-checklist)
+- [Clock-in app](https://hospitalityapp.co.uk/guides/clock-in-app)
+
+## Contact
+- Email: hello@hospitalityapp.co.uk
+- Made in the UK.

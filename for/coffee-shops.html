@@ -17,6 +17,65 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#F5F1E8" />
   <link rel="stylesheet" href="/assets/styles.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hospitalityapp.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "For venues",
+          "item": "https://hospitalityapp.co.uk/for/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Coffee shops",
+          "item": "https://hospitalityapp.co.uk/for/coffee-shops"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What's the difference vs the cafés page?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Coffee shops tend to be coffee-led with a tight food offer (pastries, toasties). The cafés playbook leans broader — cooked breakfast, lunch service. Pick whichever fits your menu; you can switch later."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it cover Natasha's Law (PPDS labelling)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The allergen log holds your matrix and per-product allergen data; the labelling itself happens at the till or label printer. We track PPDS rule changes and will ship a label module when shops need it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you integrate with Square / Lightspeed / iZettle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not in v1 — takings entered as gross daily / weekly figures so the app stays till-agnostic. POS integrations are on the roadmap; meanwhile most shops paste a daily total in 30 seconds."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -137,6 +196,22 @@
             <summary>Do you integrate with Square / Lightspeed / iZettle?</summary>
             <p>Not in v1 — takings entered as gross daily / weekly figures so the app stays till-agnostic. POS integrations are on the roadmap; meanwhile most shops paste a daily total in 30 seconds.</p>
           </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Guides</span>
+          <h2>Guides for coffee shops.</h2>
+          <p>Practical, no-fluff guides for running coffee shops on HospitalityApp.</p>
+        </div>
+        <div class="modules">
+          <article class="module-card"><h3><a href="/guides/hospitality-pos-uk">Hospitality POS (UK)</a></h3><p>Read the guide &rarr;</p></article>
+          <article class="module-card"><h3><a href="/guides/hospitality-rota-app">Hospitality rota app</a></h3><p>Read the guide &rarr;</p></article>
+          <article class="module-card"><h3><a href="/guides/food-hygiene-compliance">Food hygiene compliance</a></h3><p>Read the guide &rarr;</p></article>
+          <article class="module-card"><h3><a href="/guides/clock-in-app">Clock-in app</a></h3><p>Read the guide &rarr;</p></article>
         </div>
       </div>
     </section>

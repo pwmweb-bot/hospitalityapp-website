@@ -2,3 +2,6 @@
 node_modules/
 .env
 *.log
+
+# local preview-server helper (not for deploy)
+.claude/
