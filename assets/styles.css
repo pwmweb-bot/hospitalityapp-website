@@ -695,11 +695,10 @@ p { margin: 0 0 1em; }
 .phone {
   width: 280px;
   max-width: 100%;
-  /* Match the PNG dimensions exactly. iOS status bar + Dynamic Island
-     have been cropped out of the source PNGs (now 1290 × 2436), so the
-     bezel just needs to mirror that ratio — no CSS cropping needed,
-     no Safari/Chrome rendering differences. */
-  aspect-ratio: 1290 / 2436;
+  /* Image-driven height — the bezel wraps the screenshot at its natural
+     1290 × 2436 ratio. We deliberately avoid `aspect-ratio` + height:100%
+     here: Safari collapses a percentage-height child of an aspect-ratio
+     box, which left a dark bezel block showing under the screenshot. */
   background: #1a1612;
   border-radius: 38px;
   padding: 6px;
@@ -712,8 +711,7 @@ p { margin: 0 0 1em; }
 }
 .phone img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   border-radius: 32px;
   display: block;
 }
@@ -734,7 +732,7 @@ p { margin: 0 0 1em; }
 @media (min-width: 960px) {
   .hero-phone { grid-template-columns: 1.25fr 1fr; gap: 64px; }
 }
-.phone--hero { aspect-ratio: 1290 / 2436; }
+/* .phone--hero height comes from the image (see .phone img) — no aspect-ratio. */
 
 /* Stack: main phone + a rotated rota fragment behind it (editorial layout). */
 .hero-phone-stack {

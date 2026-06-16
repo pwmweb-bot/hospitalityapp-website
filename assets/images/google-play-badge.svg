@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 135 40" width="135" height="40" role="img" aria-label="Get it on Google Play">
-  <rect x="0.5" y="0.5" width="134" height="39" rx="7" fill="#000" stroke="#A6A6A6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 40" width="150" height="40" role="img" aria-label="Get it on Google Play">
+  <rect x="0.5" y="0.5" width="149" height="39" rx="7" fill="#000" stroke="#A6A6A6"/>
   <defs>
     <linearGradient id="gpg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#00C3FF"/>
@@ -8,7 +8,7 @@
       <stop offset="1" stop-color="#FF3D00"/>
     </linearGradient>
   </defs>
-  <path d="M13 9 L13 31 L31.5 20 Z" fill="url(#gpg)"/>
-  <text x="40" y="16" fill="#fff" font-family="Helvetica, Arial, sans-serif" font-size="8">GET IT ON</text>
-  <text x="39.5" y="31" fill="#fff" font-family="Helvetica, Arial, sans-serif" font-size="16.5" font-weight="600">Google Play</text>
+  <path d="M14 9 L14 31 L32 20 Z" fill="url(#gpg)"/>
+  <text x="44" y="16" fill="#fff" font-family="Helvetica, Arial, sans-serif" font-size="8">GET IT ON</text>
+  <text x="43.5" y="30.5" fill="#fff" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="600">Google Play</text>
 </svg>
