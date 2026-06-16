@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Features — Rota, compliance, till, menu, clock-in &amp; payroll | HospitalityApp</title>
-  <meta name="description" content="Staff rota, 10-category compliance with photo evidence, till/POS for pubs and restaurants, kitchen display, menu management, clock-in (anti buddy-punching), labour-cost % live and payroll exports. One UK hospitality app." />
+  <meta name="description" content="Staff rota, 10-category compliance with photo evidence, till/POS for pubs and restaurants, kitchen display, menu, stock control, gross-profit margins, clock-in (anti buddy-punching), labour-cost % live and payroll exports. One UK hospitality app." />
   <link rel="canonical" href="https://hospitalityapp.co.uk/features" />
   <link rel="alternate" hreflang="en-GB" href="https://hospitalityapp.co.uk/features" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -105,7 +105,7 @@
       <div class="container hero__inner">
         <span class="eyebrow">Everything in the box</span>
         <h1 class="hero__title">Everything a venue needs in one app.</h1>
-        <p class="hero__sub">Rota, compliance, till, kitchen display, menu, clock-in, takings and payroll — every module tightly scoped, no upsell tricks. The same data flows from rota → clock-in → labour cost → till → takings → compliance audit, so you never re-key it.</p>
+        <p class="hero__sub">Rota, compliance, till, kitchen display, menu, stock, gross-profit margins, clock-in, takings and payroll — every module tightly scoped, no upsell tricks. The same data flows from rota → clock-in → labour cost → till → takings → compliance audit, so you never re-key it.</p>
       </div>
     </section>
 
@@ -167,6 +167,42 @@
         </div>
         <div class="feature-row__media">
           <img src="/assets/images/screens/till.png" alt="The HospitalityApp till in pub mode at the Crown &amp; Anchor, showing the Draught menu — Camden Hells, Neck Oil IPA, Guinness, Madrí, Birra Moretti, Aspall Cider, Camden Pale and Guinness 0.0 — with half and pint pricing, plus a Counter sale totalling £6.50." width="1180" height="720" loading="lazy" style="max-width: 100%; height: auto; border-radius: var(--r-lg); border: 1px solid var(--line); box-shadow: 0 12px 32px -16px oklch(0.10 0.012 60 / 0.18);" />
+        </div>
+      </article>
+
+      <article class="feature-row is-flipped" id="stock">
+        <div class="feature-row__copy">
+          <span class="eyebrow">Stock &amp; margins</span>
+          <h2>Know your stock — and your margins.</h2>
+          <p>Track what's behind the bar and in the cellar, set reorder limits, and let the till do the counting. Every sale depletes stock by the exact measure poured, so your levels stay honest without a clipboard.</p>
+          <ul class="feature-row__list">
+            <li>Live stock levels per item — bottles, kegs, cases — with par and reorder limits</li>
+            <li>Low-stock "to order" list grouped by supplier, so ordering takes minutes</li>
+            <li>Auto-depletion on sale: a linked product drops stock by its pour (ml ÷ container size)</li>
+            <li>Receive, waste, count and adjustment movements — a full, dated stock ledger</li>
+            <li>Stocktakes that reconcile counted vs system in one tap</li>
+          </ul>
+          <p style="margin-top: 18px;"><span id="margins"></span><strong>Gross-profit margins.</strong> Set a cost on every product and the till shows its GP% <span style="font-family: var(--mono); font-size: 0.9em;">(price − cost) ÷ price</span>. For drinks, enter the container cost and size once — the per-measure cost and margin calculate themselves.</p>
+        </div>
+        <div class="feature-row__media">
+          <div style="background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 18px 18px 20px; box-shadow: 0 12px 32px -16px oklch(0.10 0.012 60 / 0.18); max-width: 360px; width: 100%;">
+            <div style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 12px;">To order · Camden Town Brewery</div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line);">
+              <span style="font-size: 14px; color: var(--ink);">Camden Hells <span style="color: var(--ink-3); font-size: 12px;">· keg</span></span>
+              <span style="font-size: 11px; font-weight: 700; color: #b23b3b; background: #fbeaea; border-radius: 999px; padding: 2px 8px;">LOW · order 2</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0;">
+              <span style="font-size: 14px; color: var(--ink);">House Malbec <span style="color: var(--ink-3); font-size: 12px;">· bottle</span></span>
+              <span style="font-size: 11px; font-weight: 700; color: #b23b3b; background: #fbeaea; border-radius: 999px; padding: 2px 8px;">LOW · order 12</span>
+            </div>
+            <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line);">
+              <div style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 8px;">Margin · House Malbec 175ml</div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <span style="font-size: 13px; color: var(--ink-2);">£6.50 sell · £1.49 cost</span>
+                <span style="font-size: 18px; font-weight: 700; color: #2e7d54;">GP 77%</span>
+              </div>
+            </div>
+          </div>
         </div>
       </article>
 
