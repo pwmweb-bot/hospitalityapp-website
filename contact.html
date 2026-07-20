@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact us &amp; book a demo | HospitalityApp</title>
+  <meta name="description" content="Talk to HospitalityApp — book a demo, ask about multi-site, or get help. One system for rota, compliance, till and payroll across UK hospitality venues." />
+  <link rel="canonical" href="https://hospitalityapp.co.uk/contact" />
+  <link rel="alternate" hreflang="en-GB" href="https://hospitalityapp.co.uk/contact" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:title" content="Contact us &amp; book a demo | HospitalityApp" />
+  <meta property="og:description" content="Book a demo or ask us anything — one system for rota, compliance, till and payroll for UK hospitality." />
+  <meta property="og:url" content="https://hospitalityapp.co.uk/contact" />
+  <meta property="og:image" content="https://hospitalityapp.co.uk/assets/images/og/home.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#F5F1E8" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <style>
+    .contact-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 48px; align-items: start; }
+    @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; gap: 32px; } }
+    .contact-form { display: grid; gap: 18px; }
+    .cf-two { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    @media (max-width: 560px) { .cf-two { grid-template-columns: 1fr; } }
+    .cf-row { display: grid; gap: 7px; }
+    .cf-label { font-family: var(--sans); font-size: 14px; font-weight: 600; color: var(--ink-2); }
+    .cf-label .req { color: var(--brand-accent); }
+    .cf-input, .cf-select, .cf-textarea {
+      font-family: var(--sans); font-size: 15px; color: var(--ink); width: 100%;
+      background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-md);
+      padding: 12px 14px; transition: border-color 150ms ease, box-shadow 150ms ease;
+    }
+    .cf-input:focus, .cf-select:focus, .cf-textarea:focus {
+      outline: none; border-color: var(--brand-accent); box-shadow: 0 0 0 3px var(--brand-accent-tint);
+    }
+    .cf-textarea { min-height: 148px; resize: vertical; }
+    .cf-hp { position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .cf-fineprint { font-size: 13px; color: var(--ink-3); margin-top: 2px; }
+    .cf-banner { border-radius: var(--r-md); padding: 14px 16px; margin-bottom: 26px; font-size: 15px; display: none; }
+    .cf-banner.ok  { background: var(--sage-tint); color: var(--sage); border: 1px solid var(--sage); }
+    .cf-banner.err { background: var(--burgundy-tint); color: var(--burgundy); border: 1px solid var(--burgundy); }
+    .contact-aside { display: grid; gap: 26px; }
+    .contact-aside h3 { font-family: var(--sans); font-size: 15px; font-weight: 700; color: var(--ink); margin: 0 0 8px; }
+    .contact-aside p { font-size: 14px; color: var(--ink-3); margin: 0; line-height: 1.6; }
+    .contact-aside a { color: var(--brand-accent-ink); }
+    .contact-aside ol { margin: 8px 0 0; padding-left: 18px; font-size: 14px; color: var(--ink-3); line-height: 1.7; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand-lockup" href="/">
+        <span class="brand-lockup__mark" aria-hidden="true"></span>
+        <span>HospitalityApp</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-toggle__icon"></span>
+      </button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="/features">Features</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/for/">For venues</a>
+        <a href="/guides/">Guides</a>
+        <a href="/multi-site">Multi-site</a>
+        <span class="nav-cta">
+          <a class="btn btn-secondary" href="https://my.hospitalityapp.co.uk/login">Sign in</a>
+          <a class="btn" href="https://my.hospitalityapp.co.uk/login">Sign up free</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__inner">
+        <span class="eyebrow">Contact</span>
+        <h1 class="hero__title">Book a demo, or ask us anything.</h1>
+        <p class="hero__sub">Want to see the till, the rota and payroll working together on your kind of venue? Tell us a little about you and we'll set up a walkthrough — or just get an answer to your question. We reply within one working day.</p>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div id="cf-banner" class="cf-banner" role="status" aria-live="polite"></div>
+        <div class="contact-grid">
+          <form id="contact-form-el" class="contact-form" action="/contact.php" method="post">
+            <div class="cf-two">
+              <div class="cf-row">
+                <label class="cf-label" for="cf-name">Your name <span class="req">*</span></label>
+                <input class="cf-input" id="cf-name" name="name" type="text" required autocomplete="name" />
+              </div>
+              <div class="cf-row">
+                <label class="cf-label" for="cf-venue">Venue name</label>
+                <input class="cf-input" id="cf-venue" name="venue" type="text" autocomplete="organization" />
+              </div>
+            </div>
+
+            <div class="cf-two">
+              <div class="cf-row">
+                <label class="cf-label" for="cf-email">Email <span class="req">*</span></label>
+                <input class="cf-input" id="cf-email" name="email" type="email" required autocomplete="email" />
+              </div>
+              <div class="cf-row">
+                <label class="cf-label" for="cf-phone">Phone</label>
+                <input class="cf-input" id="cf-phone" name="phone" type="tel" autocomplete="tel" />
+              </div>
+            </div>
+
+            <div class="cf-row">
+              <label class="cf-label" for="cf-type">What can we help with?</label>
+              <select class="cf-select" id="cf-type" name="type">
+                <option value="general">General enquiry</option>
+                <option value="demo">Book a demo</option>
+                <option value="multisite">Multi-site walkthrough</option>
+                <option value="support">Support</option>
+              </select>
+            </div>
+
+            <div class="cf-row">
+              <label class="cf-label" for="cf-message">Message <span class="req">*</span></label>
+              <textarea class="cf-textarea" id="cf-message" name="message" required placeholder="Tell us about your venue and what you'd like to see."></textarea>
+            </div>
+
+            <!-- Honeypot: real people never see or fill this. -->
+            <div class="cf-hp" aria-hidden="true">
+              <label for="cf-company-website">Company website</label>
+              <input id="cf-company-website" name="company_website" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div>
+              <button class="btn btn-large" type="submit">Send message</button>
+              <p class="cf-fineprint">We'll only use your details to reply to this enquiry. See our <a href="/privacy">privacy notice</a>.</p>
+            </div>
+          </form>
+
+          <aside class="contact-aside">
+            <div>
+              <h3>Prefer email?</h3>
+              <p>Write to us any time at <a href="mailto:hello@hospitalityapp.co.uk">hello@hospitalityapp.co.uk</a> and we'll pick it up.</p>
+            </div>
+            <div>
+              <h3>What happens next</h3>
+              <ol>
+                <li>We reply within one working day.</li>
+                <li>For a demo, we'll book a 20-minute walkthrough at a time that suits your service.</li>
+                <li>No hard sell — you can start a free trial whenever you're ready.</li>
+              </ol>
+            </div>
+            <div>
+              <h3>Already decided?</h3>
+              <p>You don't have to wait for us — <a href="https://my.hospitalityapp.co.uk/login">sign up free</a> and start a 30-day trial on your own venue today.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="brand-lockup" href="/">
+            <span class="brand-lockup__mark" aria-hidden="true"></span>
+            <span>HospitalityApp</span>
+          </a>
+          <p>Rota, compliance and payroll for every kind of UK hospitality venue.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/features">Features</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/multi-site">Multi-site</a></li>
+            <li><a href="https://my.hospitalityapp.co.uk/login">Sign in</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>For venues</h4>
+          <ul>
+            <li><a href="/for/pubs">Pubs</a></li>
+            <li><a href="/for/bars">Bars</a></li>
+            <li><a href="/for/restaurants">Restaurants</a></li>
+            <li><a href="/for/cafes">Cafés</a></li>
+            <li><a href="/for/coffee-shops">Coffee shops</a></li>
+            <li><a href="/for/hotels">Hotels</a></li>
+            <li><a href="/for/bnbs">B&amp;Bs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__apps" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:18px 0 6px;"><span style="font-size:13px;color:var(--ink-3);">Get the app</span><div class="store-badges" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;"><a href="https://apps.apple.com/gb/app/hospitalityappuk/id6768234673" target="_blank" rel="noopener" aria-label="Download HospitalityApp on the App Store"><img src="/assets/images/app-store-badge.svg" alt="Download on the App Store" width="135" height="40" loading="lazy" /></a><a href="https://play.google.com/store/apps/details?id=co.uk.hospitalities.staff" target="_blank" rel="noopener" aria-label="Get HospitalityApp on Google Play"><img src="/assets/images/google-play-badge.svg" alt="Get it on Google Play" width="150" height="40" loading="lazy" /></a></div></div>
+      <div class="site-footer__legal">
+        <span>© <span class="js-year">2026</span> Psychemeta Ltd · HospitalityApp is a <a href="https://psychemeta.com" target="_blank" rel="noopener">Psychemeta</a> product · Made in the UK</span>
+        <span>Hosted in the EU · GDPR by default</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/main.js" defer></script>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var banner = document.getElementById('cf-banner');
+      var form = document.getElementById('contact-form-el');
+      if (params.get('sent') === '1' && banner) {
+        banner.className = 'cf-banner ok';
+        banner.textContent = 'Thanks — your message is on its way. We’ll reply within one working day.';
+        banner.style.display = 'block';
+        if (form) form.style.display = 'none';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (params.get('error') && banner) {
+        banner.className = 'cf-banner err';
+        banner.textContent = params.get('error') === 'validation'
+          ? 'Please add your name, a valid email and a message, then send again.'
+          : 'Sorry — we couldn’t send that. Please email hello@hospitalityapp.co.uk directly.';
+        banner.style.display = 'block';
+      }
+      var type = params.get('type');
+      var sel = document.getElementById('cf-type');
+      if (type && sel) {
+        for (var i = 0; i < sel.options.length; i++) {
+          if (sel.options[i].value === type) { sel.selectedIndex = i; break; }
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
