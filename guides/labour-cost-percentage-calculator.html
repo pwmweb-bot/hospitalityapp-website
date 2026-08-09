@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Labour-cost percentage — the formula, benchmarks &amp; calculator | HospitalityApp</title>
+  <meta name="description" content="Labour cost ÷ sales × 100. UK hospitality benchmarks by venue type, why 28-32% is a healthy pub target and 26-30% is a healthy restaurant target, and how to run it live from the rota — not after payday." />
+  <link rel="canonical" href="https://hospitalityapp.co.uk/guides/labour-cost-percentage-calculator" />
+  <link rel="alternate" hreflang="en-GB" href="https://hospitalityapp.co.uk/guides/labour-cost-percentage-calculator" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:title" content="Labour-cost percentage — the formula &amp; benchmarks | HospitalityApp" />
+  <meta property="og:description" content="The formula, UK hospitality benchmarks by venue type, live vs post-hoc, and how to hit target." />
+  <meta property="og:url" content="https://hospitalityapp.co.uk/guides/labour-cost-percentage-calculator" />
+  <meta property="og:image" content="https://hospitalityapp.co.uk/assets/images/screens/takings.png" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#F5F1E8" />
+  <link rel="stylesheet" href="/assets/styles.css?v=20260809a" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Labour-cost percentage — the formula, benchmarks and how to hit target",
+        "author": { "@type": "Organization", "name": "HospitalityApp" },
+        "publisher": { "@type": "Organization", "name": "HospitalityApp", "url": "https://hospitalityapp.co.uk/" },
+        "datePublished": "2026-08-09",
+        "dateModified": "2026-08-09",
+        "image": "https://hospitalityapp.co.uk/assets/images/screens/takings.png",
+        "mainEntityOfPage": "https://hospitalityapp.co.uk/guides/labour-cost-percentage-calculator"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hospitalityapp.co.uk/" },
+          { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://hospitalityapp.co.uk/guides/" },
+          { "@type": "ListItem", "position": 3, "name": "Labour-cost percentage calculator", "item": "https://hospitalityapp.co.uk/guides/labour-cost-percentage-calculator" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What's the labour-cost percentage formula?", "acceptedAnswer": { "@type": "Answer", "text": "Labour cost divided by sales, multiplied by 100. Labour cost is the total wage bill for the period — hours worked × hourly rate for every worker on shift, plus employer NIC and pension contributions if you want a fully-loaded figure. Sales is gross takings for the same period, excluding VAT (which is not yours). So: (total wages ÷ net sales) × 100." } },
+          { "@type": "Question", "name": "What are healthy UK hospitality benchmarks?", "acceptedAnswer": { "@type": "Answer", "text": "Rough industry benchmarks: wet-led pub 22-28%, food-led pub 28-34%, casual dining restaurant 26-32%, fine dining 30-38%, café / coffee shop 25-32%, hotel F&amp;B 28-35%. These are gross-labour-to-net-sales figures; if you're including employer NIC and pension, add 2-4 percentage points. A single-venue independent is usually running higher than a chain because they don't have the volume to absorb management overhead." } },
+          { "@type": "Question", "name": "Why does 'live' matter?", "acceptedAnswer": { "@type": "Answer", "text": "Because a rota you can't cost until payday is a rota you can't fix. A rota with a live labour-cost ticker updates the running £ and % as you drag shifts on, so you find out you've over-rostered while building — not on Monday morning when the wage bill lands. The single most expensive mistake in the business is over-rostering; the software should catch it before you Publish." } },
+          { "@type": "Question", "name": "What's a good target labour %?", "acceptedAnswer": { "@type": "Answer", "text": "Set a target that's on the low side of your benchmark range and run against it in green / amber / red bands: within +2 percentage points is green (fine), +2 to +5 is amber (watch), more than +5 is red (act). Publishing a rota that breaks the red band should raise a confirmation dialog — a deliberate speed bump that most independent operators find is the moment the number actually lands." } },
+          { "@type": "Question", "name": "Should I include the owner's hours?", "acceptedAnswer": { "@type": "Answer", "text": "For sanity, yes — assign the owner a notional hourly rate and include their working hours. Otherwise the labour figure flatters as owner-operators absorb work into unpaid time, and when you try to hire a manager to replace the owner, the labour figure jumps by five points overnight. Better to know now." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand-lockup" href="/">
+        <span class="brand-lockup__mark" aria-hidden="true"></span>
+        <span>HospitalityApp</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-toggle__icon"></span>
+      </button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="/features/">Features</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/for/">For venues</a>
+        <a href="/guides/" aria-current="page">Guides</a>
+        <a href="/multi-site">Multi-site</a>
+        <span class="nav-cta">
+          <a class="btn btn-secondary" href="https://my.hospitalityapp.co.uk/login">Sign in</a>
+          <a class="btn" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__inner">
+        <span class="eyebrow">Guide · Labour cost</span>
+        <h1 class="hero__title">Labour cost, live not post-hoc.</h1>
+        <p class="hero__sub">The formula, the UK hospitality benchmarks, the green / amber / red banding — and why a rota that shows the running £ and % as you drag is the difference between running the number and being run by it.</p>
+        <div class="hero__cta">
+          <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
+          <a class="btn btn-secondary btn-large" href="/features/rota">See the rota module</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">The formula</span>
+          <h2>Labour ÷ Sales × 100.</h2>
+          <p>Labour cost divided by sales, times a hundred. Two figures, one ratio. What matters is the definitions.</p>
+        </div>
+        <div style="max-width: 780px;">
+          <p><strong>Labour cost</strong> is the total wage bill for the period. Hours worked × hourly rate for every worker on shift, summed. If you want a fully-loaded figure (recommended), add employer NIC (13.8% on earnings above the secondary threshold) and pension contributions (3% minimum under auto-enrolment for eligible workers).</p>
+          <p><strong>Sales</strong> is gross takings for the same period, <em>excluding VAT</em>. VAT is not yours — it's held for HMRC. Including it inflates the denominator and flatters the ratio by around 17%. Most operators run their labour % against net sales.</p>
+          <p><strong>Period</strong> matters. Daily gives you spikes and troughs that mean little. Weekly is the sweet spot for operational decisions. Monthly matches the accountant's view but is too slow to change anything.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">UK benchmarks</span>
+          <h2>Healthy labour-cost % by venue type.</h2>
+          <p>Rough ranges for a single-venue independent, gross labour to net sales. Add 2–4 percentage points if you're loading employer NIC and pension into the labour figure.</p>
+        </div>
+        <div style="max-width: 780px; overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--line);">
+                <th style="text-align: left; padding: 12px 8px;">Venue type</th>
+                <th style="text-align: left; padding: 12px 8px;">Healthy range</th>
+                <th style="text-align: left; padding: 12px 8px;">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--line);"><td style="padding: 10px 8px;">Wet-led pub</td><td style="padding: 10px 8px;">22–28%</td><td style="padding: 10px 8px;">Lower because drinks are self-service in pattern</td></tr>
+              <tr style="border-bottom: 1px solid var(--line);"><td style="padding: 10px 8px;">Food-led pub / gastropub</td><td style="padding: 10px 8px;">28–34%</td><td style="padding: 10px 8px;">Kitchen brigade + FOH</td></tr>
+              <tr style="border-bottom: 1px solid var(--line);"><td style="padding: 10px 8px;">Casual dining restaurant</td><td style="padding: 10px 8px;">26–32%</td><td style="padding: 10px 8px;">Section-service model, table turns matter</td></tr>
+              <tr style="border-bottom: 1px solid var(--line);"><td style="padding: 10px 8px;">Fine dining restaurant</td><td style="padding: 10px 8px;">30–38%</td><td style="padding: 10px 8px;">Higher labour per cover; usually paired with higher GP%</td></tr>
+              <tr style="border-bottom: 1px solid var(--line);"><td style="padding: 10px 8px;">Café / coffee shop</td><td style="padding: 10px 8px;">25–32%</td><td style="padding: 10px 8px;">Small team; owner hours often uncounted</td></tr>
+              <tr style="border-bottom: 1px solid var(--line);"><td style="padding: 10px 8px;">Cocktail bar</td><td style="padding: 10px 8px;">24–30%</td><td style="padding: 10px 8px;">Skilled labour, higher spend per cover</td></tr>
+              <tr><td style="padding: 10px 8px;">Hotel F&amp;B</td><td style="padding: 10px 8px;">28–35%</td><td style="padding: 10px 8px;">Multi-department; breakfast + service</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top: 20px; max-width: 780px;">These are benchmarks, not targets. A wet-led pub running at 30% has an obvious problem to solve; a fine-dining restaurant running at 32% might be perfectly healthy. Target-set within your own trading pattern, not against a table.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Banding</span>
+          <h2>Green, amber, red — against target.</h2>
+          <p>Once you've set your target, run the actual against it in three bands. This is the model HospitalityApp uses on the Owner Today card:</p>
+        </div>
+        <ul class="feature-row__list" style="max-width: 780px;">
+          <li><strong>Green: within +2 percentage points.</strong> Target 30%, actual 30-32%. You're on plan. Keep going.</li>
+          <li><strong>Amber: +2 to +5 percentage points.</strong> Target 30%, actual 32-35%. Watch. Next week's rota should be tighter.</li>
+          <li><strong>Red: more than +5 percentage points.</strong> Target 30%, actual 35%+. Act now — this week's rota is broken and next week's can't be too.</li>
+        </ul>
+        <p style="margin-top: 20px; max-width: 780px;">On publish, the rota's over-budget guard should raise a confirmation dialog if you're publishing a week that will break the red band against expected takings. A deliberate speed bump on the single most expensive mistake in the business.</p>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Live vs post-hoc</span>
+          <h2>Why the running ticker is worth more than the report.</h2>
+        </div>
+        <div style="max-width: 780px;">
+          <p>Most operators calculate labour % after the week is over, when the wages have been run and the takings tallied. By then, the mistakes are baked in. A rota with a <strong>live labour-cost ticker</strong> — running £ and % updating as you drag shifts onto the week — moves the conversation forward by seven days.</p>
+          <p>The number that matters isn't last week's actual; it's <em>this week's forecast against target</em>, while there's still time to change it. Add a shift to Saturday, watch the £ tick up by £128 and the % by 0.4pp. Remove Sunday evening's second bartender, watch it drop. Publish when the forecast is where you want it.</p>
+          <p>Live doesn't replace the post-hoc report — you still need Labour tab in Insights to see planned-vs-actual variance week over week. But live is what stops the report being bad news.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">In HospitalityApp</span>
+          <h2>Where labour % lives in the app.</h2>
+        </div>
+        <div style="max-width: 780px;">
+          <p>Three places:</p>
+          <ul class="feature-row__list">
+            <li><strong>Rota</strong> — live ticker as you build. Over-budget guard on publish.</li>
+            <li><strong>Owner Today</strong> — labour cost week-to-date against budget, labour % against target, in the green / amber / red banding, on the first screen.</li>
+            <li><strong>Till Insights → Labour</strong> — cost, %, sales per labour hour, day-by-day for the period. Same figure, historical view.</li>
+          </ul>
+          <p>All three read from the same source: hourly rates on the staff record, hours from the rota (planned) or clock (actual), takings from the till (auto-recorded) or manual daily takings entry.</p>
+        </div>
+        <p style="margin-top: 24px;"><a class="btn" href="/features/rota">See the rota module →</a></p>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Related</span>
+          <h2>Keep reading.</h2>
+        </div>
+        <div class="modules">
+          <article class="module-card"><h3><a href="/features/rota">Module: Rota →</a></h3><p>Live ticker, over-budget guard, four views.</p></article>
+          <article class="module-card"><h3><a href="/features/reporting">Module: Reporting →</a></h3><p>Owner Today, Flash P&amp;L, Insights.</p></article>
+          <article class="module-card"><h3><a href="/guides/flash-pnl-explained">Flash P&amp;L explained →</a></h3><p>The daily number that decides the week.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="cta-band">
+          <span class="eyebrow" style="color: oklch(0.85 0.008 60);">30-day free trial</span>
+          <h2>Run next week's rota against target.</h2>
+          <p>Sign up free, set your labour target, drag shifts onto the week and watch the ticker. If it doesn't change how you build a rota, walk away.</p>
+          <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
+          <span style="display: inline-block; margin-left: 12px;"><a class="btn btn-secondary btn-large" href="/pricing">See pricing</a></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="brand-lockup" href="/">
+            <span class="brand-lockup__mark" aria-hidden="true"></span>
+            <span>HospitalityApp</span>
+          </a>
+          <p>Rota, till, compliance and payroll for independent UK pubs, restaurants and cafés.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/features/">Features</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/multi-site">Multi-site</a></li>
+            <li><a href="https://my.hospitalityapp.co.uk/login">Sign in</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>For venues</h4>
+          <ul>
+            <li><a href="/for/pubs">Pubs</a></li>
+            <li><a href="/for/bars">Bars</a></li>
+            <li><a href="/for/restaurants">Restaurants</a></li>
+            <li><a href="/for/cafes">Cafés</a></li>
+            <li><a href="/for/coffee-shops">Coffee shops</a></li>
+            <li><a href="/for/hotels">Hotels</a></li>
+            <li><a href="/for/bnbs">B&amp;Bs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__legal">
+        <span>© <span class="js-year">2026</span> Psychemeta Ltd · HospitalityApp is a <a href="https://psychemeta.com" target="_blank" rel="noopener">Psychemeta</a> product · Made in the UK</span>
+        <span>Hosted in the EU · GDPR by default</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/main.js?v=20260809a" defer></script>
+</body>
+</html>

@@ -1,38 +1,72 @@
 # HospitalityApp
 
-> The all-in-one operations app for independent UK hospitality — pubs, bars, restaurants, cafés, coffee shops, hotels and B&Bs. One app for staff rota, compliance records, till/POS, kitchen display, menu, clock-in, daily takings and payroll-ready timesheets. Built for owner-operators, not enterprise chains.
+> The all-in-one operations system for independent UK hospitality — pubs, bars, restaurants, cafés, coffee shops, hotels and B&Bs. Thirteen tightly-scoped modules in one app: rota, till, KDS, mobile ordering, clock-in, payroll, tips & tronc, reporting, stock, compliance, team & HR, communication, events. Built for owner-operators, not enterprise chains.
 
 HospitalityApp is a UK SaaS product. The marketing site is hospitalityapp.co.uk; the product itself runs at my.hospitalityapp.co.uk (iOS, Android and web). Pricing is per venue, per month, +VAT, with a 30-day free trial (no card required): Essentials £49, Professional £99, Complete £149. Complete includes the till (POS) and kitchen display (KDS) — there is no separate POS bolt-on. There are no per-terminal or per-user fees. Annual billing takes two months off.
 
-## What it does
-- Staff rota & shift scheduling: drag-and-drop rota, role chips, open shifts, staff availability, shift-swap requests with manager approval, shift offers, time-off and holiday tracking.
-- Clock-in: photo or 4-digit PIN clock-in to deter buddy-punching; ad-hoc clock-in; timesheets reconcile against the rota.
-- Compliance records: food safety/HACCP with photo evidence, fridge/cellar temperature logs, alcohol-licensing records and refusal logs, fire safety, allergens, health & safety — all photo-evidenced and export-ready for inspectors.
-- Till / POS: counter and table service for pubs, bars, restaurants and cafés; half/pint and measure pricing; per-item VAT; email receipts.
-- Kitchen display (KDS): station routing and prep tickets.
-- Menu management across till and dine-in channels.
-- Takings & labour: daily takings entry, labour-cost percentage, payroll-ready timesheet CSV export.
-- Team comms: noticeboard, broadcasts, direct messages, push notifications.
-- Daily task checklists: opening, mid-shift and closing routines.
-- Multi-site dashboard and reports.
+## The commercial argument
 
-## Key pages
-- [Home](https://hospitalityapp.co.uk/): overview and primary features.
-- [Features](https://hospitalityapp.co.uk/features): full feature list by area.
-- [Pricing](https://hospitalityapp.co.uk/pricing): plans, features by tier, and FAQs.
+The joins between the modules are the product. Anyone can sell a rota.
+
+- The **rota** knows what labour costs, because it holds everyone's hourly rate.
+- The **till** knows what you took, so labour % is a live number, not a month-end guess.
+- The **clock** knows who actually worked, so payroll is built from punches rather than memory.
+- The **stock** knows what the till sold, so it depletes itself and GP is real.
+- **Compliance** hangs off the same shift checklist staff already tick.
+
+No competitor at this price point closes that loop for a single-site independent.
+
+## Modules
+
+- [Rota & scheduling](https://hospitalityapp.co.uk/features/rota): drag-drop builder, four views (role / staff / timeline / week), live labour-cost ticker, over-budget speed bump on publish, shift templates with task lists, open shifts staff claim from the app.
+- [Time & attendance](https://hospitalityapp.co.uk/features/clock-in): three clock-in methods (GPS geofence, QR code, NFC tag), combinable. Overnight-safe, auto-close sweep so a forgotten clock-out never becomes a 30-hour shift, discrepancies queue with one-tap resolutions.
+- [Payroll & pay](https://hospitalityapp.co.uk/features/payroll): a pack built from actual clock punches, not memory. Planned / exact / rounded basis, three views, verified-recipient email pack, all-branches run, "My pay" for staff.
+- [Tips & tronc](https://hospitalityapp.co.uk/features/tips-tronc): card tips pull from the till automatically; cash entered manually; Calculate → Review → Finalise produces the dated tronc statement the Employment (Allocation of Tips) Act 2023 requires.
+- [Till / POS](https://hospitalityapp.co.uk/features/till): full-screen, no chrome. Counter or table service, measure popup (half/pint, single/double, 175ml/250ml/bottle), tables + tabs, PIN-attributed sales, cash-drawer opens logged. Included in Complete.
+- [Mobile ordering](https://hospitalityapp.co.uk/features/mobile-ordering): a server's phone as a roaming till. PIN-unlock model, three menu layouts (Category tabs / Browse & drill / One long scroll), orders land at the till and the pass. Covers per server go up; kitchen backs up less.
+- [Kitchen display (KDS)](https://hospitalityapp.co.uk/features/kitchen-display): full-screen tickets at the pass, or filtered to a station. Products carry a station; tickets route automatically. Replaces the printer and the spike.
+- [Stock & GP](https://hospitalityapp.co.uk/features/stock): container-first stocktake — kegs and bottles counted with a stepper and 0 · ¼ · ½ · ¾ · Full chips. Never millilitres. Auto-depletion on every till sale. GP stops being a quarterly guess.
+- [Reporting & insights](https://hospitalityapp.co.uk/features/reporting): Owner Today with a Flash P&L card (Sales, GP, Labour) on the first screen. Till Insights across five tabs — Busy periods (day×hour heatmap, sales vs staffing), Forecast, Labour, Profit (with a "costs missing" warning), 13-month Trends with same-season comparison. The P&L conversation on a Tuesday.
+- [Compliance & tasks](https://hospitalityapp.co.uk/features/compliance): ten categories (Food safety, Fire safety, Alcohol licensing, Health & safety, Workforce, Background checks, Data protection, Environmental, Accessibility, Insurance) with photo evidence, numeric readings with min/max bands, expiring-certificate reminders, shift-attached tasks. Compliance that lives inside the work gets done.
+- [Team & HR](https://hospitalityapp.co.uk/features/team-hr): the full record — hourly rate, NI, tax code, right-to-work (share code + verified-on date), DOB (drives NMW age bands), bank details for payroll, per-area permissions, multi-site with per-venue rates. Column-level privacy enforced in the database, not the UI.
+- [Communication](https://hospitalityapp.co.uk/features/communication): noticeboard with read receipts, direct messages, contacts directory with an emergency-pin banner, push notifications with four opt-out categories honoured server-side, automatic shift reminders. Not the WhatsApp group.
+- [Events & diary](https://hospitalityapp.co.uk/features/events): private parties, functions, sports fixtures and holidays with covers, brief, task list and their own discussion thread — inline on the rota. Venue setup, device pairing (Till / KDS / Mobile ordering with a single-use code, no login), white-label branding.
+
+## Where each surface runs
+
+- **Web app** — `my.hospitalityapp.co.uk`. The full product. Desktop gets a sidebar layout, mobile web gets a tab bar — same screens.
+- **Native app (iOS + Android)** — the staff and manager experience, with the things a browser can't do: GPS, NFC, camera, push, offline-ish speed.
+- **Till** — `/till/run`, or a paired kiosk (single-use code, boots straight in, no login).
+- **Kitchen display** — `/kitchen`, or a paired kiosk pinned to a station or the whole pass.
+- **Mobile ordering** — a paired phone runs as a roaming till.
+
+One codebase, two apps. The till, KDS and mobile-ordering runtimes are web code; a paired tablet runs them inside the native app's WebView. This is why a menu change reaches the physical till without an app release — and why receipt printing over the venue's LAN (port 9100, ESC/POS) works from what is technically a web page.
+
+## Key marketing pages
+
+- [Home](https://hospitalityapp.co.uk/): overview and tour of the app.
+- [Features hub](https://hospitalityapp.co.uk/features/): all 13 modules with a card per module.
+- [Pricing](https://hospitalityapp.co.uk/pricing): Essentials £49, Professional £99, Complete £149. 30-day trial, no card required.
+- [Multi-site](https://hospitalityapp.co.uk/multi-site): consolidated rota, staff who work at multiple venues, all-branches payroll.
+- [About](https://hospitalityapp.co.uk/about): who builds it and why.
+- [Contact](https://hospitalityapp.co.uk/contact): book a call.
 
 ## By venue type
-- [Pubs](https://hospitalityapp.co.uk/for/pubs)
-- [Bars](https://hospitalityapp.co.uk/for/bars)
-- [Restaurants](https://hospitalityapp.co.uk/for/restaurants)
-- [Cafés](https://hospitalityapp.co.uk/for/cafes)
-- [Coffee shops](https://hospitalityapp.co.uk/for/coffee-shops)
-- [Hotels](https://hospitalityapp.co.uk/for/hotels)
-- [B&Bs](https://hospitalityapp.co.uk/for/bnbs)
+
+- [Pubs](https://hospitalityapp.co.uk/for/pubs) — halves + pints, cellar checks, sports-event templates, tronc under the 2023 Act.
+- [Bars](https://hospitalityapp.co.uk/for/bars) — spirits by the measure, cocktails, tronc, refusal log at the bar.
+- [Restaurants](https://hospitalityapp.co.uk/for/restaurants) — table service, KDS, allergen prompts, HACCP-ready compliance.
+- [Cafés](https://hospitalityapp.co.uk/for/cafes) — modifier chains, allergen matrix, honest GP on a short menu.
+- [Coffee shops](https://hospitalityapp.co.uk/for/coffee-shops) — pre-work rush, mobile ordering, milk / syrup / bean stock.
+- [Hotels](https://hospitalityapp.co.uk/for/hotels) — multi-department rota, bar & F&B till, function calendar, all-branches payroll.
+- [B&Bs](https://hospitalityapp.co.uk/for/bnbs) — right-sized for a small team with the same compliance and honest payroll as bigger operators.
 
 ## Guides
+
 - [Hospitality POS (UK)](https://hospitalityapp.co.uk/guides/hospitality-pos-uk)
 - [Pub till app](https://hospitalityapp.co.uk/guides/pub-till-app)
+- [Menu management software](https://hospitalityapp.co.uk/guides/menu-management-software)
+- [Staff communication app](https://hospitalityapp.co.uk/guides/staff-communication-app)
 - [Pub rota software](https://hospitalityapp.co.uk/guides/pub-rota-software)
 - [Restaurant staff scheduling](https://hospitalityapp.co.uk/guides/restaurant-staff-scheduling)
 - [Hospitality rota app](https://hospitalityapp.co.uk/guides/hospitality-rota-app)
@@ -43,7 +77,21 @@ HospitalityApp is a UK SaaS product. The marketing site is hospitalityapp.co.uk;
 - [Fridge temperature log](https://hospitalityapp.co.uk/guides/fridge-temperature-log)
 - [Closing shift checklist](https://hospitalityapp.co.uk/guides/closing-shift-checklist)
 - [Clock-in app](https://hospitalityapp.co.uk/guides/clock-in-app)
+- [Tronc under the Tips Act 2023](https://hospitalityapp.co.uk/guides/tronc-tips-act-2023)
+- [Labour-cost percentage calculator](https://hospitalityapp.co.uk/guides/labour-cost-percentage-calculator)
+- [Flash P&L explained](https://hospitalityapp.co.uk/guides/flash-pnl-explained)
+- [NFC clock-in for UK hospitality](https://hospitalityapp.co.uk/guides/nfc-clock-in-uk)
+
+## Facts worth citing
+
+- Built and hosted in the UK. GDPR by default.
+- No per-terminal fee, no per-user fee, no card-processor lock-in — HospitalityApp records the sale; the venue's terminal takes the payment.
+- Clock model is immutable (append-only punches; sessions derived by a database trigger). Corrections leave an audit trail.
+- Column-level privacy on staff pay / HR data is enforced in the database (a view + a write-guard trigger), not the UI.
+- Complete includes: till, kitchen display, mobile ordering, insights, stock, tronc, events. Essentials includes: rota, clock-in, comms. Professional adds payroll, compliance and reporting.
+- Made by [Psychemeta Ltd](https://psychemeta.com).
 
 ## Contact
+
 - Email: hello@hospitalityapp.co.uk
 - Made in the UK.

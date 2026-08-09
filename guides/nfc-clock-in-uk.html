@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NFC clock-in for UK hospitality — tap a tag, punch in honest | HospitalityApp</title>
+  <meta name="description" content="NFC clock-in for pubs, bars and restaurants: register tags by UID with a label, tap the tag on the till to punch in, combine with GPS geofence to close buddy-punching. Overnight-safe, immutable, cheap to run." />
+  <link rel="canonical" href="https://hospitalityapp.co.uk/guides/nfc-clock-in-uk" />
+  <link rel="alternate" hreflang="en-GB" href="https://hospitalityapp.co.uk/guides/nfc-clock-in-uk" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:title" content="NFC clock-in for UK hospitality — tap a tag, punch in honest | HospitalityApp" />
+  <meta property="og:description" content="Tag registry by UID, tap on the till, combine with GPS geofence, overnight-safe, immutable." />
+  <meta property="og:url" content="https://hospitalityapp.co.uk/guides/nfc-clock-in-uk" />
+  <meta property="og:image" content="https://hospitalityapp.co.uk/assets/images/og/home.png" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#F5F1E8" />
+  <link rel="stylesheet" href="/assets/styles.css?v=20260809a" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "NFC clock-in for UK hospitality — tap a tag, punch in honest",
+        "author": { "@type": "Organization", "name": "HospitalityApp" },
+        "publisher": { "@type": "Organization", "name": "HospitalityApp", "url": "https://hospitalityapp.co.uk/" },
+        "datePublished": "2026-08-09",
+        "dateModified": "2026-08-09",
+        "image": "https://hospitalityapp.co.uk/assets/images/og/home.png",
+        "mainEntityOfPage": "https://hospitalityapp.co.uk/guides/nfc-clock-in-uk"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hospitalityapp.co.uk/" },
+          { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://hospitalityapp.co.uk/guides/" },
+          { "@type": "ListItem", "position": 3, "name": "NFC clock-in for UK hospitality", "item": "https://hospitalityapp.co.uk/guides/nfc-clock-in-uk" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What is NFC clock-in?", "acceptedAnswer": { "@type": "Answer", "text": "Near-field communication clock-in: staff tap a physical NFC tag with their phone (or an NFC-capable tablet) to record a clock-in. Tags are registered in the app by their UID with a human-readable label like 'Bar till' or 'Kitchen door'. A tap opens the app, records the punch, and closes — usually under two seconds." } },
+          { "@type": "Question", "name": "Why NFC and not just a PIN or a photo?", "acceptedAnswer": { "@type": "Answer", "text": "Speed and physical presence. PIN can be shared; a photo needs a decent camera angle and adds friction; both can be argued after the fact. NFC requires the person's phone to be within a couple of centimetres of a specific physical tag, at a specific time — which is a much harder story to fake. Combined with GPS geofence, buddy-punching is decisively closed." } },
+          { "@type": "Question", "name": "What hardware do I need?", "acceptedAnswer": { "@type": "Answer", "text": "NFC tags — NTAG213 or NTAG215 stickers, usually 20-50p each in packs of 10. Stick one on the till, one at the staff entrance, one wherever suits the venue. Staff use their own phone (iPhone from 7 onwards, Android from 6.0 onwards); no company hardware required. HospitalityApp's tag registry pairs tags to the venue by UID; no printing or configuration on the tag itself." } },
+          { "@type": "Question", "name": "How do I stop someone from tapping their friend's phone?", "acceptedAnswer": { "@type": "Answer", "text": "The tag itself is public — anyone can tap it. What matters is which phone is doing the tapping: the app authenticates the user (they're already logged in as themselves), so the punch is attributed to the logged-in user, not the tag. To go further, combine NFC with a GPS geofence requirement: the punch only lands if the phone is also within the venue's geofence at the moment of the tap. Belt and braces." } },
+          { "@type": "Question", "name": "What about overnight shifts crossing midnight?", "acceptedAnswer": { "@type": "Answer", "text": "The clock model treats an overnight shift as one session, not two. Tapping in at 20:00 and tapping out at 02:30 records a single 6.5-hour session. The auto-close sweep catches forgotten clock-outs and lands them in the discrepancies queue for a manager to resolve — a forgotten clock-out never becomes a 30-hour shift on payroll." } },
+          { "@type": "Question", "name": "Can I rotate tags if one is lost or copied?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — remove a tag from the registry and it's invalidated instantly. Any tap using that UID stops recording as a valid clock-in. Buy a new tag, register it, label it, stick it in place. Total downtime is a few minutes; the compromise story ends there." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand-lockup" href="/">
+        <span class="brand-lockup__mark" aria-hidden="true"></span>
+        <span>HospitalityApp</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-toggle__icon"></span>
+      </button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="/features/">Features</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/for/">For venues</a>
+        <a href="/guides/" aria-current="page">Guides</a>
+        <a href="/multi-site">Multi-site</a>
+        <span class="nav-cta">
+          <a class="btn btn-secondary" href="https://my.hospitalityapp.co.uk/login">Sign in</a>
+          <a class="btn" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__inner">
+        <span class="eyebrow">Guide · Time &amp; attendance</span>
+        <h1 class="hero__title">Tap a tag on the till, punch in honest.</h1>
+        <p class="hero__sub">NFC clock-in for UK hospitality — 50p tags on the venue, staff phones do the rest. Combine with GPS geofence to close buddy-punching. Overnight-safe, immutable, cheap to run.</p>
+        <div class="hero__cta">
+          <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
+          <a class="btn btn-secondary btn-large" href="/features/clock-in">See the clock-in module</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">What it is</span>
+          <h2>Near-field, actually near-field.</h2>
+          <p>NFC (Near-Field Communication) is the same technology that runs contactless card payment. A phone held within 2-4cm of an NFC tag reads its unique ID (UID) in a fraction of a second. Apple and Google Wallet use it; TfL uses it; the tap-to-open in your hotel room uses it. It's ubiquitous, cheap and boring — three good qualities for a payroll input.</p>
+        </div>
+        <ul class="feature-row__list" style="max-width: 780px;">
+          <li><strong>Physical presence.</strong> The staff member's phone has to be at the tag — usually a sticker on the till or the staff entrance. A photo can be sent from anywhere; a PIN can be typed from anywhere; a tag has to be tapped in the venue.</li>
+          <li><strong>Speed.</strong> Under two seconds from unlocked phone in hand to punch recorded. Fast enough that staff actually use it instead of tapping "Confirmed" through a screen sequence.</li>
+          <li><strong>No shared hardware.</strong> Staff use their own phones. You provide the tag and the app; they provide the reader.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How the registry works</span>
+          <h2>Tags register by UID, label by hand.</h2>
+        </div>
+        <ul class="feature-row__list" style="max-width: 780px;">
+          <li>Buy NFC tags — NTAG213 or NTAG215 stickers, usually 20-50p each in packs of ten from Amazon or a specialist supplier.</li>
+          <li>In the app, open Time &amp; attendance → NFC tags → Register a new tag; tap the tag with your phone; the UID (a 14-character hex string) auto-fills.</li>
+          <li>Give it a label a human can read: "Bar till", "Kitchen door", "Cellar top". This is what shows up in the audit log.</li>
+          <li>Stick the tag where it belongs. Test with one clock-in.</li>
+          <li>Remove a lost tag from the registry to invalidate it instantly; buy a replacement, register the new UID, stick it in place.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Combining methods</span>
+          <h2>NFC + GPS geofence closes buddy-punching.</h2>
+        </div>
+        <div style="max-width: 780px;">
+          <p>The three HospitalityApp clock-in methods (GPS geofence, QR code, NFC tag) are combinable. Requiring NFC <em>and</em> a GPS check within the venue's geofence means the punch only lands if the phone is holding a tag <em>at</em> the venue — a story that's much harder to fake than either alone.</p>
+          <p>Practical setup for a pub:</p>
+          <ul class="feature-row__list">
+            <li>NFC tag on the till (or the staff entrance if the till is in a public spot).</li>
+            <li>GPS geofence: 50m radius around the venue postcode.</li>
+            <li>Require both. Optional: require a selfie for the first clock-in of a shift, tap-only for the rest.</li>
+          </ul>
+          <p>Cost: about £5 in tags. Time to set up: 15 minutes. Buddy-punching risk after that: effectively zero, because the shared-phone attack requires being physically present at the venue, at the right time, with the right person's logged-in device — at which point the staff member might as well come to work.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Overnight and edge cases</span>
+          <h2>The rules the software should already know.</h2>
+        </div>
+        <ul class="feature-row__list" style="max-width: 780px;">
+          <li><strong>Overnight-safe.</strong> A shift crossing midnight is one session; a tap-in at 20:00 and tap-out at 02:30 records as 6.5 hours, not two shifts.</li>
+          <li><strong>Clock-out grace window.</strong> A closer finishing 20 minutes past the scheduled end isn't punished. Configurable per venue.</li>
+          <li><strong>Auto-close sweep.</strong> A forgotten clock-out is closed at a sensible end and flagged for manager review — never a 30-hour shift on payroll.</li>
+          <li><strong>Future-punch clamp.</strong> A device with a wrong clock can't write a punch into the future.</li>
+          <li><strong>Discrepancies queue.</strong> Every no-show, still-clocked-in and flagged session lands in one manager screen with one-tap resolutions — Pay as planned, Close out at 23:15, Mark as no-show, Confirm as-is, Dismiss.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">The audit trail</span>
+          <h2>Immutable by design.</h2>
+        </div>
+        <div style="max-width: 780px;">
+          <p>The clock model is append-only. Punches are individual events; sessions are <em>derived</em> from them by a database trigger. You can correct a session (add a missing clock-out, close a still-open one, mark a no-show) but you can't rewrite the underlying punches — every correction is recorded as a new event with an audit note against the manager who made it.</p>
+          <p>That matters if a pay dispute goes to a tribunal, or a payroll audit questions a specific week: the record is intact and dated, and the reason for every correction is on the record next to it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Related</span>
+          <h2>Keep reading.</h2>
+        </div>
+        <div class="modules">
+          <article class="module-card"><h3><a href="/features/clock-in">Module: Time &amp; attendance →</a></h3><p>GPS, QR, NFC, discrepancies queue, auto-close sweep.</p></article>
+          <article class="module-card"><h3><a href="/features/payroll">Module: Payroll →</a></h3><p>Payroll pack built from these actual clock punches.</p></article>
+          <article class="module-card"><h3><a href="/guides/clock-in-app">Clock-in app guide →</a></h3><p>The setup guide with printable QR posters.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="cta-band">
+          <span class="eyebrow" style="color: oklch(0.85 0.008 60);">30-day free trial</span>
+          <h2>Register your first tag this afternoon.</h2>
+          <p>Sign up free, register one tag, stick it to the till. First clock-in takes under two seconds.</p>
+          <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
+          <span style="display: inline-block; margin-left: 12px;"><a class="btn btn-secondary btn-large" href="/pricing">See pricing</a></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="brand-lockup" href="/">
+            <span class="brand-lockup__mark" aria-hidden="true"></span>
+            <span>HospitalityApp</span>
+          </a>
+          <p>Rota, till, compliance and payroll for independent UK pubs, restaurants and cafés.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/features/">Features</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/multi-site">Multi-site</a></li>
+            <li><a href="https://my.hospitalityapp.co.uk/login">Sign in</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>For venues</h4>
+          <ul>
+            <li><a href="/for/pubs">Pubs</a></li>
+            <li><a href="/for/bars">Bars</a></li>
+            <li><a href="/for/restaurants">Restaurants</a></li>
+            <li><a href="/for/cafes">Cafés</a></li>
+            <li><a href="/for/coffee-shops">Coffee shops</a></li>
+            <li><a href="/for/hotels">Hotels</a></li>
+            <li><a href="/for/bnbs">B&amp;Bs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__legal">
+        <span>© <span class="js-year">2026</span> Psychemeta Ltd · HospitalityApp is a <a href="https://psychemeta.com" target="_blank" rel="noopener">Psychemeta</a> product · Made in the UK</span>
+        <span>Hosted in the EU · GDPR by default</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/main.js?v=20260809a" defer></script>
+</body>
+</html>
