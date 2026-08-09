@@ -2,7 +2,7 @@
 
 > The all-in-one operations app for independent UK hospitality — pubs, bars, restaurants, cafés, coffee shops, hotels and B&Bs. One app for staff rota, compliance records, till/POS, kitchen display, menu, clock-in, daily takings and payroll-ready timesheets. Built for owner-operators, not enterprise chains.
 
-HospitalityApp is a UK SaaS product. The marketing site is hospitalityapp.co.uk; the product itself runs at my.hospitalityapp.co.uk (iOS, Android and web). Pricing is per venue, per month, with a free trial: Essentials £49, Professional £99, Complete · Venue OS £149, plus an optional Till add-on (POS + KDS) £59. There are no per-terminal or per-user fees.
+HospitalityApp is a UK SaaS product. The marketing site is hospitalityapp.co.uk; the product itself runs at my.hospitalityapp.co.uk (iOS, Android and web). Pricing is per venue, per month, +VAT, with a 30-day free trial (no card required): Essentials £49, Professional £99, Complete £149. Complete includes the till (POS) and kitchen display (KDS) — there is no separate POS bolt-on. There are no per-terminal or per-user fees. Annual billing takes two months off.
 
 ## What it does
 - Staff rota & shift scheduling: drag-and-drop rota, role chips, open shifts, staff availability, shift-swap requests with manager approval, shift offers, time-off and holiday tracking.
@@ -19,7 +19,7 @@ HospitalityApp is a UK SaaS product. The marketing site is hospitalityapp.co.uk;
 ## Key pages
 - [Home](https://hospitalityapp.co.uk/): overview and primary features.
 - [Features](https://hospitalityapp.co.uk/features): full feature list by area.
-- [Pricing](https://hospitalityapp.co.uk/pricing): plans, the Till add-on, and FAQs.
+- [Pricing](https://hospitalityapp.co.uk/pricing): plans, features by tier, and FAQs.
 
 ## By venue type
 - [Pubs](https://hospitalityapp.co.uk/for/pubs)
