@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Time &amp; attendance — GPS, QR, NFC clock-in with an auto-close sweep | HospitalityApp</title>
+  <meta name="description" content="Three clock-in methods (GPS geofence, QR code, NFC tag), combinable. Overnight-safe, clock-out grace window, ad-hoc clock-in, auto-close sweep so a forgotten clock-out never becomes a 30-hour shift. Discrepancies queue with one-tap resolutions." />
+  <link rel="canonical" href="https://hospitalityapp.co.uk/features/clock-in" />
+  <link rel="alternate" hreflang="en-GB" href="https://hospitalityapp.co.uk/features/clock-in" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:title" content="Time &amp; attendance — clock-in with GPS, QR, NFC | HospitalityApp" />
+  <meta property="og:description" content="Combinable clock-in methods, auto-close sweep, one-tap discrepancy resolutions. The immutable clock trail behind honest payroll." />
+  <meta property="og:url" content="https://hospitalityapp.co.uk/features/clock-in" />
+  <meta property="og:image" content="https://hospitalityapp.co.uk/assets/images/og/home.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#F5F1E8" />
+  <link rel="stylesheet" href="/assets/styles.css?v=20260809a" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hospitalityapp.co.uk/" },
+          { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://hospitalityapp.co.uk/features" },
+          { "@type": "ListItem", "position": 3, "name": "Time &amp; attendance", "item": "https://hospitalityapp.co.uk/features/clock-in" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Which clock-in method should I pick?", "acceptedAnswer": { "@type": "Answer", "text": "The three (GPS geofence, QR code, NFC tag) combine. Choose the friction that fits the venue: an NFC tag on the till is one tap; a geofence needs no hardware; a printable QR poster is free. Many operators require GPS in addition to a scan — cheap to add, closes buddy-punching decisively." } },
+          { "@type": "Question", "name": "Are punches editable?", "acceptedAnswer": { "@type": "Answer", "text": "No. The clock model is immutable — punches are append-only time entries, and sessions are derived by a database trigger. You can correct a session (add a missing clock-out, close a still-open shift, mark a no-show, or dismiss a flagged session), but you cannot rewrite history without leaving a trace. Every correction has an audit note against the person who made it." } },
+          { "@type": "Question", "name": "What if someone forgets to clock out?", "acceptedAnswer": { "@type": "Answer", "text": "The auto-close sweep catches it. A forgotten clock-out doesn't become a 30-hour shift — the system closes it at a sensible end and drops it into the discrepancies queue for the manager to resolve. Resolutions are one-tap: Pay as planned, Close out at 23:15, Mark as no-show, Confirm as-is, or Dismiss. Every choice is audited." } },
+          { "@type": "Question", "name": "Does it handle overnight shifts?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A shift crossing midnight is still one session; closers can clock out at 02:00 without the app deciding it must be a new day. This is a pub product — the software should know that a Friday shift is really a Friday-into-Saturday shift, and it does." } },
+          { "@type": "Question", "name": "What's an 'ad-hoc' clock-in?", "acceptedAnswer": { "@type": "Answer", "text": "Someone works an unrostered shift — a cover, an emergency, a stock delivery. You choose (per venue) who's allowed to clock in without a scheduled shift: Everyone, Managers only, or Off. Worked time is never invisible. The session lands on the rota alongside the planned ones and is paid through the normal payroll run." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand-lockup" href="/">
+        <span class="brand-lockup__mark" aria-hidden="true"></span>
+        <span>HospitalityApp</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-toggle__icon"></span>
+      </button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="/features" aria-current="page">Features</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/for/">For venues</a>
+        <a href="/guides/">Guides</a>
+        <a href="/multi-site">Multi-site</a>
+        <span class="nav-cta">
+          <a class="btn btn-secondary" href="https://my.hospitalityapp.co.uk/login">Sign in</a>
+          <a class="btn" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__inner">
+        <span class="eyebrow">Module · Time &amp; attendance</span>
+        <h1 class="hero__title">A clock that can't be fudged.</h1>
+        <p class="hero__sub">Three clock-in methods (GPS, QR, NFC) that combine. Overnight-safe. Auto-close sweep so a forgotten clock-out never becomes a 30-hour shift. Every exception surfaces in a discrepancies queue with a one-tap resolution.</p>
+        <div class="hero__cta">
+          <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
+          <a class="btn btn-secondary btn-large" href="/features">All features</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">What it does</span>
+          <h2>Everything the clock tracks and enforces.</h2>
+        </div>
+        <ul class="feature-row__list" style="max-width: 780px;">
+          <li><strong>Three clock-in methods, combinable</strong> — GPS geofence, QR code, NFC tag. Choose the friction that fits.</li>
+          <li><strong>Printable QR poster</strong> — generated in-app with staff instructions and a big code. Rotate the secret any time and reprint.</li>
+          <li><strong>NFC tag registry</strong> — register tags by UID with a label ("Bar till"). Remove a lost one instantly.</li>
+          <li><strong>Overnight-safe</strong> — a shift crossing midnight can still be clocked out at 02:00.</li>
+          <li><strong>Clock-out grace window</strong> — closers aren't punished for finishing 20 minutes late.</li>
+          <li><strong>Ad-hoc clock-in</strong> — Everyone / Managers only / Off, per venue. Worked time is never invisible.</li>
+          <li><strong>Auto-close sweep</strong> — a forgotten clock-out doesn't become a 30-hour shift.</li>
+          <li><strong>Future-punch clamp</strong> — a device with a wrong clock can't write a punch into the future.</li>
+          <li><strong>Discrepancies queue</strong> — every no-show, still-clocked-in and flagged session lands in one manager screen with real resolutions: <em>Pay as planned</em>, <em>Close out at 23:15</em>, <em>Mark as no-show</em>, <em>Confirm as-is</em>, <em>Dismiss</em> — each with an audit note.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Why it matters</span>
+          <h2>The commercial difference the discrepancies queue makes.</h2>
+        </div>
+        <div style="max-width: 780px;">
+          <p>The queue is the difference between payroll being a two-hour reconciliation and a five-minute review. Every exception is surfaced with the evidence and a one-tap resolution, and <strong>nothing silently defaults to "pay it"</strong> — that's the failure mode of a lot of "modern" time-and-attendance products: they hide the messy sessions so the run doesn't stall, and the wage bill is quietly higher than it should be.</p>
+          <p>The clock model is immutable by design. Punches are append-only <code>time_entries</code>; sessions are derived by a database trigger. You can correct a session; you cannot rewrite history without leaving a trace. That's what makes the pay conversation a data conversation, not a memory conversation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How it joins to the rest</span>
+          <h2>The clock is where the rota meets reality.</h2>
+        </div>
+        <div class="modules">
+          <article class="module-card">
+            <h3><a href="/features/rota">Rota &amp; scheduling →</a></h3>
+            <p>Scheduled shifts become the expected pattern; clock punches reconcile against them for planned-vs-actual variance.</p>
+          </article>
+          <article class="module-card">
+            <h3><a href="/features/payroll">Payroll &amp; pay →</a></h3>
+            <p>Planned hours, exact minutes, or rounded to 15 — your call, applied consistently. Staff see the same basis in their own app.</p>
+          </article>
+          <article class="module-card">
+            <h3><a href="/features/reporting">Reporting &amp; insights →</a></h3>
+            <p>Labour tab: shifts, hours, cost per staff member, planned vs actual vs variance. Sales per labour hour, live.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="cta-band">
+          <span class="eyebrow" style="color: oklch(0.85 0.008 60);">30-day free trial</span>
+          <h2>Print a QR, tap a tag, or set a geofence.</h2>
+          <p>Sign up free, pick a clock-in method, and have your first team member clock in today. All three methods work through the app in the trial — you can pick between them later.</p>
+          <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
+          <span style="display: inline-block; margin-left: 12px;"><a class="btn btn-secondary btn-large" href="/guides/clock-in-app">Read the clock-in guide</a></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="brand-lockup" href="/">
+            <span class="brand-lockup__mark" aria-hidden="true"></span>
+            <span>HospitalityApp</span>
+          </a>
+          <p>Rota, till, compliance and payroll for independent UK pubs, restaurants and cafés.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/features">Features</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/multi-site">Multi-site</a></li>
+            <li><a href="https://my.hospitalityapp.co.uk/login">Sign in</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>For venues</h4>
+          <ul>
+            <li><a href="/for/pubs">Pubs</a></li>
+            <li><a href="/for/bars">Bars</a></li>
+            <li><a href="/for/restaurants">Restaurants</a></li>
+            <li><a href="/for/cafes">Cafés</a></li>
+            <li><a href="/for/coffee-shops">Coffee shops</a></li>
+            <li><a href="/for/hotels">Hotels</a></li>
+            <li><a href="/for/bnbs">B&amp;Bs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__legal">
+        <span>© <span class="js-year">2026</span> Psychemeta Ltd · HospitalityApp is a <a href="https://psychemeta.com" target="_blank" rel="noopener">Psychemeta</a> product · Made in the UK</span>
+        <span>Hosted in the EU · GDPR by default</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/main.js?v=20260809a" defer></script>
+</body>
+</html>

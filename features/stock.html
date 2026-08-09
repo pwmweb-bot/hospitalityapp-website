@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stock &amp; GP — container-first stocktake, auto-depletion, real margins | HospitalityApp</title>
+  <meta name="description" content="Kegs and bottles counted with a stepper and 0 / ¼ / ½ / ¾ / Full chips — never millilitres. Link a stock item to a till product and every sale drops the exact £ of stock consumed. GP is real, not calculated once a quarter and disbelieved." />
+  <link rel="canonical" href="https://hospitalityapp.co.uk/features/stock" />
+  <link rel="alternate" hreflang="en-GB" href="https://hospitalityapp.co.uk/features/stock" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:title" content="Stock &amp; GP — container-first stocktake, auto-depletion | HospitalityApp" />
+  <meta property="og:description" content="Nobody counts a cellar in millilitres. Container-first stocktake + auto-depletion + real GP. Included in Complete." />
+  <meta property="og:url" content="https://hospitalityapp.co.uk/features/stock" />
+  <meta property="og:image" content="https://hospitalityapp.co.uk/assets/images/og/home.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#F5F1E8" />
+  <link rel="stylesheet" href="/assets/styles.css?v=20260809a" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hospitalityapp.co.uk/" },
+          { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://hospitalityapp.co.uk/features" },
+          { "@type": "ListItem", "position": 3, "name": "Stock &amp; GP", "item": "https://hospitalityapp.co.uk/features/stock" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What does 'container-first stocktake' mean?", "acceptedAnswer": { "@type": "Answer", "text": "You count what you can actually see: whole kegs, whole bottles, cases. For opens, you use a stepper and 0 / ¼ / ½ / ¾ / Full chips. Never millilitres — nobody counts a cellar in millilitres. The system converts your quarters to the underlying units for the variance calculation. Stocktakes are resumable, and grouped by area (Cellar, Back bar, Kitchen)." } },
+          { "@type": "Question", "name": "How does 'auto-depletion' work?", "acceptedAnswer": { "@type": "Answer", "text": "You link a stock item (a keg of Camden Hells) to the till products that pour from it (Hells Half, Hells Pint), set the units-used per sale (285ml for a half, 568ml for a pint) and the container size (11 gallons ≈ 50000ml). Every till sale then drops the linked stock by the exact volume consumed. Your levels stay honest without a clipboard." } },
+          { "@type": "Question", "name": "What's on the 'To order' list?", "acceptedAnswer": { "@type": "Answer", "text": "Everything at or under its reorder level, grouped by supplier, with reorder quantity pre-filled. One screen; a copy-to-supplier or email export in a few taps. Reorder levels and par levels are per item — set them once, tune them as you learn the venue's rhythm." } },
+          { "@type": "Question", "name": "What are 'movements'?", "acceptedAnswer": { "@type": "Answer", "text": "The full audit log — every receive (with cost), waste / spillage (with note), adjustment, sale (auto), and stocktake result. Dated, named, unforgeable. Movements are what let you say, six months later, exactly what happened to that missing case." } },
+          { "@type": "Question", "name": "Is stock control an add-on?", "acceptedAnswer": { "@type": "Answer", "text": "No. Stock is included in the Complete plan. There is no per-SKU limit, no per-warehouse fee, and no separate 'stock management' subscription." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand-lockup" href="/">
+        <span class="brand-lockup__mark" aria-hidden="true"></span>
+        <span>HospitalityApp</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-toggle__icon"></span>
+      </button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="/features" aria-current="page">Features</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/for/">For venues</a>
+        <a href="/guides/">Guides</a>
+        <a href="/multi-site">Multi-site</a>
+        <span class="nav-cta">
+          <a class="btn btn-secondary" href="https://my.hospitalityapp.co.uk/login">Sign in</a>
+          <a class="btn" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__inner">
+        <span class="eyebrow">Module · Stock &amp; GP</span>
+        <h1 class="hero__title">Nobody counts a cellar in millilitres.</h1>
+        <p class="hero__sub">Count kegs and bottles with a stepper and <code>0 · ¼ · ½ · ¾ · Full</code> chips. Link stock to till products and every sale drops the exact £ of stock consumed. GP stops being a number you calculate quarterly and start disbelieving.</p>
+        <div class="hero__cta">
+          <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
+          <a class="btn btn-secondary btn-large" href="/features">All features</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">What it does</span>
+          <h2>Stock, ordered and counted the way a cellar works.</h2>
+        </div>
+        <ul class="feature-row__list" style="max-width: 780px;">
+          <li><strong>Stock items</strong> with unit, cost, supplier, reorder level, par level, reorder quantity.</li>
+          <li><strong>Link a stock item to a till product</strong> and it <em>auto-depletes as the till sells</em> — set units-used per sale and container size, and the system does the arithmetic.</li>
+          <li><strong>To order</strong> — everything at or under its reorder level, grouped by supplier, ready to send.</li>
+          <li><strong>Stocktake</strong> — snapshot, count, see live variance, then apply to reconcile (or cancel).</li>
+          <li><strong>Movements</strong> — a full, dated audit log: receive, waste / spillage, adjustment — each with a note.</li>
+          <li><strong>On the phone</strong>: add a product and run a stocktake <strong>container-first</strong> — kegs and bottles counted with a stepper and <code>0 · ¼ · ½ · ¾ · Full</code> chips. Never millilitres. Stocktakes are resumable, grouped by area (Cellar, Back bar, Kitchen).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Why it matters</span>
+          <h2>GP stops being a story.</h2>
+        </div>
+        <div style="max-width: 780px;">
+          <p>Most independents count stock every quarter, plug the numbers into a spreadsheet, get a GP figure they don't quite believe, and shelve it until next quarter. Nothing changes. When stock auto-depletes on sale and waste is recorded where it happens, variance is visible <em>the day of the count</em> — and the Profit tab in Insights has real costs behind it.</p>
+          <p>The container-first counting model is why staff actually finish a stocktake. Counting quarters is a job you can do in an hour; counting millilitres is a job you never start.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How it joins to the rest</span>
+          <h2>Stock is downstream of the till and upstream of Profit.</h2>
+        </div>
+        <div class="modules">
+          <article class="module-card">
+            <h3><a href="/features/till">Till / POS →</a></h3>
+            <p>Linked stock items auto-deplete on every sale. Container costs on the product; the till does the arithmetic.</p>
+          </article>
+          <article class="module-card">
+            <h3><a href="/features/reporting">Reporting &amp; insights →</a></h3>
+            <p>Profit tab: revenue, GP, GP%, stock at cost, waste this period, GP by category. Real numbers, not stories.</p>
+          </article>
+          <article class="module-card">
+            <h3><a href="/features/compliance">Compliance &amp; tasks →</a></h3>
+            <p>Cellar checks and fridge temperatures ride the same task list your team already ticks.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="cta-band">
+          <span class="eyebrow" style="color: oklch(0.85 0.008 60);">30-day free trial</span>
+          <h2>Do a stocktake on your phone tonight.</h2>
+          <p>Sign up free, add your bar as an area, count in quarters, apply. See variance the same evening — no spreadsheet, no reconciliation trip on Monday.</p>
+          <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
+          <span style="display: inline-block; margin-left: 12px;"><a class="btn btn-secondary btn-large" href="/pricing">See pricing</a></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="brand-lockup" href="/">
+            <span class="brand-lockup__mark" aria-hidden="true"></span>
+            <span>HospitalityApp</span>
+          </a>
+          <p>Rota, till, compliance and payroll for independent UK pubs, restaurants and cafés.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/features">Features</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/multi-site">Multi-site</a></li>
+            <li><a href="https://my.hospitalityapp.co.uk/login">Sign in</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>For venues</h4>
+          <ul>
+            <li><a href="/for/pubs">Pubs</a></li>
+            <li><a href="/for/bars">Bars</a></li>
+            <li><a href="/for/restaurants">Restaurants</a></li>
+            <li><a href="/for/cafes">Cafés</a></li>
+            <li><a href="/for/coffee-shops">Coffee shops</a></li>
+            <li><a href="/for/hotels">Hotels</a></li>
+            <li><a href="/for/bnbs">B&amp;Bs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__legal">
+        <span>© <span class="js-year">2026</span> Psychemeta Ltd · HospitalityApp is a <a href="https://psychemeta.com" target="_blank" rel="noopener">Psychemeta</a> product · Made in the UK</span>
+        <span>Hosted in the EU · GDPR by default</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/main.js?v=20260809a" defer></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Communication — noticeboard, DMs, push, emergency contacts | HospitalityApp</title>
+  <meta name="description" content="Noticeboard with read receipts, 1:1 messages, contacts directory with emergency pin, push notifications with four opt-out categories (honoured server-side), automatic shift reminders. The WhatsApp group nobody reads, replaced with a work tool that actually is one." />
+  <link rel="canonical" href="https://hospitalityapp.co.uk/features/communication" />
+  <link rel="alternate" hreflang="en-GB" href="https://hospitalityapp.co.uk/features/communication" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:title" content="Communication — noticeboard, DMs, push, emergency contacts | HospitalityApp" />
+  <meta property="og:description" content="Replace the WhatsApp group. Noticeboard, DMs, contacts directory, opt-outs honoured server-side, automatic shift reminders." />
+  <meta property="og:url" content="https://hospitalityapp.co.uk/features/communication" />
+  <meta property="og:image" content="https://hospitalityapp.co.uk/assets/images/og/home.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#F5F1E8" />
+  <link rel="stylesheet" href="/assets/styles.css?v=20260809a" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hospitalityapp.co.uk/" },
+          { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://hospitalityapp.co.uk/features" },
+          { "@type": "ListItem", "position": 3, "name": "Communication", "item": "https://hospitalityapp.co.uk/features/communication" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Isn't a WhatsApp group easier?", "acceptedAnswer": { "@type": "Answer", "text": "It's easier until you need to prove something. WhatsApp has no read receipts you can trust, no acknowledge-required flag, no audit trail, and it mixes work with pictures of the manager's dog. The noticeboard gives you pinned notices, read receipts, and a durable record of who saw what and when." } },
+          { "@type": "Question", "name": "Can staff message each other?", "acceptedAnswer": { "@type": "Answer", "text": "In v1, staff message managers and the owner — not each other. This is deliberate: it's a work tool, not a social network. If two staff members need to talk about a swap, that's what shift-swap requests are for. If they need to talk about the shift, that's what the noticeboard is for. Peer-to-peer messaging is on the roadmap when the demand is real, not because it's expected." } },
+          { "@type": "Question", "name": "What are the four push categories?", "acceptedAnswer": { "@type": "Answer", "text": "Shifts &amp; rota, Requests &amp; approvals, Messages &amp; notices, Tasks &amp; compliance. Each has an opt-out, and preferences are honoured server-side before a push is sent — an opt-out is real, not cosmetic. If a staff member has turned off Tasks &amp; compliance, that channel doesn't queue and doesn't deliver, full stop." } },
+          { "@type": "Question", "name": "What automatic reminders are sent?", "acceptedAnswer": { "@type": "Answer", "text": "Two hours before a shift, a missed clock-in alert (to the staff member and their managers), and a clock-out nudge if someone is still clocked in past a sensible end. All can be tuned per venue; all respect the four opt-out categories." } },
+          { "@type": "Question", "name": "Where do emergency contacts live?", "acceptedAnswer": { "@type": "Answer", "text": "In the contacts directory alongside suppliers, maintenance, utilities and property. Up to three emergency contacts pin to a banner — the number you need at 11pm when the cellar floods is one tap from any screen." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand-lockup" href="/">
+        <span class="brand-lockup__mark" aria-hidden="true"></span>
+        <span>HospitalityApp</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-toggle__icon"></span>
+      </button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="/features" aria-current="page">Features</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/for/">For venues</a>
+        <a href="/guides/">Guides</a>
+        <a href="/multi-site">Multi-site</a>
+        <span class="nav-cta">
+          <a class="btn btn-secondary" href="https://my.hospitalityapp.co.uk/login">Sign in</a>
+          <a class="btn" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__inner">
+        <span class="eyebrow">Module · Communication</span>
+        <h1 class="hero__title">Not the WhatsApp group.</h1>
+        <p class="hero__sub">A noticeboard with read receipts, direct messages, a contacts directory with an emergency-pin banner, and push notifications with four opt-out categories honoured <em>server-side</em>. A work tool that actually is one.</p>
+        <div class="hero__cta">
+          <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
+          <a class="btn btn-secondary btn-large" href="/features">All features</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">What it does</span>
+          <h2>Six things that stop the group chat.</h2>
+        </div>
+        <ul class="feature-row__list" style="max-width: 780px;">
+          <li><strong>Notice board</strong> — announcements, reminders and urgent notices, pinnable, with read receipts. The thing that currently lives in a WhatsApp group nobody reads.</li>
+          <li><strong>Direct messages</strong> — 1:1 chat in-app. In v1 staff message managers and the owner, not each other — deliberate.</li>
+          <li><strong>Contacts directory</strong> — suppliers, maintenance, utilities, property, emergency. Tap to dial. Up to three emergency contacts pin to a banner — the number you need at 11pm when the cellar floods is one tap from any screen.</li>
+          <li><strong>Push notifications</strong> with four opt-out categories: Shifts &amp; rota, Requests &amp; approvals, Messages &amp; notices, Tasks &amp; compliance. Preferences are honoured <em>server-side before a push is sent</em> — an opt-out is real, not cosmetic.</li>
+          <li><strong>Shift reminders</strong> — automatic: 2 hours before a shift, a missed clock-in alert (to the staff member and their managers), and a clock-out nudge.</li>
+          <li><strong>In-app help</strong> — 22 persona-aware topics with related links and a support CTA.</li>
+          <li><strong>Support tickets</strong> — raised from inside the app, landing in the operator console.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Why it matters</span>
+          <h2>The three things WhatsApp can't do.</h2>
+        </div>
+        <div style="max-width: 780px;">
+          <p>The first is <strong>acknowledge-required notices</strong>. A pinned noticeboard post with read receipts is the evidence that everyone saw the allergen briefing, the new cellar procedure, the change to opening hours. A WhatsApp thumbs-up is not.</p>
+          <p>The second is <strong>server-side opt-outs</strong>. If a staff member turns off "Messages &amp; notices" at midnight, that isn't advice to the app — the notification service doesn't queue or deliver it. There's no back-door route where a manager can override or "just this once" it.</p>
+          <p>The third is <strong>the emergency banner</strong>. A supplier list is only useful when you can find the number in a hurry. Pinning up to three to a persistent banner means the cellar-flooded, gas-cut-off, alarm-going-off number is one tap from wherever you happened to be in the app.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How it joins to the rest</span>
+          <h2>Comms triggers pull from everywhere.</h2>
+        </div>
+        <div class="modules">
+          <article class="module-card">
+            <h3><a href="/features/rota">Rota &amp; scheduling →</a></h3>
+            <p>Publish a week and everyone rostered gets a push. Approve a swap and the swappers get a push.</p>
+          </article>
+          <article class="module-card">
+            <h3><a href="/features/clock-in">Time &amp; attendance →</a></h3>
+            <p>Missed clock-in alerts go to the staff member AND their managers.</p>
+          </article>
+          <article class="module-card">
+            <h3><a href="/features/compliance">Compliance &amp; tasks →</a></h3>
+            <p>Missed closing tasks and overdue checks land in the manager's inbox and the daily digest.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="cta-band">
+          <span class="eyebrow" style="color: oklch(0.85 0.008 60);">30-day free trial</span>
+          <h2>Retire the group chat this week.</h2>
+          <p>Sign up free, pin the first two notices, add your emergency contacts, and let the app take care of shift reminders. The whole team drops WhatsApp inside a fortnight.</p>
+          <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
+          <span style="display: inline-block; margin-left: 12px;"><a class="btn btn-secondary btn-large" href="/pricing">See pricing</a></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="brand-lockup" href="/">
+            <span class="brand-lockup__mark" aria-hidden="true"></span>
+            <span>HospitalityApp</span>
+          </a>
+          <p>Rota, till, compliance and payroll for independent UK pubs, restaurants and cafés.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/features">Features</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/multi-site">Multi-site</a></li>
+            <li><a href="https://my.hospitalityapp.co.uk/login">Sign in</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>For venues</h4>
+          <ul>
+            <li><a href="/for/pubs">Pubs</a></li>
+            <li><a href="/for/bars">Bars</a></li>
+            <li><a href="/for/restaurants">Restaurants</a></li>
+            <li><a href="/for/cafes">Cafés</a></li>
+            <li><a href="/for/coffee-shops">Coffee shops</a></li>
+            <li><a href="/for/hotels">Hotels</a></li>
+            <li><a href="/for/bnbs">B&amp;Bs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__legal">
+        <span>© <span class="js-year">2026</span> Psychemeta Ltd · HospitalityApp is a <a href="https://psychemeta.com" target="_blank" rel="noopener">Psychemeta</a> product · Made in the UK</span>
+        <span>Hosted in the EU · GDPR by default</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/main.js?v=20260809a" defer></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Team &amp; HR — right-to-work, NMW bands, per-area permissions | HospitalityApp</title>
+  <meta name="description" content="The full HR record — hourly rate, NI, tax code, right-to-work with share code, DOB (driving NMW age bands), bank details for payroll, per-area permissions, multi-site with per-venue rates. Column-level privacy enforced in the database, not the UI." />
+  <link rel="canonical" href="https://hospitalityapp.co.uk/features/team-hr" />
+  <link rel="alternate" hreflang="en-GB" href="https://hospitalityapp.co.uk/features/team-hr" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:title" content="Team &amp; HR — the full record, next to the rota | HospitalityApp" />
+  <meta property="og:description" content="Hourly rate, NI, tax code, right-to-work, NMW age bands, per-venue rates — all beside the rota, with column-level privacy in the database." />
+  <meta property="og:url" content="https://hospitalityapp.co.uk/features/team-hr" />
+  <meta property="og:image" content="https://hospitalityapp.co.uk/assets/images/screens/team.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#F5F1E8" />
+  <link rel="stylesheet" href="/assets/styles.css?v=20260809a" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hospitalityapp.co.uk/" },
+          { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://hospitalityapp.co.uk/features" },
+          { "@type": "ListItem", "position": 3, "name": "Team &amp; HR", "item": "https://hospitalityapp.co.uk/features/team-hr" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What's stored on a staff record?", "acceptedAnswer": { "@type": "Answer", "text": "Name, contact, role, hourly rate, start/end date, contract type, NI number, tax code, right-to-work (document type, share code, verified-on date, with an explicit 'Not verified — UK law requires a check' warning), DOB (which drives National Minimum Wage age bands), address, emergency contact, and bank details for payroll. Plus their clock-in code and till PIN." } },
+          { "@type": "Question", "name": "How is 'column-level privacy' enforced?", "acceptedAnswer": { "@type": "Answer", "text": "In the database, not the UI. A staff member can read their own row; a manager reads their team; pay and HR columns are behind a database view and a write-guard trigger. An escalation attempt or a tampered request hits the database's answer, not the front end's — the wrong-role user simply never sees the columns, whichever route they take. It's the difference between 'we hid it' and 'they can't reach it'." } },
+          { "@type": "Question", "name": "How does 'invite by email' work?", "acceptedAnswer": { "@type": "Answer", "text": "You add their email and role; a branded link goes out; they tap it once, set a password, and land straight in the app — no browser detour, no follow-up call. Backup link to send manually if the email doesn't arrive; resend for expired invites; PENDING badge in the rota picker so you can schedule before they've accepted." } },
+          { "@type": "Question", "name": "What are per-area permissions?", "acceptedAnswer": { "@type": "Answer", "text": "View/edit/approve toggles across Menu, Staff, Rota, Time off, Notice board and Shift swaps. Managers don't have to be all-or-nothing — one manager can be the rota builder, another the compliance owner, another the till admin. Owners still see and do everything." } },
+          { "@type": "Question", "name": "What if a staff member works at more than one of my venues?", "acceptedAnswer": { "@type": "Answer", "text": "The 'Works at other venues' link makes multi-site staff first-class citizens. Per-venue hourly rate, per-venue permissions, per-venue rota; consolidated on the all-branches payroll run so pay is one figure, not a reconciliation." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand-lockup" href="/">
+        <span class="brand-lockup__mark" aria-hidden="true"></span>
+        <span>HospitalityApp</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-toggle__icon"></span>
+      </button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="/features" aria-current="page">Features</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/for/">For venues</a>
+        <a href="/guides/">Guides</a>
+        <a href="/multi-site">Multi-site</a>
+        <span class="nav-cta">
+          <a class="btn btn-secondary" href="https://my.hospitalityapp.co.uk/login">Sign in</a>
+          <a class="btn" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__inner">
+        <span class="eyebrow">Module · Team &amp; HR</span>
+        <h1 class="hero__title">The HR record, next to the rota.</h1>
+        <p class="hero__sub">Right-to-work and NMW age bands are the two things that cost an independent real money at inspection. Holding them next to the rota — where the age band is already relevant to the rate — is the point.</p>
+        <div class="hero__cta">
+          <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
+          <a class="btn btn-secondary btn-large" href="/features">All features</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">What it does</span>
+          <h2>Everything on a person, in one place.</h2>
+        </div>
+        <ul class="feature-row__list" style="max-width: 780px;">
+          <li><strong>Roster</strong> with All / On today / On leave filters.</li>
+          <li><strong>Invite by email</strong> — a branded link the invitee taps to set a password and land in the app. Backup link, resend for expired invites, PENDING badge in the rota picker.</li>
+          <li><strong>The full HR record</strong>: name, contact, role, hourly rate, start/end date, contract type, NI number, tax code, right-to-work (document type, share code, verified-on date, "Not verified" warning), DOB (drives NMW age bands), address, emergency contact, bank details for payroll.</li>
+          <li><strong>Clock-in code</strong> and <strong>till PIN</strong> per person.</li>
+          <li><strong>Per-area permissions</strong> — view/edit/approve toggles across Menu, Staff, Rota, Time off, Notice board, Shift swaps.</li>
+          <li><strong>Works at other venues</strong> — multi-site staff with a per-venue hourly rate.</li>
+          <li><strong>Deactivate a leaver</strong> without deleting anything — history, punches and audit remain intact.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Why it matters</span>
+          <h2>The two things that cost real money at inspection.</h2>
+        </div>
+        <div style="max-width: 780px;">
+          <p>Right-to-work checks and National Minimum Wage banding are the two areas HMRC and Immigration Enforcement care most about. A missing share-code note or a birthday that's silently crossed a NMW threshold are the fines you hear about later. Holding the HR record next to the rota — where age is already the reason someone gets £11.44 rather than £8.60 — is the loop that closes.</p>
+          <p>The other piece is <strong>column-level privacy enforced in the database</strong>. Pay and HR data sits behind a view and a write-guard trigger, so an escalation attempt or a tampered request hits the database's answer, not the front end's. It's the difference between "we hid it in the UI" and "they can't reach it".</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How it joins to the rest</span>
+          <h2>The staff record is a spine.</h2>
+        </div>
+        <div class="modules">
+          <article class="module-card">
+            <h3><a href="/features/rota">Rota &amp; scheduling →</a></h3>
+            <p>Role chips, hourly rates, availability, holiday balances — all read from the same record. Multi-site staff carry per-venue rates.</p>
+          </article>
+          <article class="module-card">
+            <h3><a href="/features/payroll">Payroll &amp; pay →</a></h3>
+            <p>NI, tax code and bank details live here; the pay run pulls them without transcription.</p>
+          </article>
+          <article class="module-card">
+            <h3><a href="/features/compliance">Compliance &amp; tasks →</a></h3>
+            <p>Workforce compliance (right-to-work, DBS, training expiry) is populated from the staff record. Two views, one truth.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="cta-band">
+          <span class="eyebrow" style="color: oklch(0.85 0.008 60);">30-day free trial</span>
+          <h2>Onboard your team in seconds, not an afternoon.</h2>
+          <p>Sign up free, invite your team by email, and let each person set their own password. First shift on next week's rota takes minutes.</p>
+          <a class="btn btn-large" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
+          <span style="display: inline-block; margin-left: 12px;"><a class="btn btn-secondary btn-large" href="/pricing">See pricing</a></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="brand-lockup" href="/">
+            <span class="brand-lockup__mark" aria-hidden="true"></span>
+            <span>HospitalityApp</span>
+          </a>
+          <p>Rota, till, compliance and payroll for independent UK pubs, restaurants and cafés.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/features">Features</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/multi-site">Multi-site</a></li>
+            <li><a href="https://my.hospitalityapp.co.uk/login">Sign in</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>For venues</h4>
+          <ul>
+            <li><a href="/for/pubs">Pubs</a></li>
+            <li><a href="/for/bars">Bars</a></li>
+            <li><a href="/for/restaurants">Restaurants</a></li>
+            <li><a href="/for/cafes">Cafés</a></li>
+            <li><a href="/for/coffee-shops">Coffee shops</a></li>
+            <li><a href="/for/hotels">Hotels</a></li>
+            <li><a href="/for/bnbs">B&amp;Bs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__legal">
+        <span>© <span class="js-year">2026</span> Psychemeta Ltd · HospitalityApp is a <a href="https://psychemeta.com" target="_blank" rel="noopener">Psychemeta</a> product · Made in the UK</span>
+        <span>Hosted in the EU · GDPR by default</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/main.js?v=20260809a" defer></script>
+</body>
+</html>
