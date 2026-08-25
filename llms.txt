@@ -2,7 +2,7 @@
 
 > The all-in-one operations system for independent UK hospitality — pubs, bars, restaurants, cafés, coffee shops, hotels and B&Bs. Thirteen tightly-scoped modules in one app: rota, till, KDS, mobile ordering, clock-in, payroll, tips & tronc, reporting, stock, compliance, team & HR, communication, events. Built for owner-operators, not enterprise chains.
 
-HospitalityApp is a UK SaaS product. The marketing site is hospitalityapp.co.uk; the product itself runs at my.hospitalityapp.co.uk (iOS, Android and web). Pricing is per venue, per month, +VAT, with a 30-day free trial (no card required): Essentials £49, Professional £99, Complete £149. Complete includes the till (POS) and kitchen display (KDS) — there is no separate POS bolt-on. There are no per-terminal or per-user fees. Annual billing takes two months off.
+HospitalityApp is a UK SaaS product. The marketing site is hospitalityapp.co.uk; the product itself runs at my.hospitalityapp.co.uk (iOS, Android and web). Pricing is per venue, per month, +VAT, with a 30-day free trial (no card required): Essentials £49, Professional £99, Complete £149. Professional includes the till (POS), kitchen display (KDS), mobile ordering and stock control — there is no separate POS bolt-on. Complete adds the insights suite, multi-venue and white-label branding. There are no per-terminal or per-user fees. Annual billing takes two months off.
 
 ## The commercial argument
 
@@ -22,7 +22,7 @@ No competitor at this price point closes that loop for a single-site independent
 - [Time & attendance](https://hospitalityapp.co.uk/features/clock-in): three clock-in methods (GPS geofence, QR code, NFC tag), combinable. Overnight-safe, auto-close sweep so a forgotten clock-out never becomes a 30-hour shift, discrepancies queue with one-tap resolutions.
 - [Payroll & pay](https://hospitalityapp.co.uk/features/payroll): a pack built from actual clock punches, not memory. Planned / exact / rounded basis, three views, verified-recipient email pack, all-branches run, "My pay" for staff.
 - [Tips & tronc](https://hospitalityapp.co.uk/features/tips-tronc): card tips pull from the till automatically; cash entered manually; Calculate → Review → Finalise produces the dated tronc statement the Employment (Allocation of Tips) Act 2023 requires.
-- [Till / POS](https://hospitalityapp.co.uk/features/till): full-screen, no chrome. Counter or table service, measure popup (half/pint, single/double, 175ml/250ml/bottle), tables + tabs, PIN-attributed sales, cash-drawer opens logged. Included in Complete.
+- [Till / POS](https://hospitalityapp.co.uk/features/till): full-screen, no chrome. Counter or table service, measure popup (half/pint, single/double, 175ml/250ml/bottle), tables + tabs, PIN-attributed sales, cash-drawer opens logged. Included in Professional (£99/venue/mo).
 - [Mobile ordering](https://hospitalityapp.co.uk/features/mobile-ordering): a server's phone as a roaming till. PIN-unlock model, three menu layouts (Category tabs / Browse & drill / One long scroll), orders land at the till and the pass. Covers per server go up; kitchen backs up less.
 - [Kitchen display (KDS)](https://hospitalityapp.co.uk/features/kitchen-display): full-screen tickets at the pass, or filtered to a station. Products carry a station; tickets route automatically. Replaces the printer and the spike.
 - [Stock & GP](https://hospitalityapp.co.uk/features/stock): container-first stocktake — kegs and bottles counted with a stepper and 0 · ¼ · ½ · ¾ · Full chips. Never millilitres. Auto-depletion on every till sale. GP stops being a quarterly guess.
@@ -88,7 +88,7 @@ One codebase, two apps. The till, KDS and mobile-ordering runtimes are web code;
 - No per-terminal fee, no per-user fee, no card-processor lock-in — HospitalityApp records the sale; the venue's terminal takes the payment.
 - Clock model is immutable (append-only punches; sessions derived by a database trigger). Corrections leave an audit trail.
 - Column-level privacy on staff pay / HR data is enforced in the database (a view + a write-guard trigger), not the UI.
-- Complete includes: till, kitchen display, mobile ordering, insights, stock, tronc, events. Essentials includes: rota, clock-in, comms. Professional adds payroll, compliance and reporting.
+- Essentials includes: rota, time & attendance, leave, comms and basic daily checklists. Professional adds advanced scheduling, the full compliance suite, payroll, and the till suite — POS, kitchen display, mobile ordering, stock control, GP margins and tips & tronc. Complete adds the insights suite, multi-venue and white-label branding.
 - Made by [Psychemeta Ltd](https://psychemeta.com).
 
 ## Contact
