@@ -51,6 +51,13 @@ One codebase, two apps. The till, KDS and mobile-ordering runtimes are web code;
 - [About](https://hospitalityapp.co.uk/about): who builds it and why.
 - [Contact](https://hospitalityapp.co.uk/contact): book a call.
 
+## Free tools (no email required, no sign-up)
+
+- [Rota template](https://hospitalityapp.co.uk/tools/rota-template): free staff rota spreadsheet for UK hospitality. Overnight shifts calculate correctly (17:00–01:00 is 8 hours, not −16), live labour-cost % banded green/amber/red against your target, and two Working Time Regulations 1998 checks — a 20-minute break flag on shifts over 6 hours, and an 11-hour daily rest flag on the close-then-open. Works in Excel 2016+, Google Sheets, Numbers and LibreOffice.
+- [Pub rota template](https://hospitalityapp.co.uk/tools/pub-rota-template): same engine with cellar, glass collector and door in the role list.
+- [Bar rota template](https://hospitalityapp.co.uk/tools/bar-rota-template): cocktail bar, barback, glass collector and door, built for late trading.
+- [Kitchen & front-of-house rota template](https://hospitalityapp.co.uk/tools/kitchen-foh-rota-template): head chef to runner, both halves of the building costed on one sheet, split shifts handled.
+
 ## By venue type
 
 - [Pubs](https://hospitalityapp.co.uk/for/pubs) — halves + pints, cellar checks, sports-event templates, tronc under the 2023 Act.

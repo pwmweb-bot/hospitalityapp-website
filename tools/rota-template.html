@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Free rota template (Excel &amp; Google Sheets) — UK hospitality | HospitalityApp</title>
+  <meta name="description" content="A free staff rota template for UK pubs, bars, restaurants and cafés. Overnight shifts calculate correctly, live labour-cost % against your target, and it flags shifts breaching the 20-minute break and 11-hour rest rules. No email required." />
+  <link rel="canonical" href="https://hospitalityapp.co.uk/tools/rota-template" />
+  <link rel="alternate" hreflang="en-GB" href="https://hospitalityapp.co.uk/tools/rota-template" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:title" content="Free rota template for UK hospitality — Excel &amp; Google Sheets" />
+  <meta property="og:description" content="Overnight shifts that calculate correctly, live labour-cost %, and Working Time Regulations checks built in. Free, no email required." />
+  <meta property="og:url" content="https://hospitalityapp.co.uk/tools/rota-template" />
+  <meta property="og:image" content="https://hospitalityapp.co.uk/assets/images/og/home.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#F5F1E8" />
+  <link rel="stylesheet" href="/assets/styles.css?v=20260809a" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hospitalityapp.co.uk/" },
+          { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://hospitalityapp.co.uk/tools/rota-template" },
+          { "@type": "ListItem", "position": 3, "name": "Free rota template", "item": "https://hospitalityapp.co.uk/tools/rota-template" }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to use the free hospitality rota template",
+        "description": "Build a week's staff rota in a spreadsheet, with hours, labour cost and Working Time Regulations checks calculated for you.",
+        "totalTime": "PT15M",
+        "step": [
+          { "@type": "HowToStep", "position": 1, "name": "Download and open", "text": "Download the .xlsx and open it in Excel, Google Sheets, Numbers or LibreOffice. Put Monday's date in cell B3 of the Rota sheet." },
+          { "@type": "HowToStep", "position": 2, "name": "Enter the shifts", "text": "One row per shift. Type the date, the person's name, and the start and end times. Overnight shifts are handled — 17:00 to 01:00 counts as 8 hours." },
+          { "@type": "HowToStep", "position": 3, "name": "Add unpaid breaks", "text": "Put unpaid break minutes in the Break column. Hours and cost recalculate themselves." },
+          { "@type": "HowToStep", "position": 4, "name": "Add hourly rates", "text": "Put each person's hourly rate in the Rate column. Look up the current National Minimum Wage band for their age rather than reusing last year's figure." },
+          { "@type": "HowToStep", "position": 5, "name": "Set your target", "text": "On the Summary sheet, type your expected net sales excluding VAT and your target labour percentage." },
+          { "@type": "HowToStep", "position": 6, "name": "Fix the week before you publish it", "text": "Check the variance cell. Green means within two points of target. Red means the week is over budget — change it before the team sees it." }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Is the rota template really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. No email address, no sign-up, no trial required. Download it, use it, change it, share it with anyone. We publish it because operators who outgrow a spreadsheet sometimes come looking for software, and we would rather be the people who gave them the spreadsheet." } },
+          { "@type": "Question", "name": "Does it work in Google Sheets?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Download the .xlsx and upload it to Google Drive, then open with Google Sheets — the formulas, the conditional formatting and both compliance checks carry across. It also works in Microsoft Excel 2016 or newer, Apple Numbers and LibreOffice Calc." } },
+          { "@type": "Question", "name": "Does it handle shifts that run past midnight?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, and this is the thing most spreadsheet rotas get wrong. A shift from 17:00 to 01:00 is calculated as 8 hours, not minus 16. The formula adds a day to the end time whenever the end is earlier than the start, so late bars and kitchens work without a workaround." } },
+          { "@type": "Question", "name": "What are the two compliance checks?", "acceptedAnswer": { "@type": "Answer", "text": "The break check flags any shift over 6 hours with under 20 minutes of break, because the Working Time Regulations 1998 give a worker an uninterrupted 20-minute rest break when daily working time exceeds 6 hours. The rest check flags any shift starting less than 11 hours after that same person's previous shift ended, because the Regulations provide for 11 consecutive hours of daily rest. Both are prompts to look again, not legal advice — different rules apply to under-18s." } },
+          { "@type": "Question", "name": "How do I work out my labour cost percentage?", "acceptedAnswer": { "@type": "Answer", "text": "Total labour cost divided by net sales, times 100 — and use sales excluding VAT, because VAT is not yours. The Summary sheet does this for you and bands the result: green within two percentage points of your target, amber two to five points over, red beyond that." } },
+          { "@type": "Question", "name": "Do I need to credit HospitalityApp if I use it?", "acceptedAnswer": { "@type": "Answer", "text": "No. Use it however you like, including inside your own business or group, with no attribution required." } }
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    .dl {
+      background: var(--paper, #fff);
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      padding: 26px 26px 22px;
+      box-shadow: 0 12px 32px -18px oklch(0.10 0.012 60 / 0.22);
+      max-width: 640px;
+    }
+    .dl__row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin: 14px 0 0; }
+    .dl__meta {
+      font-family: var(--mono); font-size: 11px; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--ink-3); margin: 14px 0 0;
+    }
+    .dl__nogate {
+      display: inline-block; font-family: var(--mono); font-size: 10.5px;
+      font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      color: #2e7d54; background: #e6f2ea; border-radius: 999px;
+      padding: 4px 11px; margin-bottom: 14px;
+    }
+    .grid-preview { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .grid-preview th, .grid-preview td {
+      border: 1px solid var(--line); padding: 7px 9px; text-align: left;
+    }
+    .grid-preview th {
+      background: var(--bone-2); font-family: var(--mono); font-size: 10px;
+      letter-spacing: .09em; text-transform: uppercase; color: var(--ink-3);
+      white-space: nowrap;
+    }
+    .grid-preview td { color: var(--ink-2); }
+    .flag { color: #b23b3b; font-weight: 600; white-space: nowrap; }
+    .scrollx { overflow-x: auto; border-radius: var(--r-lg); }
+    .variants { display: grid; grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); gap: 14px; }
+    .print-only { display: none; }
+    @media print {
+      .site-header, .site-footer, .hero__cta, .dl, .cta-band, .no-print { display: none !important; }
+      .print-only { display: block !important; }
+      .print-grid { width: 100%; border-collapse: collapse; font-size: 10pt; }
+      .print-grid th, .print-grid td { border: 1px solid #999; padding: 9px 6px; }
+      .print-grid th { background: #eee; }
+      .print-grid td { height: 30px; }
+      a[href]:after { content: ""; }
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJBLJRW979"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-TJBLJRW979');
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand-lockup" href="/">
+        <span class="brand-lockup__mark" aria-hidden="true"></span>
+        <span>HospitalityApp</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-toggle__icon"></span>
+      </button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="/features">Features</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/for/">For venues</a>
+        <a href="/guides/">Guides</a>
+        <a href="/multi-site">Multi-site</a>
+        <span class="nav-cta">
+          <a class="btn btn-secondary" href="https://my.hospitalityapp.co.uk/login">Sign in</a>
+          <a class="btn" href="https://my.hospitalityapp.co.uk/login">Start free trial</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__inner">
+        <span class="eyebrow">Free tool · Rota template</span>
+        <h1 class="hero__title">A free rota template that gets overnight shifts right.</h1>
+        <p class="hero__sub">Most spreadsheet rotas break the moment a shift crosses midnight. This one doesn't — and it also costs the week live against your labour target, and flags the two Working Time rules hospitality breaks most often. Built for UK pubs, bars, restaurants and cafés.</p>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="dl">
+          <span class="dl__nogate">No email required</span>
+          <h2 style="margin: 0 0 8px; font-size: 1.35rem;">Download the template</h2>
+          <p style="margin: 0; color: var(--ink-2);">Works in Microsoft Excel (2016 or newer), Google Sheets, Apple Numbers and LibreOffice Calc.</p>
+          <div class="dl__row">
+            <a class="btn btn-large" href="/tools/downloads/rota-template.xlsx" download>Download .xlsx</a>
+            <a class="btn btn-secondary btn-large" href="/tools/downloads/rota-template.csv" download>Plain .csv</a>
+          </div>
+          <p class="dl__meta">17 KB · three sheets: Rota, Summary, How to use · free to use and share, no attribution needed</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">What makes it different</span>
+          <h2>Three things most rota spreadsheets get wrong.</h2>
+        </div>
+        <ul class="feature-row__list" style="max-width: 780px;">
+          <li><strong>Overnight shifts.</strong> A shift from 17:00 to 01:00 is eight hours. In a naive spreadsheet it comes out as minus sixteen, so people either fudge it or split the row. This template adds a day whenever the end time is earlier than the start.</li>
+          <li><strong>Labour cost as you build.</strong> The Summary sheet divides labour cost by your expected net sales and bands the answer green, amber or red against your target. You find out the week is over budget <em>before</em> you publish it, not after payday.</li>
+          <li><strong>Two Working Time checks.</strong> It flags any shift over six hours with under a 20-minute break, and any shift starting less than eleven hours after that person's last one finished. Both are the mistakes a busy manager makes at 5pm on a Thursday.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">What it looks like</span>
+          <h2>One row per shift. The maths looks after itself.</h2>
+          <p>Grey columns are calculated — you never type in them. The two check columns stay blank until something needs looking at.</p>
+        </div>
+        <div class="scrollx">
+          <table class="grid-preview">
+            <thead>
+              <tr>
+                <th>Day</th><th>Role</th><th>Name</th><th>Start</th><th>End</th>
+                <th>Break</th><th>Hours</th><th>Rate</th><th>Cost</th>
+                <th>Break check</th><th>Rest check</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monday</td><td>Duty manager</td><td>Alice</td><td>09:00</td><td>17:00</td>
+                <td>30</td><td>7.50</td><td>£12.50</td><td>£93.75</td><td></td><td></td>
+              </tr>
+              <tr>
+                <td>Monday</td><td>Bar</td><td>Bob</td><td>17:00</td><td>01:00</td>
+                <td>0</td><td>8.00</td><td>£12.50</td><td>£100.00</td>
+                <td class="flag">Needs a 20-min break</td><td></td>
+              </tr>
+              <tr>
+                <td>Tuesday</td><td>Bar</td><td>Bob</td><td>09:00</td><td>17:00</td>
+                <td>30</td><td>7.50</td><td>£12.50</td><td>£93.75</td>
+                <td></td><td class="flag">Under 11h rest</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top: 16px; max-width: 780px;">Bob's Monday late shift ends at 01:00 on Tuesday and he is back at 09:00 — eight hours later. That is the rota mistake nobody notices until someone is too tired to be behind a bar, and it is exactly what the rest check exists to catch.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Pick your venue</span>
+          <h2>Four versions, already set up with the right roles.</h2>
+          <p>Same engine, different role rows — so you are not deleting "Chef de partie" out of a pub rota before you start.</p>
+        </div>
+        <div class="variants">
+          <article class="module-card">
+            <h3>General hospitality</h3>
+            <p>Duty manager, bar, kitchen, floor. The neutral starting point.</p>
+            <p style="margin-top:10px;"><strong>You're on this page.</strong></p>
+          </article>
+          <article class="module-card">
+            <h3><a href="/tools/pub-rota-template">Pub rota template</a></h3>
+            <p>Adds cellar, glass collector and door — the roles a wet-led week actually needs.</p>
+          </article>
+          <article class="module-card">
+            <h3><a href="/tools/bar-rota-template">Bar rota template</a></h3>
+            <p>Cocktail bar, barback, glass collector, door. Built for late trading.</p>
+          </article>
+          <article class="module-card">
+            <h3><a href="/tools/kitchen-foh-rota-template">Kitchen &amp; FOH template</a></h3>
+            <p>Head chef through to runner and host, kitchen and front-of-house on one sheet.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Six steps</span>
+          <h2>How to use it.</h2>
+        </div>
+        <ol class="feature-row__list" style="max-width: 780px;">
+          <li><strong>Open it</strong> in Excel, Google Sheets, Numbers or LibreOffice, and put Monday's date in cell B3.</li>
+          <li><strong>Enter one row per shift</strong> — date, role, name, start, end. Times go in as <code>17:00</code>, not as text.</li>
+          <li><strong>Add unpaid break minutes.</strong> Hours and cost calculate themselves.</li>
+          <li><strong>Add hourly rates.</strong> Look up the current National Minimum Wage band for each person's age — the rates change every April, which is why this template ships with the rate column blank rather than a figure that will be wrong by next spring.</li>
+          <li><strong>On the Summary sheet</strong>, type your expected net sales (excluding VAT) and your target labour percentage.</li>
+          <li><strong>Fix the week before you publish it.</strong> Green means you are within two points of target. Red means change something now.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Setting a target</span>
+          <h2>What labour percentage should you be aiming at?</h2>
+          <p>Rough UK benchmarks for a single-site independent, gross labour against net sales. Add two to four points if you are loading employer NIC and pension into the figure.</p>
+        </div>
+        <div class="scrollx">
+          <table class="grid-preview">
+            <thead><tr><th>Venue type</th><th>Healthy range</th><th>Note</th></tr></thead>
+            <tbody>
+              <tr><td>Wet-led pub</td><td>22–28%</td><td>Drinks service carries fewer labour hours per pound taken</td></tr>
+              <tr><td>Food-led pub / gastropub</td><td>28–34%</td><td>Kitchen brigade on top of front-of-house</td></tr>
+              <tr><td>Casual dining restaurant</td><td>26–32%</td><td>Table turns matter more than headcount</td></tr>
+              <tr><td>Fine dining</td><td>30–38%</td><td>Higher labour per cover, usually with higher GP to match</td></tr>
+              <tr><td>Café / coffee shop</td><td>25–32%</td><td>Small teams — owner hours often go uncounted</td></tr>
+              <tr><td>Cocktail bar</td><td>24–30%</td><td>Skilled labour, higher spend per cover</td></tr>
+              <tr><td>Hotel F&amp;B</td><td>28–35%</td><td>Multi-department, breakfast plus service</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top: 16px; max-width: 780px;">These are benchmarks, not targets. A wet-led pub at 30% has a problem worth solving; a fine-dining restaurant at 32% may be perfectly healthy. Set a target inside your own trading pattern. There is more detail, including the full formula, in the <a href="/guides/labour-cost-percentage-calculator">labour-cost percentage guide</a>.</p>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">The two checks, explained</span>
+          <h2>What the flags actually mean.</h2>
+        </div>
+        <div style="max-width: 780px;">
+          <p><strong>“Needs a 20-min break”</strong> appears when a shift is longer than six hours and you have entered less than twenty minutes of break. Under the Working Time Regulations 1998, a worker is entitled to an uninterrupted rest break of twenty minutes when daily working time is more than six hours. In hospitality this is the most-breached rule in the book, usually by accident on a short-staffed Saturday.</p>
+          <p><strong>“Under 11h rest”</strong> appears when someone's next shift starts less than eleven hours after their last one finished. The Regulations provide for eleven consecutive hours of rest in each twenty-four-hour period. The classic breach is the close-then-open — finish at 01:00, back on at 09:00 — which is eight hours and is very easy to roster without noticing.</p>
+          <p>Both flags are a prompt to look again, not legal advice. Different and stricter limits apply to workers under 18, and some sectors and workforce agreements vary. Check your own obligations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section no-print">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Prefer paper?</span>
+          <h2>Print a blank week.</h2>
+          <p>Some kitchens still want a sheet on the wall. Printing this page gives you a clean blank grid with the spreadsheet's columns and nothing else — no navigation, no marketing.</p>
+        </div>
+        <p><button class="btn btn-secondary" type="button" onclick="window.print()">Print a blank rota</button></p>
+      </div>
+    </section>
+
+    <div class="print-only">
+      <h2>Weekly rota</h2>
+      <p>Venue: ________________________  Week commencing: ________________________</p>
+      <table class="print-grid">
+        <thead>
+          <tr><th>Day</th><th>Role</th><th>Name</th><th>Start</th><th>End</th><th>Break</th><th>Hours</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Mon</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Mon</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Tue</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Tue</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Wed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Wed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Thu</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Thu</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Fri</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Fri</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Sat</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Sat</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Sun</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Sun</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+      <p>hospitalityapp.co.uk/tools/rota-template</p>
+    </div>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Being honest about it</span>
+          <h2>When the spreadsheet stops working.</h2>
+        </div>
+        <div style="max-width: 780px;">
+          <p>A spreadsheet is genuinely fine for a small team and a steady week. Plenty of good venues run on one for years, and we would rather you used a good one than a bad one.</p>
+          <p>It stops being fine at a predictable point. A spreadsheet cannot tell your team the rota has changed — that is still a WhatsApp message somebody misses. It cannot stop you rostering a person who booked the week off, because it does not know about the holiday. It cannot tell you what people <em>actually</em> worked versus what you planned, so payday becomes a negotiation. And it cannot let someone pick up a shift you could not fill without you re-sending the file.</p>
+          <p>When those things start costing real money, that is the point to move to something that does them. Our <a href="/features/rota">rota module</a> publishes to everyone's phone, blocks a double-booking, reconciles planned against actual from clock-in punches, and shows the same labour-cost figure this spreadsheet calculates — except live, as you drag shifts around.</p>
+        </div>
+        <p style="margin-top: 22px;">
+          <a class="btn" href="/features/rota">See how the rota module works</a>
+          <span style="display:inline-block; margin-left: 10px;"><a class="btn btn-secondary" href="/pricing">Pricing from £49</a></span>
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-tight" style="background: var(--bone-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Common questions</span>
+          <h2>About the template.</h2>
+        </div>
+        <div style="max-width: 780px;">
+          <details><summary>Is it really free?</summary><p>Yes. No email address, no sign-up, no trial. Download it, change it, share it. We publish it because operators who outgrow a spreadsheet sometimes come looking for software, and we would rather be the people who gave them the spreadsheet.</p></details>
+          <details><summary>Does it work in Google Sheets?</summary><p>Yes. Upload the .xlsx to Google Drive and open it with Google Sheets — formulas, conditional formatting and both checks carry across. It also works in Excel 2016 or newer, Apple Numbers and LibreOffice Calc.</p></details>
+          <details><summary>Does it handle shifts past midnight?</summary><p>Yes, and this is the thing most spreadsheet rotas get wrong. 17:00 to 01:00 is calculated as eight hours, not minus sixteen.</p></details>
+          <details><summary>Why is the hourly rate column empty?</summary><p>Deliberately. National Minimum and National Living Wage rates change every April and vary by age band. A figure baked into a downloadable file is wrong within months, and a wrong wage figure is worse than no figure. Look up the current rate for each person's band.</p></details>
+          <details><summary>Can I use it for more than one venue?</summary><p>Yes — take a copy per venue. It is not built to consolidate several sites into one view; if you need that, it is what the <a href="/multi-site">multi-site</a> side of the app is for.</p></details>
+          <details><summary>Do I have to credit you?</summary><p>No. Use it however you like, including commercially, with no attribution.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="brand-lockup" href="/">
+            <span class="brand-lockup__mark" aria-hidden="true"></span>
+            <span>HospitalityApp</span>
+          </a>
+          <p>Rota, till, compliance and payroll for independent UK pubs, restaurants and cafés.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/features">Features</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/multi-site">Multi-site</a></li>
+            <li><a href="https://my.hospitalityapp.co.uk/login">Sign in</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Free tools</h4>
+          <ul>
+            <li><a href="/tools/rota-template">Rota template</a></li>
+            <li><a href="/tools/pub-rota-template">Pub rota template</a></li>
+            <li><a href="/tools/bar-rota-template">Bar rota template</a></li>
+            <li><a href="/tools/kitchen-foh-rota-template">Kitchen &amp; FOH template</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__legal">
+        <span>© <span class="js-year">2026</span> Psychemeta Ltd · HospitalityApp is a <a href="https://psychemeta.com" target="_blank" rel="noopener">Psychemeta</a> product · Made in the UK</span>
+        <span>Hosted in the EU · GDPR by default</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/main.js?v=20260809a" defer></script>
+</body>
+</html>

@@ -36,6 +36,9 @@ RewriteRule ^(.*)$ $1.html [L]
 # ── MIME / Content-Type fixes ───────────────────────────────
 <IfModule mod_mime.c>
 AddType application/json .json
+# Free downloadable templates under /tools/downloads/
+AddType application/vnd.openxmlformats-officedocument.spreadsheetml.sheet .xlsx
+AddType text/csv .csv
 # Apple's AASA file has no extension. Use SetEnvIf + Header to fix the
 # content type on this exact path.
 </IfModule>
