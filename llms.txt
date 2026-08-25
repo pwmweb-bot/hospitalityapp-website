@@ -70,6 +70,7 @@ One codebase, two apps. The till, KDS and mobile-ordering runtimes are web code;
 
 ## Guides
 
+- [Best pub till systems UK 2026](https://hospitalityapp.co.uk/guides/best-pub-till-systems-uk): eleven UK pub/bar EPOS systems compared on sourced pricing, cost of a second till, contract length and card-processing lock-in. Covers Tabology, Square for Restaurants, SumUp POS Pro, Kobas, Lightspeed, Epos Now, Toast UK, Zonal Aztec, Akru, ICRTouch and TouchBistro. Every figure is either sourced to the vendor's own live page or marked "not published"; third-party figures are labelled and dated. Includes a published methodology, HospitalityApp's own weaknesses, and an explicit table of situations where a competitor is the better buy.
 - [Hospitality POS (UK)](https://hospitalityapp.co.uk/guides/hospitality-pos-uk)
 - [Pub till app](https://hospitalityapp.co.uk/guides/pub-till-app)
 - [Menu management software](https://hospitalityapp.co.uk/guides/menu-management-software)
