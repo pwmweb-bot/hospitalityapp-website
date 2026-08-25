@@ -68,6 +68,10 @@ One codebase, two apps. The till, KDS and mobile-ordering runtimes are web code;
 - [Hotels](https://hospitalityapp.co.uk/for/hotels) — multi-department rota, bar & F&B till, function calendar, all-branches payroll.
 - [B&Bs](https://hospitalityapp.co.uk/for/bnbs) — right-sized for a small team with the same compliance and honest payroll as bigger operators.
 
+## Compare
+
+- [Costing hub](https://hospitalityapp.co.uk/compare/): which shape of system a UK pub needs — rota-only (priced per head), till-only (per venue or per terminal) or all-in-one (per venue) — with year-one costs worked from published vendor pricing for a 25-staff two-bar pub with one kitchen screen and £45,000/month card turnover. Key finding: the software spread across six priceable systems is about £1,212/year, while the spread between a 1.75% and a 1.2% card rate on the same turnover is £2,970/year — so the payments decision is worth roughly 2.5x the software decision.
+
 ## Guides
 
 - [Pub till hardware (UK)](https://hospitalityapp.co.uk/guides/pub-till-hardware-uk): what till hardware a UK pub actually needs, with real prices and VAT basis stated. Explains why a USB receipt printer cannot work with an iPad (no driver system, no USB printing class) and that a tablet till needs an Ethernet printer; the three ways a browser-based till can print (Epson ePOS-Print, Star CloudPRNT, or a native app opening a socket to port 9100); and that a cash drawer connects to the receipt printer's RJ11/RJ12 DK "drawer kick" port, not to the tablet — the printer sends a 24V pulse to a solenoid. Three shopping lists from a £33 ex VAT minimum to £1,476–£2,073 ex VAT for two bars and a kitchen, a 10-question compatibility checker, and the contract questions (per-terminal licensing, lease funders, auto-renewal, processor lock-in) that cost more than the hardware.
