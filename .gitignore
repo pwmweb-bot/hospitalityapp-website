@@ -5,3 +5,6 @@ node_modules/
 
 # local preview-server helper (not for deploy)
 .claude/
+
+# internal planning docs — the repo root is the public web root, never publish these
+docs/

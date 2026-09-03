@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="An event is added to the diary and highlighted">
+  <style>
+    .day{transform-box:fill-box;transform-origin:center;animation:day 3.2s ease-in-out infinite}
+    @keyframes day{0%,30%{transform:scale(0);opacity:0}44%{transform:scale(1.15);opacity:1}56%{transform:scale(.97)}66%,90%{transform:scale(1);opacity:1}97%,100%{opacity:0}}
+    .spk{transform-box:fill-box;transform-origin:center;animation:spk 3.2s ease-in-out infinite}
+    @keyframes spk{0%,50%{transform:scale(0) rotate(-20deg);opacity:0}64%{transform:scale(1.2) rotate(0);opacity:1}76%,90%{transform:scale(1);opacity:1}97%,100%{opacity:0}}
+    @media (prefers-reduced-motion:reduce){.day,.spk{animation:none;opacity:1}.day{transform:scale(1)}.spk{transform:scale(1)}}
+  </style>
+  <rect x="12" y="14" width="40" height="38" rx="6" fill="none" stroke="#1A1612" stroke-width="3"/>
+  <line x1="12" y1="24" x2="52" y2="24" stroke="#1A1612" stroke-width="3"/>
+  <line x1="22" y1="10" x2="22" y2="18" stroke="#1A1612" stroke-width="3" stroke-linecap="round"/>
+  <line x1="42" y1="10" x2="42" y2="18" stroke="#1A1612" stroke-width="3" stroke-linecap="round"/>
+  <rect class="day" x="26" y="30" width="14" height="14" rx="3" fill="#E97D45"/>
+  <path class="spk" d="M46 30 l1.6 4 4 1.6 -4 1.6 -1.6 4 -1.6 -4 -4 -1.6 4 -1.6 z" fill="#5B8C6E"/>
+</svg>

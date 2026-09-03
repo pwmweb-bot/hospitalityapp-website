@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="A shift drops into a weekly rota grid">
+  <style>
+    .drop{animation:rdrop 3s ease-out infinite;transform-box:fill-box}
+    @keyframes rdrop{0%,4%{opacity:0;transform:translateY(-6px)}16%{opacity:1;transform:none}88%{opacity:1;transform:none}97%,100%{opacity:0}}
+    @media (prefers-reduced-motion:reduce){.drop{animation:none;opacity:1;transform:none}}
+  </style>
+  <rect x="8" y="12" width="48" height="44" rx="6" fill="none" stroke="#1A1612" stroke-width="3"/>
+  <line x1="8" y1="25" x2="56" y2="25" stroke="#1A1612" stroke-width="2.4"/>
+  <rect x="13" y="17" width="7" height="4" rx="2" fill="#C9C1B0"/>
+  <rect x="24" y="17" width="7" height="4" rx="2" fill="#C9C1B0"/>
+  <rect x="35" y="17" width="7" height="4" rx="2" fill="#C9C1B0"/>
+  <rect x="46" y="17" width="5" height="4" rx="2" fill="#C9C1B0"/>
+  <rect x="12" y="31" width="17" height="7" rx="3.5" fill="#E97D45"/>
+  <rect x="35" y="31" width="17" height="7" rx="3.5" fill="#1A1612"/>
+  <rect x="12" y="43" width="17" height="7" rx="3.5" fill="#1A1612"/>
+  <rect class="drop" x="35" y="43" width="17" height="7" rx="3.5" fill="#E97D45"/>
+</svg>

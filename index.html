@@ -98,7 +98,7 @@
         <span class="menu-toggle__icon"></span>
       </button>
       <nav class="nav" id="primary-nav" aria-label="Primary">
-        <a href="/features">Features</a>
+        <div class="nav__group"><a href="/features">Features <span class="nav__caret" aria-hidden="true"></span></a><div class="nav__panel"><a href="/features/rota">Rota &amp; scheduling</a><a href="/features/clock-in">Time &amp; attendance</a><a href="/features/payroll">Payroll &amp; pay</a><a href="/features/tips-tronc">Tips &amp; tronc</a><a href="/features/till">Till / POS</a><a href="/features/mobile-ordering">Mobile ordering</a><a href="/features/kitchen-display">Kitchen display</a><a href="/features/stock">Stock &amp; GP</a><a href="/features/reporting">Reporting &amp; insights</a><a href="/features/compliance">Compliance &amp; tasks</a><a href="/features/team-hr">Team &amp; HR</a><a href="/features/communication">Communication</a><a href="/features/events">Events &amp; diary</a><a href="/features" class="nav__panel__all">All features →</a></div></div>
         <a href="/pricing">Pricing</a>
         <a href="/for/">For venues</a>
         <a href="/guides/">Guides</a>
@@ -166,6 +166,33 @@
             <span>From, per venue / month + VAT</span>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <section class="section section-tight" aria-label="What your team does day to day">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Day to day</span>
+          <h2>The moments that run your venue.</h2>
+          <p>Clock in, check a fridge, ring an order — the everyday actions your team does in seconds, all in one app.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
+          <article style="background:var(--bone-2);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 24px 24px;text-align:center;">
+            <img src="/assets/anim/clock-in.svg" alt="A phone taps a wall tag to clock in, confirmed with a tick" width="150" height="150" loading="lazy" style="display:block;margin:0 auto;" />
+            <h3 style="font-size:22px;margin:14px 0 6px;">Tap to clock in</h3>
+            <p style="color:var(--ink-3);font-size:14px;margin:0;">Staff hold their phone to the NFC card on the wall. Honest hours, straight into payroll.</p>
+          </article>
+          <article style="background:var(--bone-2);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 24px 24px;text-align:center;">
+            <img src="/assets/anim/fridge-temp.svg" alt="A fridge thermometer reads four degrees, confirmed in band with a tick" width="150" height="150" loading="lazy" style="display:block;margin:0 auto;" />
+            <h3 style="font-size:22px;margin:14px 0 6px;">Fridge temp checked</h3>
+            <p style="color:var(--ink-3);font-size:14px;margin:0;">Log the reading in one tap. In band, photo-evidenced, audit-ready when the EHO calls.</p>
+          </article>
+          <article style="background:var(--bone-2);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 24px 24px;text-align:center;">
+            <img src="/assets/anim/till-order.svg" alt="An order is rung through on a tablet till and payment is confirmed with a tick" width="150" height="150" loading="lazy" style="display:block;margin:0 auto;" />
+            <h3 style="font-size:22px;margin:14px 0 6px;">Order rung through</h3>
+            <p style="color:var(--ink-3);font-size:14px;margin:0;">Ring the round on any tablet, take payment, done. The till that came with the app.</p>
+          </article>
+        </div>
       </div>
     </section>
 

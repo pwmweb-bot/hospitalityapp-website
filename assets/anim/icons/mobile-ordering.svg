@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="An order sent from a phone flies to the pass">
+  <style>
+    .plane{transform-box:fill-box;transform-origin:center;animation:plane 3s ease-in-out infinite}
+    @keyframes plane{0%,20%{transform:translate(0,0);opacity:0}30%{opacity:1}70%{transform:translate(16px,-14px);opacity:1}84%,100%{transform:translate(22px,-20px);opacity:0}}
+    .row{opacity:0;animation:row 3s ease-out infinite}
+    @keyframes row{0%,6%{opacity:0}16%,90%{opacity:1}97%,100%{opacity:0}}
+    .r2{animation-delay:.18s}
+    @media (prefers-reduced-motion:reduce){.plane,.row{animation:none;opacity:1;transform:none}}
+  </style>
+  <rect x="12" y="10" width="30" height="44" rx="6" fill="none" stroke="#1A1612" stroke-width="3"/>
+  <rect x="23" y="14" width="8" height="2.6" rx="1.3" fill="#1A1612"/>
+  <rect class="row" x="18" y="24" width="18" height="4" rx="2" fill="#C9C1B0"/>
+  <rect class="row r2" x="18" y="32" width="13" height="4" rx="2" fill="#C9C1B0"/>
+  <rect x="18" y="43" width="18" height="6" rx="3" fill="#E97D45"/>
+  <g class="plane">
+    <path d="M40 40 L58 33 L44 48 L42 43 Z" fill="#5B8C6E"/>
+  </g>
+</svg>

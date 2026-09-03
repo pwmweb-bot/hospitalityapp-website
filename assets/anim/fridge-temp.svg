@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="A fridge thermometer reads four degrees, confirmed in band with a tick">
+  <style>
+    .merc{animation:merc 3s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom}
+    @keyframes merc{0%{transform:scaleY(.35)}45%,100%{transform:scaleY(1)}}
+    .read{animation:read 3s ease-in-out infinite}
+    @keyframes read{0%,30%{opacity:0}48%,100%{opacity:1}}
+    .pop{transform-box:fill-box;transform-origin:center;animation:pop 3s ease-in-out infinite}
+    @keyframes pop{0%,55%{transform:scale(0);opacity:0}67%{transform:scale(1.18);opacity:1}76%{transform:scale(.96)}84%,100%{transform:scale(1);opacity:1}}
+    @media (prefers-reduced-motion:reduce){.merc,.read,.pop{animation:none;opacity:1}.pop{transform:scale(1)}}
+  </style>
+  <rect x="40" y="30" width="34" height="80" rx="17" fill="none" stroke="#1A1612" stroke-width="3"/>
+  <circle cx="57" cy="118" r="16" fill="none" stroke="#1A1612" stroke-width="3"/>
+  <circle cx="57" cy="118" r="9" fill="#E97D45"/>
+  <rect class="merc" x="53" y="60" width="8" height="58" rx="4" fill="#E97D45"/>
+  <g class="read">
+    <rect x="86" y="60" width="52" height="30" rx="7" fill="#1A1612"/>
+    <text x="112" y="80" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="15" font-weight="600" fill="#F5F1E8">4°C</text>
+  </g>
+  <g class="pop">
+    <circle cx="120" cy="46" r="13" fill="#5B8C6E"/>
+    <path d="M114 46 l4 4 8 -9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

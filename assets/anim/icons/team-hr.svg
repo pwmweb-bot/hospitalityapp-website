@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="A staff record card is verified">
+  <style>
+    .verify{transform-box:fill-box;transform-origin:center;animation:verify 3s ease-in-out infinite}
+    @keyframes verify{0%,45%{transform:scale(0);opacity:0}58%{transform:scale(1.18);opacity:1}70%{transform:scale(.96)}80%,100%{transform:scale(1);opacity:1}}
+    .ln{opacity:0;animation:ln 3s ease-out infinite}
+    @keyframes ln{0%,8%{opacity:0}20%,92%{opacity:1}98%,100%{opacity:0}}
+    .l2{animation-delay:.16s}
+    @media (prefers-reduced-motion:reduce){.verify,.ln{animation:none;opacity:1}.verify{transform:scale(1)}}
+  </style>
+  <rect x="10" y="14" width="44" height="36" rx="6" fill="none" stroke="#1A1612" stroke-width="3"/>
+  <circle cx="24" cy="27" r="6" fill="#E97D45"/>
+  <path d="M15 42 a9 9 0 0 1 18 0" fill="none" stroke="#1A1612" stroke-width="3" stroke-linecap="round"/>
+  <rect class="ln" x="37" y="24" width="12" height="3.4" rx="1.7" fill="#C9C1B0"/>
+  <rect class="ln l2" x="37" y="31" width="9" height="3.4" rx="1.7" fill="#C9C1B0"/>
+  <g class="verify">
+    <circle cx="47" cy="45" r="10" fill="#5B8C6E"/>
+    <path d="M42.5 45 l3 3 5.5 -6.2" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

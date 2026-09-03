@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="A payslip with a pound total that settles in">
+  <style>
+    .ln{opacity:0;animation:ln 3.2s ease-out infinite}
+    @keyframes ln{0%,8%{opacity:0}18%,90%{opacity:1}97%,100%{opacity:0}}
+    .l2{animation-delay:.18s}.l3{animation-delay:.36s}
+    .coin{transform-box:fill-box;transform-origin:center;animation:coin 3.2s ease-in-out infinite}
+    @keyframes coin{0%,40%{transform:scale(0) translateY(6px);opacity:0}55%{transform:scale(1.15) translateY(0);opacity:1}66%{transform:scale(.97)}74%,92%{transform:scale(1);opacity:1}98%,100%{opacity:0}}
+    @media (prefers-reduced-motion:reduce){.ln,.coin{animation:none;opacity:1}.coin{transform:none}}
+  </style>
+  <rect x="12" y="9" width="32" height="46" rx="5" fill="none" stroke="#1A1612" stroke-width="3"/>
+  <rect class="ln" x="18" y="17" width="20" height="3.2" rx="1.6" fill="#C9C1B0"/>
+  <rect class="ln l2" x="18" y="24" width="14" height="3.2" rx="1.6" fill="#C9C1B0"/>
+  <rect class="ln l3" x="18" y="31" width="18" height="3.2" rx="1.6" fill="#C9C1B0"/>
+  <rect x="18" y="40" width="20" height="7" rx="3.5" fill="#E97D45"/>
+  <g class="coin">
+    <circle cx="46" cy="44" r="12" fill="#5B8C6E"/>
+    <text x="46" y="49" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="15" font-weight="700" fill="#fff">£</text>
+  </g>
+</svg>

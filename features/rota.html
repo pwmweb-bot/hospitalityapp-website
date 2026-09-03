@@ -65,7 +65,7 @@
         <span class="menu-toggle__icon"></span>
       </button>
       <nav class="nav" id="primary-nav" aria-label="Primary">
-        <a href="/features" aria-current="page">Features</a>
+        <div class="nav__group"><a href="/features" aria-current="page">Features <span class="nav__caret" aria-hidden="true"></span></a><div class="nav__panel"><a href="/features/rota">Rota &amp; scheduling</a><a href="/features/clock-in">Time &amp; attendance</a><a href="/features/payroll">Payroll &amp; pay</a><a href="/features/tips-tronc">Tips &amp; tronc</a><a href="/features/till">Till / POS</a><a href="/features/mobile-ordering">Mobile ordering</a><a href="/features/kitchen-display">Kitchen display</a><a href="/features/stock">Stock &amp; GP</a><a href="/features/reporting">Reporting &amp; insights</a><a href="/features/compliance">Compliance &amp; tasks</a><a href="/features/team-hr">Team &amp; HR</a><a href="/features/communication">Communication</a><a href="/features/events">Events &amp; diary</a><a href="/features" class="nav__panel__all">All features →</a></div></div>
         <a href="/pricing">Pricing</a>
         <a href="/for/">For venues</a>
         <a href="/guides/">Guides</a>
@@ -93,10 +93,27 @@
 
     <section class="section section-tight">
       <div class="container">
-        <figure style="margin: 0; background: var(--bone-2); border: 1px solid var(--line); border-radius: var(--r-xl); padding: 24px; text-align: center;">
-          <img src="/assets/images/screens/rota.png" alt="Weekly rota view with role chips, drag-and-drop shifts, and a live labour-cost ticker showing £2,340 / 24.5% against a 25% target." width="1290" height="2436" loading="eager" style="max-width: 340px; height: auto; border-radius: var(--r-lg); border: 1px solid var(--line); box-shadow: 0 12px 32px -16px oklch(0.10 0.012 60 / 0.18);" />
-          <figcaption style="margin-top: 14px; font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3);">A published week — the £ / % you see is live as you drag</figcaption>
-        </figure>
+        <div class="feature-row">
+          <div class="feature-row__copy">
+            <span class="eyebrow">On the phone</span>
+            <h2>The whole week, in your hand.</h2>
+            <p>Build it on a tablet at the desk, then check and tweak from your phone on the floor. The £ and labour % recalculates as you drag — the number a chain's ops director watches in real time, on your counter.</p>
+            <ul class="feature-row__list">
+              <li>Live labour-cost ticker — running £ and % as you drag.</li>
+              <li>Four views — by role, by staff, timeline and week.</li>
+              <li>Over-budget guard the moment you hit Publish.</li>
+              <li>Open shifts staff claim straight from the app.</li>
+            </ul>
+          </div>
+          <div class="feature-row__media">
+            <figure style="margin: 0; text-align: center;">
+              <div class="phone">
+                <img src="/assets/images/screens/rota.png" alt="Weekly rota view with role chips, drag-and-drop shifts, and a live labour-cost ticker showing £2,340 / 24.5% against a 25% target." width="1290" height="2436" loading="eager" />
+              </div>
+              <figcaption style="margin-top: 14px; font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3);">A published week — the £ / % is live as you drag</figcaption>
+            </figure>
+          </div>
+        </div>
       </div>
     </section>
 

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="A phone taps a wall tag to clock in, confirmed with a tick">
+  <style>
+    .w{animation:wave 3s ease-out infinite;transform-box:fill-box;transform-origin:left center}
+    @keyframes wave{0%{opacity:0;transform:scale(0.6)}12%{opacity:1}40%{opacity:0;transform:scale(1.05)}100%{opacity:0}}
+    .w2{animation-delay:.18s}.w3{animation-delay:.36s}
+    .phone{animation:nudge 3s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    @keyframes nudge{0%,100%{transform:translateX(0)}22%{transform:translateX(-4px)}44%{transform:translateX(0)}}
+    .pop{transform-box:fill-box;transform-origin:center;animation:pop 3s ease-in-out infinite}
+    @keyframes pop{0%,55%{transform:scale(0);opacity:0}67%{transform:scale(1.18);opacity:1}76%{transform:scale(.96)}84%,100%{transform:scale(1);opacity:1}}
+    @media (prefers-reduced-motion:reduce){.w,.phone,.pop{animation:none;opacity:1}.pop{transform:scale(1)}}
+  </style>
+  <rect x="26" y="50" width="40" height="56" rx="8" fill="none" stroke="#1A1612" stroke-width="3"/>
+  <circle cx="46" cy="70" r="4" fill="#E97D45"/>
+  <path d="M40 82 q6 6 12 0" fill="none" stroke="#E97D45" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M37 88 q9 9 18 0" fill="none" stroke="#E97D45" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+  <path class="w" d="M74 60 q10 20 0 40" fill="none" stroke="#E97D45" stroke-width="3" stroke-linecap="round"/>
+  <path class="w w2" d="M82 54 q14 26 0 52" fill="none" stroke="#E97D45" stroke-width="3" stroke-linecap="round"/>
+  <path class="w w3" d="M90 48 q18 32 0 64" fill="none" stroke="#E97D45" stroke-width="3" stroke-linecap="round"/>
+  <g class="phone">
+    <rect x="104" y="38" width="46" height="80" rx="10" fill="#1A1612"/>
+    <rect x="109" y="46" width="36" height="64" rx="5" fill="#F5F1E8"/>
+    <rect x="121" y="41" width="12" height="3" rx="1.5" fill="#F5F1E8"/>
+    <g class="pop">
+      <circle cx="127" cy="78" r="13" fill="#5B8C6E"/>
+      <path d="M121 78 l4 4 8 -9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>
