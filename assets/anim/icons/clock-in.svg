@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="A clock hand sweeps and a clock-in is confirmed">
   <style>
-    .hand{transform-box:fill-box;transform-origin:32px 33px;animation:sweep 3s linear infinite}
+    .hand{transform-box:view-box;transform-origin:32px 33px;animation:sweep 3s linear infinite}
     @keyframes sweep{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
     .pop{transform-box:fill-box;transform-origin:center;animation:pop 3s ease-in-out infinite}
     @keyframes pop{0%,50%{transform:scale(0);opacity:0}62%{transform:scale(1.18);opacity:1}72%{transform:scale(.96)}82%,100%{transform:scale(1);opacity:1}}
