@@ -16,7 +16,7 @@
   <meta property="og:locale" content="en_GB" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#F5F1E8" />
-  <link rel="stylesheet" href="/assets/styles.css?v=20260903a" />
+  <link rel="stylesheet" href="/assets/styles.css?v=20260903b" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -107,10 +107,23 @@
           </div>
           <div class="feature-row__media">
             <figure style="margin: 0; text-align: center;">
-              <div class="phone">
-                <img src="/assets/images/screens/rota.png" alt="Weekly rota view with role chips, drag-and-drop shifts, and a live labour-cost ticker showing £2,340 / 24.5% against a 25% target." width="1290" height="2436" loading="eager" />
+              <div class="rota-stage">
+                <div class="phone">
+                  <img src="/assets/images/screens/rota.webp" alt="Weekly rota view with role chips, drag-and-drop shifts, and a live labour-cost ticker showing £2,340 / 24.5% against a 25% target." width="560" height="1058" loading="eager" decoding="async" />
+                </div>
+                <!-- Decorative: the alt text above already carries the fact.
+                     Hidden from assistive tech so a screen reader is not read a
+                     second, animated copy of the same number. -->
+                <span class="rota-stage__shift" aria-hidden="true"></span>
+                <span class="rota-stage__chip" aria-hidden="true">
+                  <span class="rota-stage__dot"></span>
+                  <span class="rota-stage__read">
+                    <span>£2,340 · 24.5%</span>
+                    <span>£2,520 · 26.1%</span>
+                  </span>
+                </span>
               </div>
-              <figcaption style="margin-top: 14px; font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3);">A published week — the £ / % is live as you drag</figcaption>
+              <figcaption style="margin-top: 14px; font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3);">Drop one Saturday shift in — the week moves to £2,520 and over target, before you publish</figcaption>
             </figure>
           </div>
         </div>

@@ -8,7 +8,7 @@
       <stop offset="1" stop-color="#FF3D00"/>
     </linearGradient>
   </defs>
-  <path d="M14 9 L14 31 L32 20 Z" fill="url(#gpg)"/>
-  <text x="44" y="16" fill="#fff" font-family="Helvetica, Arial, sans-serif" font-size="8">GET IT ON</text>
-  <text x="43.5" y="30.5" fill="#fff" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="600">Google Play</text>
+  <path d="M15 9 L15 31 L33 20 Z" fill="url(#gpg)"/>
+  <text x="42" y="16" fill="#fff" font-family="Helvetica, Arial, sans-serif" font-size="8">GET IT ON</text>
+  <text x="42" y="31" fill="#fff" font-family="Helvetica, Arial, sans-serif" font-size="15.5" font-weight="600">Google Play</text>
 </svg>
