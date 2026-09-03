@@ -8,3 +8,8 @@ node_modules/
 
 # internal planning docs — the repo root is the public web root, never publish these
 docs/
+
+# drafts — kept locally but never published (repo root is the public web root)
+customers/the-foregate.html
+lab.html
+assets/lab/
