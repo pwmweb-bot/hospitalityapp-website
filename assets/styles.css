@@ -1304,3 +1304,88 @@ p { margin: 0 0 1em; }
 .spacer-sm { height: 16px; }
 .spacer-md { height: 32px; }
 .spacer-lg { height: 64px; }
+
+
+/* ── Rota composite ──────────────────────────────────────────────────────────
+   The one place on this site where motion earns its keep. The rota page's own
+   figcaption says "the £ / % is live as you drag" — a claim a still cannot
+   make good on. A real screenshot underneath; two small overlays on top.
+
+   THE RULE THAT MAKES THIS SAFE. styles.css above kills `animation` outright
+   under prefers-reduced-motion — and killing an animation discards its FILL
+   too, so `animation-fill-mode: both` does not rescue the end state. Therefore
+   every base rule below IS THE FINAL FRAME, and the keyframes run BACKWARDS
+   from a delta to it. A reduced-motion visitor, or anyone whose CSS animation
+   fails, sees the settled result: the over-target ticker and the placed shift.
+   Written the other way round they would get a rota with a blank ticker.
+   No JS, no SMIL, no video — all three slip past that switch silently. */
+.rota-stage { position: relative; display: inline-block; }
+
+.rota-stage__chip {
+  position: absolute;
+  left: 50%;
+  bottom: 13%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  /* FINAL FRAME: over target. */
+  background: var(--brand-accent-tint, #F8E4CB);
+  color: var(--brand-accent-ink, #3D210B);
+  box-shadow: 0 6px 18px -8px rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+}
+.rota-stage__dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--brand-accent, #E59134);
+  flex: none;
+}
+/* The two readings are stacked and cross-faded, because a CSS keyframe cannot
+   animate text content. The SECOND is the final frame, so it is the one left
+   standing when animation is switched off. */
+.rota-stage__read { position: relative; display: inline-block; }
+.rota-stage__read span { display: block; }
+.rota-stage__read span:first-child {
+  position: absolute; inset: 0; opacity: 0;   /* final frame: hidden */
+}
+
+.rota-stage__shift {
+  position: absolute;
+  right: 12%;
+  top: 44%;
+  width: 17%;
+  height: 5.5%;
+  border-radius: 5px;
+  background: var(--brand-accent, #E59134);
+  opacity: 0.92;                              /* final frame: placed */
+  box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rota-stage__shift    { animation: rotaDrop 7s cubic-bezier(.2,.7,.3,1) infinite; }
+  .rota-stage__chip     { animation: rotaChip 7s ease infinite; }
+  .rota-stage__read span:first-child  { animation: rotaWas 7s steps(1, end) infinite; }
+  .rota-stage__read span:last-child   { animation: rotaNow 7s steps(1, end) infinite; }
+}
+
+/* Each keyframe set STARTS at the delta and ENDS at the base rule's value. */
+@keyframes rotaDrop {
+  0%, 8%   { transform: translate(38%, -180%); opacity: 0; }
+  26%      { transform: translate(0, 0);       opacity: 0.92; }
+  92%      { transform: translate(0, 0);       opacity: 0.92; }
+  100%     { transform: translate(38%, -180%); opacity: 0; }
+}
+@keyframes rotaChip {
+  0%, 30%  { background: var(--sage-tint, #DCE8DD); color: var(--sage-ink, #1F4225); }
+  40%, 92% { background: var(--brand-accent-tint, #F8E4CB); color: var(--brand-accent-ink, #3D210B); }
+  100%     { background: var(--sage-tint, #DCE8DD); color: var(--sage-ink, #1F4225); }
+}
+@keyframes rotaWas { 0%, 30% { opacity: 1; } 34%, 100% { opacity: 0; } }
+@keyframes rotaNow { 0%, 30% { opacity: 0; } 34%, 100% { opacity: 1; } }
