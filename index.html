@@ -83,6 +83,76 @@
 
     gtag('config', 'G-TJBLJRW979');
   </script>
+  <style>
+    /* Chrome-free video: custom poster + play button; the YouTube player is
+       injected on click with controls/branding/related/captions all off, then
+       its residual title strip is cropped away. */
+    .ytlite {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      aspect-ratio: 16 / 9;
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      background: #000 var(--poster) center / cover no-repeat;
+      box-shadow: 0 24px 56px -28px oklch(0.10 0.012 60 / 0.4), 0 8px 20px -12px oklch(0.10 0.012 60 / 0.18);
+    }
+    .ytlite__cover {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      z-index: 3; /* stays above the player until playback actually starts */
+    }
+    .ytlite__cover::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(0,0,0,0.10), rgba(0,0,0,0.28));
+      transition: background 0.2s ease;
+    }
+    .ytlite__cover:hover::before { background: radial-gradient(circle at 50% 50%, rgba(0,0,0,0.05), rgba(0,0,0,0.20)); }
+    .ytlite__play {
+      position: relative;
+      width: 84px;
+      height: 84px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--brand-accent);
+      color: #fff;
+      box-shadow: 0 12px 30px -8px rgba(0,0,0,0.55);
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .ytlite__cover:hover .ytlite__play { transform: scale(1.06); background: var(--brand-accent-ink); }
+    .ytlite__cover:focus-visible { outline: none; }
+    .ytlite__cover:focus-visible .ytlite__play { outline: 3px solid var(--brand-accent-ink); outline-offset: 4px; }
+    .ytlite__play svg { margin-left: 4px; } /* optically centre the triangle */
+    /* Playing state: hide the cover, reveal the cropped player. */
+    .ytlite.is-playing { background: #000; }
+    .ytlite.is-playing .ytlite__cover { display: none; }
+    .ytlite__stage { position: absolute; inset: 0; overflow: hidden; z-index: 1; }
+    .ytlite__stage iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      pointer-events: none; /* the shield takes every mouse event, so YouTube never shows hover chrome */
+      /* Uniform zoom crops YouTube's title (top) + logo/share (bottom) strips. */
+      transform: scale(var(--yt-zoom, 1.26));
+      transform-origin: center center;
+    }
+    /* Transparent layer over the player: captures clicks (play/pause) and
+       swallows hover so no YouTube UI is ever triggered. */
+    .ytlite__shield { position: absolute; inset: 0; z-index: 2; background: transparent; cursor: pointer; }
+  </style>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -166,6 +236,23 @@
             <span>From, per venue / month + VAT</span>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <section class="section section-tight" aria-label="Watch the demo">
+      <div class="container">
+        <div class="section-head" style="text-align: center; max-width: 640px; margin-left: auto; margin-right: auto;">
+          <span class="eyebrow">Watch the demo</span>
+          <h2>See HospitalityApp in action.</h2>
+          <p>A few minutes on the app that runs the rota, the till, the clock-in and the compliance log — for one venue or a whole group.</p>
+        </div>
+        <div class="ytlite" data-yt="as_3mnFIpkM" style="--poster: url('/assets/video/video-poster.jpg');">
+          <button type="button" class="ytlite__cover" aria-label="Play video: See HospitalityApp in action">
+            <span class="ytlite__play" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="34" height="34"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+            </span>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -698,5 +785,88 @@
   </footer>
 
   <script src="/assets/main.js?v=20260903a" defer></script>
+  <script>
+    // Chrome-free YouTube. The player runs through YouTube's IFrame API in
+    // nocookie mode with every UI element off (controls, branding, related,
+    // captions, annotations, keyboard, fullscreen). A transparent shield over
+    // it takes all pointer events, so YouTube never sees a hover and never
+    // paints its title / logo / share overlays; the start-title and bottom-logo
+    // strips are cropped by a CSS zoom; and when the clip ends we tear the
+    // player down and restore the poster so no end-screen ever shows. No
+    // contact with YouTube until the visitor moves to play it.
+    (function () {
+      var lites = document.querySelectorAll('.ytlite');
+      if (!lites.length) return;
+      var apiReady = false, apiAsked = false, queue = [];
+      function loadAPI() {
+        if (apiAsked) return; apiAsked = true;
+        var t = document.createElement('script');
+        t.src = 'https://www.youtube.com/iframe_api';
+        document.head.appendChild(t);
+      }
+      window.onYouTubeIframeAPIReady = function () {
+        apiReady = true; queue.forEach(function (fn) { fn(); }); queue = [];
+      };
+      function whenReady(fn) { if (apiReady) fn(); else { queue.push(fn); loadAPI(); } }
+
+      lites.forEach(function (el) {
+        var cover = el.querySelector('.ytlite__cover');
+        if (!cover) return;
+        var player = null;
+        // Warm the API on intent (hover/touch) so the click that follows can
+        // start playback with sound within the user-gesture window.
+        cover.addEventListener('pointerover', loadAPI, { once: true });
+        cover.addEventListener('touchstart', loadAPI, { once: true, passive: true });
+
+        cover.addEventListener('click', function () {
+          if (player) { player.playVideo(); return; }
+          var id = el.getAttribute('data-yt');
+          var stage = document.createElement('div');
+          stage.className = 'ytlite__stage';
+          var mount = document.createElement('div');
+          stage.appendChild(mount);
+          var shield = document.createElement('div');
+          shield.className = 'ytlite__shield';
+          stage.appendChild(shield);
+          el.appendChild(stage);
+
+          whenReady(function () {
+            player = new YT.Player(mount, {
+              host: 'https://www.youtube-nocookie.com',
+              videoId: id,
+              playerVars: {
+                autoplay: 1, controls: 0, modestbranding: 1, rel: 0,
+                playsinline: 1, cc_load_policy: 0, iv_load_policy: 3,
+                disablekb: 1, fs: 0
+              },
+              events: {
+                onReady: function (e) { e.target.playVideo(); },
+                onStateChange: function (e) {
+                  if (e.data === YT.PlayerState.PLAYING) {
+                    el.classList.add('is-playing'); // reveal player, hide my cover
+                  } else if (e.data === YT.PlayerState.PAUSED) {
+                    // Show my own cover over the paused frame — masks YouTube's
+                    // center play button so no YouTube UI is ever visible.
+                    el.classList.remove('is-playing');
+                  } else if (e.data === YT.PlayerState.ENDED) {
+                    try { player.destroy(); } catch (err) {}
+                    player = null;
+                    if (stage.parentNode) stage.parentNode.removeChild(stage);
+                    el.classList.remove('is-playing'); // back to the clean poster
+                  }
+                }
+              }
+            });
+            shield.addEventListener('click', function () {
+              if (!player || !player.getPlayerState) return;
+              var s = player.getPlayerState();
+              if (s === YT.PlayerState.PLAYING) player.pauseVideo();
+              else player.playVideo();
+            });
+          });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
