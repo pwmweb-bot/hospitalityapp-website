@@ -6,7 +6,7 @@
  * of truth first then bring it across.
  * ───────────────────────────────────────────────────────────── */
 
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Montserrat:ital,wght@0,700;1,700&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
 
 :root {
   /* Inks (text + line) */
@@ -45,6 +45,8 @@
 
   /* Type stacks */
   --serif: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
+  /* Titles and headings: Montserrat Bold (17 Sep 2026). */
+  --display: 'Montserrat', 'Inter Tight', -apple-system, 'Segoe UI', Helvetica, sans-serif;
   --sans: 'Inter Tight', -apple-system, 'Segoe UI', Helvetica, sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
 
@@ -88,17 +90,17 @@ a:hover { color: var(--brand-accent-ink); }
 button { font: inherit; cursor: pointer; }
 
 h1, h2, h3, h4 {
-  font-family: var(--serif);
+  font-family: var(--display);
   color: var(--ink);
-  line-height: 1.05;
-  letter-spacing: -0.01em;
-  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 700;
   margin: 0 0 0.5em;
 }
-h1 { font-size: clamp(40px, 7vw, 76px); }
-h2 { font-size: clamp(30px, 5vw, 52px); }
-h3 { font-size: clamp(22px, 3vw, 32px); }
-h4 { font-size: 20px; }
+h1 { font-size: clamp(34px, 5.4vw, 60px); }
+h2 { font-size: clamp(26px, 3.8vw, 42px); }
+h3 { font-size: clamp(20px, 2.4vw, 26px); }
+h4 { font-size: 18px; }
 p { margin: 0 0 1em; }
 
 /* ── Skip link ───────────────────────────────────────────── */
@@ -418,7 +420,7 @@ p { margin: 0 0 1em; }
   max-width: 820px;
 }
 .hero__title {
-  font-size: clamp(44px, 8vw, 88px);
+  font-size: clamp(36px, 5.2vw, 60px);
   margin: 0;
 }
 .hero__sub {
@@ -473,7 +475,7 @@ p { margin: 0 0 1em; }
   transform: translateY(-2px);
   box-shadow: 0 12px 28px -16px oklch(0.18 0.012 60 / 0.25);
 }
-.module-card h3 { font-size: 22px; margin: 0; }
+.module-card h3 { font-size: 19px; margin: 0; }
 .module-card p { color: var(--ink-3); font-size: 14px; margin: 0; }
 .module-card a {
   margin-top: auto;
@@ -552,7 +554,7 @@ p { margin: 0 0 1em; }
   margin-bottom: 6px;
 }
 .dil-card__icon svg { display: block; }
-.dil-card h4 { font-family: var(--serif); font-size: 24px; margin: 6px 0 4px; }
+.dil-card h4 { font-family: var(--display); font-size: 20px; margin: 6px 0 4px; }
 .dil-card .pill { margin-bottom: 8px; justify-self: start; }
 .dil-card p { color: var(--ink-2); margin: 0; font-size: 15px; }
 
@@ -587,7 +589,7 @@ p { margin: 0 0 1em; }
   padding: 4px 10px;
   border-radius: 999px;
 }
-.tier h3 { font-size: 26px; margin: 0; }
+.tier h3 { font-size: 22px; margin: 0; }
 .tier__price {
   font-family: var(--serif);
   font-size: 44px;
@@ -717,7 +719,7 @@ p { margin: 0 0 1em; }
   .feature-row.is-flipped > .feature-row__media { order: -1; }
 }
 .feature-row__copy { max-width: 540px; }
-.feature-row__copy h2 { font-size: clamp(28px, 3.6vw, 40px); }
+.feature-row__copy h2 { font-size: clamp(24px, 3vw, 34px); }
 .feature-row__list { margin: 18px 0 0; padding-left: 0; list-style: none; display: grid; gap: 10px; }
 .feature-row__list li {
   font-size: 14.5px;
@@ -948,8 +950,8 @@ p { margin: 0 0 1em; }
 }
 .tour-step .eyebrow { margin-bottom: 12px; }
 .tour-step h3 {
-  font-family: var(--serif);
-  font-size: clamp(28px, 3vw, 36px);
+  font-family: var(--display);
+  font-size: clamp(22px, 2.4vw, 28px);
   line-height: 1.15;
   margin: 4px 0 14px;
 }
@@ -1076,8 +1078,8 @@ p { margin: 0 0 1em; }
   margin-bottom: 12px;
 }
 .tour-card__copy h3 {
-  font-family: var(--serif);
-  font-size: clamp(28px, 3vw, 36px);
+  font-family: var(--display);
+  font-size: clamp(22px, 2.4vw, 28px);
   line-height: 1.15;
   margin: 4px 0 14px;
 }
@@ -1129,7 +1131,7 @@ p { margin: 0 0 1em; }
 }
 .tour-card--hero .tour-card__phone { max-width: 340px; }
 .tour-card--hero .tour-card__copy h3 {
-  font-size: clamp(32px, 3.6vw, 44px);
+  font-size: clamp(26px, 3vw, 36px);
 }
 .tour-card--hero .tour-card__copy p {
   font-size: 17px;
@@ -1281,8 +1283,8 @@ p { margin: 0 0 1em; }
   max-width: 720px;
   margin: 0 auto;
 }
-.prose h2 { font-size: 26px; margin-top: 1.6em; }
-.prose h3 { font-size: 19px; margin-top: 1.4em; }
+.prose h2 { font-size: 22px; margin-top: 1.6em; }
+.prose h3 { font-size: 17px; margin-top: 1.4em; }
 .prose p, .prose li { font-size: 15.5px; color: var(--ink-2); }
 .prose ul { padding-left: 22px; }
 .prose code {
