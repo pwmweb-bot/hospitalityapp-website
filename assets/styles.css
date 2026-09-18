@@ -271,13 +271,16 @@ p { margin: 0 0 1em; }
 
 /* ── Site header ─────────────────────────────────────────── */
 
+/* Opaque bone, never translucent. The lockup's white keyline only vanishes
+   because the ground under it is bone: at the old 85% with a blur, the dark
+   CTA band, phone mockups or video scrolling underneath dragged the header
+   to about rgb(216,210,204) and the keyline showed as a white outline round
+   every letter. */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: oklch(0.965 0.012 75 / 0.85);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: var(--bone);
   border-bottom: 1px solid var(--line);
 }
 .site-header__inner {
@@ -291,11 +294,12 @@ p { margin: 0 0 1em; }
   padding: 14px var(--gutter);
 }
 /* The lockup is an image (assets/brand/ha-lockup-light-*-2026.png): the white/
-   art, whose white keyline vanishes on bone and leaves ink italic with a thin
-   orange extrude. Sizes are fixed in CSS so the sticky header never shifts
-   while it loads. 215x28 is the plan's 215px-wide wordmark with the tray the
-   pack PNG cuts off restored; 179x24 at 400px and under keeps it clear of the
-   44px menu button. Never narrower than 179px (the 20px-tall floor). */
+   art, whose white keyline vanishes on bone (so .site-header must stay opaque
+   bone) and leaves ink italic with a thin orange extrude. Sizes are fixed in
+   CSS so the sticky header never shifts while it loads. 215x28 is the plan's
+   215px-wide wordmark with the tray the pack PNG cuts off restored; 179x24 at
+   400px and under keeps it clear of the 44px menu button. Never narrower than
+   179px (the 20px-tall floor). */
 .brand-lockup {
   display: inline-flex;
   align-items: center;
