@@ -6,7 +6,7 @@
  * of truth first then bring it across.
  * ───────────────────────────────────────────────────────────── */
 
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Montserrat:ital,wght@0,700;1,700&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
 
 :root {
   /* Inks (text + line) */
@@ -44,9 +44,10 @@
   --r-xl: 22px;
 
   /* Type stacks */
-  --serif: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
-  /* Titles and headings: Montserrat Bold (17 Sep 2026). */
+  /* Titles, headings, the wordmark, prices and big numbers: Montserrat Bold
+     (17-18 Sep 2026). --serif is kept only as a safety net that points at it. */
   --display: 'Montserrat', 'Inter Tight', -apple-system, 'Segoe UI', Helvetica, sans-serif;
+  --serif: var(--display);
   --sans: 'Inter Tight', -apple-system, 'Segoe UI', Helvetica, sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
 
@@ -269,10 +270,11 @@ p { margin: 0 0 1em; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: var(--serif);
-  font-size: 22px;
+  font-family: var(--display);
+  font-size: 19px;
   color: var(--ink);
-  font-weight: 400;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 .brand-lockup__mark {
   width: 32px;
@@ -591,8 +593,10 @@ p { margin: 0 0 1em; }
 }
 .tier h3 { font-size: 22px; margin: 0; }
 .tier__price {
-  font-family: var(--serif);
-  font-size: 44px;
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 38px;
   color: var(--ink);
   line-height: 1;
 }
@@ -873,12 +877,12 @@ p { margin: 0 0 1em; }
   gap: 8px;
 }
 .stats-band .stat strong {
-  font-family: var(--serif);
-  font-size: clamp(36px, 5vw, 56px);
-  font-weight: 400;
+  font-family: var(--display);
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 700;
   color: var(--ink);
   line-height: 1;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 .stats-band .stat span {
   font-family: var(--mono);
@@ -1300,7 +1304,7 @@ p { margin: 0 0 1em; }
 
 .muted { color: var(--ink-3); }
 .center { text-align: center; }
-.serif { font-family: var(--serif); }
+.serif { font-family: var(--display); font-weight: 700; }
 .mono { font-family: var(--mono); }
 .spacer-xs { height: 8px; }
 .spacer-sm { height: 16px; }
