@@ -1269,6 +1269,10 @@ p { margin: 0 0 1em; }
 .site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
 .site-footer a { color: var(--ink-2); font-size: 14px; }
 .site-footer a:hover { color: var(--ink); }
+/* Footer sign-off: the flat two-colour cloche alone, no name beside it (the
+   name is in the legal line; live text next to the mark would fake a lockup). */
+.site-footer__mark { display: inline-block; }
+.site-footer__mark img { display: block; width: 29px; height: 24px; }
 .site-footer__brand p {
   color: var(--ink-3);
   font-size: 14px;
