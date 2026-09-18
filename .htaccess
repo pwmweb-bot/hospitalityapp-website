@@ -7,6 +7,12 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
+# Repo-only files are not part of the website: the deploy script (it names the
+# SSH host, port and user), the share-card generator, the README and .gitignore.
+# The web root is a git checkout, so everything committed is otherwise served.
+# (/.git/ itself is already refused by the host.)
+RewriteRule ^(scripts(/|$)|README\.md$|\.gitignore$) - [R=404,L]
+
 # Force HTTPS (20i terminates TLS at the edge; HTTP_X_FORWARDED_PROTO
 # tells us the original scheme).
 RewriteCond %{HTTPS} !=on
