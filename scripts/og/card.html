@@ -130,7 +130,9 @@
     overflow: hidden;
     border-radius: 18px;
     background: #fff;
-    box-shadow: 0 0 0 1px rgba(34, 30, 24, 0.10), 0 18px 40px -12px rgba(34, 30, 24, 0.22);
+    /* The shadow's reach (22px blur - 8px spread) stops at x 918, outside the
+       crop square. */
+    box-shadow: 0 0 0 1px rgba(34, 30, 24, 0.10), 0 14px 22px -8px rgba(34, 30, 24, 0.20);
   }
   .inset img {
     position: absolute;

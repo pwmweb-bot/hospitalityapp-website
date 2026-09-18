@@ -122,6 +122,12 @@ def optimise(raw_png, out_png):
             f"{out_png.name}: sentinel pixel is {px} not bone - fonts, data or the"
             " inset did not load, or the headline would not fit"
         )
+    # Nothing may cross the edges of WhatsApp's centre-square crop.
+    left = (W - H) // 2
+    for x in (left, left + H - 1):
+        for y in range(H):
+            if im.getpixel((x, y)) != BONE:
+                raise RuntimeError(f"{out_png.name}: something crosses the crop edge at x={x}, y={y}")
     q = im.quantize(colors=256, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.FLOYDSTEINBERG)
     q.save(out_png, optimize=True)
     return out_png.stat().st_size
@@ -137,7 +143,15 @@ def build(cfg, only, out_dir):
 
     def one(card):
         raw = tmp / f"{card['id']}.png"
-        screenshot(card, raw)
+        # Chrome now and then exits without writing a screenshot when several
+        # run at once; a second go has worked.
+        for attempt in range(3):
+            try:
+                screenshot(card, raw)
+                break
+            except RuntimeError:
+                if attempt == 2:
+                    raise
         out = out_dir / card_filename(cfg, card)
         size = optimise(raw, out)
         return card["id"], out, size
