@@ -1,5 +1,5 @@
 {
-  "_comment": "Share cards (og:image) for hospitalityapp.co.uk. Each card renders to assets/images/og/<id><suffix>.png via scripts/og/build.py and is the og:image of every page in its 'pages' list. Change a card's text and you MUST bump 'suffix' (social platforms cache images by URL), rebuild, run build.py --write-meta, deploy, then re-scrape. 'url' is the line at the foot: the page's own path when a card serves one page, the bare domain when it serves several. 'inset' is an optional screenshot, crop = [x, y, w, h] in source pixels.",
+  "_comment": "Share cards (og:image) for hospitalityapp.co.uk. Each card renders to assets/images/og/<id><suffix>.png via scripts/og/build.py and is the og:image of every page in its 'pages' list. Change a card and you MUST give it a new file name (social platforms cache images by URL): bump the global 'suffix' to rename every card, or set 'suffix' on that one card. Then rebuild, run build.py --write-meta (it moves the JSON-LD image too) and --check, deploy, then re-scrape. 'url' is the line at the foot: the page's own path when a card serves one page, the bare domain when it serves several. 'inset' is an optional screenshot, crop = [x, y, w, h] in source pixels.",
   "suffix": "-2026",
   "site": "https://hospitalityapp.co.uk",
   "out_dir": "assets/images/og",

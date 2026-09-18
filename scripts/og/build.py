@@ -16,9 +16,14 @@ rather than writing it.
 
 Needs: Python 3, Pillow, Google Chrome (override the path with $CHROME).
 
-After changing a card: bump "suffix" in cards.json (platforms cache images by
-URL), build, --write-meta, --check, commit, deploy, then re-scrape in the
-LinkedIn Post Inspector and the Facebook Sharing Debugger.
+After changing a card: give it a new file name, because platforms cache
+images by URL. Bump "suffix" in cards.json to rename every card, or set
+"suffix" on the one card you changed. Then build, --write-meta, --check,
+commit, deploy, and re-scrape in the LinkedIn Post Inspector and the
+Facebook Sharing Debugger.
+
+--write-meta moves the page's JSON-LD "image" with its og:image, and --check
+fails when they differ, so structured data never keeps naming an old card.
 """
 import argparse
 import json
@@ -46,6 +51,12 @@ W, H = 1200, 630
 BONE = (245, 241, 232)
 SENTINEL_XY = (1180, 20)
 OG_RE = re.compile(r'(<meta property="og:image" content=")([^"]*)(" />)')
+LD_RE = re.compile(r'(<script type="application/ld\+json"[^>]*>)(.*?)(</script>)', re.S)
+LD_IMAGE_RE = re.compile(r'("image"\s*:\s*")([^"]*)(")')
+# JSON-LD types whose "image" is the page's own picture, so it must be the
+# page's share card. Any other node naming one of our cards must also name
+# this page's card; a node naming some other image is left alone.
+ARTICLE_TYPES = {"Article", "BlogPosting", "NewsArticle", "TechArticle", "Report"}
 
 
 def load_config():
@@ -53,11 +64,41 @@ def load_config():
 
 
 def card_filename(cfg, card):
-    return f"{card['id']}{cfg['suffix']}.png"
+    # A card's own "suffix" renames just that card; otherwise the global one.
+    return f"{card['id']}{card.get('suffix', cfg['suffix'])}.png"
 
 
 def card_url(cfg, card):
     return f"{cfg['site']}/{cfg['out_dir']}/{card_filename(cfg, card)}"
+
+
+def is_card_url(cfg, url):
+    return url.startswith(f"{cfg['site']}/{cfg['out_dir']}/")
+
+
+def ld_images(node, found=None):
+    """Every image URL named in a parsed JSON-LD value, as (types, url).
+    Handles a plain string, a list, and an ImageObject's url/contentUrl."""
+    if found is None:
+        found = []
+    if isinstance(node, list):
+        for v in node:
+            ld_images(v, found)
+    elif isinstance(node, dict):
+        types = node.get("@type", [])
+        types = set(types if isinstance(types, list) else [types])
+        img = node.get("image")
+        for v in (img if isinstance(img, list) else [img]):
+            if isinstance(v, str):
+                found.append((types, v))
+            elif isinstance(v, dict):
+                for k in ("url", "contentUrl"):
+                    if isinstance(v.get(k), str):
+                        found.append((types, v[k]))
+        for k, v in node.items():
+            if k != "image":
+                ld_images(v, found)
+    return found
 
 
 # ── Render ──────────────────────────────────────────────────────────────
@@ -66,7 +107,7 @@ def card_url(cfg, card):
 def screenshot(card, raw_png, timeout=90):
     """Render one card with headless Chrome. Chrome writes the PNG and then
     often lingers instead of exiting, so wait for the file and kill it."""
-    data = {k: v for k, v in card.items() if k not in ("id", "pages")}
+    data = {k: v for k, v in card.items() if k not in ("id", "pages", "suffix")}
     if "inset" in data:
         data["inset"] = dict(data["inset"], src="../../" + data["inset"]["src"])
     url = TEMPLATE.as_uri() + "#" + urllib.parse.quote(json.dumps(data), safe="")
@@ -188,7 +229,9 @@ def page_to_card(cfg):
 def write_meta(cfg):
     """Point each listed page's og:image at its card, and give it
     og:image:width/height so Facebook and LinkedIn lay the card out on the
-    first share instead of after a fetch."""
+    first share instead of after a fetch. A JSON-LD "image" that named the
+    page's old card (or any of our cards) moves with it: search engines read
+    structured data, and it must not keep naming a card we replaced."""
     changed = 0
     for page, card in page_to_card(cfg).items():
         path = ROOT / page
@@ -196,7 +239,20 @@ def write_meta(cfg):
         hits = OG_RE.findall(html)
         if len(hits) != 1:
             sys.exit(f"{page}: expected one og:image meta, found {len(hits)}")
-        new = OG_RE.sub(lambda m: m.group(1) + card_url(cfg, card) + m.group(3), html)
+        old_url, url = hits[0][1], card_url(cfg, card)
+        new = OG_RE.sub(lambda m: m.group(1) + url + m.group(3), html)
+
+        def move_image(m):
+            v = m.group(2)
+            return m.group(1) + (url if v == old_url or is_card_url(cfg, v) else v) + m.group(3)
+
+        new = LD_RE.sub(lambda b: b.group(1) + LD_IMAGE_RE.sub(move_image, b.group(2)) + b.group(3), new)
+        # An image this could not rewrite (a list, an ImageObject) must not
+        # be left naming another card: stop and say where.
+        for b in LD_RE.finditer(new):
+            for _, v in ld_images(json.loads(b.group(2))):
+                if is_card_url(cfg, v) and v != url:
+                    sys.exit(f"{page}: JSON-LD image {v} still names another card; fix it by hand")
         if 'property="og:image:width"' not in new:
             new = OG_RE.sub(
                 lambda m: m.group(0)
@@ -251,6 +307,18 @@ def check(cfg):
         tw = re.search(r'<meta name="twitter:image" content="([^"]*)"', html)
         if tw and tw.group(1) != img:
             problems.append(f"{rel}: twitter:image {tw.group(1)} differs from og:image")
+        # Structured data must name the same card: an Article's image always,
+        # and any node that names one of our cards.
+        for n, b in enumerate(LD_RE.finditer(html), 1):
+            try:
+                ld = json.loads(b.group(2))
+            except ValueError as e:
+                problems.append(f"{rel}: JSON-LD block {n} is not valid JSON ({e})")
+                continue
+            for types, v in ld_images(ld):
+                if v != img and (types & ARTICLE_TYPES or is_card_url(cfg, v)):
+                    kind = "/".join(sorted(types & ARTICLE_TYPES)) or "JSON-LD"
+                    problems.append(f"{rel}: {kind} image {v} differs from og:image")
         rows.append((rel, local.name, local.stat().st_size))
     for page in mapping:
         if not (ROOT / page).is_file():
@@ -261,7 +329,7 @@ def check(cfg):
     if problems:
         print("\n".join("  PROBLEM " + p for p in problems), file=sys.stderr)
         sys.exit(1)
-    print("  all og:image URLs resolve and match cards.json")
+    print("  all og:image URLs resolve and match cards.json; JSON-LD images agree")
 
 
 # ── Look ────────────────────────────────────────────────────────────────
