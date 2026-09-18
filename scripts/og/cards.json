@@ -53,10 +53,11 @@
     },
     {
       "id": "pricing",
-      "eyebrow": "Pricing",
-      "headline": "Three plans, from £49 per venue.",
-      "sub": "Rota, compliance, till and payroll — simple per-venue pricing. Start free.",
+      "eyebrow": "Pricing · Three plans",
+      "headline": "From £49\u00a0a\u00a0venue a\u00a0month.",
+      "sub": "Rota, compliance, till and payroll. All prices +VAT. 30-day free trial, no card needed.",
       "url": "hospitalityapp.co.uk/pricing",
+      "suffix": "-2026b",
       "pages": ["pricing.html"]
     },
     {
@@ -150,7 +151,7 @@
       "headline": "A till designed to be used at speed.",
       "sub": "Counter or table service, tabs, PIN lock and a logged cash drawer.",
       "url": "hospitalityapp.co.uk/features/till",
-      "inset": { "src": "assets/images/screens/till.png", "crop": [10, 152, 434, 560] },
+      "suffix": "-2026b",
       "pages": ["features/till.html"]
     },
     {
