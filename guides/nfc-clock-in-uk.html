@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NFC clock-in for UK hospitality — tap a tag, punch in honest | HospitalityApp</title>
+  <title>NFC clock-in for UK hospitality — tap a tag, punch in honest | Hospitality App</title>
   <meta name="description" content="NFC clock-in for pubs, bars and restaurants: register tags by UID with a label, tap the tag on the till to punch in, combine with GPS geofence to close buddy-punching. Overnight-safe, immutable, cheap to run." />
   <link rel="canonical" href="https://hospitalityapp.co.uk/guides/nfc-clock-in-uk" />
   <link rel="alternate" hreflang="en-GB" href="https://hospitalityapp.co.uk/guides/nfc-clock-in-uk" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta property="og:title" content="NFC clock-in for UK hospitality — tap a tag, punch in honest | HospitalityApp" />
+  <meta property="og:title" content="NFC clock-in for UK hospitality — tap a tag, punch in honest | Hospitality App" />
   <meta property="og:description" content="Tag registry by UID, tap on the till, combine with GPS geofence, overnight-safe, immutable." />
   <meta property="og:url" content="https://hospitalityapp.co.uk/guides/nfc-clock-in-uk" />
   <meta property="og:image" content="https://hospitalityapp.co.uk/assets/images/og/home.png" />
@@ -24,8 +24,8 @@
       {
         "@type": "Article",
         "headline": "NFC clock-in for UK hospitality — tap a tag, punch in honest",
-        "author": { "@type": "Organization", "name": "HospitalityApp" },
-        "publisher": { "@type": "Organization", "name": "HospitalityApp", "url": "https://hospitalityapp.co.uk/" },
+        "author": { "@type": "Organization", "name": "Hospitality App", "alternateName": "HospitalityApp" },
+        "publisher": { "@type": "Organization", "name": "Hospitality App", "alternateName": "HospitalityApp", "url": "https://hospitalityapp.co.uk/" },
         "datePublished": "2026-08-09",
         "dateModified": "2026-08-09",
         "image": "https://hospitalityapp.co.uk/assets/images/og/home.png",
@@ -44,7 +44,7 @@
         "mainEntity": [
           { "@type": "Question", "name": "What is NFC clock-in?", "acceptedAnswer": { "@type": "Answer", "text": "Near-field communication clock-in: staff tap a physical NFC tag with their phone (or an NFC-capable tablet) to record a clock-in. Tags are registered in the app by their UID with a human-readable label like 'Bar till' or 'Kitchen door'. A tap opens the app, records the punch, and closes — usually under two seconds." } },
           { "@type": "Question", "name": "Why NFC and not just a PIN or a photo?", "acceptedAnswer": { "@type": "Answer", "text": "Speed and physical presence. PIN can be shared; a photo needs a decent camera angle and adds friction; both can be argued after the fact. NFC requires the person's phone to be within a couple of centimetres of a specific physical tag, at a specific time — which is a much harder story to fake. Combined with GPS geofence, buddy-punching is decisively closed." } },
-          { "@type": "Question", "name": "What hardware do I need?", "acceptedAnswer": { "@type": "Answer", "text": "NFC tags — NTAG213 or NTAG215 stickers, usually 20-50p each in packs of 10. Stick one on the till, one at the staff entrance, one wherever suits the venue. Staff use their own phone (iPhone from 7 onwards, Android from 6.0 onwards); no company hardware required. HospitalityApp's tag registry pairs tags to the venue by UID; no printing or configuration on the tag itself." } },
+          { "@type": "Question", "name": "What hardware do I need?", "acceptedAnswer": { "@type": "Answer", "text": "NFC tags — NTAG213 or NTAG215 stickers, usually 20-50p each in packs of 10. Stick one on the till, one at the staff entrance, one wherever suits the venue. Staff use their own phone (iPhone from 7 onwards, Android from 6.0 onwards); no company hardware required. Hospitality App's tag registry pairs tags to the venue by UID; no printing or configuration on the tag itself." } },
           { "@type": "Question", "name": "How do I stop someone from tapping their friend's phone?", "acceptedAnswer": { "@type": "Answer", "text": "The tag itself is public — anyone can tap it. What matters is which phone is doing the tapping: the app authenticates the user (they're already logged in as themselves), so the punch is attributed to the logged-in user, not the tag. To go further, combine NFC with a GPS geofence requirement: the punch only lands if the phone is also within the venue's geofence at the moment of the tap. Belt and braces." } },
           { "@type": "Question", "name": "What about overnight shifts crossing midnight?", "acceptedAnswer": { "@type": "Answer", "text": "The clock model treats an overnight shift as one session, not two. Tapping in at 20:00 and tapping out at 02:30 records a single 6.5-hour session. The auto-close sweep catches forgotten clock-outs and lands them in the discrepancies queue for a manager to resolve — a forgotten clock-out never becomes a 30-hour shift on payroll." } },
           { "@type": "Question", "name": "Can I rotate tags if one is lost or copied?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — remove a tag from the registry and it's invalidated instantly. Any tap using that UID stops recording as a valid clock-in. Buy a new tag, register it, label it, stick it in place. Total downtime is a few minutes; the compromise story ends there." } }
@@ -140,7 +140,7 @@
           <h2>NFC + GPS geofence closes buddy-punching.</h2>
         </div>
         <div style="max-width: 780px;">
-          <p>The three HospitalityApp clock-in methods (GPS geofence, QR code, NFC tag) are combinable. Requiring NFC <em>and</em> a GPS check within the venue's geofence means the punch only lands if the phone is holding a tag <em>at</em> the venue — a story that's much harder to fake than either alone.</p>
+          <p>The three Hospitality App clock-in methods (GPS geofence, QR code, NFC tag) are combinable. Requiring NFC <em>and</em> a GPS check within the venue's geofence means the punch only lands if the phone is holding a tag <em>at</em> the venue — a story that's much harder to fake than either alone.</p>
           <p>Practical setup for a pub:</p>
           <ul class="feature-row__list">
             <li>NFC tag on the till (or the staff entrance if the till is in a public spot).</li>
@@ -252,7 +252,7 @@
         </div>
       </div>
       <div class="site-footer__legal">
-        <span>© <span class="js-year">2026</span> Psychemeta Ltd · HospitalityApp is a <a href="https://psychemeta.com" target="_blank" rel="noopener">Psychemeta</a> product · Made in the UK</span>
+        <span>© <span class="js-year">2026</span> Psychemeta Ltd · Hospitality App is a <a href="https://psychemeta.com" target="_blank" rel="noopener">Psychemeta</a> product · Made in the UK</span>
         <span>Hosted in the EU · GDPR by default</span>
       </div>
     </div>

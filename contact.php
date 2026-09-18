@@ -66,7 +66,7 @@ $body .= "Venue:   " . ($venue !== '' ? $venue : '—') . "\n";
 $body .= "Phone:   " . ($phone !== '' ? $phone : '—') . "\n\n";
 $body .= "Message:\n" . $message . "\n";
 
-$headers  = "From: HospitalityApp Website <noreply@hospitalityapp.co.uk>\r\n";
+$headers  = "From: Hospitality App Website <noreply@hospitalityapp.co.uk>\r\n";
 $headers .= "Reply-To: " . $name . " <" . $email . ">\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 $headers .= "X-Mailer: hospitalityapp-website\r\n";
