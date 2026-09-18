@@ -4,16 +4,28 @@
  * Tokens mirror apps/web/src/styles/tokens.css so the marketing →
  * app handoff feels seamless. If a colour drifts here, fix the source
  * of truth first then bring it across.
+ *
+ * Brand colours (18 Sep 2026): the logo pack has exactly two, Service
+ * Orange #E59134 and ink #221E18 (plus white). They are fixed tokens
+ * (--ha-orange, --ha-ink) and the site's accent and ink point at them.
+ * Orange is an accent, never a text colour and never a fill under white
+ * text: white on #E59134 is 2.5:1, ink on it is 6.7:1.
  * ───────────────────────────────────────────────────────────── */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
 
 :root {
-  /* Inks (text + line) */
-  --ink: oklch(0.18 0.012 60);
-  --ink-2: oklch(0.28 0.012 60);
-  --ink-3: oklch(0.42 0.010 60);
-  --ink-4: oklch(0.58 0.008 60);
+  /* Brand — fixed, from the logo pack. Never themed or tinted. */
+  --ha-orange: #E59134;   /* Service Orange, oklch(0.728 0.145 64) */
+  --ha-ink: #221E18;      /* oklch(0.238 0.013 78) */
+
+  /* Inks (text + line). --ink is the brand ink; the softer inks keep
+     their old lightness (so their contrast is unchanged) on its hue. */
+  --ink: var(--ha-ink);
+  --ink-2: oklch(0.28 0.012 78);
+  --ink-3: oklch(0.42 0.010 78);
+  --ink-4: oklch(0.58 0.008 78);
+  --ink-deep: #100D08;    /* ink button hover, oklch(0.16 0.012 78) */
   --line: oklch(0.92 0.008 60);
   --line-2: oklch(0.95 0.006 60);
 
@@ -22,10 +34,14 @@
   --bone-2: oklch(0.985 0.008 75);
   --paper: #ffffff;
 
-  /* Brand accent — Service Orange */
-  --brand-accent: oklch(0.72 0.16 55);
-  --brand-accent-ink: oklch(0.32 0.10 55);
-  --brand-accent-tint: oklch(0.96 0.03 55);
+  /* Brand accent — Service Orange. The ink, tint and edge are the same
+     hue (64) at the old lightness, in sRGB gamut. Text on --brand-accent
+     is always --ink. */
+  --brand-accent: var(--ha-orange);
+  --brand-accent-ink: #4B2A02;    /* oklch(0.32 0.07 64): text on the tint, link hover */
+  --brand-accent-tint: #FEEFE2;   /* oklch(0.96 0.024 64) */
+  --brand-accent-edge: #F4D8C0;   /* oklch(0.90 0.045 64): border on the tint */
+  --brand-accent-hover: #FAA54B;  /* oklch(0.79 0.145 64): orange button hover, ink text */
 
   /* Status palette */
   --sage: oklch(0.55 0.08 150);
@@ -175,7 +191,7 @@ p { margin: 0 0 1em; }
   transition: transform 100ms ease, background 150ms ease, color 150ms ease;
 }
 .btn:hover {
-  background: oklch(0.10 0.012 60);
+  background: var(--ink-deep);
   color: var(--bone);
   transform: translateY(-1px);
   box-shadow: 0 8px 20px -8px oklch(0.18 0.012 60 / 0.35);
@@ -199,7 +215,7 @@ p { margin: 0 0 1em; }
 
 .btn-accent {
   background: var(--brand-accent);
-  color: #fff;
+  color: var(--ink);
   border-color: var(--brand-accent);
 }
 .btn-accent:hover { background: var(--brand-accent-ink); color: #fff; }
@@ -246,7 +262,7 @@ p { margin: 0 0 1em; }
 .pill-ok { color: var(--sage); background: var(--sage-tint); border-color: oklch(0.92 0.04 150); }
 .pill-warn { color: var(--brass); background: var(--brass-tint); border-color: oklch(0.92 0.05 80); }
 .pill-crit { color: var(--burgundy); background: var(--burgundy-tint); border-color: oklch(0.90 0.04 20); }
-.pill-accent { color: var(--brand-accent-ink); background: var(--brand-accent-tint); border-color: oklch(0.90 0.05 55); }
+.pill-accent { color: var(--brand-accent-ink); background: var(--brand-accent-tint); border-color: var(--brand-accent-edge); }
 
 /* ── Site header ─────────────────────────────────────────── */
 
@@ -789,7 +805,7 @@ p { margin: 0 0 1em; }
      1290 × 2436 ratio. We deliberately avoid `aspect-ratio` + height:100%
      here: Safari collapses a percentage-height child of an aspect-ratio
      box, which left a dark bezel block showing under the screenshot. */
-  background: #1a1612;
+  background: var(--ink);
   border-radius: 38px;
   padding: 6px;
   overflow: hidden;
@@ -1189,8 +1205,8 @@ p { margin: 0 0 1em; }
 }
 .cta-band h2 { color: var(--bone); margin: 0; }
 .cta-band p { color: oklch(0.85 0.008 60); margin: 0; max-width: 560px; }
-.cta-band .btn { background: var(--brand-accent); border-color: var(--brand-accent); color: #fff; }
-.cta-band .btn:hover { background: oklch(0.78 0.16 55); color: #fff; }
+.cta-band .btn { background: var(--brand-accent); border-color: var(--brand-accent); color: var(--ink); }
+.cta-band .btn:hover { background: var(--brand-accent-hover); border-color: var(--brand-accent-hover); color: var(--ink); }
 .eyebrow--on-dark { color: oklch(0.85 0.008 60); }
 .eyebrow--on-dark::before { background: var(--brand-accent); }
 .cta-band__trust {
@@ -1213,7 +1229,7 @@ p { margin: 0 0 1em; }
   align-items: center;
   gap: 8px;
   padding: 6px 12px;
-  border: 1px solid oklch(0.35 0.012 60);
+  border: 1px solid oklch(0.38 0.012 78);   /* same 1.65:1 edge on the lighter ink */
   border-radius: 999px;
 }
 .cta-band__trust li::before {
