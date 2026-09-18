@@ -9,8 +9,14 @@
     @keyframes pop{0%,55%{transform:scale(0);opacity:0}67%{transform:scale(1.18);opacity:1}76%{transform:scale(.96)}84%,100%{transform:scale(1);opacity:1}}
     @media (prefers-reduced-motion:reduce){.w,.phone,.pop{animation:none;opacity:1}.pop{transform:scale(1)}}
   </style>
-  <rect x="26" y="50" width="40" height="56" rx="8" fill="none" stroke="#221E18" stroke-width="3"/>
-  <circle cx="46" cy="70" r="4" fill="#E59134"/>
+  <!-- The wall tag: an ink card carrying the reversed flat cloche (white dome, orange tray,
+       from assets/brand/ha-mark-flat-reversed-2026.svg, 15 units wide), as on the real card.
+       Same outer size as the old outlined tag; the orange dot read as the old logo. -->
+  <rect x="24.5" y="48.5" width="43" height="59" rx="9.5" fill="#221E18"/>
+  <g transform="translate(38.5 61) scale(0.441176)">
+    <path fill="#FFFFFF" d="M17 0a3 3 0 1 1 0 6a3 3 0 1 1 0-6zM3 21v-1a14 14 0 0 1 28 0v1z"/>
+    <rect y="23" width="34" height="5" rx="2.5" fill="#E59134"/>
+  </g>
   <path d="M40 82 q6 6 12 0" fill="none" stroke="#E59134" stroke-width="2.5" stroke-linecap="round"/>
   <path d="M37 88 q9 9 18 0" fill="none" stroke="#E59134" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
   <path class="w" d="M74 60 q10 20 0 40" fill="none" stroke="#E59134" stroke-width="3" stroke-linecap="round"/>
