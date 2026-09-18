@@ -56,4 +56,14 @@ the AASA file with the right Content-Type.
 - [ ] Replace `TEAMID` placeholder in `apple-app-site-association` once Apple Developer is set up
 - [ ] Replace `REPLACE_WITH_SHA256_FROM_PLAY_CONSOLE_OR_LOCAL_KEYSTORE` once the Android keystore exists
 - [ ] Drop in real screenshots in place of `[ Rota screenshot ]` placeholders on `/features`
-- [ ] Generate per-page OG images at `assets/images/og/*.png`
+- [x] Generate per-page OG images at `assets/images/og/*.png`
+
+## Share cards (og:image)
+
+One template, `scripts/og/card.html`, rendered to 1200x630 PNGs by
+`python3 scripts/og/build.py` (headless Chrome + Pillow). `scripts/og/cards.json`
+holds each card's text and the pages that use it. The text sits inside the
+centre square so WhatsApp's small square preview never cuts the lockup or the
+headline. To change a card: edit `cards.json`, bump `suffix` (platforms cache
+images by URL), build, `--write-meta`, `--check`, deploy, then re-scrape in the
+LinkedIn Post Inspector and the Facebook Sharing Debugger.

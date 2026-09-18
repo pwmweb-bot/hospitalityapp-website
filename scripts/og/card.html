@@ -1,0 +1,255 @@
+<!doctype html>
+<!--
+  Share-card template (1200x630). Rendered to PNG by scripts/og/build.py with
+  headless Chrome; the card's text arrives as JSON in the URL hash. Opened with
+  no hash it shows a sample card, so it can be previewed in a browser.
+
+  Layout rule: WhatsApp's small preview is the CENTRE SQUARE of the card
+  (x 285-915). The lockup, eyebrow, headline, sub-line and URL all live in one
+  column inside that square, so the crop never cuts a word or the lockup. The
+  orange edge bar and the optional screenshot inset sit outside it.
+
+  Colours are the brand's hard tokens (#E59134 orange, #221E18 ink) on bone,
+  plus the site's softer ink for the sub-line. Orange is never a text colour.
+-->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<meta name="robots" content="noindex" />
+<title>Share card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter+Tight:wght@500;600&display=block" />
+<style>
+  :root {
+    --ha-orange: #E59134;
+    --ha-ink: #221E18;
+    --bone: #F5F1E8;
+    --ink-3: #504C47;   /* the site's --ink-3, oklch(0.42 0.010 78) */
+    --line: #E1DBCF;
+
+    --col-left: 312px;  /* crop square is 285..915; 27px clear each side */
+    --col-width: 576px;
+  }
+  html, body {
+    margin: 0;
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    background: var(--bone);
+  }
+  .card {
+    position: relative;
+    width: 1200px;
+    height: 630px;
+    background: var(--bone);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+  }
+  .bar {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 16px;
+    background: var(--ha-orange);
+  }
+  .col {
+    position: absolute;
+    left: var(--col-left);
+    width: var(--col-width);
+    top: 62px;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  .lockup {
+    display: block;
+    width: 338px;       /* 645x84 source at 44px tall */
+    height: 44px;
+    flex: 0 0 auto;
+  }
+  .body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 0;
+  }
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font: 600 18px/1.2 'Inter Tight', sans-serif;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 18px;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--ha-orange);
+    flex: 0 0 auto;
+  }
+  .eyebrow:empty { display: none; }
+  h1 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 58px;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--ha-ink);
+    overflow-wrap: normal;
+    text-wrap: balance;
+  }
+  .sub {
+    margin: 20px 0 0;
+    font: 500 23px/1.4 'Inter Tight', sans-serif;
+    color: var(--ink-3);
+    text-wrap: pretty;
+  }
+  .sub:empty { display: none; }
+  .foot {
+    flex: 0 0 auto;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+    font: 600 21px/1 'Inter Tight', sans-serif;
+    color: var(--ha-ink);
+    letter-spacing: 0.005em;
+    white-space: nowrap;
+  }
+
+  /* Optional screenshot inset, right of the crop square (x >= 932). */
+  .inset {
+    position: absolute;
+    left: 932px;
+    width: 228px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 0 0 1px rgba(34, 30, 24, 0.10), 0 18px 40px -12px rgba(34, 30, 24, 0.22);
+  }
+  .inset img {
+    position: absolute;
+    display: block;
+    max-width: none;
+  }
+
+  /* Visible until the script finishes cleanly. build.py fails the card if
+     this square is still in the screenshot (fonts or data did not load). */
+  .sentinel {
+    position: absolute;
+    right: 0; top: 0;
+    width: 40px; height: 40px;
+    background: #FF00FF;
+  }
+  .ready .sentinel { display: none; }
+</style>
+</head>
+<body>
+<div class="card" id="card">
+  <div class="bar"></div>
+  <div class="col">
+    <img class="lockup" src="../../assets/brand/ha-lockup-light-215x28-2026@3x.png" alt="Hospitality App" />
+    <div class="body">
+      <div class="eyebrow" id="eyebrow"></div>
+      <h1 id="headline"></h1>
+      <p class="sub" id="sub"></p>
+    </div>
+    <div class="foot" id="url">hospitalityapp.co.uk</div>
+  </div>
+  <div class="sentinel"></div>
+</div>
+<script>
+(async () => {
+  const SAMPLE = {
+    eyebrow: 'Feature · Till / POS',
+    headline: 'A till designed to be used at speed.',
+    sub: 'Counter or table service, tabs, PIN lock and a logged cash drawer.',
+    url: 'hospitalityapp.co.uk/features/till',
+  };
+  let card = SAMPLE;
+  if (location.hash.length > 1) {
+    card = JSON.parse(decodeURIComponent(location.hash.slice(1)));
+  }
+
+  document.getElementById('eyebrow').textContent = card.eyebrow || '';
+  document.getElementById('headline').textContent = card.headline;
+  document.getElementById('sub').textContent = card.sub || '';
+  document.getElementById('url').textContent = card.url || 'hospitalityapp.co.uk';
+
+  // Fonts must really load: fonts.load() resolves to [] when the face is
+  // missing (e.g. Google Fonts unreachable), and then we stay "not ready".
+  const faces = await Promise.all([
+    document.fonts.load('700 58px "Montserrat"', card.headline),
+    document.fonts.load('600 18px "Inter Tight"', 'ABC'),
+    document.fonts.load('500 23px "Inter Tight"', 'abc'),
+  ]);
+  if (faces.some((f) => f.length === 0)) return;
+  await document.fonts.ready;
+
+  const lockup = document.querySelector('.lockup');
+  if (!lockup.complete || lockup.naturalWidth === 0) {
+    await new Promise((res, rej) => { lockup.onload = res; lockup.onerror = rej; });
+  }
+
+  // Inset: {src, crop: [x, y, w, h] in source pixels}. Scaled to the inset
+  // width and centred vertically in the card.
+  if (card.inset) {
+    const box = document.createElement('div');
+    box.className = 'inset';
+    const img = new Image();
+    img.src = card.inset.src;
+    await img.decode();
+    const [cx, cy, cw, ch] = card.inset.crop || [0, 0, img.naturalWidth, img.naturalHeight];
+    const w = 228;
+    const k = w / cw;
+    const h = Math.round(ch * k);
+    box.style.height = h + 'px';
+    box.style.top = Math.round((630 - h) / 2) + 'px';
+    img.style.width = img.naturalWidth * k + 'px';
+    img.style.left = -cx * k + 'px';
+    img.style.top = -cy * k + 'px';
+    box.appendChild(img);
+    document.getElementById('card').appendChild(box);
+  }
+
+  // Fit: step the headline down until the column holds everything, it takes
+  // at most maxLines lines, and no single word is wider than the column.
+  const h1 = document.getElementById('headline');
+  const col = document.querySelector('.col');
+  const body = document.querySelector('.body');
+  const maxLines = card.maxLines || 3;
+  let size = card.size || 58;
+  const fits = () => {
+    const lineH = parseFloat(getComputedStyle(h1).lineHeight);
+    const lines = Math.round(h1.getBoundingClientRect().height / lineH);
+    return lines <= maxLines && h1.scrollWidth <= h1.clientWidth &&
+      body.scrollHeight <= body.clientHeight;
+  };
+  h1.style.fontSize = size + 'px';
+  while (!fits() && size > 38) {
+    size -= 1;
+    h1.style.fontSize = size + 'px';
+  }
+  if (!fits()) return;
+
+  // A long page URL steps down rather than wrapping or running out of the
+  // crop square.
+  const foot = document.getElementById('url');
+  let footSize = 21;
+  while (foot.scrollWidth > foot.clientWidth && footSize > 15) {
+    footSize -= 0.5;
+    foot.style.fontSize = footSize + 'px';
+  }
+  if (foot.scrollWidth > foot.clientWidth) return;
+
+  document.documentElement.dataset.headlineSize = String(size);
+  document.getElementById('card').classList.add('ready');
+})().catch((e) => { console.error(e); });
+</script>
+</body>
+</html>

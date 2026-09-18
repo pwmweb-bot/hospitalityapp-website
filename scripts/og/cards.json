@@ -1,0 +1,268 @@
+{
+  "_comment": "Share cards (og:image) for hospitalityapp.co.uk. Each card renders to assets/images/og/<id><suffix>.png via scripts/og/build.py and is the og:image of every page in its 'pages' list. Change a card's text and you MUST bump 'suffix' (social platforms cache images by URL), rebuild, run build.py --write-meta, deploy, then re-scrape. 'url' is the line at the foot: the page's own path when a card serves one page, the bare domain when it serves several. 'inset' is an optional screenshot, crop = [x, y, w, h] in source pixels.",
+  "suffix": "-2026",
+  "site": "https://hospitalityapp.co.uk",
+  "out_dir": "assets/images/og",
+  "cards": [
+    {
+      "id": "home",
+      "headline": "Run your venue, not your spreadsheets.",
+      "sub": "Rota, compliance, till, takings & payroll — one app for UK hospitality.",
+      "url": "hospitalityapp.co.uk",
+      "pages": [
+        "index.html",
+        "activate.html",
+        "contact.html",
+        "multi-site.html",
+        "for/index.html",
+        "features/clock-in.html",
+        "features/communication.html",
+        "features/events.html",
+        "features/kitchen-display.html",
+        "features/mobile-ordering.html",
+        "features/stock.html",
+        "features/tips-tronc.html",
+        "tools/bar-rota-template.html",
+        "tools/kitchen-foh-rota-template.html",
+        "tools/pub-rota-template.html",
+        "tools/rota-template.html"
+      ]
+    },
+    {
+      "id": "default",
+      "headline": "Run your venue, not your spreadsheets.",
+      "sub": "Rota, compliance, till, takings & payroll — one app for UK hospitality.",
+      "url": "hospitalityapp.co.uk",
+      "pages": ["privacy.html", "terms.html"]
+    },
+    {
+      "id": "about",
+      "eyebrow": "About",
+      "headline": "Built for the people behind the bar.",
+      "sub": "One app for rota, compliance, till and payroll — made in the UK.",
+      "url": "hospitalityapp.co.uk/about",
+      "pages": ["about.html"]
+    },
+    {
+      "id": "features",
+      "eyebrow": "Features",
+      "headline": "Everything a venue needs, in one place.",
+      "sub": "Rota, compliance, till, takings & payroll — one app for UK hospitality.",
+      "url": "hospitalityapp.co.uk/features",
+      "pages": ["features/index.html"]
+    },
+    {
+      "id": "pricing",
+      "eyebrow": "Pricing",
+      "headline": "Three plans, from £49 per venue.",
+      "sub": "Rota, compliance, till and payroll — simple per-venue pricing. Start free.",
+      "url": "hospitalityapp.co.uk/pricing",
+      "pages": ["pricing.html"]
+    },
+    {
+      "id": "guides",
+      "eyebrow": "Guides",
+      "headline": "Guides for running UK hospitality.",
+      "sub": "Practical guides on rotas, tills, compliance and clock-in for pubs, bars and restaurants.",
+      "url": "hospitalityapp.co.uk/guides",
+      "pages": [
+        "guides/index.html",
+        "guides/clock-in-app.html",
+        "guides/closing-shift-checklist.html",
+        "guides/food-hygiene-compliance.html",
+        "guides/fridge-temperature-log.html",
+        "guides/hospitality-rota-app.html",
+        "guides/menu-management-software.html",
+        "guides/nfc-clock-in-uk.html",
+        "guides/staff-communication-app.html",
+        "guides/tronc-tips-act-2023.html"
+      ]
+    },
+    {
+      "id": "pubs",
+      "eyebrow": "For pubs",
+      "headline": "The all-in-one app for pubs.",
+      "sub": "Rota, compliance, till, takings & payroll — one app for UK hospitality.",
+      "url": "hospitalityapp.co.uk",
+      "pages": [
+        "for/pubs.html",
+        "guides/alcohol-licensing-records.html",
+        "guides/cellar-checks-app.html",
+        "guides/pub-rota-software.html"
+      ]
+    },
+    {
+      "id": "restaurants",
+      "eyebrow": "For restaurants",
+      "headline": "The all-in-one app for restaurants.",
+      "sub": "Rota, compliance, till, takings & payroll — one app for UK hospitality.",
+      "url": "hospitalityapp.co.uk",
+      "pages": [
+        "for/restaurants.html",
+        "guides/haccp-app.html",
+        "guides/restaurant-staff-scheduling.html"
+      ]
+    },
+    {
+      "id": "bars",
+      "eyebrow": "For bars",
+      "headline": "The all-in-one app for bars.",
+      "sub": "Rota, compliance, till, takings & payroll — one app for UK hospitality.",
+      "url": "hospitalityapp.co.uk/for/bars",
+      "pages": ["for/bars.html"]
+    },
+    {
+      "id": "cafes",
+      "eyebrow": "For cafés",
+      "headline": "The all-in-one app for cafés.",
+      "sub": "Rota, compliance, till, takings & payroll — one app for UK hospitality.",
+      "url": "hospitalityapp.co.uk/for/cafes",
+      "pages": ["for/cafes.html"]
+    },
+    {
+      "id": "coffee-shops",
+      "eyebrow": "For coffee shops",
+      "headline": "The all-in-one app for coffee shops.",
+      "sub": "Rota, compliance, till, takings & payroll — one app for UK hospitality.",
+      "url": "hospitalityapp.co.uk/for/coffee-shops",
+      "pages": ["for/coffee-shops.html"]
+    },
+    {
+      "id": "hotels",
+      "eyebrow": "For hotels",
+      "headline": "The all-in-one app for hotels.",
+      "sub": "Rota, compliance, till, takings & payroll — one app for UK hospitality.",
+      "url": "hospitalityapp.co.uk/for/hotels",
+      "pages": ["for/hotels.html"]
+    },
+    {
+      "id": "bnbs",
+      "eyebrow": "For B&Bs",
+      "headline": "The all-in-one app for B&Bs.",
+      "sub": "Rota, compliance, till, takings & payroll — one app for UK hospitality.",
+      "url": "hospitalityapp.co.uk/for/bnbs",
+      "pages": ["for/bnbs.html"]
+    },
+
+    {
+      "id": "features-till",
+      "eyebrow": "Feature · Till / POS",
+      "headline": "A till designed to be used at speed.",
+      "sub": "Counter or table service, tabs, PIN lock and a logged cash drawer.",
+      "url": "hospitalityapp.co.uk/features/till",
+      "inset": { "src": "assets/images/screens/till.png", "crop": [10, 152, 434, 560] },
+      "pages": ["features/till.html"]
+    },
+    {
+      "id": "features-reporting",
+      "eyebrow": "Feature · Reporting",
+      "headline": "The P&L conversation on a Tuesday.",
+      "sub": "Sales, labour, GP, waste and forecast — not six weeks later.",
+      "url": "hospitalityapp.co.uk/features/reporting",
+      "inset": { "src": "assets/images/screens/takings.png", "crop": [0, 330, 1206, 1720] },
+      "pages": ["features/reporting.html"]
+    },
+    {
+      "id": "features-payroll",
+      "eyebrow": "Feature · Payroll & pay",
+      "headline": "A payroll pack, not a shoebox.",
+      "sub": "Built from actual clock punches, with ‘My pay’ for staff.",
+      "url": "hospitalityapp.co.uk/features/payroll",
+      "pages": ["features/payroll.html"]
+    },
+    {
+      "id": "features-compliance",
+      "eyebrow": "Feature · Compliance",
+      "headline": "The EHO visit stops being an event.",
+      "sub": "Ten categories, photo evidence and expiring-certificate reminders.",
+      "url": "hospitalityapp.co.uk/features/compliance",
+      "inset": { "src": "assets/images/screens/compliance.png", "crop": [0, 330, 1206, 1720] },
+      "pages": ["features/compliance.html"]
+    },
+    {
+      "id": "features-rota",
+      "eyebrow": "Feature · Rota",
+      "headline": "A rota that knows what labour costs.",
+      "sub": "A live £ and % ticker, and a speed bump before you publish over budget.",
+      "url": "hospitalityapp.co.uk/features/rota",
+      "inset": { "src": "assets/images/screens/rota.png", "crop": [0, 0, 1290, 1030] },
+      "pages": ["features/rota.html"]
+    },
+    {
+      "id": "features-team-hr",
+      "eyebrow": "Feature · Team & HR",
+      "headline": "The HR record, next to the rota.",
+      "sub": "Pay rates, right-to-work and NMW age bands, beside the rota.",
+      "url": "hospitalityapp.co.uk/features/team-hr",
+      "inset": { "src": "assets/images/screens/team.png", "crop": [0, 0, 1290, 1800] },
+      "pages": ["features/team-hr.html"]
+    },
+    {
+      "id": "guides-pub-till-app",
+      "eyebrow": "Guide · Till / POS",
+      "headline": "The pub till that knows it’s a pub.",
+      "sub": "Drinks-led menu and half/pint pricing, with the cellar log in the same app.",
+      "url": "hospitalityapp.co.uk/guides/pub-till-app",
+      "pages": ["guides/pub-till-app.html"]
+    },
+    {
+      "id": "guides-hospitality-pos-uk",
+      "eyebrow": "Guide · Till / POS",
+      "headline": "Hospitality POS for UK independents.",
+      "sub": "The till, in the same app as your rota, compliance and payroll.",
+      "url": "hospitalityapp.co.uk/guides/hospitality-pos-uk",
+      "pages": ["guides/hospitality-pos-uk.html"]
+    },
+    {
+      "id": "guides-best-pub-till-systems-uk",
+      "eyebrow": "Guide · Till / EPOS",
+      "headline": "The best pub till systems in the UK, compared on what they actually cost.",
+      "sub": "11 EPOS systems, every figure sourced.",
+      "url": "hospitalityapp.co.uk/guides/best-pub-till-systems-uk",
+      "maxLines": 4,
+      "pages": ["guides/best-pub-till-systems-uk.html"]
+    },
+    {
+      "id": "guides-pub-till-hardware-uk",
+      "eyebrow": "Guide · Till hardware",
+      "headline": "What till hardware a pub actually needs — and what you already own.",
+      "sub": "Real prices, and the contract questions that cost more than the kit.",
+      "url": "hospitalityapp.co.uk/guides/pub-till-hardware-uk",
+      "maxLines": 4,
+      "pages": ["guides/pub-till-hardware-uk.html"]
+    },
+    {
+      "id": "guides-flash-pnl-explained",
+      "eyebrow": "Guide · Reporting",
+      "headline": "Flash P&L: the daily hospitality number.",
+      "sub": "Sales, GP and labour on one card, updated daily.",
+      "url": "hospitalityapp.co.uk/guides/flash-pnl-explained",
+      "pages": ["guides/flash-pnl-explained.html"]
+    },
+    {
+      "id": "guides-labour-cost-percentage-calculator",
+      "eyebrow": "Guide · Labour cost",
+      "headline": "Labour cost, live not post-hoc.",
+      "sub": "The formula, UK benchmarks by venue type, and how to hit target.",
+      "url": "hospitalityapp.co.uk/guides/labour-cost-percentage-calculator",
+      "pages": ["guides/labour-cost-percentage-calculator.html"]
+    },
+    {
+      "id": "compare",
+      "eyebrow": "Compare",
+      "headline": "The software fee is not the decision.",
+      "sub": "Worked year-one costs for a 25-staff, two-bar pub.",
+      "url": "hospitalityapp.co.uk/compare",
+      "pages": ["compare/index.html"]
+    },
+    {
+      "id": "compare-epos-now-alternative",
+      "eyebrow": "Compare · Epos Now",
+      "headline": "An Epos Now alternative — and when they are the better buy.",
+      "sub": "An honest comparison for UK pubs.",
+      "url": "hospitalityapp.co.uk/compare/epos-now-alternative",
+      "maxLines": 4,
+      "pages": ["compare/epos-now-alternative.html"]
+    }
+  ]
+}
