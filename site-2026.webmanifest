@@ -1,0 +1,17 @@
+{
+  "name": "Hospitality App",
+  "short_name": "Hospitality",
+  "description": "Rota, compliance, till and payroll for independent UK pubs, restaurants and cafés.",
+  "lang": "en-GB",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#F5F1E8",
+  "theme_color": "#F5F1E8",
+  "icons": [
+    { "src": "/assets/brand/ha-app-icon-192-2026.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/brand/ha-app-icon-512-2026.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/brand/ha-app-icon-maskable-512-2026.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
