@@ -15,6 +15,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
 
 :root {
+  /* The site has no dark theme. This (and the color-scheme meta) stops Chrome
+     auto-dark and similar from darkening the page but not its images, which
+     would lose the ink dome of the flat mark in the footer. */
+  color-scheme: light only;
+
   /* Brand — fixed, from the logo pack. Never themed or tinted. */
   --ha-orange: #E59134;   /* Service Orange, oklch(0.728 0.145 64) */
   --ha-ink: #221E18;      /* oklch(0.238 0.013 78) */

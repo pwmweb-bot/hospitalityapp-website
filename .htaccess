@@ -36,6 +36,8 @@ RewriteRule ^(.*)$ $1.html [L]
 # ── MIME / Content-Type fixes ───────────────────────────────
 <IfModule mod_mime.c>
 AddType application/json .json
+# Web app manifest (site-2026.webmanifest); older Apache mime.types lack it.
+AddType application/manifest+json .webmanifest
 # Free downloadable templates under /tools/downloads/
 AddType application/vnd.openxmlformats-officedocument.spreadsheetml.sheet .xlsx
 AddType text/csv .csv
