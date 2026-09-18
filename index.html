@@ -134,13 +134,15 @@
       place-items: center;
       border-radius: 999px;
       background: var(--brand-accent);
-      color: #fff;
+      /* Ink triangle on orange (6.7:1), like the CTA-band buttons. White on
+         #E59134 is 2.5:1, under the 3:1 minimum for an icon. */
+      color: var(--ink);
       box-shadow: 0 12px 30px -8px rgba(0,0,0,0.55);
       transition: transform 0.15s ease, background 0.15s ease;
     }
-    .ytlite__cover:hover .ytlite__play { transform: scale(1.06); background: var(--brand-accent-ink); }
+    .ytlite__cover:hover .ytlite__play { transform: scale(1.06); background: var(--brand-accent-hover); }
     .ytlite__cover:focus-visible { outline: none; }
-    .ytlite__cover:focus-visible .ytlite__play { outline: 3px solid var(--brand-accent-ink); outline-offset: 4px; }
+    .ytlite__cover:focus-visible .ytlite__play { outline: 3px solid var(--ink); outline-offset: 4px; }
     .ytlite__play svg { margin-left: 4px; } /* optically centre the triangle */
     /* Playing state: hide the cover, reveal the cropped player. */
     .ytlite.is-playing { background: #000; }
