@@ -396,7 +396,9 @@ p { margin: 0 0 1em; }
     border-bottom: 1px solid var(--line);
     padding: 12px var(--gutter) 18px;
   }
-  .nav.is-open a { padding: 12px 0; border-top: 1px solid var(--line-2); }
+  /* Rows only: the two buttons keep their own padding and border. */
+  .nav.is-open a:not(.btn) { padding: 12px 0; border-top: 1px solid var(--line-2); }
+  .nav.is-open .nav__group > a { display: flex; }
   .nav.is-open .nav-cta { padding-top: 12px; gap: 8px; }
   /* Features dropdown collapses to a plain link on mobile — the hub lists the modules. */
   .nav__group { display: block; }
