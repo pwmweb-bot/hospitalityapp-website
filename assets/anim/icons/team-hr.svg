@@ -7,9 +7,9 @@
     .l2{animation-delay:.16s}
     @media (prefers-reduced-motion:reduce){.verify,.ln{animation:none;opacity:1}.verify{transform:scale(1)}}
   </style>
-  <rect x="10" y="14" width="44" height="36" rx="6" fill="none" stroke="#1A1612" stroke-width="3"/>
-  <circle cx="24" cy="27" r="6" fill="#E97D45"/>
-  <path d="M15 42 a9 9 0 0 1 18 0" fill="none" stroke="#1A1612" stroke-width="3" stroke-linecap="round"/>
+  <rect x="10" y="14" width="44" height="36" rx="6" fill="none" stroke="#221E18" stroke-width="3"/>
+  <circle cx="24" cy="27" r="6" fill="#E59134"/>
+  <path d="M15 42 a9 9 0 0 1 18 0" fill="none" stroke="#221E18" stroke-width="3" stroke-linecap="round"/>
   <rect class="ln" x="37" y="24" width="12" height="3.4" rx="1.7" fill="#C9C1B0"/>
   <rect class="ln l2" x="37" y="31" width="9" height="3.4" rx="1.7" fill="#C9C1B0"/>
   <g class="verify">

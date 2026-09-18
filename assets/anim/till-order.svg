@@ -9,17 +9,17 @@
     @keyframes tpop{0%,52%{transform:scale(0);opacity:0}63%{transform:scale(1.18);opacity:1}72%{transform:scale(.96)}80%,86%{transform:scale(1);opacity:1}94%,100%{opacity:0}}
     @media (prefers-reduced-motion:reduce){.trow,.pay,.tpop{animation:none;opacity:1}.tpop{transform:scale(1)}}
   </style>
-  <rect x="16" y="38" width="128" height="84" rx="11" fill="#1A1612"/>
+  <rect x="16" y="38" width="128" height="84" rx="11" fill="#221E18"/>
   <rect x="22" y="44" width="116" height="72" rx="6" fill="#F5F1E8"/>
   <rect class="trow" x="30" y="52" width="66" height="7" rx="3.5" fill="#C9C1B0"/>
-  <rect class="trow" x="106" y="52" width="24" height="7" rx="3.5" fill="#1A1612"/>
+  <rect class="trow" x="106" y="52" width="24" height="7" rx="3.5" fill="#221E18"/>
   <rect class="trow tr2" x="30" y="64" width="54" height="7" rx="3.5" fill="#C9C1B0"/>
-  <rect class="trow tr2" x="106" y="64" width="24" height="7" rx="3.5" fill="#1A1612"/>
+  <rect class="trow tr2" x="106" y="64" width="24" height="7" rx="3.5" fill="#221E18"/>
   <rect class="trow tr3" x="30" y="76" width="60" height="7" rx="3.5" fill="#C9C1B0"/>
-  <rect class="trow tr3" x="106" y="76" width="24" height="7" rx="3.5" fill="#1A1612"/>
+  <rect class="trow tr3" x="106" y="76" width="24" height="7" rx="3.5" fill="#221E18"/>
   <g class="pay">
-    <rect x="30" y="94" width="100" height="16" rx="8" fill="#E97D45"/>
-    <rect x="62" y="100" width="36" height="4" rx="2" fill="#F5F1E8"/>
+    <rect x="30" y="94" width="100" height="16" rx="8" fill="#E59134"/>
+    <rect x="62" y="100" width="36" height="4" rx="2" fill="#221E18"/>
   </g>
   <g class="tpop">
     <circle cx="80" cy="80" r="20" fill="#5B8C6E"/>

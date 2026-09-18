@@ -11,18 +11,18 @@
     .pop{transform-box:fill-box;transform-origin:center;animation:pop 3.4s ease-in-out infinite}
     @keyframes pop{0%,55%{transform:scale(0);opacity:0}67%{transform:scale(1.18);opacity:1}76%{transform:scale(.96)}84%,90%{transform:scale(1);opacity:1}96%,100%{transform:scale(1);opacity:0}}
     @media (prefers-reduced-motion:reduce){.c1,.c2,.c3,.c4,.card,.pop{animation:none;opacity:1}.pop{transform:scale(1)}}
-    .s{fill:#C9C1B0;stroke:#1A1612;stroke-width:3}
+    .s{fill:#C9C1B0;stroke:#221E18;stroke-width:3}
   </style>
-  <g fill="#1A1612">
+  <g fill="#221E18">
     <g class="c1"><rect class="s" x="32" y="40" width="26" height="16" rx="4"/><rect x="30" y="36" width="30" height="8" rx="4"/></g>
     <g class="c2"><rect class="s" x="82" y="40" width="26" height="16" rx="4"/><rect x="80" y="36" width="30" height="8" rx="4"/></g>
     <g class="c3"><rect class="s" x="82" y="112" width="26" height="16" rx="4"/><rect x="80" y="124" width="30" height="8" rx="4"/></g>
     <g class="c4"><rect class="s" x="32" y="112" width="26" height="16" rx="4"/><rect x="30" y="124" width="30" height="8" rx="4"/></g>
   </g>
-  <rect x="20" y="62" width="100" height="44" rx="8" fill="#F5F1E8" stroke="#1A1612" stroke-width="3"/>
+  <rect x="20" y="62" width="100" height="44" rx="8" fill="#F5F1E8" stroke="#221E18" stroke-width="3"/>
   <g class="card">
-    <rect x="41" y="71" width="58" height="26" rx="6" fill="#E97D45"/>
-    <text x="70" y="89.3" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="15" font-weight="600" fill="#F5F1E8">19:30</text>
+    <rect x="41" y="71" width="58" height="26" rx="6" fill="#E59134"/>
+    <text x="70" y="89.3" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="15" font-weight="600" fill="#221E18">19:30</text>
   </g>
   <g class="pop">
     <circle cx="130" cy="44" r="13" fill="#5B8C6E"/>

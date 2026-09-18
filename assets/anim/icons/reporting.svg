@@ -7,11 +7,11 @@
     @keyframes trend{0%,30%{stroke-dashoffset:46}55%,90%{stroke-dashoffset:0}98%,100%{stroke-dashoffset:46}}
     @media (prefers-reduced-motion:reduce){.bar{animation:none;transform:scaleY(1)}.trend{animation:none;stroke-dashoffset:0}}
   </style>
-  <line x1="12" y1="52" x2="54" y2="52" stroke="#1A1612" stroke-width="3" stroke-linecap="round"/>
+  <line x1="12" y1="52" x2="54" y2="52" stroke="#221E18" stroke-width="3" stroke-linecap="round"/>
   <rect class="bar" x="15" y="36" width="7" height="16" rx="2" fill="#C9C1B0"/>
-  <rect class="bar c2" x="26" y="30" width="7" height="22" rx="2" fill="#1A1612"/>
+  <rect class="bar c2" x="26" y="30" width="7" height="22" rx="2" fill="#221E18"/>
   <rect class="bar c3" x="37" y="24" width="7" height="28" rx="2" fill="#C9C1B0"/>
-  <rect class="bar c4" x="48" y="18" width="7" height="34" rx="2" fill="#E97D45"/>
+  <rect class="bar c4" x="48" y="18" width="7" height="34" rx="2" fill="#E59134"/>
   <path class="trend" d="M16 40 L30 34 L42 26 L52 16" fill="none" stroke="#5B8C6E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M52 16 l-6 1 m6 -1 l-1 6" fill="none" stroke="#5B8C6E" stroke-width="3" stroke-linecap="round"/>
 </svg>

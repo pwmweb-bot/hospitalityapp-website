@@ -8,12 +8,12 @@
     @keyframes pop{0%,55%{transform:scale(0);opacity:0}67%{transform:scale(1.18);opacity:1}76%{transform:scale(.96)}84%,100%{transform:scale(1);opacity:1}}
     @media (prefers-reduced-motion:reduce){.merc,.read,.pop{animation:none;opacity:1}.pop{transform:scale(1)}}
   </style>
-  <rect x="40" y="30" width="34" height="80" rx="17" fill="none" stroke="#1A1612" stroke-width="3"/>
-  <circle cx="57" cy="118" r="16" fill="none" stroke="#1A1612" stroke-width="3"/>
-  <circle cx="57" cy="118" r="9" fill="#E97D45"/>
-  <rect class="merc" x="53" y="60" width="8" height="58" rx="4" fill="#E97D45"/>
+  <rect x="40" y="30" width="34" height="80" rx="17" fill="none" stroke="#221E18" stroke-width="3"/>
+  <circle cx="57" cy="118" r="16" fill="none" stroke="#221E18" stroke-width="3"/>
+  <circle cx="57" cy="118" r="9" fill="#E59134"/>
+  <rect class="merc" x="53" y="60" width="8" height="58" rx="4" fill="#E59134"/>
   <g class="read">
-    <rect x="86" y="60" width="52" height="30" rx="7" fill="#1A1612"/>
+    <rect x="86" y="60" width="52" height="30" rx="7" fill="#221E18"/>
     <text x="112" y="80" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="15" font-weight="600" fill="#F5F1E8">4°C</text>
   </g>
   <g class="pop">
