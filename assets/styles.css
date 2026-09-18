@@ -654,6 +654,24 @@ p { margin: 0 0 1em; }
 .compare tbody tr:last-child th,
 .compare tbody tr:last-child td { border-bottom: 0; }
 
+/* On a phone the plan comparison (four columns) is wider than the screen.
+   Scroll the table inside its own rounded box instead of the whole page,
+   and keep the row labels pinned so a row can still be read across. */
+@media (max-width: 640px) {
+  .compare {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .compare th, .compare td { padding: 12px 12px; }
+  .compare tbody th {
+    position: sticky;
+    left: 0;
+    background: var(--paper);
+    z-index: 1;
+  }
+}
+
 /* ── FAQ ─────────────────────────────────────────────────── */
 
 .faq { display: grid; gap: 8px; max-width: 760px; }
