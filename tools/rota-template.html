@@ -100,7 +100,14 @@
     .print-only { display: none; }
     @media print {
       .site-header, .site-footer, .hero__cta, .dl, .cta-band, .no-print { display: none !important; }
+      /* The page promises "a clean blank grid and nothing else": print only the sheet. */
+      main > :not(.print-only) { display: none !important; }
       .print-only { display: block !important; }
+      /* Sheet foot: the mono cloche (8mm) and the address in 8pt grey. Inline SVG
+         with a fill, not a background, so it prints with background graphics
+         off and stays legible in black-and-white. */
+      .print-foot { display: flex; align-items: center; gap: 2mm; margin: 6mm 0 0; font-size: 8pt; line-height: 1; color: #555; }
+      .print-foot svg { width: 8mm; height: 6.6mm; flex: 0 0 auto; }
       .print-grid { width: 100%; border-collapse: collapse; font-size: 10pt; }
       .print-grid th, .print-grid td { border: 1px solid #999; padding: 9px 6px; }
       .print-grid th { background: #eee; }
@@ -342,7 +349,7 @@
           <tr><td>Sun</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         </tbody>
       </table>
-      <p>hospitalityapp.co.uk/tools/rota-template</p>
+      <p class="print-foot"><svg viewBox="0 0 34 28" width="34" height="28" fill="currentColor" aria-hidden="true"><path d="M17 0a3 3 0 1 1 0 6a3 3 0 1 1 0-6zM3 21v-1a14 14 0 0 1 28 0v1z"/><rect y="23" width="34" height="5" rx="2.5"/></svg>hospitalityapp.co.uk</p>
     </div>
 
     <section class="section section-tight">
