@@ -152,6 +152,12 @@
     /* Transparent layer over the player: captures clicks (play/pause) and
        swallows hover so no YouTube UI is ever triggered. */
     .ytlite__shield { position: absolute; inset: 0; z-index: 2; background: transparent; cursor: pointer; }
+    /* "The moments that run your venue": four animated cards. Fixed column
+       counts (1 / 2 / 4) instead of auto-fit, so they never wrap 3 + 1 and
+       leave one card alone on a row at tablet widths. */
+    .moments-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 520px) { .moments-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 980px) { .moments-grid { grid-template-columns: repeat(4, 1fr); } }
   </style>
 </head>
 <body>
@@ -261,9 +267,9 @@
         <div class="section-head">
           <span class="eyebrow">Day to day</span>
           <h2>The moments that run your venue.</h2>
-          <p>Clock in, check a fridge, ring an order — the everyday actions your team does in seconds, all in one app.</p>
+          <p>Clock in, check a fridge, ring an order, take a booking — the everyday actions your team does in seconds, all in one app.</p>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
+        <div class="moments-grid">
           <article style="background:var(--bone-2);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 24px 24px;text-align:center;">
             <img src="/assets/anim/clock-in.svg" alt="A phone taps a wall tag to clock in, confirmed with a tick" width="150" height="150" loading="lazy" style="display:block;margin:0 auto;" />
             <h3 style="font-size:22px;margin:14px 0 6px;">Tap to clock in</h3>
@@ -278,6 +284,11 @@
             <img src="/assets/anim/till-order.svg" alt="An order is rung through on a tablet till and payment is confirmed with a tick" width="150" height="150" loading="lazy" style="display:block;margin:0 auto;" />
             <h3 style="font-size:22px;margin:14px 0 6px;">Order rung through</h3>
             <p style="color:var(--ink-3);font-size:14px;margin:0;">Ring the round on any tablet, take payment, done. The till that came with the app.</p>
+          </article>
+          <article style="background:var(--bone-2);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 24px 24px;text-align:center;">
+            <img src="/assets/anim/table-booked.svg" alt="A table for four is set for 19:30 and the booking is confirmed with a tick" width="150" height="150" loading="lazy" style="display:block;margin:0 auto;" />
+            <h3 style="font-size:22px;margin:14px 0 6px;">Table booked</h3>
+            <p style="color:var(--ink-3);font-size:14px;margin:0;">Guests book on your own website, only when a table's free. Confirmed by email, ready for the door.</p>
           </article>
         </div>
       </div>

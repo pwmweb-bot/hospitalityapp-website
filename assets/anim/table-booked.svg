@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="A table for four is set for 19:30 and the booking is confirmed with a tick">
+  <style>
+    .c1,.c2,.c3,.c4{opacity:0;animation:3.4s ease-out infinite}
+    .c1{animation-name:c1}.c2{animation-name:c2}.c3{animation-name:c3}.c4{animation-name:c4}
+    @keyframes c1{0%,2%{opacity:0;transform:translateY(-10px)}11%,90%{opacity:1;transform:none}96%,100%{opacity:0}}
+    @keyframes c2{0%,9%{opacity:0;transform:translateY(-10px)}18%,90%{opacity:1;transform:none}96%,100%{opacity:0}}
+    @keyframes c3{0%,16%{opacity:0;transform:translateY(10px)}25%,90%{opacity:1;transform:none}96%,100%{opacity:0}}
+    @keyframes c4{0%,23%{opacity:0;transform:translateY(10px)}32%,90%{opacity:1;transform:none}96%,100%{opacity:0}}
+    .card{opacity:0;animation:card 3.4s ease-out infinite;transform-box:fill-box;transform-origin:center}
+    @keyframes card{0%,34%{opacity:0;transform:scale(1.35)}44%{opacity:1;transform:scale(.95)}50%,90%{opacity:1;transform:scale(1)}96%,100%{opacity:0}}
+    .pop{transform-box:fill-box;transform-origin:center;animation:pop 3.4s ease-in-out infinite}
+    @keyframes pop{0%,55%{transform:scale(0);opacity:0}67%{transform:scale(1.18);opacity:1}76%{transform:scale(.96)}84%,90%{transform:scale(1);opacity:1}96%,100%{transform:scale(1);opacity:0}}
+    @media (prefers-reduced-motion:reduce){.c1,.c2,.c3,.c4,.card,.pop{animation:none;opacity:1}.pop{transform:scale(1)}}
+    .s{fill:#C9C1B0;stroke:#1A1612;stroke-width:3}
+  </style>
+  <g fill="#1A1612">
+    <g class="c1"><rect class="s" x="32" y="40" width="26" height="16" rx="4"/><rect x="30" y="36" width="30" height="8" rx="4"/></g>
+    <g class="c2"><rect class="s" x="82" y="40" width="26" height="16" rx="4"/><rect x="80" y="36" width="30" height="8" rx="4"/></g>
+    <g class="c3"><rect class="s" x="82" y="112" width="26" height="16" rx="4"/><rect x="80" y="124" width="30" height="8" rx="4"/></g>
+    <g class="c4"><rect class="s" x="32" y="112" width="26" height="16" rx="4"/><rect x="30" y="124" width="30" height="8" rx="4"/></g>
+  </g>
+  <rect x="20" y="62" width="100" height="44" rx="8" fill="#F5F1E8" stroke="#1A1612" stroke-width="3"/>
+  <g class="card">
+    <rect x="41" y="71" width="58" height="26" rx="6" fill="#E97D45"/>
+    <text x="70" y="89.3" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="15" font-weight="600" fill="#F5F1E8">19:30</text>
+  </g>
+  <g class="pop">
+    <circle cx="130" cy="44" r="13" fill="#5B8C6E"/>
+    <path d="M124 44 l4 4 8 -9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
