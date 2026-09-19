@@ -36,7 +36,7 @@
         "author": { "@type": "Organization", "name": "Hospitality App", "alternateName": "HospitalityApp" },
         "publisher": { "@type": "Organization", "name": "Hospitality App", "alternateName": "HospitalityApp", "url": "https://hospitalityapp.co.uk/" },
         "datePublished": "2026-08-25",
-        "dateModified": "2026-08-25",
+        "dateModified": "2026-09-20",
         "image": "https://hospitalityapp.co.uk/assets/images/og/guides-pub-till-hardware-uk-2026.png",
         "mainEntityOfPage": "https://hospitalityapp.co.uk/guides/pub-till-hardware-uk"
       },
@@ -53,6 +53,7 @@
         "mainEntity": [
           { "@type": "Question", "name": "Do I actually need a receipt printer in a pub?", "acceptedAnswer": { "@type": "Answer", "text": "If you are wet-led with no kitchen, no table service and no second serving point, honestly no — not on day one. Your card machine prints its own card receipt regardless, most drinkers do not ask for a till receipt, and the cash-up can be read on screen. You need one the moment you serve food, add a second bar, do table service, or take online orders that must reach the kitchen. If you are food-led, buy the kitchen printer first and the bar printer second — most first-time buyers do it the other way round and then discover the useful one was the one on the pass." } },
           { "@type": "Question", "name": "Can I use my old iPad as a till?", "acceptedAnswer": { "@type": "Answer", "text": "Check which one it is in Settings, General, About. An iPad Air 2 or a 5th, 6th or 7th generation iPad is frozen at iPadOS 15, 16, 17 or 18 respectively, and a frozen browser eventually stops working with cloud software. An iPad 8th generation, Air 3 or mini 5 works today but is dropped by iPadOS 27. An iPad 9th generation or newer is a safe base. Also check the port: 9th generation and older use Lightning, which rules out several modern stands built around a centred USB-C port. Still switches on is not the same as still works." } },
+          { "@type": "Question", "name": "Can I use a Windows EPOS terminal or PC as the till?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, if it runs Windows 10 or 11 (64-bit) — check that Settings, System, About shows “64-bit operating system, x64-based processor”. Most dedicated EPOS terminals are Windows touchscreen PCs, so the one already on your bar may well do, and an ordinary Windows PC works too. Hospitality App Till for Windows is the same till as on a tablet, shown full screen with other websites blocked, and it prints to a USB receipt printer plugged into the PC or to a network printer, with the cash drawer kicked through the printer. It is included in Complete with no per-terminal fee. One catch: on a £0-upfront deal the terminal may belong to the supplier, not you." } },
           { "@type": "Question", "name": "Why will a USB receipt printer not work with an iPad?", "acceptedAnswer": { "@type": "Answer", "text": "A Windows PC has a driver system — you install software that knows how to speak to that specific printer. An iPad has nothing of the kind: no printer driver system and no USB printing class. Plug a USB receipt printer into an iPad and nothing happens, with no error and no prompt. No adapter fixes it. What a tablet can do is talk over a network, so if your till is a tablet the printer needs an Ethernet socket. On the Epson TM-T20IV the USB-and-serial model and the Ethernet model look nearly identical and differ by about £24 — buying the cheap one is the most expensive mistake in this category." } },
           { "@type": "Question", "name": "Why will my cash drawer not open?", "acceptedAnswer": { "@type": "Answer", "text": "Almost always one of four things. One: it is not plugged into the receipt printer — the drawer connects to the printer's DK port, never to the tablet. Two: the cable is wrong for your printer brand; APG drawers using the 320 interface need a brand-matched adapter, and that £8 part is the commonest reason a brand-new drawer does nothing. Three: your till software is not sending the drawer-kick command at all, in which case no hardware will help. Four: voltage — 24V is the UK norm, and a 24V drawer on a 12V port will not open. A drawer with a dead printer still opens with the manual key override." } },
           { "@type": "Question", "name": "Do I have to buy new software licences for a second bar?", "acceptedAnswer": { "@type": "Answer", "text": "You have to buy the hardware — a tablet, a stand and a printer for that serving point. Whether you pay again for the software depends entirely on your provider, and it is the question worth asking in writing. Some vendors bill per device, with published figures around £15 to £39 per month per extra terminal; others bill per location with unlimited devices included. On a four-till pub that difference runs into four figures a year on identical hardware. Hospitality App has no per-terminal fee, so a second till costs nothing in software." } },
@@ -144,6 +145,7 @@
           <p><strong>Wet-led bar, no food, one serving point:</strong> if you already own a tablet, you need a stand and nothing else. About <strong>£33 ex VAT</strong>. Take card on Tap to Pay with a phone you already have. No printer means no cash drawer, and that is a legitimate way to run a card-led bar.</p>
           <p><strong>A proper one-bar setup</strong> &mdash; tablet, stand, network receipt printer, cash drawer, card reader, rolls &mdash; lands at <strong>£575&ndash;£865 ex VAT (£690&ndash;£1,038 inc VAT)</strong>.</p>
           <p><strong>Two bars and a kitchen</strong>, including an impact printer on the pass and a spare tablet on the shelf: <strong>£1,476&ndash;£2,073 ex VAT (£1,771&ndash;£2,488 inc VAT)</strong>.</p>
+          <p><strong>Already own a Windows EPOS terminal or PC?</strong> If it runs Windows 10 or 11 (64-bit), our till runs on it in place of a tablet and stand &mdash; and a plain USB receipt printer works with Windows, so you can skip the £24 Ethernet premium explained below.</p>
           <p style="margin-bottom:0;">If someone is quoting you thousands for a single-bar pub, they are selling you hardware you do not need in year one.</p>
         </div>
         <p class="datenote" style="margin-top: 14px;">Prices checked 25 August 2026 &middot; compatibility facts age far more slowly than prices</p>
@@ -354,7 +356,7 @@
         <div class="section-head">
           <span class="eyebrow">Already have kit?</span>
           <h2>Will my current hardware work?</h2>
-          <p>Ten questions, each answerable in under a minute standing behind your own bar.</p>
+          <p>Eleven questions, each answerable in under a minute standing behind your own bar.</p>
         </div>
         <div style="max-width: 780px;">
           <div class="checker">
@@ -368,43 +370,48 @@
             <p><span class="no">Lightning</span> (iPad 9th gen and older) &mdash; you are limited to enclosure-style stands and universal stands like the Heckler @Rest. Do not order a Core.</p>
           </div>
           <div class="checker">
-            <h4>3. Does your receipt printer have an Ethernet socket?</h4>
+            <h4>3. Got a Windows EPOS terminal or PC? Does it run Windows 10 or 11 (64-bit)?</h4>
+            <p><span class="yes">Yes</span> &mdash; if Settings &rarr; System &rarr; About shows Windows 10 or 11 and &ldquo;64-bit operating system, x64-based processor&rdquo;, it can be your till with us, instead of a tablet or alongside one. One catch: if it came with a £0-upfront deal it may not be yours to keep &mdash; see the ownership questions below.</p>
+            <p><span class="no">Older, 32-bit or ARM</span> &mdash; Windows 7, a POSReady edition or a 32-bit install will not run our Windows till, and we do not support ARM-based PCs (About says &ldquo;ARM-based processor&rdquo;). Use a tablet instead.</p>
+          </div>
+          <div class="checker">
+            <h4>4. Does your receipt printer have an Ethernet socket?</h4>
             <p><span class="yes">Yes</span> &mdash; it will work with a tablet till.</p>
             <p><span class="no">USB only</span> &mdash; it will not. Not with an adapter, not with a hub. Fine on a Windows PC, useless on an iPad.</p>
           </div>
           <div class="checker">
-            <h4>4. Is your receipt paper 80mm or 58mm wide?</h4>
+            <h4>5. Is your receipt paper 80mm or 58mm wide?</h4>
             <p><span class="yes">80mm</span> &mdash; correct for a bar. About 42&ndash;48 characters a line: item, quantity and price without wrapping, and a legible kitchen docket with modifiers.</p>
             <p><span class="no">58mm</span> &mdash; about 32 characters. Item names wrap onto second lines and food dockets get genuinely hard to read across a hot pass. An 80mm printer can also print 58mm; a 58mm printer can never print wide. <strong>This is a one-way door.</strong></p>
           </div>
           <div class="checker">
-            <h4>5. Is your cash drawer 24V, and does its cable match your printer brand?</h4>
+            <h4>6. Is your cash drawer 24V, and does its cable match your printer brand?</h4>
             <p><span class="yes">Yes to both</span> &mdash; keep it. A working drawer plus a £5&ndash;£10 cable is a much better buy than a new drawer.</p>
             <p><span class="no">12V</span> &mdash; do not plug it into a 24V printer port. You will burn out the solenoid.</p>
             <p><strong>Unsure about the cable?</strong> Star drawers ship a near-universal RJ11 lead. APG drawers using the 320 MultiPRO interface need a brand-matched adapter. That £8 part is the commonest reason a brand-new drawer does not open.</p>
           </div>
           <div class="checker">
-            <h4>6. Is your kitchen printer thermal or impact?</h4>
+            <h4>7. Is your kitchen printer thermal or impact?</h4>
             <p><span class="yes">Impact</span> (has a ribbon cartridge, is noisy) &mdash; correct. Keep it.</p>
             <p><span class="no">Thermal</span> (no ribbon, silent) &mdash; wrong tool. It will grey out, blur or blacken above a grill, and chefs will ignore it because it makes no noise.</p>
           </div>
           <div class="checker">
-            <h4>7. Can you run a network cable to each printer position?</h4>
+            <h4>8. Can you run a network cable to each printer position?</h4>
             <p><span class="yes">Yes</span> &mdash; do it. Wireless costs about £50 more per printer and introduces the worst failure mode in the category: <strong>the silent one</strong>, where the order rings through fine and no docket ever appears.</p>
             <p><span class="no">No</span> (garden bar, listed building) &mdash; then and only then pay for the wireless model.</p>
           </div>
           <div class="checker">
-            <h4>8. Does your card terminal receive the amount from the till automatically, or does someone type it in?</h4>
+            <h4>9. Does your card terminal receive the amount from the till automatically, or does someone type it in?</h4>
             <p><span class="yes">Automatically</span> &mdash; it is integrated. Find out which EPOS systems it works with <em>before</em> you change till software, because that integration is worth more than the box.</p>
             <p><span class="no">Typed in</span> &mdash; it is standalone. That is the normal state of affairs for most independent pubs, and it is also what you would have with us. We say so plainly below.</p>
           </div>
           <div class="checker">
-            <h4>9. Is your printer's IP address reserved on your router?</h4>
+            <h4>10. Is your printer's IP address reserved on your router?</h4>
             <p><span class="yes">Yes</span> &mdash; nothing to do.</p>
             <p><span class="no">No or don't know</span> &mdash; do it now. By default your router hands out addresses that change on reboot, and when the printer's address moves, the till loses it. It is a DHCP reservation in the router admin page. Five minutes now saves a Friday night later.</p>
           </div>
           <div class="checker">
-            <h4>10. Do you have mains power at each till point?</h4>
+            <h4>11. Do you have mains power at each till point?</h4>
             <p><span class="yes">Yes</span> &mdash; plan a permanent cable and a stand with internal routing.</p>
             <p><span class="no">No</span> &mdash; solve that before you buy anything else. A till that dies at half nine on a Saturday is worse than no till, and swapping tablets at half time is not a plan.</p>
           </div>
@@ -501,10 +508,11 @@
         <div style="max-width: 780px;">
           <p><strong>We make one of these systems.</strong> Here is what Hospitality App does and does not do, in the same plain terms as everything above.</p>
           <p><strong>It runs on the tablet you already own.</strong> Our app needs iOS 15.1 or newer, or Android 7.0 or newer. That is a deliberately low floor &mdash; but read question 1 of the checker above rather than ours, because a device Apple has stopped updating is a bad idea regardless of what our minimum says.</p>
-          <p><strong>A second till costs £0 in software.</strong> Complete is £149 per venue per month + VAT and includes the till, kitchen display, mobile ordering and stock control, on as many devices as you want. Go back to the two-bar list and price it against a per-device licence at £39 a month: the difference is £936 a year + VAT on the second and third screens alone.</p>
+          <p><strong>Or on a Windows terminal.</strong> Hospitality App Till for Windows runs the same till full screen on a Windows 10 or 11 (64-bit) EPOS terminal or PC you already own; question 3 of the checker has the catch. <a href="/features/till">What it does</a>.</p>
+          <p><strong>A second till costs £0 in software.</strong> Complete is £149 per venue per month + VAT and includes the till, kitchen display, mobile ordering and stock control, on as many devices as you want, Windows tills included. Go back to the two-bar list and price it against a per-device licence at £39 a month: the difference is £936 a year + VAT on the second and third screens alone.</p>
           <p><strong>You pair a device with a single-use code.</strong> No account to log into on the tablet, no password on a bar-top device a hundred people walk past. Un-pair a lost tablet without changing anyone's password.</p>
-          <p><strong>It prints over your own LAN.</strong> The paired device streams raw ESC/POS to a network printer on port 9100 &mdash; option 3 in the printing section above &mdash; at 80mm or 58mm. The cash drawer fires from the printer's kick port exactly as described, and it fires on a cash sale even when no receipt prints. So the printers in this guide are the printers, not an approved list at an approved price, and if you leave us in three years the printer still works with whatever you buy next.</p>
-          <p><strong>Two honest limits on that.</strong> LAN printing and the drawer kick need the <em>paired native device</em>. If you are running the till in an ordinary browser tab, receipts fall back to your operating system's print dialog and the drawer will not fire, because a browser has nothing to kick with. And we are not going to publish a list of printer models we have certified, because we drive generic ESC/POS over port 9100 rather than maintaining a tested-hardware programme &mdash; ask us about your specific printer and we will tell you honestly whether we know.</p>
+          <p><strong>It prints over your own LAN.</strong> The paired device streams raw ESC/POS to a network printer on port 9100 &mdash; option 3 in the printing section above &mdash; at 80mm or 58mm. The cash drawer fires from the printer's kick port exactly as described, and it fires on a cash sale even when no receipt prints. On the Windows till you can also use any receipt printer installed in Windows &mdash; a USB thermal printer plugged into the terminal is fine there &mdash; and the drawer fires through that one too. So the printers in this guide are the printers, not an approved list at an approved price, and if you leave us in three years the printer still works with whatever you buy next.</p>
+          <p><strong>Two honest limits on that.</strong> LAN printing and the drawer kick need the <em>paired native device</em> &mdash; our tablet app, or the Windows till. If you are running the till in an ordinary browser tab, including a browser on a Windows PC, receipts fall back to your operating system's print dialog and the drawer will not fire, because a browser has nothing to kick with. And we are not going to publish a list of printer models we have certified, because we drive generic ESC/POS over port 9100 rather than maintaining a tested-hardware programme &mdash; ask us about your specific printer and we will tell you honestly whether we know.</p>
 
           <h3>The one we can't dress up: we do not have integrated card payments</h3>
           <p>Integration matters, and this guide has explained why: the amount transfers to the terminal automatically, staff never key it, and each card payment is stamped against a specific sale so your totals reconcile by construction. That is a real benefit and we do not have it. With Hospitality App your staff ring up £11.40 on the tablet and then key £11.40 into your own card terminal.</p>
@@ -528,6 +536,7 @@
         <div style="max-width: 780px;">
           <details><summary>Do I actually need a receipt printer in a pub?</summary><p>If you are wet-led with no kitchen, no table service and no second serving point &mdash; honestly, no, not on day one. Your card machine prints its own card receipt regardless, most drinkers do not ask for a till receipt, and the cash-up can be read on screen. You need one the moment you serve food, add a second bar, do table service, or take online orders that must reach the kitchen. And if you are food-led, buy the <em>kitchen</em> printer first and the bar printer second.</p></details>
           <details><summary>Can I use my old iPad as a till?</summary><p>Check which one it is in Settings &rarr; General &rarr; About. An iPad Air 2, 5th, 6th or 7th generation is genuinely finished &mdash; frozen at iPadOS 15, 16, 17 or 18, with a browser that cloud till software will eventually refuse to run. An iPad 8th gen, Air 3 or mini 5 works today but is dropped by iPadOS 27. An iPad 9th generation or newer is a safe base. Also check the port: 9th gen and older are Lightning, which rules out several modern stands. &ldquo;Still switches on&rdquo; is not the same as &ldquo;still works&rdquo;.</p></details>
+          <details><summary>Can I use a Windows EPOS terminal or PC as the till?</summary><p>Yes, if it runs Windows 10 or 11 (64-bit) &mdash; check that Settings &rarr; System &rarr; About shows &ldquo;64-bit operating system, x64-based processor&rdquo;. Most dedicated EPOS terminals are Windows touchscreen PCs, so the one already on your bar may well do, and an ordinary Windows PC works too. Hospitality App Till for Windows is the same till as on a tablet, shown full screen with other websites blocked, and it prints to a USB receipt printer plugged into the PC or to a network printer, with the cash drawer kicked through the printer. It is included in Complete with no per-terminal fee. One catch: on a £0-upfront deal the terminal may belong to the supplier, not you.</p></details>
           <details><summary>Why won't my cash drawer open?</summary><p>Almost always one of four things, in this order. One: it is not plugged into the receipt printer &mdash; the drawer connects to the printer's DK port, never to the tablet. Two: the cable is wrong for your printer brand. Three: your till software is not sending the drawer-kick command at all, in which case no hardware will help. Four: voltage &mdash; 24V is the UK norm, and a 24V drawer on a 12V port will not open. A drawer with a dead printer still opens with the manual key override.</p></details>
           <details><summary>Do I have to buy new software licences for a second bar?</summary><p>You have to buy the hardware &mdash; tablet, stand and a printer for that serving point. Whether you pay again for the <em>software</em> depends entirely on your provider, and it is the question worth asking in writing. Some vendors bill per device, with published figures around £15&ndash;£39 per month per extra terminal; others bill per location with unlimited devices. On a four-till pub that runs into four figures a year on identical hardware. Hospitality App has no per-terminal fee.</p></details>
           <details><summary>Do I have to use your card machine with Hospitality App?</summary><p>No &mdash; and we could not lock you in if we wanted to, because we do not have integrated card payments. We are processor-agnostic: the till records the sale, your own terminal takes the money, and your staff key the amount in. That is the honest downside and it is a real one on a busy Saturday. The upside is you keep your own acquirer, can retender your rate whenever you like, and nobody charges you a monthly premium for declining to use their payments product &mdash; a real fee that exists in this market at £29 a month.</p></details>
