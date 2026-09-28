@@ -29,30 +29,37 @@ RewriteRule ^(.*)$ https://hospitalityapp.co.uk/$1 [R=301,L]
 # matches the bare form and the .html form but never the slashed target, so
 # a same-name page (e.g. /about → /about/) cannot loop.
 
+# ABSOLUTE https TARGETS, DELIBERATELY. 20i terminates TLS at the edge, so
+# Apache believes the request arrived over http and builds a relative 301
+# target as http://hospitalityapp.co.uk/… — the HTTPS rule above then fires a
+# SECOND redirect. Browsers hide that (HSTS is preloaded here); Google and
+# anything without HSTS pay two hops on every old URL. Naming the scheme costs
+# nothing and makes every redirect one hop. Checked live 28 Sep 2026.
+#
 # The new tree is directory-based, so without these the ".html hygiene" rule
 # below would mint /about/index, /pricing/index … as live duplicate pages.
-RewriteRule ^index(\.html)?$                /            [R=301,L]
-RewriteRule ^features/?(index\.html)?$      /solution/   [R=301,L]
-RewriteRule ^for/?(index\.html)?$           /venues/     [R=301,L]
-RewriteRule ^(.+)/index(\.html)?$           /$1/         [R=301,L]
+RewriteRule ^index(\.html)?$                https://hospitalityapp.co.uk/            [R=301,L]
+RewriteRule ^features/?(index\.html)?$      https://hospitalityapp.co.uk/solution/   [R=301,L]
+RewriteRule ^for/?(index\.html)?$           https://hospitalityapp.co.uk/venues/     [R=301,L]
+RewriteRule ^(.+)/index(\.html)?$           https://hospitalityapp.co.uk/$1/         [R=301,L]
 
 # Pages that only gained a trailing slash. mod_dir would do this by itself,
 # but only in two hops from the .html form, and only while DirectorySlash is on.
-RewriteRule ^about(\.html)?$                /about/      [R=301,L]
-RewriteRule ^contact(\.html)?$              /contact/    [R=301,L]
-RewriteRule ^pricing(\.html)?$              /pricing/    [R=301,L]
-RewriteRule ^privacy(\.html)?$              /privacy/    [R=301,L]
-RewriteRule ^terms(\.html)?$                /terms/      [R=301,L]
-RewriteRule ^multi-site(\.html)?$           /multi-site/ [R=301,L]
+RewriteRule ^about(\.html)?$                https://hospitalityapp.co.uk/about/      [R=301,L]
+RewriteRule ^contact(\.html)?$              https://hospitalityapp.co.uk/contact/    [R=301,L]
+RewriteRule ^pricing(\.html)?$              https://hospitalityapp.co.uk/pricing/    [R=301,L]
+RewriteRule ^privacy(\.html)?$              https://hospitalityapp.co.uk/privacy/    [R=301,L]
+RewriteRule ^terms(\.html)?$                https://hospitalityapp.co.uk/terms/      [R=301,L]
+RewriteRule ^multi-site(\.html)?$           https://hospitalityapp.co.uk/multi-site/ [R=301,L]
 
 # Feature pages that were renamed.
-RewriteRule ^features/till(\.html)?/?$           /features/till-pos/            [R=301,L]
-RewriteRule ^features/rota(\.html)?/?$           /features/rota-management/     [R=301,L]
-RewriteRule ^features/stock(\.html)?/?$          /features/stock-control/       [R=301,L]
-RewriteRule ^features/communication(\.html)?/?$  /features/team-communication/  [R=301,L]
+RewriteRule ^features/till(\.html)?/?$           https://hospitalityapp.co.uk/features/till-pos/            [R=301,L]
+RewriteRule ^features/rota(\.html)?/?$           https://hospitalityapp.co.uk/features/rota-management/     [R=301,L]
+RewriteRule ^features/stock(\.html)?/?$          https://hospitalityapp.co.uk/features/stock-control/       [R=301,L]
+RewriteRule ^features/communication(\.html)?/?$  https://hospitalityapp.co.uk/features/team-communication/  [R=301,L]
 
 # Feature pages that kept their name and only gained a trailing slash.
-RewriteRule ^features/(compliance|kitchen-display|mobile-ordering|payroll|reporting)(\.html)?$ /features/$1/ [R=301,L]
+RewriteRule ^features/(compliance|kitchen-display|mobile-ordering|payroll|reporting)(\.html)?$ https://hospitalityapp.co.uk/features/$1/ [R=301,L]
 
 # Four live feature pages with no page of their own on the new site. The topic
 # survives elsewhere; these are the closest honest match, not an equivalent —
@@ -61,34 +68,34 @@ RewriteRule ^features/(compliance|kitchen-display|mobile-ordering|payroll|report
 # guide, not to /features/payroll/: that page never says "tip" or "tronc", and
 # Google reads a 301 onto an off-topic page as a soft 404 and drops the URL
 # instead of passing it on. The guide is kept, live and entirely on the topic.
-RewriteRule ^features/clock-in(\.html)?/?$    /features/rota-management/     [R=301,L]
-RewriteRule ^features/events(\.html)?/?$      /features/team-communication/  [R=301,L]
-RewriteRule ^features/tips-tronc(\.html)?/?$  /guides/tronc-tips-act-2023    [R=301,L]
-RewriteRule ^features/team-hr(\.html)?/?$     /solution/#people              [R=301,L,NE]
+RewriteRule ^features/clock-in(\.html)?/?$    https://hospitalityapp.co.uk/features/rota-management/     [R=301,L]
+RewriteRule ^features/events(\.html)?/?$      https://hospitalityapp.co.uk/features/team-communication/  [R=301,L]
+RewriteRule ^features/tips-tronc(\.html)?/?$  https://hospitalityapp.co.uk/guides/tronc-tips-act-2023    [R=301,L]
+RewriteRule ^features/team-hr(\.html)?/?$     https://hospitalityapp.co.uk/solution/#people              [R=301,L,NE]
 
 # /for/ became /venues/. Pubs and bars are now one page, as are cafés and
 # coffee shops; both merges are deliberate.
-RewriteRule ^for/pubs(\.html)?/?$          /venues/pubs-and-bars/  [R=301,L]
-RewriteRule ^for/bars(\.html)?/?$          /venues/pubs-and-bars/  [R=301,L]
-RewriteRule ^for/restaurants(\.html)?/?$   /venues/restaurants/    [R=301,L]
-RewriteRule ^for/cafes(\.html)?/?$         /venues/cafes/          [R=301,L]
-RewriteRule ^for/coffee-shops(\.html)?/?$  /venues/cafes/          [R=301,L]
-RewriteRule ^for/hotels(\.html)?/?$        /venues/hotels/         [R=301,L]
-RewriteRule ^for/bnbs(\.html)?/?$          /venues/bnbs/           [R=301,L]
+RewriteRule ^for/pubs(\.html)?/?$          https://hospitalityapp.co.uk/venues/pubs-and-bars/  [R=301,L]
+RewriteRule ^for/bars(\.html)?/?$          https://hospitalityapp.co.uk/venues/pubs-and-bars/  [R=301,L]
+RewriteRule ^for/restaurants(\.html)?/?$   https://hospitalityapp.co.uk/venues/restaurants/    [R=301,L]
+RewriteRule ^for/cafes(\.html)?/?$         https://hospitalityapp.co.uk/venues/cafes/          [R=301,L]
+RewriteRule ^for/coffee-shops(\.html)?/?$  https://hospitalityapp.co.uk/venues/cafes/          [R=301,L]
+RewriteRule ^for/hotels(\.html)?/?$        https://hospitalityapp.co.uk/venues/hotels/         [R=301,L]
+RewriteRule ^for/bnbs(\.html)?/?$          https://hospitalityapp.co.uk/venues/bnbs/           [R=301,L]
 
 # Anything else that was ever under /features/ or /for/ — but only when it does
 # not exist. Without these two conditions the first rule would 301 every one of
 # the ten new /features/<name>/ pages away to /solution/.
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^features/.+$                  /solution/   [R=301,L]
+RewriteRule ^features/.+$                  https://hospitalityapp.co.uk/solution/   [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^for/.+$                       /venues/     [R=301,L]
+RewriteRule ^for/.+$                       https://hospitalityapp.co.uk/venues/     [R=301,L]
 
 # /tools/ has no index page of its own. The four rota templates under it keep
 # their own URLs; the bare directory goes to the guides hub that lists them.
-RewriteRule ^tools/?$                      /guides/     [R=301,L]
+RewriteRule ^tools/?$                      https://hospitalityapp.co.uk/guides/     [R=301,L]
 
 # NOT redirected, because they still exist and still answer:
 #   /  /compare/  /compare/epos-now-alternative  /guides/  /guides/<20 slugs>
@@ -110,12 +117,12 @@ RewriteRule ^ - [R=404,L]
 
 # Strip trailing slash from non-directory URLs.
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+)/$ /$1 [R=301,L]
+RewriteRule ^(.+)/$ https://hospitalityapp.co.uk/$1 [R=301,L]
 
 # Hide .html on internal-pretty URLs.
 # 1) Redirect /features.html → /features for canonical hygiene.
 RewriteCond %{THE_REQUEST} \s/+([^.\s]+)\.html[\s?] [NC]
-RewriteRule ^ /%1 [R=301,L]
+RewriteRule ^ https://hospitalityapp.co.uk/%1 [R=301,L]
 
 # 2) Internally rewrite /features → /features.html.
 RewriteCond %{REQUEST_FILENAME} !-d
