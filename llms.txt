@@ -48,7 +48,6 @@ One codebase. The till, KDS and mobile-ordering runtimes are web code; a paired 
 
 - [Home](https://hospitalityapp.co.uk/): overview and tour of the app.
 - [The solution](https://hospitalityapp.co.uk/solution/): the whole product on one page, in four parts — people, standards, service and numbers.
-
 - [Pricing](https://hospitalityapp.co.uk/pricing/): Essentials £49, Professional £99, Complete £149, Complete Plus £199 per venue per month +VAT, or £490 / £990 / £1,490 / £1,990 a year. 30-day trial on Complete, no card required.
 - [Multi-site](https://hospitalityapp.co.uk/multi-site/): consolidated rota, staff who work at multiple venues, all-branches payroll.
 - [About](https://hospitalityapp.co.uk/about/): who builds it and why.
