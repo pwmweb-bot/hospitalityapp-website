@@ -23,6 +23,75 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 RewriteCond %{HTTP_HOST} ^www\.hospitalityapp\.co\.uk$ [NC]
 RewriteRule ^(.*)$ https://hospitalityapp.co.uk/$1 [R=301,L]
 
+# ── 2026 site rebuild: old URLs → the new directory URLs ────
+# One hop per URL. Placed here, above the trailing-slash strip and the two
+# .html rules below, so nothing needs two redirects to arrive. Each pattern
+# matches the bare form and the .html form but never the slashed target, so
+# a same-name page (e.g. /about → /about/) cannot loop.
+
+# The new tree is directory-based, so without these the ".html hygiene" rule
+# below would mint /about/index, /pricing/index … as live duplicate pages.
+RewriteRule ^index(\.html)?$                /            [R=301,L]
+RewriteRule ^features/?(index\.html)?$      /solution/   [R=301,L]
+RewriteRule ^for/?(index\.html)?$           /venues/     [R=301,L]
+RewriteRule ^(.+)/index(\.html)?$           /$1/         [R=301,L]
+
+# Pages that only gained a trailing slash. mod_dir would do this by itself,
+# but only in two hops from the .html form, and only while DirectorySlash is on.
+RewriteRule ^about(\.html)?$                /about/      [R=301,L]
+RewriteRule ^contact(\.html)?$              /contact/    [R=301,L]
+RewriteRule ^pricing(\.html)?$              /pricing/    [R=301,L]
+RewriteRule ^privacy(\.html)?$              /privacy/    [R=301,L]
+RewriteRule ^terms(\.html)?$                /terms/      [R=301,L]
+RewriteRule ^multi-site(\.html)?$           /multi-site/ [R=301,L]
+
+# Feature pages that were renamed.
+RewriteRule ^features/till(\.html)?/?$           /features/till-pos/            [R=301,L]
+RewriteRule ^features/rota(\.html)?/?$           /features/rota-management/     [R=301,L]
+RewriteRule ^features/stock(\.html)?/?$          /features/stock-control/       [R=301,L]
+RewriteRule ^features/communication(\.html)?/?$  /features/team-communication/  [R=301,L]
+
+# Feature pages that kept their name and only gained a trailing slash.
+RewriteRule ^features/(compliance|kitchen-display|mobile-ordering|payroll|reporting)(\.html)?$ /features/$1/ [R=301,L]
+
+# Four live feature pages with no page of their own on the new site. The topic
+# survives inside another page; these are the closest honest match, not an
+# equivalent — clock-in is covered by the rota page's recorded hours, events by
+# team communication, tips by payroll, and HR records by the solution page.
+RewriteRule ^features/clock-in(\.html)?/?$    /features/rota-management/     [R=301,L]
+RewriteRule ^features/events(\.html)?/?$      /features/team-communication/  [R=301,L]
+RewriteRule ^features/tips-tronc(\.html)?/?$  /features/payroll/             [R=301,L]
+RewriteRule ^features/team-hr(\.html)?/?$     /solution/#people              [R=301,L,NE]
+
+# /for/ became /venues/. Pubs and bars are now one page, as are cafés and
+# coffee shops; both merges are deliberate.
+RewriteRule ^for/pubs(\.html)?/?$          /venues/pubs-and-bars/  [R=301,L]
+RewriteRule ^for/bars(\.html)?/?$          /venues/pubs-and-bars/  [R=301,L]
+RewriteRule ^for/restaurants(\.html)?/?$   /venues/restaurants/    [R=301,L]
+RewriteRule ^for/cafes(\.html)?/?$         /venues/cafes/          [R=301,L]
+RewriteRule ^for/coffee-shops(\.html)?/?$  /venues/cafes/          [R=301,L]
+RewriteRule ^for/hotels(\.html)?/?$        /venues/hotels/         [R=301,L]
+RewriteRule ^for/bnbs(\.html)?/?$          /venues/bnbs/           [R=301,L]
+
+# Anything else that was ever under /features/ or /for/ — but only when it does
+# not exist. Without these two conditions the first rule would 301 every one of
+# the ten new /features/<name>/ pages away to /solution/.
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^features/.+$                  /solution/   [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^for/.+$                       /venues/     [R=301,L]
+
+# /tools/ has no index page of its own and Options -Indexes now refuses to list
+# it. The four rota templates under it keep their own URLs.
+RewriteRule ^tools/?$                      /guides/     [R=301,L]
+
+# NOT redirected, because they still exist and still answer:
+#   /  /compare/  /compare/epos-now-alternative  /guides/  /guides/<20 slugs>
+#   /tools/<4 rota templates>  /tools/downloads/*  /till-windows
+#   /delete-account  /activate  /404.html
+
 # Strip trailing slash from non-directory URLs.
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.+)/$ /$1 [R=301,L]
@@ -38,6 +107,11 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [L]
 </IfModule>
+
+# ── Directory listings ──────────────────────────────────────
+# /features/ and /tools/ have no index page. Without this the host lists
+# their contents; the redirects above cover both, this is the backstop.
+Options -Indexes
 
 # ── MIME / Content-Type fixes ───────────────────────────────
 <IfModule mod_mime.c>
@@ -83,3 +157,6 @@ AddOutputFilterByType DEFLATE text/html text/css application/javascript applicat
 # A real 404 page (noindex). It used to be /index.html: every missing URL,
 # /favicon.ico included, got the whole homepage as its 404 body.
 ErrorDocument 404 /404.html
+# A directory with no index page (Options -Indexes above) is a 403, which
+# would otherwise be a bare Apache page. Send it to the same 404.
+ErrorDocument 403 /404.html
