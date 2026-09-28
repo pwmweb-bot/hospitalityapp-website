@@ -2,12 +2,12 @@
 /**
  * Contact form handler for hospitalityapp.co.uk.
  * Self-contained, no dependencies. Emails enquiries to hello@ and redirects
- * back to /contact with a status. Defensive: honeypot, validation, and
+ * back to /contact/ with a status. Defensive: honeypot, validation, and
  * CR/LF stripping on every header-bound value to prevent header injection.
  */
 
 function cf_redirect($query) {
-    header('Location: /contact' . $query, true, 303);
+    header('Location: /contact/' . $query, true, 303);
     exit;
 }
 
@@ -56,7 +56,12 @@ $types = array(
 $type = $types[$typeKey] ?? 'General enquiry';
 
 $to      = 'hello@hospitalityapp.co.uk';
-$subject = '[Website] ' . $type . ' — ' . $name;
+// RFC 2047: the em dash and any non-ASCII name must not go raw into a header.
+$mime_header = function ($s) {
+    if (preg_match('/^[\x20-\x7E]*$/', $s)) { return $s; }
+    return '=?UTF-8?B?' . base64_encode($s) . '?=';
+};
+$subject = $mime_header('[Website] ' . $type . ' — ' . $name);
 
 $body  = "New enquiry from the hospitalityapp.co.uk contact form.\n\n";
 $body .= "Type:    " . $type . "\n";
@@ -67,7 +72,13 @@ $body .= "Phone:   " . ($phone !== '' ? $phone : '—') . "\n\n";
 $body .= "Message:\n" . $message . "\n";
 
 $headers  = "From: Hospitality App Website <noreply@hospitalityapp.co.uk>\r\n";
-$headers .= "Reply-To: " . $name . " <" . $email . ">\r\n";
+// A plain name is quoted so a colon or comma in it cannot split the header; a
+// name that needs encoding becomes an encoded-word, which is never quoted.
+$reply_plain = str_replace(array('\\', '"'), '', $name);
+$reply_name  = preg_match('/^[\x20-\x7E]*$/', $reply_plain)
+    ? '"' . $reply_plain . '"'
+    : $mime_header($reply_plain);
+$headers .= "Reply-To: " . $reply_name . " <" . $email . ">\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 $headers .= "X-Mailer: hospitalityapp-website\r\n";
 
