@@ -78,3 +78,7 @@ header nav[data-open=true] .drawer-login,header nav[data-open=true] .drawer-cta{
 header nav[data-open=true] .drawer-login{margin-top:4px;font-size:15px}
 header nav[data-open=true] .drawer-cta{align-self:flex-start;margin-top:14px}
 }
+
+/* Restored capability copy runs to several paragraphs per column. */
+.feature-grid article p+p{margin-top:14px}
+.feature-grid article .clean-list{margin:16px 0 0}
