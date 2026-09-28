@@ -91,3 +91,23 @@ header nav[data-open=true] .drawer-cta{align-self:flex-start;margin-top:14px}
 /* Three discount cards, not two, now the Founder offer is back. */
 .discount-pair.three{grid-template-columns:repeat(3,1fr)}
 @media(max-width:900px){.discount-pair.three{grid-template-columns:1fr}}
+
+/* Demo video. YouTube with no YouTube on show: our own poster and play button,
+   the player built only when someone asks for it, its remaining title and logo
+   strips cropped by a zoom, and a transparent shield over it so a hover never
+   summons YouTube's own chrome. Nothing is fetched from YouTube until a click. */
+.ytlite{position:relative;max-width:900px;margin:0 auto;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#000 var(--poster) center/cover no-repeat;box-shadow:0 24px 56px -28px rgba(34,30,24,.4),0 8px 20px -12px rgba(34,30,24,.18)}
+.ytlite-cover{position:absolute;inset:0;width:100%;height:100%;display:grid;place-items:center;border:0;background:transparent;cursor:pointer;z-index:3}
+.ytlite-cover::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(0,0,0,.10),rgba(0,0,0,.28));transition:background .2s}
+.ytlite-cover:hover::before{background:radial-gradient(circle at 50% 50%,rgba(0,0,0,.05),rgba(0,0,0,.20))}
+.ytlite-play{position:relative;width:84px;height:84px;display:grid;place-items:center;border-radius:50%;background:var(--orange);color:var(--ink);box-shadow:0 12px 30px -8px rgba(0,0,0,.55);transition:transform .15s,background .15s}
+.ytlite-cover:hover .ytlite-play{transform:scale(1.06);background:var(--orange-hover)}
+.ytlite-play svg{margin-left:4px}
+.ytlite-cover:focus-visible{outline:none}
+.ytlite-cover:focus-visible .ytlite-play{outline:3px solid var(--accent-ink);outline-offset:4px}
+.ytlite.is-playing{background:#000}
+.ytlite.is-playing .ytlite-cover{display:none}
+.ytlite-stage{position:absolute;inset:0;overflow:hidden;z-index:1}
+.ytlite-stage iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;pointer-events:none;transform:scale(var(--yt-zoom,1.26));transform-origin:center}
+.ytlite-shield{position:absolute;inset:0;z-index:2;background:transparent;cursor:pointer}
+@media(max-width:760px){.ytlite-play{width:64px;height:64px}.ytlite-play svg{width:26px;height:26px}}
