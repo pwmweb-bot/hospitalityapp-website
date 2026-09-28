@@ -55,12 +55,15 @@ RewriteRule ^features/communication(\.html)?/?$  /features/team-communication/  
 RewriteRule ^features/(compliance|kitchen-display|mobile-ordering|payroll|reporting)(\.html)?$ /features/$1/ [R=301,L]
 
 # Four live feature pages with no page of their own on the new site. The topic
-# survives inside another page; these are the closest honest match, not an
-# equivalent — clock-in is covered by the rota page's recorded hours, events by
-# team communication, tips by payroll, and HR records by the solution page.
+# survives elsewhere; these are the closest honest match, not an equivalent —
+# clock-in is covered by the rota page's recorded hours, events by team
+# communication, and HR records by the solution page. Tips and tronc go to the
+# guide, not to /features/payroll/: that page never says "tip" or "tronc", and
+# Google reads a 301 onto an off-topic page as a soft 404 and drops the URL
+# instead of passing it on. The guide is kept, live and entirely on the topic.
 RewriteRule ^features/clock-in(\.html)?/?$    /features/rota-management/     [R=301,L]
 RewriteRule ^features/events(\.html)?/?$      /features/team-communication/  [R=301,L]
-RewriteRule ^features/tips-tronc(\.html)?/?$  /features/payroll/             [R=301,L]
+RewriteRule ^features/tips-tronc(\.html)?/?$  /guides/tronc-tips-act-2023    [R=301,L]
 RewriteRule ^features/team-hr(\.html)?/?$     /solution/#people              [R=301,L,NE]
 
 # /for/ became /venues/. Pubs and bars are now one page, as are cafés and
@@ -83,14 +86,27 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^for/.+$                       /venues/     [R=301,L]
 
-# /tools/ has no index page of its own and Options -Indexes now refuses to list
-# it. The four rota templates under it keep their own URLs.
+# /tools/ has no index page of its own. The four rota templates under it keep
+# their own URLs; the bare directory goes to the guides hub that lists them.
 RewriteRule ^tools/?$                      /guides/     [R=301,L]
 
 # NOT redirected, because they still exist and still answer:
 #   /  /compare/  /compare/epos-now-alternative  /guides/  /guides/<20 slugs>
 #   /tools/<4 rota templates>  /tools/downloads/*  /till-windows
 #   /delete-account  /activate  /404.html
+
+# ── Directory listings ──────────────────────────────────────
+# A directory with no index page (/assets/, /tools/downloads/, /.well-known/)
+# would otherwise be listed by the host. `Options -Indexes` is the obvious way
+# to say this, and it is what this file used to say — but Options is the one
+# directive class here that 20i's AllowOverride may not grant, and a refused
+# directive aborts the WHOLE .htaccess, which is a 500 on every URL on the
+# domain the instant the pull lands. Every other rule in this file is FileInfo,
+# so this does the same job with mod_rewrite and depends on nothing new.
+# /features/ and /tools/ never reach this: both are redirected above.
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}/index.html !-f
+RewriteRule ^ - [R=404,L]
 
 # Strip trailing slash from non-directory URLs.
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -107,11 +123,6 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [L]
 </IfModule>
-
-# ── Directory listings ──────────────────────────────────────
-# /features/ and /tools/ have no index page. Without this the host lists
-# their contents; the redirects above cover both, this is the backstop.
-Options -Indexes
 
 # ── MIME / Content-Type fixes ───────────────────────────────
 <IfModule mod_mime.c>
@@ -157,6 +168,6 @@ AddOutputFilterByType DEFLATE text/html text/css application/javascript applicat
 # A real 404 page (noindex). It used to be /index.html: every missing URL,
 # /favicon.ico included, got the whole homepage as its 404 body.
 ErrorDocument 404 /404.html
-# A directory with no index page (Options -Indexes above) is a 403, which
-# would otherwise be a bare Apache page. Send it to the same 404.
+# Kept for anything the host itself refuses (it would otherwise be a bare
+# Apache page). The directory rule above returns 404, not 403.
 ErrorDocument 403 /404.html
