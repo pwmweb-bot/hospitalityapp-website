@@ -87,3 +87,7 @@ header nav[data-open=true] .drawer-cta{align-self:flex-start;margin-top:14px}
 .feature-directory.four{grid-template-columns:repeat(4,1fr)}
 @media(max-width:1100px){.feature-directory.four{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.feature-directory.four{grid-template-columns:1fr}}
+
+/* Three discount cards, not two, now the Founder offer is back. */
+.discount-pair.three{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.discount-pair.three{grid-template-columns:1fr}}
