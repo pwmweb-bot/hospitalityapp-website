@@ -50,7 +50,12 @@ CHROME = os.environ.get(
 W, H = 1200, 630
 BONE = (245, 241, 232)
 SENTINEL_XY = (1180, 20)
-OG_RE = re.compile(r'(<meta property="og:image" content=")([^"]*)(" />)')
+# The 2026 pages are minified and self-close with ">"; the older ones use
+# " />". Match both, or --write-meta and --check silently skip half the site.
+OG_RE = re.compile(r'(<meta property="og:image" content=")([^"]*)("\s*/?>)')
+# X/Twitter reads its own tag first and only falls back to og:image, so a
+# page that has one must have it move with the card too.
+TW_RE = re.compile(r'(<meta name="twitter:image" content=")([^"]*)("\s*/?>)')
 LD_RE = re.compile(r'(<script type="application/ld\+json"[^>]*>)(.*?)(</script>)', re.S)
 LD_IMAGE_RE = re.compile(r'("image"\s*:\s*")([^"]*)(")')
 # JSON-LD types whose "image" is the page's own picture, so it must be the
@@ -241,6 +246,7 @@ def write_meta(cfg):
             sys.exit(f"{page}: expected one og:image meta, found {len(hits)}")
         old_url, url = hits[0][1], card_url(cfg, card)
         new = OG_RE.sub(lambda m: m.group(1) + url + m.group(3), html)
+        new = TW_RE.sub(lambda m: m.group(1) + url + m.group(3), new)
 
         def move_image(m):
             v = m.group(2)
@@ -254,10 +260,11 @@ def write_meta(cfg):
                 if is_card_url(cfg, v) and v != url:
                     sys.exit(f"{page}: JSON-LD image {v} still names another card; fix it by hand")
         if 'property="og:image:width"' not in new:
+            close = ' />' if ' />' in hits[0][2] else '>'
             new = OG_RE.sub(
                 lambda m: m.group(0)
-                + f'\n  <meta property="og:image:width" content="{W}" />'
-                + f'\n  <meta property="og:image:height" content="{H}" />',
+                + f'<meta property="og:image:width" content="{W}"{close}'
+                + f'<meta property="og:image:height" content="{H}"{close}',
                 new,
             )
         if new != html:

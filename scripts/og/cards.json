@@ -20,8 +20,6 @@
         "features/stock-control/index.html",
         "features/team-communication/index.html",
         "features/reservations-floor-plans/index.html",
-        "pricing/index.html",
-        "compare/index.html",
         "blog/index.html",
         "blog/plan-a-hospitality-rota/index.html",
         "blog/opening-checklist-team-uses/index.html",
@@ -64,12 +62,14 @@
     },
     {
       "id": "pricing",
-      "eyebrow": "Pricing · Three plans",
+      "eyebrow": "Pricing · Four plans",
       "headline": "From £49 a venue a month.",
       "sub": "Rota, compliance, till and payroll. All prices +VAT. 30-day free trial, no card needed.",
       "url": "hospitalityapp.co.uk/pricing",
-      "suffix": "-2026b",
-      "pages": []
+      "suffix": "-2026c",
+      "pages": [
+        "pricing/index.html"
+      ]
     },
     {
       "id": "guides",
@@ -325,7 +325,9 @@
       "headline": "The software fee is not the decision.",
       "sub": "Worked year-one costs for a 25-staff, two-bar pub.",
       "url": "hospitalityapp.co.uk/compare",
-      "pages": []
+      "pages": [
+        "compare/index.html"
+      ]
     },
     {
       "id": "compare-epos-now-alternative",
