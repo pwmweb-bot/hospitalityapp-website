@@ -16,7 +16,7 @@
   <meta name="color-scheme" content="light only" />
   <meta property="og:site_name" content="Hospitality App" />
   <meta property="og:title" content="Hospitality POS for UK independents | Hospitality App" />
-  <meta property="og:description" content="The till app for UK pubs, bars, restaurants and cafés. Built into the same app as your rota, compliance and payroll." />
+  <meta property="og:description" content="The till app for UK pubs, bars, restaurants and cafés. Built into the same app as your rota, compliance and payroll reports." />
   <meta property="og:url" content="https://hospitalityapp.co.uk/guides/hospitality-pos-uk" />
   <meta property="og:image" content="https://hospitalityapp.co.uk/assets/images/og/guides-hospitality-pos-uk-2026.png" />
   <meta property="og:image:width" content="1200" />
@@ -53,7 +53,7 @@
         "mainEntity": [
           { "@type": "Question", "name": "What is a hospitality POS?", "acceptedAnswer": { "@type": "Answer", "text": "A hospitality POS (point of sale) — sometimes called an EPOS, electronic point of sale, or simply a till app — is the software bar and waiting staff use to take orders, send them to the kitchen or bar, take payment and record the sale. A hospitality POS is built for the rhythms of pubs, restaurants and cafés: drinks-led menus with half-pint and pint pricing, course management, allergen prompts at the till, split-bill payments, table service and table maps." } },
           { "@type": "Question", "name": "How much does a hospitality POS cost in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "UK independent venues typically pay £30–£90 per till per month for software, plus £400–£1,200 per terminal for hardware if buying outright (or £15–£40 per terminal per month on lease). Card-processing fees are separate, usually 1.0–1.7% per transaction. Hospitality App includes the till in the Complete plan at £149 per venue per month, with no per-terminal fees; bring any iPad or Android tablet, or run it on a Windows 10 or 11 (64-bit) PC or EPOS terminal." } },
-          { "@type": "Question", "name": "Do I need a separate EPOS or can my rota app run the till?", "acceptedAnswer": { "@type": "Answer", "text": "Traditionally these have been separate products. An all-in-one platform like Hospitality App runs the till inside the same app as your rota, compliance records and payroll — which means staff records, allergen matrices and labour-cost calculations stay in sync without an integration layer. For most UK independents under three sites this is simpler, cheaper and removes the data drift you get between separate tools." } },
+          { "@type": "Question", "name": "Do I need a separate EPOS or can my rota app run the till?", "acceptedAnswer": { "@type": "Answer", "text": "Traditionally these have been separate products. An all-in-one platform like Hospitality App runs the till inside the same app as your rota, compliance records and payroll reports — which means staff records, allergen matrices and labour-cost calculations stay in sync without an integration layer. For most UK independents under three sites this is simpler, cheaper and removes the data drift you get between separate tools." } },
           { "@type": "Question", "name": "Does a pub need a different POS to a restaurant?", "acceptedAnswer": { "@type": "Answer", "text": "The same underlying till engine works for both, but the menu, payment and compliance flows should differ. A pub till leads with the drinks page (half/pint pricing, cellar tie-in, refusal log access). A restaurant till leads with course management, allergen sign-off at the till and kitchen printer routing. Hospitality App ships pub, bar, restaurant and café modes that change the till's layout, default menu structure and compliance prompts automatically based on your venue type." } },
           { "@type": "Question", "name": "Can the POS integrate with my existing payment processor?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — Hospitality App's till is processor-agnostic and works with Stripe, SumUp, Square, Zettle (where allowed) and standalone card terminals. The till records the sale; the processor handles the card swipe. This means you keep your existing card-machine contract and can switch processors without changing tills." } },
           { "@type": "Question", "name": "Will the till run on a Windows EPOS terminal?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Hospitality App Till for Windows runs on Windows 10 or 11 (64-bit), so it works on a touchscreen EPOS terminal, an all-in-one POS PC or an ordinary Windows PC you already own. It is the same till as on tablets, shown full screen: it starts with Windows, stays on the till, and staff use their till PIN as normal. It prints receipts and opens the cash drawer through a receipt printer plugged into the PC or on your network. There is no per-terminal or licence fee for adding a Windows till." } },
@@ -88,7 +88,7 @@
         <span class="menu-toggle__icon"></span>
       </button>
       <nav class="nav" id="primary-nav" aria-label="Primary">
-        <div class="nav__group"><a href="/solution/">Features <span class="nav__caret" aria-hidden="true"></span></a><div class="nav__panel"><a href="/features/rota-management/">Rota &amp; attendance</a><a href="/features/payroll/">Payroll &amp; pay</a><a href="/features/till-pos/">Till / POS</a><a href="/features/mobile-ordering/">Mobile ordering</a><a href="/features/kitchen-display/">Kitchen display</a><a href="/features/reservations-floor-plans/">Reservations &amp; floor plans</a><a href="/features/stock-control/">Stock &amp; GP</a><a href="/features/reporting/">Reporting &amp; insights</a><a href="/features/compliance/">Compliance &amp; tasks</a><a href="/features/team-communication/">Team communication</a><a href="/solution/" class="nav__panel__all">All features →</a></div></div>
+        <div class="nav__group"><a href="/solution/">Features <span class="nav__caret" aria-hidden="true"></span></a><div class="nav__panel"><a href="/features/rota-management/">Rota &amp; attendance</a><a href="/features/payroll/">Payroll reports</a><a href="/features/till-pos/">Till / POS</a><a href="/features/mobile-ordering/">Mobile ordering</a><a href="/features/kitchen-display/">Kitchen display</a><a href="/features/reservations-floor-plans/">Reservations &amp; floor plans</a><a href="/features/stock-control/">Stock &amp; GP</a><a href="/features/reporting/">Reporting &amp; insights</a><a href="/features/compliance/">Compliance &amp; tasks</a><a href="/features/team-communication/">Team communication</a><a href="/solution/" class="nav__panel__all">All features →</a></div></div>
         <a href="/pricing/">Pricing</a>
         <a href="/venues/">For venues</a>
         <a href="/guides/">Guides</a>
@@ -168,7 +168,7 @@
           </details>
           <details>
             <summary>Restaurant mode — course management, table service</summary>
-            <p>Default landing is the dining-room table map. Courses fire in waves (starter → main → dessert) with kitchen printer routing. Allergen prompt is mandatory before the order sends. Split-bill flow is built for the "we'll split the wine but I had the steak" reality.</p>
+            <p>Default landing is your tables, with seat covers and pay-per-table; the visual floor plan comes with Complete Plus. Courses fire in waves (starter → main → dessert) with kitchen printer routing. Allergen prompt is mandatory before the order sends. Split-bill flow is built for the "we'll split the wine but I had the steak" reality.</p>
           </details>
           <details>
             <summary>Café mode — fast counter, modifier-heavy menu</summary>
@@ -200,7 +200,7 @@
           </article>
           <article class="module-card" style="border-color: var(--brand-accent);">
             <h3>Hospitality App all-in-one</h3>
-            <p style="color: var(--ink-3); font-size: 14px;">£149/venue/mo Complete includes till + KDS + stock + rota + full compliance + payroll. Bring any iPad, Android tablet or Windows 10/11 (64-bit) EPOS terminal — no per-terminal fees. Processor-agnostic.</p>
+            <p style="color: var(--ink-3); font-size: 14px;">£149/venue/mo Complete includes till + printed kitchen tickets + stock + rota + full compliance + payroll reports. Bring any iPad, Android tablet or Windows 10/11 (64-bit) EPOS terminal — no per-terminal fees. Processor-agnostic.</p>
           </article>
         </div>
         <p style="margin-top: 24px; font-size: 14px; color: var(--ink-3); max-width: 720px;">Prices ex-VAT, accurate June 2026; verify with each provider. The biggest cost most independents overlook isn't the till hardware — it's the integration tax of running rota, compliance and till on three separate systems. Annual billing on any tier saves you two months. See <a href="/pricing/">full pricing</a>.</p>
@@ -224,7 +224,7 @@
           </details>
           <details>
             <summary>Do I need a separate EPOS or can my rota app run the till?</summary>
-            <p>All-in-one platforms like Hospitality App run the till inside the same app as rota, compliance and payroll. Staff records, allergen matrices and labour-cost calculations stay in sync without an integration layer.</p>
+            <p>All-in-one platforms like Hospitality App run the till inside the same app as rota, compliance and payroll reports. Staff records, allergen matrices and labour-cost calculations stay in sync without an integration layer.</p>
           </details>
           <details>
             <summary>Does a pub need a different POS to a restaurant?</summary>
@@ -300,7 +300,7 @@
       <div class="site-footer__grid">
         <div class="site-footer__brand">
           <a class="site-footer__mark" href="/"><img src="/assets/brand/ha-mark-flat-2026.svg" width="29" height="24" alt="Hospitality App" loading="lazy" /></a>
-          <p>Rota, compliance and payroll for every kind of UK hospitality venue.</p>
+          <p>Rota, compliance and payroll reports for every kind of UK hospitality venue.</p>
         </div>
         <div>
           <h4>Product</h4>
