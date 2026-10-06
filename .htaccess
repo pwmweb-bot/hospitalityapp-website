@@ -47,6 +47,7 @@ RewriteRule ^(.+)/index(\.html)?$           https://hospitalityapp.co.uk/$1/    
 # but only in two hops from the .html form, and only while DirectorySlash is on.
 RewriteRule ^about(\.html)?$                https://hospitalityapp.co.uk/about/      [R=301,L]
 RewriteRule ^contact(\.html)?$              https://hospitalityapp.co.uk/contact/    [R=301,L]
+RewriteRule ^demo(\.html)?$                 https://hospitalityapp.co.uk/demo/       [R=301,L]
 RewriteRule ^pricing(\.html)?$              https://hospitalityapp.co.uk/pricing/    [R=301,L]
 RewriteRule ^privacy(\.html)?$              https://hospitalityapp.co.uk/privacy/    [R=301,L]
 RewriteRule ^terms(\.html)?$                https://hospitalityapp.co.uk/terms/      [R=301,L]

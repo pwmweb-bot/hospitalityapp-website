@@ -49,7 +49,7 @@ $phone = $header_safe($phone);
 // Allow-list the enquiry type by key → human label.
 $types = array(
     'general'   => 'General enquiry',
-    'demo'      => 'Book a demo',
+    'demo'      => 'Book a 15-min demo',
     'multisite' => 'Multi-site walkthrough',
     'support'   => 'Support',
 );

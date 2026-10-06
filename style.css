@@ -88,6 +88,29 @@ header nav[data-open=true] .drawer-cta{align-self:flex-start;margin-top:14px}
 @media(max-width:1100px){.feature-directory.four{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.feature-directory.four{grid-template-columns:1fr}}
 
+/* Header: Book a 15-min demo is the bar button. Free trial stays a text link
+   on wide screens and in the mobile drawer, so the trial is still one tap. */
+header .button.small{gap:12px}
+.trial-link{font-size:14px;font-weight:650;white-space:nowrap}
+.drawer-trial{display:none}
+@media(max-width:1400px){.trial-link{display:none}}
+@media(max-width:760px){
+header nav[data-open=true] .drawer-trial{display:inline-flex;margin-top:4px;font-size:15px}
+}
+
+/* /demo/ — business and owner details, then the live Calendly times. */
+.demo-layout{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:start}
+.demo-group{display:grid;gap:22px;border-top:1px solid #c4bcb4;padding-top:22px}
+.demo-group h2{font-size:13px;letter-spacing:1.4px;font-weight:700;margin:0}
+.demo-times{padding-top:0}
+.demo-calendly{min-width:280px;height:740px;border:1px solid #d6ccc2;border-radius:8px;overflow:hidden;background:#fff}
+.demo-calendly iframe{width:100%;height:100%}
+.demo-fallback{margin:16px 0 0;font-size:14px;font-weight:650}
+.demo-fallback a{border-bottom:1px solid #d1ccc6;padding-bottom:4px}
+.demo-follow{text-align:center;margin:28px 0 0;font-size:15px;font-weight:650}
+.demo-follow a,.closing a:not(.button){text-decoration:underline;text-underline-offset:3px}
+@media(max-width:900px){.demo-layout{grid-template-columns:1fr;gap:40px}.demo-calendly{height:680px}}
+
 /* Three discount cards, not two, now the Founder offer is back. */
 .discount-pair.three{grid-template-columns:repeat(3,1fr)}
 @media(max-width:900px){.discount-pair.three{grid-template-columns:1fr}}

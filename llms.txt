@@ -52,6 +52,7 @@ One codebase. The till, KDS and mobile-ordering runtimes are web code; a paired 
 - [Multi-site](https://hospitalityapp.co.uk/multi-site/): cross-site rota with a double-booking guard, staff who work at multiple venues, a venue switcher, an all-branches payroll report (Professional and up) and per-venue reporting.
 - [About](https://hospitalityapp.co.uk/about/): who builds it and why.
 - [Contact](https://hospitalityapp.co.uk/contact/): a contact form and an email address; every message reaches a person.
+- [Book a 15-minute demo](https://hospitalityapp.co.uk/demo/): business and owner details, then the live 15-minute calendar at https://calendly.com/psychemeta/15min. The same slot is offered after a venue is created in the app.
 - [For venues](https://hospitalityapp.co.uk/venues/): the index of venue-type pages.
 - [Journal](https://hospitalityapp.co.uk/blog/): longer pieces on running a venue — [planning a rota](https://hospitalityapp.co.uk/blog/plan-a-hospitality-rota/), [an opening checklist the team actually uses](https://hospitalityapp.co.uk/blog/opening-checklist-team-uses/) and [reservations and floor plans in service](https://hospitalityapp.co.uk/blog/reservations-floor-plan-service/).
 
