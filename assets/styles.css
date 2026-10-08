@@ -314,11 +314,17 @@ p { margin: 0 0 1em; }
   .brand-lockup img { width: 179px; height: 24px; }
 }
 
-.nav { display: flex; align-items: center; gap: 28px; }
+/* 20px, not 28: these pages load no web font, so the row is set in whatever
+   the system has. With "Start free trial" in the bar, Arial (Linux) and
+   Tahoma (standing in for Windows' Segoe UI) needed 9-19px more than the
+   1,140px container gives at 28px, and "For venues" and "Multi-site" wrapped
+   onto two lines. 20px leaves 21-31px spare in those and 56px on a Mac. */
+.nav { display: flex; align-items: center; gap: 20px; }
 .nav a:not(.btn) {
   color: var(--ink-2);
   font-weight: 500;
   font-size: 14.5px;
+  white-space: nowrap;
 }
 .nav a:not(.btn):hover { color: var(--ink); }
 .nav-cta { display: inline-flex; gap: 10px; }
@@ -358,6 +364,11 @@ p { margin: 0 0 1em; }
   z-index: 60;
 }
 .nav__panel::before { content: ''; position: absolute; top: -14px; left: 0; right: 0; height: 14px; }
+/* A short nav (delete-account.html) sits far right, so a panel opening
+   rightwards from Features ran past the window. Hidden, it still counts as
+   page width, so the page scrolled sideways at the narrowest desktop widths
+   (1181px up to about 1240). Open it leftwards there. */
+.nav__group--end .nav__panel { left: auto; right: 0; }
 .nav__group:hover .nav__panel,
 .nav__group:focus-within .nav__panel { opacity: 1; visibility: visible; transform: translateY(0); }
 .nav__panel a:not(.btn) {
