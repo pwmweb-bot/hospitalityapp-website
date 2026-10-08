@@ -322,7 +322,7 @@ p { margin: 0 0 1em; }
 }
 .nav a:not(.btn):hover { color: var(--ink); }
 .nav-cta { display: inline-flex; gap: 10px; }
-.nav-cta .btn { color: var(--bone); }
+.nav-cta .btn { color: var(--bone); white-space: nowrap; }
 .nav-cta .btn-secondary { color: var(--ink); }
 
 /* ── Features dropdown (mega-menu) ───────────────────────── */
@@ -382,9 +382,11 @@ p { margin: 0 0 1em; }
   color: var(--ink-3);
 }
 
-/* The header collapses to the menu button at 1180px, not the site's usual
+/* The page links fold into the menu button at 1180px, not the site's usual
    760px: the one-line nav needs about 1100px beside the 215px lockup once
-   "Book a 15-min demo" sits with Sign in and Free trial. */
+   "Book a 15-min demo" sits with Sign in and Start free trial. The three
+   buttons stay in the bar down to 761px (see below), so a laptop or tablet
+   always shows both the trial and the demo. */
 @media (max-width: 1180px) {
   .nav { display: none; }
   .nav.is-open {
@@ -407,6 +409,23 @@ p { margin: 0 0 1em; }
   /* Features dropdown collapses to a plain link on mobile — the hub lists the modules. */
   .nav__group { display: block; }
   .nav__caret, .nav__panel { display: none; }
+}
+/* 761-1180px: the closed nav shows only its three buttons, beside the menu
+   button; open, it is the drawer as above, with the buttons at its foot. */
+@media (min-width: 761px) and (max-width: 1180px) {
+  .nav:not(.is-open) { display: flex; margin-left: auto; }
+  .nav:not(.is-open) > a:not(.btn),
+  .nav:not(.is-open) > .nav__group { display: none; }
+  .menu-toggle { order: 2; }
+}
+/* A portrait tablet needs the buttons a little narrower to fit. */
+@media (min-width: 761px) and (max-width: 900px) {
+  .nav-cta .btn { padding-left: 16px; padding-right: 16px; }
+}
+/* Phones: the three buttons stack full width at the foot of the drawer,
+   instead of squeezing into one row and wrapping "Sign in" onto two lines. */
+@media (max-width: 760px) {
+  .nav.is-open .nav-cta { flex-direction: column; }
 }
 .menu-toggle {
   display: none;
