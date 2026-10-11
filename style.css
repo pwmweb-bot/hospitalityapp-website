@@ -219,6 +219,14 @@ header nav[data-open=true] .drawer-cta{min-height:44px}
 .request-card p{margin:0 0 14px;color:var(--muted);font-size:14px}
 .request-field{border:1px solid #e1dedb;border-radius:5px;padding:10px 12px;margin-bottom:8px;font-size:14px;background:#fbf8f5}
 .request-send{display:inline-flex;margin-top:6px;background:#221E18;color:#fff;font-weight:650;font-size:14px;border-radius:5px;padding:12px 16px}
+.room-steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.room-steps li{display:grid;grid-template-columns:48px minmax(0,1fr);gap:12px;padding:18px 0;border-top:1px solid #d6ccc2}
+.room-steps li:first-child{border-top:0;padding-top:0}
+.room-steps h3{margin:0 0 6px;font-size:22px}
+.room-steps p{margin:0;color:var(--muted);font-size:15px;line-height:1.6}
+.folio-panel .bill{border-top:0;margin:0;padding:6px 16px 12px;font-size:15px}
+.folio-panel .charge-pill{margin:0 16px 16px}
+.table-scroll tbody th small{display:block;font-weight:450;color:var(--muted);font-size:12px;letter-spacing:0;margin-top:4px;text-transform:none}
 @media(max-width:760px){
 .module-row a{padding:9px 12px;font-size:12px}
 .rooms-spotlight,.room-flow,.rooms-split,.stat-row{grid-template-columns:1fr;gap:28px}

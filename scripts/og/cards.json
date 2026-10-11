@@ -53,9 +53,10 @@
     {
       "id": "rooms",
       "eyebrow": "Room management",
-      "headline": "The bar tab, on the room bill.",
-      "sub": "Diary, guest register and charge to room, for pubs, inns and small hotels.",
+      "headline": "Easy room management.",
+      "sub": "Bar and food orders go straight onto the guest's room bill.",
       "url": "hospitalityapp.co.uk/features/rooms",
+      "suffix": "-2026b",
       "pages": [
         "features/rooms/index.html"
       ]
