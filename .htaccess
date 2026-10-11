@@ -60,7 +60,7 @@ RewriteRule ^features/stock(\.html)?/?$          https://hospitalityapp.co.uk/fe
 RewriteRule ^features/communication(\.html)?/?$  https://hospitalityapp.co.uk/features/team-communication/  [R=301,L]
 
 # Feature pages that kept their name and only gained a trailing slash.
-RewriteRule ^features/(compliance|kitchen-display|mobile-ordering|payroll|reporting)(\.html)?$ https://hospitalityapp.co.uk/features/$1/ [R=301,L]
+RewriteRule ^features/(compliance|kitchen-display|mobile-ordering|payroll|reporting|rooms)(\.html)?$ https://hospitalityapp.co.uk/features/$1/ [R=301,L]
 
 # Four live feature pages with no page of their own on the new site. The topic
 # survives elsewhere; these are the closest honest match, not an equivalent —
