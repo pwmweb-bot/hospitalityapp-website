@@ -60,12 +60,13 @@ RewriteRule ^features/stock(\.html)?/?$          https://hospitalityapp.co.uk/fe
 RewriteRule ^features/communication(\.html)?/?$  https://hospitalityapp.co.uk/features/team-communication/  [R=301,L]
 
 # Feature pages that kept their name and only gained a trailing slash.
-RewriteRule ^features/(compliance|kitchen-display|mobile-ordering|payroll|reporting|rooms)(\.html)?$ https://hospitalityapp.co.uk/features/$1/ [R=301,L]
+RewriteRule ^features/(compliance|kitchen-display|mobile-ordering|payroll|reporting|rooms|events-tickets)(\.html)?$ https://hospitalityapp.co.uk/features/$1/ [R=301,L]
 
 # Four live feature pages with no page of their own on the new site. The topic
 # survives elsewhere; these are the closest honest match, not an equivalent —
-# clock-in is covered by the rota page's recorded hours, events by team
-# communication, and HR records by the solution page. Tips and tronc go to the
+# clock-in is covered by the rota page's recorded hours, the old /features/events
+# URL by team communication (the rota diary — ticket sales live at
+# /features/events-tickets/), and HR records by the solution page. Tips and tronc go to the
 # guide, not to /features/payroll/: that page never says "tip" or "tronc", and
 # Google reads a 301 onto an off-topic page as a soft 404 and drops the URL
 # instead of passing it on. The guide is kept, live and entirely on the topic.
