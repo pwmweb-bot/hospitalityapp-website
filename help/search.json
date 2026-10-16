@@ -1,0 +1,236 @@
+{
+  "articles": [
+    {
+      "title": "Build next week’s rota",
+      "summary": "Plan the week, watch the labour cost, and publish it so the team can see their shifts.",
+      "topic": "staff",
+      "topicTitle": "Staff & pay",
+      "url": "/help/staff/build-next-weeks-rota/",
+      "text": "The rota is where the week is planned. The same people clock in against those shifts, and the hours feed the payroll report. Build the week Open the rota and move to next week. Shifts can be seen by role, by person, on a timeline, or as the week. Drag a shift into place, or start from a template if the week looks like the last one. The labour cost updates as you build, from each person’s hourly rate. Publishing asks you to look again when the week is over the labour you set. Publish Publish the week when it is ready. The team see their shifts in the app. You can unpublish a week if it needs to change. An open shift can be left for someone to claim from the app. Leave already booked shows on the rota, so you are not rostering someone who is away. Someone who works at more than one of your venues cannot be given two shifts that overlap. The rota keeps that from being published. Rota and attendance are on every plan, starting with Essentials."
+    },
+    {
+      "title": "Connect card payments",
+      "summary": "Connect Stripe so deposits and ticket money go to your own account.",
+      "topic": "settings",
+      "topicTitle": "Settings",
+      "url": "/help/settings/connect-card-payments/",
+      "text": "Online card payments use Stripe Connect. The money goes to your own Stripe account. Hospitality App takes no commission on deposits or tickets. Stripe’s own fees still apply. What it is for Connect payments before you: take a deposit or full payment on a function room take a deposit or full payment on a room stay sell a paid ticket A table-reservation deposit uses the same connection. It is included in Complete Plus. The guest gets a deposit-paid email, and taking that deposit off the bill shows as deposits on the Z. What it is not for The till does not take the card. Your card machine does. There is no processor lock-in and no per-terminal fee. Connecting Stripe does not change that. Open Settings and connect the Stripe account for the venue. Until that is done, a space, a stay or an event can still be set up, but a guest cannot pay a deposit by card."
+    },
+    {
+      "title": "Create your first event",
+      "summary": "Name, date, tickets, questions and the door. Check the public page before you publish.",
+      "topic": "tickets",
+      "topicTitle": "Tickets",
+      "url": "/help/tickets/create-your-first-event/",
+      "text": "An event is a quiz, a dinner, a tasting or any night you sell places for. Tickets are sold from Hospitality App, and the sales sit in the same reports as the till. Start the event Open Events and choose New event . The steps are Details, Tickets, Questions, Doors, then a review. The events list, with tickets sold and takings for each night. Example data for The Crown & Anchor. On Details , set the name, the date and a short description. A night can run on past midnight without becoming a second event. Tickets, questions, doors Add at least one ticket type, with a price and a limit. Free tickets are allowed. See Ticket types and limits . Add a checkout question if you need dietary notes or a team name. See Checkout questions . Set when the doors open. Staff scan tickets from a phone. See Scan tickets at the door . The review step shows the public page before you publish. You can also set the wording of the email the guest receives. The money Paid tickets go to your own Stripe account, including a booking fee you set for the venue and the VAT on that fee. Hospitality App takes no commission. Stripe’s own fees still apply. Connect card payments first. Events and tickets are not on the published plan prices. Food or drink included in the ticket can be rung on the till at £0, so the kitchen and the bar still see the order."
+    },
+    {
+      "title": "Setting up a function room",
+      "summary": "Create a space, set its layouts and sessions, and choose how guests pay.",
+      "topic": "spaces",
+      "topicTitle": "Spaces",
+      "url": "/help/spaces/setting-up-a-function-room/",
+      "text": "This guide takes you through adding a function room, from its name and capacity to the price guests see. You can save at any step and come back later. Before you start, open Spaces . If you want guests to pay a deposit by card, connect card payments first. Add the space 1 Name it and set the size Go to Spaces and choose New space . Give it the name guests will recognise, such as “The Function Room”, and set the most people it can hold. Spaces list for The Crown & Anchor, with the Function Room, the Snug and the Boardroom. Example data. The Spaces list shows each room, whether online booking is on, and the price guests are offered. 2 Choose the layouts Pick the layouts you offer, such as theatre, boardroom or banquet. Each layout has its own capacity, so a guest booking a banquet sees the right numbers. Decide when it can be booked 3 Set sessions or hourly booking Offer fixed sessions (morning, afternoon, evening), booking by the hour, or both. Add setting-up and clearing time so back-to-back bookings do not clash. The detail is in Sessions, prices and deposits . Set the price 4 Choose how you charge Charge room hire, a minimum spend, a price per person, or a mix. Ask for a deposit or full payment when the guest books, or take payment on the day. 5 Add extras Add things guests can order with the room: teas and coffees, a buffet, a screen. Price each one per person or per booking. See Adding extras . Check and publish 6 Review and save Check the summary, then save. The space appears in your Spaces list straight away. If online booking is on, guests can book it from your booking page. Tip: read the confirmation before you save, so you know what the guest will receive. What next? Sessions, prices and deposits , for more detail on pricing. Turning on online booking , to take bookings from your website. Blocking dates , to close the room for a private event."
+    },
+    {
+      "title": "Setting up rooms",
+      "summary": "Add the rooms you let, with a rate for room only or bed and breakfast.",
+      "topic": "rooms",
+      "topicTitle": "Rooms",
+      "url": "/help/rooms/setting-up-rooms/",
+      "text": "Room management is for the bedrooms you let: a double above the bar, a twin, a single. It is separate from Spaces , which is for a function room or boardroom booked as a whole. Add a room Give each room a name guests and staff will both recognise, such as Room 1, and the type: double, twin or single. Set the rate. A room can be offered as room only or as bed and breakfast. Add a minimum stay when a Friday or Saturday should not be sold as a single night. Room nights are charged at 20% VAT. Drinks and food keep the VAT already set on the till, which matters when the lot is settled together. See The room bill . Stays are entered in Hospitality App. There is no connection to Booking.com, Expedia or Airbnb. Next Book a stay , including a card deposit or payment in full. The stay then shows on the room diary ."
+    },
+    {
+      "title": "Take your first order",
+      "summary": "Open the till, pick a measure, and put the round on a tab or a table.",
+      "topic": "till",
+      "topicTitle": "Till & orders",
+      "url": "/help/till/take-your-first-order/",
+      "text": "The till runs full screen, on a tablet or on Hospitality App Till for Windows . Staff sign in with their PIN. The next order is attributed to whoever unlocked it. Take the round Open the till. Categories run down the side, with the products for that category on the grid. Search is there if the button is not in view. Tap the product. A drink asks for the measure: half or pint, single or double, 175ml, 250ml or bottle. Each measure has its own price. A line can take an option, an extra or a mixer. Tap a dish twice and it sits on the bill twice, so each plate can have its own note. Drinks still stack. The running total is on the bill. Add a note if it should print on the bill and the kitchen ticket. The till records the sale. It does not take the card. Your card machine does. Where the order sits Counter service and table service are set for the venue. A bar tab is saved against a name. A table uses the floor plan. Either way the sale stays open until it is paid, split, or charged to a room . Held sales stay with the PIN that held them. When the till is idle it locks, and the next person enters their own PIN. Till / POS is included in Complete. There is no per-terminal fee."
+    },
+    {
+      "title": "Add a manager",
+      "summary": "Add someone who can run the venue, and keep pay details to the people who should see them.",
+      "topic": "settings",
+      "topicTitle": "Settings",
+      "url": "/help/settings/add-a-manager/",
+      "text": "The people who work for you each have a record. A manager can run the rota, the till settings and the pay reports. A member of staff sees their own shifts, clock-in and messages. Add the person Add them to the team with their name and the venue they work at. Someone who works at more than one venue can have a rate at each. Their shifts still cannot overlap. Set what they are allowed to do. Giving someone manager access is what lets them publish a rota, refund a sale, and open pay reports. Leave that off for someone who only needs to clock in and read the rota. Pay details Hourly rate, National Insurance, tax code and bank details live on the record. They are restricted in the database, not only hidden on screen. A change to bank details alerts managers. A rate change is dated. Shifts before the change keep the old rate, which is what the payroll report uses. Staff added here are the people you put on next week’s rota ."
+    },
+    {
+      "title": "Booking a stay",
+      "summary": "Guest, dates, extras and deposit. No deposit, a card deposit, or pay in full.",
+      "topic": "rooms",
+      "topicTitle": "Rooms",
+      "url": "/help/rooms/booking-a-stay/",
+      "text": "A stay is booked in five steps: Guest, Dates, Extras, Deposit, then a review. Guest and dates Enter the guest’s name and contact, then the arrival and departure dates and the room. Two stays cannot share the same room on the same night. If the room is closed, block the date instead of booking it. Choose room only or bed and breakfast, matching the rate you set in Setting up rooms . Extras Add anything that belongs on this stay, such as a breakfast that is not already in the rate. The line shows on the summary before you save. Deposit On the deposit step, choose one of three: No deposit. The guest pays at check-out. Pay deposit now. The guest pays a deposit by card when they book. Pay in full now. The guest pays the whole stay by card when they book. The deposit step of a new room booking, with no deposit, pay deposit now, or pay in full now. Example data. The card payment goes to your own Stripe account. Hospitality App takes no commission. Stripe’s own fees still apply. Connect card payments before you choose a card option. A stay with no deposit, and anything charged to the room from the bar, is still settled at check-out by card, cash or bank transfer. See The room bill . Check-out At check-out the guest settles whatever is left. An itemised VAT invoice is emailed. Room nights stay at 20% VAT. Bar and food keep the VAT already on the till."
+    },
+    {
+      "title": "Clock in",
+      "summary": "Clock in by GPS, a QR code, or an NFC tag. A forgotten clock-out does not become a 30-hour shift.",
+      "topic": "staff",
+      "topicTitle": "Staff & pay",
+      "url": "/help/staff/clock-in/",
+      "text": "Staff clock in on the app at the start of a shift and clock out at the end. The hours are what the payroll report uses, not a remembered finish time. Three ways to clock in A venue can use any combination of: GPS , inside a geofence around the building QR code , scanned at the venue NFC tag , tapped at the door or behind the bar Clocking in is tied to the person, so the shift on the rota and the hours worked can be compared. Overnight and forgotten clock-outs A shift that runs past midnight stays one shift. If someone forgets to clock out, an automatic close stops that shift becoming a 30-hour day. Hours that do not match the rota are queued for a manager, with a one-tap way to accept or correct them. Corrections stay in the record. Clock-in is included with the rota, from Essentials upwards."
+    },
+    {
+      "title": "Sessions, prices and deposits",
+      "summary": "Morning, afternoon, evening or by the hour. Room hire, minimum spend or per person.",
+      "topic": "spaces",
+      "topicTitle": "Spaces",
+      "url": "/help/spaces/sessions-prices-and-deposits/",
+      "text": "A space can be booked in sessions, by the hour, or both. The price can be room hire, a minimum spend, a price per person, or a mix. Sessions A session is a named block of time, such as morning, afternoon or evening, with a start and an end. Guests only see sessions that are still free. Choosing a date and a session for the Function Room. Morning, afternoon and evening, with prices. Example data for The Crown & Anchor. On that screen the guest picks the date, then a session. A session that is already taken is not offered. If you also allow booking by the hour, set the hours the room can be used and any setting-up or clearing time that must stay free. That gap stops one booking running into the next. How the price is worked out You can charge in three ways, and you can combine them: Room hire , a set amount for the session. Minimum spend , an amount that must be spent, with anything above it still to pay. Per person , a price multiplied by the number of guests. The guest sees the total before they pay, including any extras . The deposit When the guest books, you can take: no payment now, and settle on the day a deposit by card the full amount by card The card payment goes to your own Stripe account. Hospitality App takes no commission. Stripe’s own fees still apply. Connect payments first, in Connect card payments . The guest’s summary for an afternoon session, with extras and a deposit still to pay. Example data. A space can instead take an enquiry, which you confirm yourself. That is covered in Taking an enquiry ."
+    },
+    {
+      "title": "Tabs and split bills",
+      "summary": "Keep a named tab, split a bill by item, and keep the tip separate from a discount.",
+      "topic": "till",
+      "topicTitle": "Till & orders",
+      "url": "/help/till/tabs-and-split-bills/",
+      "text": "A tab is an open bill with a name. A split is that bill divided by item. Both happen on the same till. A tab Save the open sale against a name. The tab list shows how many are open, what is outstanding, and what has been taken today. Bring a tab back to add another round, then take payment or charge it to a room . Tables work the same way from the floor plan: covers, the open bill, and pay at that table. You can hand the tablet over for the guest to pay, or send a payment link. The card is still taken by your card machine, or by the link, not by a processor built into the till. Split by item Split the bill by item when people are paying separately. Move the lines onto each person’s bill. Each one is paid on its own. Tips and discounts A tip can be card or cash, and a tip can be split. A discount never changes the tip. A price change in pounds asks for a reason. Staff drinks have their own button and are recorded against a person. A refund, of one item or the whole sale, is for a manager. It can be cash, card or Apple Pay. A refund receipt prints, and the reason is recorded. When the bill is done, print it, reprint it, or email it. The receipt can carry your logo."
+    },
+    {
+      "title": "Ticket types and limits",
+      "summary": "Standard, early bird or a table. A price, a limit, and when each type goes on sale.",
+      "topic": "tickets",
+      "topicTitle": "Tickets",
+      "url": "/help/tickets/ticket-types-and-limits/",
+      "text": "Each event can have more than one ticket type. A type has a name, a price, how many you will sell, and when it goes on sale. Add a type On the Tickets step, add a line for each type. Typical ones: Standard , the main ticket. Early bird , a lower price that ends when you say. Table , a price for a whole table rather than one person. A ticket can cost nothing. A paid ticket can include a booking fee for your venue, with the VAT you set on that fee. The fee is yours. The payment goes to your own Stripe account. Hospitality App takes no commission. Stripe’s own fees still apply. Limits Set a limit on the ticket type, and a limit for the whole event. Sales stop when either limit is reached. The events list shows how many have sold against that limit. Events with sold counts and takings. Example data. When they go on sale Each type can wait until a date and time you set. Until then the public page can show a countdown. After that time, the type is on sale if the limit has not been reached. Refunds Refund the tickets you choose. Those places can go back on sale. A refunded ticket will not scan at the door."
+    },
+    {
+      "title": "Adding extras",
+      "summary": "Teas and coffees, a buffet, a projector. Priced per person or per booking.",
+      "topic": "spaces",
+      "topicTitle": "Spaces",
+      "url": "/help/spaces/adding-extras/",
+      "text": "Extras are the things a guest can add to a space when they book. Each one has a name, a price, and whether that price is per person or per booking. Add one On the space, open the extras step and add a line. Two examples from a function room: A glass of prosecco at a price per person . A projector at a price per booking . Per person is multiplied by the party size. Per booking is charged once, however many people come. What the guest sees Extras appear on the same screen as the deposit. The guest ticks the ones they want, and the total updates before they pay. Extras on a function-room booking, priced per person or per booking, with the deposit underneath. Example data. Food or drink you would rather take on the day can stay off this list. Anything you do list is agreed, and paid with the deposit, at the time of booking. Save the space when the list is right. You can change an extra later; it applies to new bookings."
+    },
+    {
+      "title": "Checkout questions",
+      "summary": "Ask for dietary needs, a team name, or anything else you need before the night.",
+      "topic": "tickets",
+      "topicTitle": "Tickets",
+      "url": "/help/tickets/checkout-questions/",
+      "text": "Checkout questions are asked when the guest buys, after they have chosen a ticket and before they pay. Add a question On the Questions step of the event, add a question and choose how it is answered. A short written answer covers a dietary note or a team name. You can mark a question as required, so the guest cannot pay until it is filled in. Keep the list short. A quiz might ask for the team name. A dinner might ask about dietary needs. Both can sit on the same event. Where the answers go The answer is stored with that guest’s order. Staff can read it with the booking. It is not printed on the ticket itself. Questions are per event. A new event starts with none, so add the ones that night actually needs. The door still checks the ticket, not the answer. Scanning is covered in Scan tickets at the door ."
+    },
+    {
+      "title": "Close the till",
+      "summary": "Count the drawer at the start, and record the drawer and the card machine at the end of the day.",
+      "topic": "till",
+      "topicTitle": "Till & orders",
+      "url": "/help/till/close-the-till/",
+      "text": "The day has a count at the start and a count at the end. The difference is what the Z report shows. Start of day Count the float in the drawer before service and enter it on the till. No-sale openings of the drawer are logged from then on. Through the day Sales record who took them, because each order follows a PIN. Card takings are whatever your card machine took. The till does not process the card. A deposit taken off a bill, from table reservations, shows on the Z as deposits. Room payments taken online are not in the drawer. End of day Count the cash in the drawer. Enter the card-machine total. Close the day. The difference between what was expected and what you counted is on the Z. Reprint the Z later from the same place if you need another copy. Food and drink can print in the kitchen and at the bar during the day. Closing the till does not change those printers. Test a printer from the till if a ticket did not come out. Daily takings sync back, so the takings record fills itself."
+    },
+    {
+      "title": "Getting started",
+      "summary": "Venue, people, rota, till, then the rooms or tickets you actually sell.",
+      "topic": "settings",
+      "topicTitle": "Settings",
+      "url": "/help/settings/getting-started/",
+      "text": "Five steps cover the first afternoon. Do them in order. Each one links to the short guide. Card payments, if guests will pay you online. Connect card payments so a deposit or a ticket goes to your own Stripe account. Skip this if you only need the rota and the till. The people who run it. Add a manager , then anyone else who needs to clock in. Next week’s shifts. Build the rota and publish it. The team clock in against it. The till. Take a first order , then close the day once so the Z is familiar before a Saturday. The part you sell on top. A function room is Spaces . Bedrooms are Rooms . A quiz or a dinner is Tickets . The same guides open in the app from the ? button, on the screen they belong to. If a step does not match what you see, contact the team and name the screen you were on."
+    },
+    {
+      "title": "Pay tips fairly",
+      "summary": "Card tips come from the till. Cash is entered by hand. The tronc statement is the one the Tips Act requires.",
+      "topic": "staff",
+      "topicTitle": "Staff & pay",
+      "url": "/help/staff/tips/",
+      "text": "Tips recorded on the till can be shared out under the Employment (Allocation of Tips) Act 2023. The longer explanation of the Act is in the tronc guide . This is the short version of the buttons. What the till already has Card tips taken on a bill are pulled from the till. Cash tips are entered by hand. A tip can be split at the time of the sale, and a discount does not change the tip. See Tabs and split bills . Calculate, review, finalise Calculate the share for the period. Review the amounts and who they go to. Finalise to produce the dated tronc statement the Act requires. Payroll reports themselves, hours and pay for a date range, are a separate step and are on Professional and above. We produce the report and a CSV. We do not run payroll or file RTI. A rate change is dated, so shifts before that date keep the old rate."
+    },
+    {
+      "title": "Using the room diary",
+      "summary": "Week and two-week diary. Stays, arrivals, departures and blocked rooms, with occupancy for each night.",
+      "topic": "rooms",
+      "topicTitle": "Rooms",
+      "url": "/help/rooms/using-the-room-diary/",
+      "text": "Open Rooms and stay on Diary . Rooms run down the side and nights run across the top. Switch between Week and Two weeks . Select a stay to open it, or an empty night to book one. The diary shows the guest, the nights and the total for that stay. Stays are coloured by status: Checked in Confirmed Arriving Leaving A same-day turnaround shows the departure and the next arrival on the same night, so the changeover is visible. A Blocked room is drawn on the diary and cannot be booked. Out-of-order dates from a repair block those nights in the same way. Each night along the top shows how full you are, as a percentage of rooms occupied. The room diary, with checked-in, confirmed, arriving and leaving stays, a same-day turnaround and a blocked room. Example data from the Crown & Anchor pilot. The other tabs on this screen are Today , Housekeeping , Capacity and Maintenance ."
+    },
+    {
+      "title": "Scan tickets at the door",
+      "summary": "Scan the QR from a staff phone. Each ticket only scans once.",
+      "topic": "tickets",
+      "topicTitle": "Tickets",
+      "url": "/help/tickets/scan-tickets-at-the-door/",
+      "text": "Every ticket has its own QR code. The guest gets it by email. From the confirmation email, or the paid page, they can add it to Apple Wallet and Google Wallet. Staff still scan the QR at the door. On the night Open the event and choose Door , or open Door from the events list. Scan the code with a staff phone. The events list, where Door sits next to each event. Example data. The scanner checks the ticket in. It flags a code that: has already been scanned has been refunded belongs to a different event Each ticket only counts once. A second scan of the same code is shown as already used. Wallet passes Guests can add the ticket to Apple Wallet and Google Wallet from the confirmation email or the paid page. That is the product. It does not mean Google’s class review is finished, or that Google Wallet is available to every guest. The QR on the pass is the same code the door scans. Set the door time on the Doors step when you create the event , so the public page shows when to arrive."
+    },
+    {
+      "title": "Taking an enquiry instead of a booking",
+      "summary": "Let guests ask first, and confirm the booking yourself.",
+      "topic": "spaces",
+      "topicTitle": "Spaces",
+      "url": "/help/spaces/taking-an-enquiry/",
+      "text": "A space can take a firm booking, or an enquiry that you confirm. Use an enquiry when you want to check the date before it is held. Switch a space to enquiries On the space, choose enquiry rather than instant booking. Guests can still pick the room, the date and the session. They are told the request needs confirming, and they are not charged yet. A date and session screen that says the space takes enquiries and will be confirmed by the venue. Example data. Confirm it The request arrives with the guest’s name, the space, the date, the session and the party size. Confirm it to hold the room, or decline it so the session stays free for someone else. A confirmed enquiry then follows the same path as any other booking, including the confirmation the guest receives . Other spaces can stay on instant booking with a deposit . The choice is per space."
+    },
+    {
+      "title": "Today: arrivals and departures",
+      "summary": "One screen for the day. Check guests in and out, post to the bill, and see who is staying over.",
+      "topic": "rooms",
+      "topicTitle": "Rooms",
+      "url": "/help/rooms/arrivals-and-departures/",
+      "text": "Open Rooms and choose Today . It is one screen for this day’s arrivals, departures and guests who are staying over. On the day Early arrivals are flagged, so the room can be ready before the guest is due. The balance is shown before check-out, including anything still owed on the stay. Check-in records the UK guest register, the fields in the Immigration (Hotel Records) Order 1972. Check guests in and out from this screen, and post a charge to the bill. Two stays still cannot share a room on the same night. That is enforced on the diary . A card deposit, or payment in full, is taken when you book the stay , not on this screen. Anything left is settled at check-out. See The room bill ."
+    },
+    {
+      "title": "Changing or cancelling a booking",
+      "summary": "Move the date, change the numbers, or refund a deposit.",
+      "topic": "spaces",
+      "topicTitle": "Spaces",
+      "url": "/help/spaces/changing-or-cancelling-a-booking/",
+      "text": "Open Spaces and find the booking in the list. You can search by the guest’s name. The Spaces home, with bookings listed under the rooms. Example data for The Crown & Anchor. Change it From the booking you can move the date or the session, change the party size, or change the layout, as long as the room is free and the new layout can hold the party. The price updates from the session and the numbers. If the guest has already paid a deposit, the balance due changes with the new total. The confirmation shows what they have paid and what is left. Cancel it Cancel the booking to free the session. If a deposit was paid by card, refund it from the booking. The refund goes back to the card the guest used. Stripe’s own fees still apply to the original payment. A cancelled session can be booked again straight away, unless you have blocked the date ."
+    },
+    {
+      "title": "Housekeeping on a phone",
+      "summary": "Dirty, cleaning, clean or inspected. Update it from a phone, and report a problem with a photo.",
+      "topic": "rooms",
+      "topicTitle": "Rooms",
+      "url": "/help/rooms/housekeeping-on-a-phone/",
+      "text": "Open Rooms and choose Housekeeping , on the web or on a phone. Each room shows its status, who is cleaning it, and whether a guest is arriving early. The statuses are: Dirty Cleaning Clean Inspected Filter the list by status, or show every room. Rooms with an early arrival are marked and listed first. A guest who is still in house is shown on the room, so it is not cleaned while they are there. Choose Start cleaning when the room is begun. When something is wrong, use Report a problem and attach a photo. Repairs, with a priority and any out-of-order dates, are logged under Maintenance . Housekeeping on a phone: rooms still to clean, an early arrival, and one room open with its status. Example data from the Crown & Anchor pilot."
+    },
+    {
+      "title": "The booking confirmation",
+      "summary": "What the guest receives, and the balance still to pay.",
+      "topic": "spaces",
+      "topicTitle": "Spaces",
+      "url": "/help/spaces/the-booking-confirmation/",
+      "text": "When a booking is confirmed, the guest sees the space, the date, the session, the party size, what they have paid and what is left to pay. A confirmed function-room booking on a phone, with the deposit paid and the balance due. Example data. The same details are in the confirmation email. It uses your venue name. You can add your own note, for arrival instructions or a cancellation line, before the booking is saved. If they paid a deposit The confirmation separates the deposit already paid from the balance due on the day. Extras they added, such as a buffet or a projector, are listed on the same summary. See Sessions, prices and deposits . If it was an enquiry An enquiry does not send a paid confirmation until you confirm it. Once you do, the guest gets the same confirmation as a booking. See Taking an enquiry ."
+    },
+    {
+      "title": "The room bill",
+      "summary": "Put a round from the bar or the table onto the guest’s room, and settle it at check-out.",
+      "topic": "rooms",
+      "topicTitle": "Rooms",
+      "url": "/help/rooms/room-bill/",
+      "text": "Bar and food can go straight onto the guest’s room bill. There is no paper chit to carry upstairs. From the till Take the order at the bar, or at the table on a staff phone. It sits on an open tab, the same as any other sale. See Take your first order . From that open tab, charge it to the guest’s room. The order lands on that stay, next to the room nights. At check-out The guest pays whatever is left on the bill, by card, cash or bank transfer. A deposit, or the room charge itself, may already have been paid online when the stay was booked . The invoice is emailed. It is itemised. Room nights are at 20% VAT. The pint and the pie keep the VAT that was already on the till. If room management is off The charge-to-room choice only appears where rooms are switched on for the venue. A tab that is not charged to a room is paid in the usual way, on the till. The till itself does not take the card. Your card machine does."
+    },
+    {
+      "title": "Capacity for the week",
+      "summary": "Rooms sold against rooms available, with guests, average room rate and revenue per available room.",
+      "topic": "rooms",
+      "topicTitle": "Rooms",
+      "url": "/help/rooms/capacity-for-the-week/",
+      "text": "Open Rooms and choose Capacity . It compares rooms sold with rooms available, and shows guests, the average room rate (ADR) and revenue per available room (RevPAR). Use it for the week or the month. A heat map shows which nights and room types are filling up, so a quiet Tuesday and a full Saturday are visible without opening each stay. The percentage along the top of the diary is the same idea for a single night: rooms occupied divided by rooms you can sell. Capacity is the longer view, with the rate and the revenue alongside."
+    },
+    {
+      "title": "Turning on online booking",
+      "summary": "A booking page for your venue, linked from your website.",
+      "topic": "spaces",
+      "topicTitle": "Spaces",
+      "url": "/help/spaces/online-booking/",
+      "text": "Online booking lets a guest choose a space, a date and a session without calling the venue. Each space can be on or off. Turn it on On Spaces , the list shows Online booking for the venue, and each space shows whether guests can book it. Turn it on for the rooms you want on the public page. The Spaces list, with online booking on, for The Crown & Anchor. Example data. Guests then see the spaces you have published, the party size, and only the sessions that are free. The guest’s first step, choosing a space and a party size. Example data. Payments If a space asks for a deposit or the full amount, connect card payments first. The money goes to your own Stripe account. Hospitality App takes no commission. Stripe’s own fees still apply. A space set to enquiries still appears on the page. The guest sends a request instead of paying. Link the page from your website wherever you want guests to book a room. Dates you have blocked are not offered."
+    },
+    {
+      "title": "Blocking dates",
+      "summary": "Close a space for a private event, a refit or a bank holiday.",
+      "topic": "spaces",
+      "topicTitle": "Spaces",
+      "url": "/help/spaces/blocking-dates/",
+      "text": "Block a date when a space should not be booked, even though the room still exists. A wedding you are taking by hand, a refit, or a day the venue is closed are the usual reasons. Close the date Open the space and block the date, or the session, that must stay closed. Guests using online booking are not offered that session. A session that is only blocked for the afternoon can still be booked in the morning. A block is not a booking. It does not take a deposit and it does not email a guest. When the date is free again, remove the block and the session goes back on sale. If the room is already booked, change or cancel that booking first. A block does not move a guest who is already confirmed."
+    },
+    {
+      "title": "Logging a repair",
+      "summary": "Record a fault, its priority and who is on it, and take the room out of order for only those dates.",
+      "topic": "rooms",
+      "topicTitle": "Rooms",
+      "url": "/help/rooms/logging-a-repair/",
+      "text": "Open Rooms and choose Maintenance . Each issue shows its priority, who is on it, and any dates the room is out of order. Log the repair, set the priority and name the person dealing with it. If the room cannot be let, set the out-of-order dates. Only those nights are blocked. The rest of the diary can still be booked. A blocked or out-of-order night is shown on the diary and cannot take a stay. A problem spotted while cleaning, including one with a photo, is reported from housekeeping ."
+    }
+  ]
+}

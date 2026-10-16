@@ -1,0 +1,342 @@
+{
+  "articles": [
+    {
+      "title": "Build next week’s rota",
+      "topic": "staff",
+      "slug": "build-next-weeks-rota",
+      "summary": "Plan the week, watch the labour cost, and publish it so the team can see their shifts.",
+      "app_screens": [
+        "rota"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/staff/build-next-weeks-rota/",
+      "html": "<p>The rota is where the week is planned. The same people <a href=\"https://hospitalityapp.co.uk/help/staff/clock-in/\">clock in</a> against those shifts, and the hours feed the payroll report.</p>\n<h2 id=\"build-the-week\">Build the week</h2>\n<p>Open the rota and move to next week. Shifts can be seen by role, by person, on a timeline, or as the week. Drag a shift into place, or start from a template if the week looks like the last one.</p>\n<p>The labour cost updates as you build, from each person’s hourly rate. Publishing asks you to look again when the week is over the labour you set.</p>\n<h2 id=\"publish\">Publish</h2>\n<p>Publish the week when it is ready. The team see their shifts in the app. You can unpublish a week if it needs to change.</p>\n<p>An open shift can be left for someone to claim from the app. Leave already booked shows on the rota, so you are not rostering someone who is away.</p>\n<p>Someone who works at more than one of your venues cannot be given two shifts that overlap. The rota keeps that from being published.</p>\n<p>Rota and attendance are on every plan, starting with Essentials.</p>"
+    },
+    {
+      "title": "Connect card payments",
+      "topic": "settings",
+      "slug": "connect-card-payments",
+      "summary": "Connect Stripe so deposits and ticket money go to your own account.",
+      "app_screens": [
+        "settings",
+        "settings/payments"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/settings/connect-card-payments/",
+      "html": "<p>Online card payments use Stripe Connect. The money goes to your own Stripe account. Hospitality App takes no commission on deposits or tickets. Stripe’s own fees still apply.</p>\n<h2 id=\"what-it-is-for\">What it is for</h2>\n<p>Connect payments before you:</p>\n<ul><li>take a <a href=\"https://hospitalityapp.co.uk/help/spaces/sessions-prices-and-deposits/\">deposit or full payment on a function room</a></li><li>take a <a href=\"https://hospitalityapp.co.uk/help/rooms/booking-a-stay/\">deposit or full payment on a room stay</a></li><li>sell a <a href=\"https://hospitalityapp.co.uk/help/tickets/create-your-first-event/\">paid ticket</a></li></ul>\n<p>A table-reservation deposit uses the same connection. It is included in Complete Plus. The guest gets a deposit-paid email, and taking that deposit off the bill shows as deposits on the Z.</p>\n<h2 id=\"what-it-is-not-for\">What it is not for</h2>\n<p>The till does not take the card. Your card machine does. There is no processor lock-in and no per-terminal fee. Connecting Stripe does not change that.</p>\n<p>Open <strong>Settings</strong> and connect the Stripe account for the venue. Until that is done, a space, a stay or an event can still be set up, but a guest cannot pay a deposit by card.</p>"
+    },
+    {
+      "title": "Create your first event",
+      "topic": "tickets",
+      "slug": "create-your-first-event",
+      "summary": "Name, date, tickets, questions and the door. Check the public page before you publish.",
+      "app_screens": [
+        "events",
+        "events/new"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/tickets/create-your-first-event/",
+      "html": "<p>An event is a quiz, a dinner, a tasting or any night you sell places for. Tickets are sold from Hospitality App, and the sales sit in the same reports as the till.</p>\n<h2 id=\"start-the-event\">Start the event</h2>\n<p>Open <strong>Events</strong> and choose <strong>New event</strong>. The steps are Details, Tickets, Questions, Doors, then a review.</p>\n<figure class=\"hc-shot\"><img src=\"https://hospitalityapp.co.uk/assets/help/events-list.png\" alt=\"The events list, with tickets sold and takings for each night. Example data for The Crown &amp; Anchor.\"><figcaption>The events list, with tickets sold and takings for each night. Example data for The Crown &amp; Anchor.</figcaption></figure>\n<p>On <strong>Details</strong>, set the name, the date and a short description. A night can run on past midnight without becoming a second event.</p>\n<h2 id=\"tickets-questions-doors\">Tickets, questions, doors</h2>\n<ul><li>Add at least one ticket type, with a price and a limit. Free tickets are allowed. See <a href=\"https://hospitalityapp.co.uk/help/tickets/ticket-types-and-limits/\">Ticket types and limits</a>.</li><li>Add a checkout question if you need dietary notes or a team name. See <a href=\"https://hospitalityapp.co.uk/help/tickets/checkout-questions/\">Checkout questions</a>.</li><li>Set when the doors open. Staff scan tickets from a phone. See <a href=\"https://hospitalityapp.co.uk/help/tickets/scan-tickets-at-the-door/\">Scan tickets at the door</a>.</li></ul>\n<p>The review step shows the public page before you publish. You can also set the wording of the email the guest receives.</p>\n<h2 id=\"the-money\">The money</h2>\n<p>Paid tickets go to your own Stripe account, including a booking fee you set for the venue and the VAT on that fee. Hospitality App takes no commission. Stripe’s own fees still apply. <a href=\"https://hospitalityapp.co.uk/help/settings/connect-card-payments/\">Connect card payments</a> first.</p>\n<p>Events and tickets are not on the published plan prices.</p>\n<p>Food or drink included in the ticket can be rung on the till at £0, so the kitchen and the bar still see the order.</p>"
+    },
+    {
+      "title": "Setting up a function room",
+      "topic": "spaces",
+      "slug": "setting-up-a-function-room",
+      "summary": "Create a space, set its layouts and sessions, and choose how guests pay.",
+      "app_screens": [
+        "spaces",
+        "spaces/new"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/spaces/setting-up-a-function-room/",
+      "html": "<p>This guide takes you through adding a function room, from its name and capacity to the price guests see. You can save at any step and come back later.</p>\n<p>Before you start, open <strong>Spaces</strong>. If you want guests to pay a deposit by card, <a href=\"https://hospitalityapp.co.uk/help/settings/connect-card-payments/\">connect card payments</a> first.</p>\n<h2 id=\"add-the-space\">Add the space</h2>\n<div class=\"hc-step\"><span class=\"hc-no\">1</span><div><h3>Name it and set the size</h3>\n</div></div>\n<p>Go to <strong>Spaces</strong> and choose <strong>New space</strong>. Give it the name guests will recognise, such as “The Function Room”, and set the most people it can hold.</p>\n<figure class=\"hc-shot\"><img src=\"https://hospitalityapp.co.uk/assets/help/spaces-list.png\" alt=\"Spaces list for The Crown &amp; Anchor, with the Function Room, the Snug and the Boardroom. Example data.\"><figcaption>Spaces list for The Crown &amp; Anchor, with the Function Room, the Snug and the Boardroom. Example data.</figcaption></figure>\n<p>The Spaces list shows each room, whether online booking is on, and the price guests are offered.</p>\n<div class=\"hc-step\"><span class=\"hc-no\">2</span><div><h3>Choose the layouts</h3>\n</div></div>\n<p>Pick the layouts you offer, such as theatre, boardroom or banquet. Each layout has its own capacity, so a guest booking a banquet sees the right numbers.</p>\n<h2 id=\"decide-when-it-can-be-booked\">Decide when it can be booked</h2>\n<div class=\"hc-step\"><span class=\"hc-no\">3</span><div><h3>Set sessions or hourly booking</h3>\n</div></div>\n<p>Offer fixed sessions (morning, afternoon, evening), booking by the hour, or both. Add setting-up and clearing time so back-to-back bookings do not clash. The detail is in <a href=\"https://hospitalityapp.co.uk/help/spaces/sessions-prices-and-deposits/\">Sessions, prices and deposits</a>.</p>\n<h2 id=\"set-the-price\">Set the price</h2>\n<div class=\"hc-step\"><span class=\"hc-no\">4</span><div><h3>Choose how you charge</h3>\n</div></div>\n<p>Charge room hire, a minimum spend, a price per person, or a mix. Ask for a deposit or full payment when the guest books, or take payment on the day.</p>\n<div class=\"hc-step\"><span class=\"hc-no\">5</span><div><h3>Add extras</h3>\n</div></div>\n<p>Add things guests can order with the room: teas and coffees, a buffet, a screen. Price each one per person or per booking. See <a href=\"https://hospitalityapp.co.uk/help/spaces/adding-extras/\">Adding extras</a>.</p>\n<h2 id=\"check-and-publish\">Check and publish</h2>\n<div class=\"hc-step\"><span class=\"hc-no\">6</span><div><h3>Review and save</h3>\n</div></div>\n<p>Check the summary, then save. The space appears in your Spaces list straight away. If online booking is on, guests can book it from your booking page.</p>\n<p class=\"hc-tip\">Tip: read the confirmation before you save, so you know what the guest will receive.</p>\n<h2 id=\"what-next\">What next?</h2>\n<ul><li><a href=\"https://hospitalityapp.co.uk/help/spaces/sessions-prices-and-deposits/\">Sessions, prices and deposits</a>, for more detail on pricing.</li><li><a href=\"https://hospitalityapp.co.uk/help/spaces/online-booking/\">Turning on online booking</a>, to take bookings from your website.</li><li><a href=\"https://hospitalityapp.co.uk/help/spaces/blocking-dates/\">Blocking dates</a>, to close the room for a private event.</li></ul>"
+    },
+    {
+      "title": "Setting up rooms",
+      "topic": "rooms",
+      "slug": "setting-up-rooms",
+      "summary": "Add the rooms you let, with a rate for room only or bed and breakfast.",
+      "app_screens": [
+        "rooms"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/rooms/setting-up-rooms/",
+      "html": "<p>Room management is for the bedrooms you let: a double above the bar, a twin, a single. It is separate from <a href=\"https://hospitalityapp.co.uk/help/spaces/setting-up-a-function-room/\">Spaces</a>, which is for a function room or boardroom booked as a whole.</p>\n<h2 id=\"add-a-room\">Add a room</h2>\n<p>Give each room a name guests and staff will both recognise, such as Room 1, and the type: double, twin or single.</p>\n<p>Set the rate. A room can be offered as room only or as bed and breakfast. Add a minimum stay when a Friday or Saturday should not be sold as a single night.</p>\n<p>Room nights are charged at 20% VAT. Drinks and food keep the VAT already set on the till, which matters when the lot is settled together. See <a href=\"https://hospitalityapp.co.uk/help/rooms/room-bill/\">The room bill</a>.</p>\n<p>Stays are entered in Hospitality App. There is no connection to Booking.com, Expedia or Airbnb.</p>\n<h2 id=\"next\">Next</h2>\n<p><a href=\"https://hospitalityapp.co.uk/help/rooms/booking-a-stay/\">Book a stay</a>, including a card deposit or payment in full. The stay then shows on the <a href=\"https://hospitalityapp.co.uk/help/rooms/using-the-room-diary/\">room diary</a>.</p>"
+    },
+    {
+      "title": "Take your first order",
+      "topic": "till",
+      "slug": "take-your-first-order",
+      "summary": "Open the till, pick a measure, and put the round on a tab or a table.",
+      "app_screens": [
+        "till",
+        "till/run"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/till/take-your-first-order/",
+      "html": "<p>The till runs full screen, on a tablet or on <a href=\"https://hospitalityapp.co.uk/till-windows\">Hospitality App Till for Windows</a>. Staff sign in with their PIN. The next order is attributed to whoever unlocked it.</p>\n<h2 id=\"take-the-round\">Take the round</h2>\n<ol><li>Open the till. Categories run down the side, with the products for that category on the grid. Search is there if the button is not in view.</li><li>Tap the product. A drink asks for the measure: half or pint, single or double, 175ml, 250ml or bottle. Each measure has its own price.</li><li>A line can take an option, an extra or a mixer. Tap a dish twice and it sits on the bill twice, so each plate can have its own note. Drinks still stack.</li><li>The running total is on the bill. Add a note if it should print on the bill and the kitchen ticket.</li></ol>\n<p>The till records the sale. It does not take the card. Your card machine does.</p>\n<h2 id=\"where-the-order-sits\">Where the order sits</h2>\n<p>Counter service and table service are set for the venue. A bar tab is saved against a name. A table uses the floor plan. Either way the sale stays open until it is paid, split, or <a href=\"https://hospitalityapp.co.uk/help/rooms/room-bill/\">charged to a room</a>.</p>\n<p>Held sales stay with the PIN that held them. When the till is idle it locks, and the next person enters their own PIN.</p>\n<p>Till / POS is included in Complete. There is no per-terminal fee.</p>"
+    },
+    {
+      "title": "Add a manager",
+      "topic": "settings",
+      "slug": "add-a-manager",
+      "summary": "Add someone who can run the venue, and keep pay details to the people who should see them.",
+      "app_screens": [
+        "settings",
+        "settings/team"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/settings/add-a-manager/",
+      "html": "<p>The people who work for you each have a record. A manager can run the rota, the till settings and the pay reports. A member of staff sees their own shifts, clock-in and messages.</p>\n<h2 id=\"add-the-person\">Add the person</h2>\n<p>Add them to the team with their name and the venue they work at. Someone who works at more than one venue can have a rate at each. Their shifts still cannot overlap.</p>\n<p>Set what they are allowed to do. Giving someone manager access is what lets them publish a rota, refund a sale, and open pay reports. Leave that off for someone who only needs to clock in and read the rota.</p>\n<h2 id=\"pay-details\">Pay details</h2>\n<p>Hourly rate, National Insurance, tax code and bank details live on the record. They are restricted in the database, not only hidden on screen. A change to bank details alerts managers.</p>\n<p>A rate change is dated. Shifts before the change keep the old rate, which is what the payroll report uses.</p>\n<p>Staff added here are the people you put on <a href=\"https://hospitalityapp.co.uk/help/staff/build-next-weeks-rota/\">next week’s rota</a>.</p>"
+    },
+    {
+      "title": "Booking a stay",
+      "topic": "rooms",
+      "slug": "booking-a-stay",
+      "summary": "Guest, dates, extras and deposit. No deposit, a card deposit, or pay in full.",
+      "app_screens": [
+        "rooms/stays"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/rooms/booking-a-stay/",
+      "html": "<p>A stay is booked in five steps: Guest, Dates, Extras, Deposit, then a review.</p>\n<h2 id=\"guest-and-dates\">Guest and dates</h2>\n<p>Enter the guest’s name and contact, then the arrival and departure dates and the room. Two stays cannot share the same room on the same night. If the room is closed, block the date instead of booking it.</p>\n<p>Choose room only or bed and breakfast, matching the rate you set in <a href=\"https://hospitalityapp.co.uk/help/rooms/setting-up-rooms/\">Setting up rooms</a>.</p>\n<h2 id=\"extras\">Extras</h2>\n<p>Add anything that belongs on this stay, such as a breakfast that is not already in the rate. The line shows on the summary before you save.</p>\n<h2 id=\"deposit\">Deposit</h2>\n<p>On the deposit step, choose one of three:</p>\n<ul><li><strong>No deposit.</strong> The guest pays at check-out.</li><li><strong>Pay deposit now.</strong> The guest pays a deposit by card when they book.</li><li><strong>Pay in full now.</strong> The guest pays the whole stay by card when they book.</li></ul>\n<figure class=\"hc-shot\"><img src=\"https://hospitalityapp.co.uk/assets/help/rooms-deposit.png\" alt=\"The deposit step of a new room booking, with no deposit, pay deposit now, or pay in full now. Example data.\"><figcaption>The deposit step of a new room booking, with no deposit, pay deposit now, or pay in full now. Example data.</figcaption></figure>\n<p>The card payment goes to your own Stripe account. Hospitality App takes no commission. Stripe’s own fees still apply. <a href=\"https://hospitalityapp.co.uk/help/settings/connect-card-payments/\">Connect card payments</a> before you choose a card option.</p>\n<p>A stay with no deposit, and anything charged to the room from the bar, is still settled at check-out by card, cash or bank transfer. See <a href=\"https://hospitalityapp.co.uk/help/rooms/room-bill/\">The room bill</a>.</p>\n<h2 id=\"check-out\">Check-out</h2>\n<p>At check-out the guest settles whatever is left. An itemised VAT invoice is emailed. Room nights stay at 20% VAT. Bar and food keep the VAT already on the till.</p>"
+    },
+    {
+      "title": "Clock in",
+      "topic": "staff",
+      "slug": "clock-in",
+      "summary": "Clock in by GPS, a QR code, or an NFC tag. A forgotten clock-out does not become a 30-hour shift.",
+      "app_screens": [
+        "clock",
+        "rota"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/staff/clock-in/",
+      "html": "<p>Staff clock in on the app at the start of a shift and clock out at the end. The hours are what the payroll report uses, not a remembered finish time.</p>\n<h2 id=\"three-ways-to-clock-in\">Three ways to clock in</h2>\n<p>A venue can use any combination of:</p>\n<ul><li><strong>GPS</strong>, inside a geofence around the building</li><li><strong>QR code</strong>, scanned at the venue</li><li><strong>NFC tag</strong>, tapped at the door or behind the bar</li></ul>\n<p>Clocking in is tied to the person, so the shift on the <a href=\"https://hospitalityapp.co.uk/help/staff/build-next-weeks-rota/\">rota</a> and the hours worked can be compared.</p>\n<h2 id=\"overnight-and-forgotten-clock-outs\">Overnight and forgotten clock-outs</h2>\n<p>A shift that runs past midnight stays one shift. If someone forgets to clock out, an automatic close stops that shift becoming a 30-hour day.</p>\n<p>Hours that do not match the rota are queued for a manager, with a one-tap way to accept or correct them. Corrections stay in the record.</p>\n<p>Clock-in is included with the rota, from Essentials upwards.</p>"
+    },
+    {
+      "title": "Sessions, prices and deposits",
+      "topic": "spaces",
+      "slug": "sessions-prices-and-deposits",
+      "summary": "Morning, afternoon, evening or by the hour. Room hire, minimum spend or per person.",
+      "app_screens": [
+        "spaces",
+        "spaces/new"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/spaces/sessions-prices-and-deposits/",
+      "html": "<p>A space can be booked in sessions, by the hour, or both. The price can be room hire, a minimum spend, a price per person, or a mix.</p>\n<h2 id=\"sessions\">Sessions</h2>\n<p>A session is a named block of time, such as morning, afternoon or evening, with a start and an end. Guests only see sessions that are still free.</p>\n<figure class=\"hc-shot\"><img src=\"https://hospitalityapp.co.uk/assets/help/spaces-guest-when.png\" alt=\"Choosing a date and a session for the Function Room. Morning, afternoon and evening, with prices. Example data for The Crown &amp; Anchor.\"><figcaption>Choosing a date and a session for the Function Room. Morning, afternoon and evening, with prices. Example data for The Crown &amp; Anchor.</figcaption></figure>\n<p>On that screen the guest picks the date, then a session. A session that is already taken is not offered.</p>\n<p>If you also allow booking by the hour, set the hours the room can be used and any setting-up or clearing time that must stay free. That gap stops one booking running into the next.</p>\n<h2 id=\"how-the-price-is-worked-out\">How the price is worked out</h2>\n<p>You can charge in three ways, and you can combine them:</p>\n<ul><li><strong>Room hire</strong>, a set amount for the session.</li><li><strong>Minimum spend</strong>, an amount that must be spent, with anything above it still to pay.</li><li><strong>Per person</strong>, a price multiplied by the number of guests.</li></ul>\n<p>The guest sees the total before they pay, including any <a href=\"https://hospitalityapp.co.uk/help/spaces/adding-extras/\">extras</a>.</p>\n<h2 id=\"the-deposit\">The deposit</h2>\n<p>When the guest books, you can take:</p>\n<ul><li>no payment now, and settle on the day</li><li>a deposit by card</li><li>the full amount by card</li></ul>\n<p>The card payment goes to your own Stripe account. Hospitality App takes no commission. Stripe’s own fees still apply. Connect payments first, in <a href=\"https://hospitalityapp.co.uk/help/settings/connect-card-payments/\">Connect card payments</a>.</p>\n<figure class=\"hc-shot\"><img src=\"https://hospitalityapp.co.uk/assets/help/spaces-guest-pay.png\" alt=\"The guest’s summary for an afternoon session, with extras and a deposit still to pay. Example data.\"><figcaption>The guest’s summary for an afternoon session, with extras and a deposit still to pay. Example data.</figcaption></figure>\n<p>A space can instead take an enquiry, which you confirm yourself. That is covered in <a href=\"https://hospitalityapp.co.uk/help/spaces/taking-an-enquiry/\">Taking an enquiry</a>.</p>"
+    },
+    {
+      "title": "Tabs and split bills",
+      "topic": "till",
+      "slug": "tabs-and-split-bills",
+      "summary": "Keep a named tab, split a bill by item, and keep the tip separate from a discount.",
+      "app_screens": [
+        "till",
+        "till/run"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/till/tabs-and-split-bills/",
+      "html": "<p>A tab is an open bill with a name. A split is that bill divided by item. Both happen on the same till.</p>\n<h2 id=\"a-tab\">A tab</h2>\n<p>Save the open sale against a name. The tab list shows how many are open, what is outstanding, and what has been taken today. Bring a tab back to add another round, then take payment or <a href=\"https://hospitalityapp.co.uk/help/rooms/room-bill/\">charge it to a room</a>.</p>\n<p>Tables work the same way from the floor plan: covers, the open bill, and pay at that table. You can hand the tablet over for the guest to pay, or send a payment link. The card is still taken by your card machine, or by the link, not by a processor built into the till.</p>\n<h2 id=\"split-by-item\">Split by item</h2>\n<p>Split the bill by item when people are paying separately. Move the lines onto each person’s bill. Each one is paid on its own.</p>\n<h2 id=\"tips-and-discounts\">Tips and discounts</h2>\n<p>A tip can be card or cash, and a tip can be split. A discount never changes the tip. A price change in pounds asks for a reason.</p>\n<p>Staff drinks have their own button and are recorded against a person. A refund, of one item or the whole sale, is for a manager. It can be cash, card or Apple Pay. A refund receipt prints, and the reason is recorded.</p>\n<p>When the bill is done, print it, reprint it, or email it. The receipt can carry your logo.</p>"
+    },
+    {
+      "title": "Ticket types and limits",
+      "topic": "tickets",
+      "slug": "ticket-types-and-limits",
+      "summary": "Standard, early bird or a table. A price, a limit, and when each type goes on sale.",
+      "app_screens": [
+        "events",
+        "events/new"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/tickets/ticket-types-and-limits/",
+      "html": "<p>Each event can have more than one ticket type. A type has a name, a price, how many you will sell, and when it goes on sale.</p>\n<h2 id=\"add-a-type\">Add a type</h2>\n<p>On the Tickets step, add a line for each type. Typical ones:</p>\n<ul><li><strong>Standard</strong>, the main ticket.</li><li><strong>Early bird</strong>, a lower price that ends when you say.</li><li><strong>Table</strong>, a price for a whole table rather than one person.</li></ul>\n<p>A ticket can cost nothing. A paid ticket can include a booking fee for your venue, with the VAT you set on that fee. The fee is yours. The payment goes to your own Stripe account. Hospitality App takes no commission. Stripe’s own fees still apply.</p>\n<h2 id=\"limits\">Limits</h2>\n<p>Set a limit on the ticket type, and a limit for the whole event. Sales stop when either limit is reached. The events list shows how many have sold against that limit.</p>\n<figure class=\"hc-shot\"><img src=\"https://hospitalityapp.co.uk/assets/help/events-list.png\" alt=\"Events with sold counts and takings. Example data.\"><figcaption>Events with sold counts and takings. Example data.</figcaption></figure>\n<h2 id=\"when-they-go-on-sale\">When they go on sale</h2>\n<p>Each type can wait until a date and time you set. Until then the public page can show a countdown. After that time, the type is on sale if the limit has not been reached.</p>\n<h2 id=\"refunds\">Refunds</h2>\n<p>Refund the tickets you choose. Those places can go back on sale. A refunded ticket will not scan at the door.</p>"
+    },
+    {
+      "title": "Adding extras",
+      "topic": "spaces",
+      "slug": "adding-extras",
+      "summary": "Teas and coffees, a buffet, a projector. Priced per person or per booking.",
+      "app_screens": [
+        "spaces",
+        "spaces/new"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/spaces/adding-extras/",
+      "html": "<p>Extras are the things a guest can add to a space when they book. Each one has a name, a price, and whether that price is per person or per booking.</p>\n<h2 id=\"add-one\">Add one</h2>\n<p>On the space, open the extras step and add a line. Two examples from a function room:</p>\n<ul><li>A glass of prosecco at a price <strong>per person</strong>.</li><li>A projector at a price <strong>per booking</strong>.</li></ul>\n<p>Per person is multiplied by the party size. Per booking is charged once, however many people come.</p>\n<h2 id=\"what-the-guest-sees\">What the guest sees</h2>\n<p>Extras appear on the same screen as the deposit. The guest ticks the ones they want, and the total updates before they pay.</p>\n<figure class=\"hc-shot\"><img src=\"https://hospitalityapp.co.uk/assets/help/spaces-guest-pay.png\" alt=\"Extras on a function-room booking, priced per person or per booking, with the deposit underneath. Example data.\"><figcaption>Extras on a function-room booking, priced per person or per booking, with the deposit underneath. Example data.</figcaption></figure>\n<p>Food or drink you would rather take on the day can stay off this list. Anything you do list is agreed, and paid with the deposit, at the time of booking.</p>\n<p>Save the space when the list is right. You can change an extra later; it applies to new bookings.</p>"
+    },
+    {
+      "title": "Checkout questions",
+      "topic": "tickets",
+      "slug": "checkout-questions",
+      "summary": "Ask for dietary needs, a team name, or anything else you need before the night.",
+      "app_screens": [
+        "events",
+        "events/new"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/tickets/checkout-questions/",
+      "html": "<p>Checkout questions are asked when the guest buys, after they have chosen a ticket and before they pay.</p>\n<h2 id=\"add-a-question\">Add a question</h2>\n<p>On the Questions step of the event, add a question and choose how it is answered. A short written answer covers a dietary note or a team name. You can mark a question as required, so the guest cannot pay until it is filled in.</p>\n<p>Keep the list short. A quiz might ask for the team name. A dinner might ask about dietary needs. Both can sit on the same event.</p>\n<h2 id=\"where-the-answers-go\">Where the answers go</h2>\n<p>The answer is stored with that guest’s order. Staff can read it with the booking. It is not printed on the ticket itself.</p>\n<p>Questions are per event. A new event starts with none, so add the ones that night actually needs.</p>\n<p>The door still checks the ticket, not the answer. Scanning is covered in <a href=\"https://hospitalityapp.co.uk/help/tickets/scan-tickets-at-the-door/\">Scan tickets at the door</a>.</p>"
+    },
+    {
+      "title": "Close the till",
+      "topic": "till",
+      "slug": "close-the-till",
+      "summary": "Count the drawer at the start, and record the drawer and the card machine at the end of the day.",
+      "app_screens": [
+        "till",
+        "till/run"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/till/close-the-till/",
+      "html": "<p>The day has a count at the start and a count at the end. The difference is what the Z report shows.</p>\n<h2 id=\"start-of-day\">Start of day</h2>\n<p>Count the float in the drawer before service and enter it on the till. No-sale openings of the drawer are logged from then on.</p>\n<h2 id=\"through-the-day\">Through the day</h2>\n<p>Sales record who took them, because each order follows a PIN. Card takings are whatever your card machine took. The till does not process the card.</p>\n<p>A deposit taken off a bill, from table reservations, shows on the Z as deposits. Room payments taken online are not in the drawer.</p>\n<h2 id=\"end-of-day\">End of day</h2>\n<ol><li>Count the cash in the drawer.</li><li>Enter the card-machine total.</li><li>Close the day. The difference between what was expected and what you counted is on the Z.</li><li>Reprint the Z later from the same place if you need another copy.</li></ol>\n<p>Food and drink can print in the kitchen and at the bar during the day. Closing the till does not change those printers. Test a printer from the till if a ticket did not come out.</p>\n<p>Daily takings sync back, so the takings record fills itself.</p>"
+    },
+    {
+      "title": "Getting started",
+      "topic": "settings",
+      "slug": "getting-started",
+      "summary": "Venue, people, rota, till, then the rooms or tickets you actually sell.",
+      "app_screens": [
+        "home",
+        "settings"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/settings/getting-started/",
+      "html": "<p>Five steps cover the first afternoon. Do them in order. Each one links to the short guide.</p>\n<ol><li><strong>Card payments, if guests will pay you online.</strong> <a href=\"https://hospitalityapp.co.uk/help/settings/connect-card-payments/\">Connect card payments</a> so a deposit or a ticket goes to your own Stripe account. Skip this if you only need the rota and the till.</li><li><strong>The people who run it.</strong> <a href=\"https://hospitalityapp.co.uk/help/settings/add-a-manager/\">Add a manager</a>, then anyone else who needs to clock in.</li><li><strong>Next week’s shifts.</strong> <a href=\"https://hospitalityapp.co.uk/help/staff/build-next-weeks-rota/\">Build the rota</a> and publish it. The team clock in against it.</li><li><strong>The till.</strong> <a href=\"https://hospitalityapp.co.uk/help/till/take-your-first-order/\">Take a first order</a>, then <a href=\"https://hospitalityapp.co.uk/help/till/close-the-till/\">close the day</a> once so the Z is familiar before a Saturday.</li><li><strong>The part you sell on top.</strong> A function room is <a href=\"https://hospitalityapp.co.uk/help/spaces/setting-up-a-function-room/\">Spaces</a>. Bedrooms are <a href=\"https://hospitalityapp.co.uk/help/rooms/setting-up-rooms/\">Rooms</a>. A quiz or a dinner is <a href=\"https://hospitalityapp.co.uk/help/tickets/create-your-first-event/\">Tickets</a>.</li></ol>\n<p>The same guides open in the app from the ? button, on the screen they belong to.</p>\n<p>If a step does not match what you see, <a href=\"https://hospitalityapp.co.uk/contact/\">contact the team</a> and name the screen you were on.</p>"
+    },
+    {
+      "title": "Pay tips fairly",
+      "topic": "staff",
+      "slug": "tips",
+      "summary": "Card tips come from the till. Cash is entered by hand. The tronc statement is the one the Tips Act requires.",
+      "app_screens": [
+        "payroll",
+        "tips"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/staff/tips/",
+      "html": "<p>Tips recorded on the till can be shared out under the Employment (Allocation of Tips) Act 2023. The longer explanation of the Act is in the <a href=\"https://hospitalityapp.co.uk/guides/tronc-tips-act-2023\">tronc guide</a>. This is the short version of the buttons.</p>\n<h2 id=\"what-the-till-already-has\">What the till already has</h2>\n<p>Card tips taken on a bill are pulled from the till. Cash tips are entered by hand. A tip can be split at the time of the sale, and a discount does not change the tip. See <a href=\"https://hospitalityapp.co.uk/help/till/tabs-and-split-bills/\">Tabs and split bills</a>.</p>\n<h2 id=\"calculate-review-finalise\">Calculate, review, finalise</h2>\n<ol><li><strong>Calculate</strong> the share for the period.</li><li><strong>Review</strong> the amounts and who they go to.</li><li><strong>Finalise</strong> to produce the dated tronc statement the Act requires.</li></ol>\n<p>Payroll reports themselves, hours and pay for a date range, are a separate step and are on Professional and above. We produce the report and a CSV. We do not run payroll or file RTI.</p>\n<p>A rate change is dated, so shifts before that date keep the old rate.</p>"
+    },
+    {
+      "title": "Using the room diary",
+      "topic": "rooms",
+      "slug": "using-the-room-diary",
+      "summary": "Week and two-week diary. Stays, arrivals, departures and blocked rooms, with occupancy for each night.",
+      "app_screens": [
+        "rooms/diary"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/rooms/using-the-room-diary/",
+      "html": "<p>Open <strong>Rooms</strong> and stay on <strong>Diary</strong>. Rooms run down the side and nights run across the top. Switch between <strong>Week</strong> and <strong>Two weeks</strong>.</p>\n<p>Select a stay to open it, or an empty night to book one. The diary shows the guest, the nights and the total for that stay.</p>\n<p>Stays are coloured by status:</p>\n<ul><li><strong>Checked in</strong></li><li><strong>Confirmed</strong></li><li><strong>Arriving</strong></li><li><strong>Leaving</strong></li></ul>\n<p>A same-day turnaround shows the departure and the next arrival on the same night, so the changeover is visible. A <strong>Blocked</strong> room is drawn on the diary and cannot be booked. Out-of-order dates from <a href=\"https://hospitalityapp.co.uk/help/rooms/logging-a-repair/\">a repair</a> block those nights in the same way.</p>\n<p>Each night along the top shows how full you are, as a percentage of rooms occupied.</p>\n<figure class=\"hc-shot\"><img src=\"https://hospitalityapp.co.uk/assets/help/rooms-diary.png\" alt=\"The room diary, with checked-in, confirmed, arriving and leaving stays, a same-day turnaround and a blocked room. Example data from the Crown &amp; Anchor pilot.\"><figcaption>The room diary, with checked-in, confirmed, arriving and leaving stays, a same-day turnaround and a blocked room. Example data from the Crown &amp; Anchor pilot.</figcaption></figure>\n<p>The other tabs on this screen are <a href=\"https://hospitalityapp.co.uk/help/rooms/arrivals-and-departures/\">Today</a>, <a href=\"https://hospitalityapp.co.uk/help/rooms/housekeeping-on-a-phone/\">Housekeeping</a>, <a href=\"https://hospitalityapp.co.uk/help/rooms/capacity-for-the-week/\">Capacity</a> and <a href=\"https://hospitalityapp.co.uk/help/rooms/logging-a-repair/\">Maintenance</a>.</p>"
+    },
+    {
+      "title": "Scan tickets at the door",
+      "topic": "tickets",
+      "slug": "scan-tickets-at-the-door",
+      "summary": "Scan the QR from a staff phone. Each ticket only scans once.",
+      "app_screens": [
+        "events",
+        "events/door"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/tickets/scan-tickets-at-the-door/",
+      "html": "<p>Every ticket has its own QR code. The guest gets it by email. From the confirmation email, or the paid page, they can add it to Apple Wallet and Google Wallet. Staff still scan the QR at the door.</p>\n<h2 id=\"on-the-night\">On the night</h2>\n<p>Open the event and choose <strong>Door</strong>, or open <strong>Door</strong> from the events list. Scan the code with a staff phone.</p>\n<figure class=\"hc-shot\"><img src=\"https://hospitalityapp.co.uk/assets/help/events-list.png\" alt=\"The events list, where Door sits next to each event. Example data.\"><figcaption>The events list, where Door sits next to each event. Example data.</figcaption></figure>\n<p>The scanner checks the ticket in. It flags a code that:</p>\n<ul><li>has already been scanned</li><li>has been refunded</li><li>belongs to a different event</li></ul>\n<p>Each ticket only counts once. A second scan of the same code is shown as already used.</p>\n<h2 id=\"wallet-passes\">Wallet passes</h2>\n<p>Guests can add the ticket to Apple Wallet and Google Wallet from the confirmation email or the paid page. That is the product. It does not mean Google’s class review is finished, or that Google Wallet is available to every guest. The QR on the pass is the same code the door scans.</p>\n<p>Set the door time on the Doors step when you <a href=\"https://hospitalityapp.co.uk/help/tickets/create-your-first-event/\">create the event</a>, so the public page shows when to arrive.</p>"
+    },
+    {
+      "title": "Taking an enquiry instead of a booking",
+      "topic": "spaces",
+      "slug": "taking-an-enquiry",
+      "summary": "Let guests ask first, and confirm the booking yourself.",
+      "app_screens": [
+        "spaces",
+        "spaces/bookings"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/spaces/taking-an-enquiry/",
+      "html": "<p>A space can take a firm booking, or an enquiry that you confirm. Use an enquiry when you want to check the date before it is held.</p>\n<h2 id=\"switch-a-space-to-enquiries\">Switch a space to enquiries</h2>\n<p>On the space, choose enquiry rather than instant booking. Guests can still pick the room, the date and the session. They are told the request needs confirming, and they are not charged yet.</p>\n<figure class=\"hc-shot\"><img src=\"https://hospitalityapp.co.uk/assets/help/spaces-guest-when.png\" alt=\"A date and session screen that says the space takes enquiries and will be confirmed by the venue. Example data.\"><figcaption>A date and session screen that says the space takes enquiries and will be confirmed by the venue. Example data.</figcaption></figure>\n<h2 id=\"confirm-it\">Confirm it</h2>\n<p>The request arrives with the guest’s name, the space, the date, the session and the party size. Confirm it to hold the room, or decline it so the session stays free for someone else.</p>\n<p>A confirmed enquiry then follows the same path as any other booking, including the <a href=\"https://hospitalityapp.co.uk/help/spaces/the-booking-confirmation/\">confirmation the guest receives</a>.</p>\n<p>Other spaces can stay on instant booking with a <a href=\"https://hospitalityapp.co.uk/help/spaces/sessions-prices-and-deposits/\">deposit</a>. The choice is per space.</p>"
+    },
+    {
+      "title": "Today: arrivals and departures",
+      "topic": "rooms",
+      "slug": "arrivals-and-departures",
+      "summary": "One screen for the day. Check guests in and out, post to the bill, and see who is staying over.",
+      "app_screens": [
+        "rooms/today"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/rooms/arrivals-and-departures/",
+      "html": "<p>Open <strong>Rooms</strong> and choose <strong>Today</strong>. It is one screen for this day’s arrivals, departures and guests who are staying over.</p>\n<h2 id=\"on-the-day\">On the day</h2>\n<ul><li>Early arrivals are flagged, so the room can be ready before the guest is due.</li><li>The balance is shown before check-out, including anything still owed on the stay.</li><li>Check-in records the UK guest register, the fields in the Immigration (Hotel Records) Order 1972.</li><li>Check guests in and out from this screen, and post a charge to the bill.</li></ul>\n<p>Two stays still cannot share a room on the same night. That is enforced on the <a href=\"https://hospitalityapp.co.uk/help/rooms/using-the-room-diary/\">diary</a>. A card deposit, or payment in full, is taken when you <a href=\"https://hospitalityapp.co.uk/help/rooms/booking-a-stay/\">book the stay</a>, not on this screen. Anything left is settled at check-out. See <a href=\"https://hospitalityapp.co.uk/help/rooms/room-bill/\">The room bill</a>.</p>"
+    },
+    {
+      "title": "Changing or cancelling a booking",
+      "topic": "spaces",
+      "slug": "changing-or-cancelling-a-booking",
+      "summary": "Move the date, change the numbers, or refund a deposit.",
+      "app_screens": [
+        "spaces",
+        "spaces/bookings"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/spaces/changing-or-cancelling-a-booking/",
+      "html": "<p>Open <strong>Spaces</strong> and find the booking in the list. You can search by the guest’s name.</p>\n<figure class=\"hc-shot\"><img src=\"https://hospitalityapp.co.uk/assets/help/spaces-list.png\" alt=\"The Spaces home, with bookings listed under the rooms. Example data for The Crown &amp; Anchor.\"><figcaption>The Spaces home, with bookings listed under the rooms. Example data for The Crown &amp; Anchor.</figcaption></figure>\n<h2 id=\"change-it\">Change it</h2>\n<p>From the booking you can move the date or the session, change the party size, or change the layout, as long as the room is free and the new layout can hold the party. The price updates from the session and the numbers.</p>\n<p>If the guest has already paid a deposit, the balance due changes with the new total. The <a href=\"https://hospitalityapp.co.uk/help/spaces/the-booking-confirmation/\">confirmation</a> shows what they have paid and what is left.</p>\n<h2 id=\"cancel-it\">Cancel it</h2>\n<p>Cancel the booking to free the session. If a deposit was paid by card, refund it from the booking. The refund goes back to the card the guest used. Stripe’s own fees still apply to the original payment.</p>\n<p>A cancelled session can be booked again straight away, unless you have <a href=\"https://hospitalityapp.co.uk/help/spaces/blocking-dates/\">blocked the date</a>.</p>"
+    },
+    {
+      "title": "Housekeeping on a phone",
+      "topic": "rooms",
+      "slug": "housekeeping-on-a-phone",
+      "summary": "Dirty, cleaning, clean or inspected. Update it from a phone, and report a problem with a photo.",
+      "app_screens": [
+        "rooms/housekeeping"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/rooms/housekeeping-on-a-phone/",
+      "html": "<p>Open <strong>Rooms</strong> and choose <strong>Housekeeping</strong>, on the web or on a phone. Each room shows its status, who is cleaning it, and whether a guest is arriving early.</p>\n<p>The statuses are:</p>\n<ul><li><strong>Dirty</strong></li><li><strong>Cleaning</strong></li><li><strong>Clean</strong></li><li><strong>Inspected</strong></li></ul>\n<p>Filter the list by status, or show every room. Rooms with an early arrival are marked and listed first. A guest who is still in house is shown on the room, so it is not cleaned while they are there.</p>\n<p>Choose <strong>Start cleaning</strong> when the room is begun. When something is wrong, use <strong>Report a problem</strong> and attach a photo. Repairs, with a priority and any out-of-order dates, are logged under <a href=\"https://hospitalityapp.co.uk/help/rooms/logging-a-repair/\">Maintenance</a>.</p>\n<figure class=\"hc-shot\"><img src=\"https://hospitalityapp.co.uk/assets/help/rooms-housekeeping.png\" alt=\"Housekeeping on a phone: rooms still to clean, an early arrival, and one room open with its status. Example data from the Crown &amp; Anchor pilot.\"><figcaption>Housekeeping on a phone: rooms still to clean, an early arrival, and one room open with its status. Example data from the Crown &amp; Anchor pilot.</figcaption></figure>"
+    },
+    {
+      "title": "The booking confirmation",
+      "topic": "spaces",
+      "slug": "the-booking-confirmation",
+      "summary": "What the guest receives, and the balance still to pay.",
+      "app_screens": [
+        "spaces",
+        "spaces/bookings"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/spaces/the-booking-confirmation/",
+      "html": "<p>When a booking is confirmed, the guest sees the space, the date, the session, the party size, what they have paid and what is left to pay.</p>\n<figure class=\"hc-shot\"><img src=\"https://hospitalityapp.co.uk/assets/help/spaces-phone-confirmed.png\" alt=\"A confirmed function-room booking on a phone, with the deposit paid and the balance due. Example data.\"><figcaption>A confirmed function-room booking on a phone, with the deposit paid and the balance due. Example data.</figcaption></figure>\n<p>The same details are in the confirmation email. It uses your venue name. You can add your own note, for arrival instructions or a cancellation line, before the booking is saved.</p>\n<h2 id=\"if-they-paid-a-deposit\">If they paid a deposit</h2>\n<p>The confirmation separates the deposit already paid from the balance due on the day. Extras they added, such as a buffet or a projector, are listed on the same summary. See <a href=\"https://hospitalityapp.co.uk/help/spaces/sessions-prices-and-deposits/\">Sessions, prices and deposits</a>.</p>\n<h2 id=\"if-it-was-an-enquiry\">If it was an enquiry</h2>\n<p>An enquiry does not send a paid confirmation until you confirm it. Once you do, the guest gets the same confirmation as a booking. See <a href=\"https://hospitalityapp.co.uk/help/spaces/taking-an-enquiry/\">Taking an enquiry</a>.</p>"
+    },
+    {
+      "title": "The room bill",
+      "topic": "rooms",
+      "slug": "room-bill",
+      "summary": "Put a round from the bar or the table onto the guest’s room, and settle it at check-out.",
+      "app_screens": [
+        "rooms/stays",
+        "till/run"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/rooms/room-bill/",
+      "html": "<p>Bar and food can go straight onto the guest’s room bill. There is no paper chit to carry upstairs.</p>\n<h2 id=\"from-the-till\">From the till</h2>\n<ol><li>Take the order at the bar, or at the table on a staff phone. It sits on an open tab, the same as any other sale. See <a href=\"https://hospitalityapp.co.uk/help/till/take-your-first-order/\">Take your first order</a>.</li><li>From that open tab, charge it to the guest’s room.</li><li>The order lands on that stay, next to the room nights.</li></ol>\n<h2 id=\"at-check-out\">At check-out</h2>\n<p>The guest pays whatever is left on the bill, by card, cash or bank transfer. A deposit, or the room charge itself, may already have been paid online when the stay was <a href=\"https://hospitalityapp.co.uk/help/rooms/booking-a-stay/\">booked</a>.</p>\n<p>The invoice is emailed. It is itemised. Room nights are at 20% VAT. The pint and the pie keep the VAT that was already on the till.</p>\n<h2 id=\"if-room-management-is-off\">If room management is off</h2>\n<p>The charge-to-room choice only appears where rooms are switched on for the venue. A tab that is not charged to a room is paid in the usual way, on the till. The till itself does not take the card. Your card machine does.</p>"
+    },
+    {
+      "title": "Capacity for the week",
+      "topic": "rooms",
+      "slug": "capacity-for-the-week",
+      "summary": "Rooms sold against rooms available, with guests, average room rate and revenue per available room.",
+      "app_screens": [
+        "rooms/capacity"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/rooms/capacity-for-the-week/",
+      "html": "<p>Open <strong>Rooms</strong> and choose <strong>Capacity</strong>. It compares rooms sold with rooms available, and shows guests, the average room rate (ADR) and revenue per available room (RevPAR).</p>\n<p>Use it for the week or the month. A heat map shows which nights and room types are filling up, so a quiet Tuesday and a full Saturday are visible without opening each stay.</p>\n<p>The percentage along the top of the <a href=\"https://hospitalityapp.co.uk/help/rooms/using-the-room-diary/\">diary</a> is the same idea for a single night: rooms occupied divided by rooms you can sell. Capacity is the longer view, with the rate and the revenue alongside.</p>"
+    },
+    {
+      "title": "Turning on online booking",
+      "topic": "spaces",
+      "slug": "online-booking",
+      "summary": "A booking page for your venue, linked from your website.",
+      "app_screens": [
+        "spaces"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/spaces/online-booking/",
+      "html": "<p>Online booking lets a guest choose a space, a date and a session without calling the venue. Each space can be on or off.</p>\n<h2 id=\"turn-it-on\">Turn it on</h2>\n<p>On <strong>Spaces</strong>, the list shows <strong>Online booking</strong> for the venue, and each space shows whether guests can book it. Turn it on for the rooms you want on the public page.</p>\n<figure class=\"hc-shot\"><img src=\"https://hospitalityapp.co.uk/assets/help/spaces-list.png\" alt=\"The Spaces list, with online booking on, for The Crown &amp; Anchor. Example data.\"><figcaption>The Spaces list, with online booking on, for The Crown &amp; Anchor. Example data.</figcaption></figure>\n<p>Guests then see the spaces you have published, the party size, and only the sessions that are free.</p>\n<figure class=\"hc-shot\"><img src=\"https://hospitalityapp.co.uk/assets/help/spaces-guest-pick.png\" alt=\"The guest’s first step, choosing a space and a party size. Example data.\"><figcaption>The guest’s first step, choosing a space and a party size. Example data.</figcaption></figure>\n<h2 id=\"payments\">Payments</h2>\n<p>If a space asks for a deposit or the full amount, <a href=\"https://hospitalityapp.co.uk/help/settings/connect-card-payments/\">connect card payments</a> first. The money goes to your own Stripe account. Hospitality App takes no commission. Stripe’s own fees still apply.</p>\n<p>A space set to <a href=\"https://hospitalityapp.co.uk/help/spaces/taking-an-enquiry/\">enquiries</a> still appears on the page. The guest sends a request instead of paying.</p>\n<p>Link the page from your website wherever you want guests to book a room. Dates you have <a href=\"https://hospitalityapp.co.uk/help/spaces/blocking-dates/\">blocked</a> are not offered.</p>"
+    },
+    {
+      "title": "Blocking dates",
+      "topic": "spaces",
+      "slug": "blocking-dates",
+      "summary": "Close a space for a private event, a refit or a bank holiday.",
+      "app_screens": [
+        "spaces"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/spaces/blocking-dates/",
+      "html": "<p>Block a date when a space should not be booked, even though the room still exists. A wedding you are taking by hand, a refit, or a day the venue is closed are the usual reasons.</p>\n<h2 id=\"close-the-date\">Close the date</h2>\n<p>Open the space and block the date, or the session, that must stay closed. Guests using <a href=\"https://hospitalityapp.co.uk/help/spaces/online-booking/\">online booking</a> are not offered that session. A session that is only blocked for the afternoon can still be booked in the morning.</p>\n<p>A block is not a booking. It does not take a deposit and it does not email a guest. When the date is free again, remove the block and the session goes back on sale.</p>\n<p>If the room is already booked, <a href=\"https://hospitalityapp.co.uk/help/spaces/changing-or-cancelling-a-booking/\">change or cancel that booking</a> first. A block does not move a guest who is already confirmed.</p>"
+    },
+    {
+      "title": "Logging a repair",
+      "topic": "rooms",
+      "slug": "logging-a-repair",
+      "summary": "Record a fault, its priority and who is on it, and take the room out of order for only those dates.",
+      "app_screens": [
+        "rooms/maintenance"
+      ],
+      "url": "https://hospitalityapp.co.uk/help/rooms/logging-a-repair/",
+      "html": "<p>Open <strong>Rooms</strong> and choose <strong>Maintenance</strong>. Each issue shows its priority, who is on it, and any dates the room is out of order.</p>\n<p>Log the repair, set the priority and name the person dealing with it. If the room cannot be let, set the out-of-order dates. Only those nights are blocked. The rest of the diary can still be booked.</p>\n<p>A blocked or out-of-order night is shown on the <a href=\"https://hospitalityapp.co.uk/help/rooms/using-the-room-diary/\">diary</a> and cannot take a stay. A problem spotted while cleaning, including one with a photo, is reported from <a href=\"https://hospitalityapp.co.uk/help/rooms/housekeeping-on-a-phone/\">housekeeping</a>.</p>"
+    }
+  ]
+}
