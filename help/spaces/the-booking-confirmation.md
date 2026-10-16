@@ -11,7 +11,7 @@ group: Bookings
 
 When a booking is confirmed, the guest sees the space, the date, the session, the party size, what they have paid and what is left to pay.
 
-![A confirmed function-room booking on a phone, with the deposit paid and the balance due. Example data.](/assets/help/spaces-phone-confirmed.png)
+![A confirmed booking for the Snug on a phone, with the deposit paid and the balance due. Example data.](/assets/help/spaces-phone-confirmed.png)
 
 The same details are in the confirmation email. It uses your venue name. You can add your own note, for arrival instructions or a cancellation line, before the booking is saved.
 

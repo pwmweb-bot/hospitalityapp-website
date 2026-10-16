@@ -9,9 +9,9 @@ order: 3
 group: Diary
 ---
 
-Open **Rooms** and stay on **Diary**. Rooms run down the side and nights run across the top. Switch between **Week** and **Two weeks**.
+Open **Rooms** and stay on **Diary**. Rooms run down the side and nights run across the top. Switch between **Week** and **2 weeks**.
 
-Select a stay to open it, or an empty night to book one. The diary shows the guest, the nights and the total for that stay.
+Select a stay to open it, or an empty night to book one. The diary shows the guest’s name, and how many people are staying, across those nights.
 
 Stays are coloured by status:
 
@@ -24,6 +24,6 @@ A same-day turnaround shows the departure and the next arrival on the same night
 
 Each night along the top shows how full you are, as a percentage of rooms occupied.
 
-![The room diary, with checked-in, confirmed, arriving and leaving stays, a same-day turnaround and a blocked room. Example data from the Crown & Anchor pilot.](/assets/help/rooms-diary.png)
+![The two-week room diary. Occupancy on each night, checked-in and confirmed stays, a same-day turnaround on Room 1, and Room 4 blocked. Example data.](/assets/help/rooms-diary.png?v=20261016e)
 
 The other tabs on this screen are [Today](/help/rooms/arrivals-and-departures/), [Housekeeping](/help/rooms/housekeeping-on-a-phone/), [Capacity](/help/rooms/capacity-for-the-week/) and [Maintenance](/help/rooms/logging-a-repair/).

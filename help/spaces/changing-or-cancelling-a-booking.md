@@ -11,8 +11,6 @@ group: Bookings
 
 Open **Spaces** and find the booking in the list. You can search by the guest’s name.
 
-![The Spaces home, with bookings listed under the rooms. Example data for The Crown & Anchor.](/assets/help/spaces-list.png)
-
 ## Change it
 
 From the booking you can move the date or the session, change the party size, or change the layout, as long as the room is free and the new layout can hold the party. The price updates from the session and the numbers.
