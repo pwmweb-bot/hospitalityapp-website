@@ -34,7 +34,41 @@ ROOT = Path(__file__).resolve().parents[2]
 HELP = ROOT / "help"
 SITEMAP = ROOT / "sitemap.xml"
 SITE = "https://hospitalityapp.co.uk"
-CSS = "/style.css?v=20261016a"
+CSS = "/style.css?v=20261016b"
+
+# Feature pages in the "The solution" nav. Descriptions are shortened from each page.
+FEATURES = [
+    ("/features/rota-management/", "Rota &amp; attendance", "Shifts, availability and recorded hours."),
+    ("/features/team-communication/", "Team &amp; communication", "Notices, messages and the rota diary."),
+    ("/features/compliance/", "Compliance", "Daily checks, readings and reminders."),
+    ("/features/payroll/", "Payroll reports", "Hours from the clock, ready to review."),
+    ("/features/till-pos/", "Till / POS", "Counter and table service, tabs and bills."),
+    ("/features/mobile-ordering/", "Mobile ordering", "Take the order on a phone at the table."),
+    ("/features/kitchen-display/", "Kitchen display", "Tickets to the station and the pass."),
+    ("/features/reservations-floor-plans/", "Reservations &amp; floor plans", "Table bookings beside the layout."),
+    ("/features/stock-control/", "Stock control", "What sold, and the profit behind it."),
+    ("/features/reporting/", "Reporting", "Sales, busy periods and staffing."),
+    ("/features/spaces/", "Spaces &amp; function rooms", "A room booked by session or by the hour."),
+    ("/features/rooms/", "Room management", "Diary, housekeeping and the room bill."),
+    ("/features/events-tickets/", "Events &amp; tickets", "Sell the night and scan at the door."),
+    ("/features/loyalty/", "Loyalty", "Points on the bill, kept in the wallet."),
+]
+
+
+def solution_nav(current_path=""):
+    """The solution stays a link. The button discloses every /features/ page."""
+    solution_current = ' aria-current="page"' if current_path.rstrip("/") == "/solution" else ""
+    items = []
+    for href, name, description in FEATURES:
+        current = ' aria-current="page"' if current_path.rstrip("/") == href.rstrip("/") else ""
+        items.append(
+            f'<a href="{href}"{current}><strong>{name}</strong><span>{description}</span></a>'
+        )
+    return (
+        f'<div class="nav-drop"><a href="/solution/"{solution_current}>The solution</a>'
+        f'<button type="button" class="nav-drop-toggle" aria-expanded="false" aria-controls="nav-features" aria-label="Feature pages"><span aria-hidden="true"></span></button>'
+        f'<div class="nav-sub" id="nav-features">{"".join(items)}</div></div>'
+    )
 
 TOPICS = [
     {
@@ -296,12 +330,12 @@ def count_label(n):
 def header(current="help"):
     help_attr = ' aria-current="page"' if current == "help" else ""
     return f"""<a class="skip" href="#main">Skip to content</a>
-<header><a class="brand" href="/" aria-label="Hospitality App home"><img class="brand-logo" src="/assets/logo.png" alt="Hospitality App" width="645" height="84" decoding="async"></a><nav id="site-nav" aria-label="Main navigation"><a href="/solution/">The solution</a><a href="/pricing/">Pricing</a><a href="/multi-site/">Multi-site</a><a href="/venues/">For venues</a><a href="/blog/">Journal</a><a href="/help/"{help_attr}>Help</a><a class="drawer-login" href="https://my.hospitalityapp.co.uk/login">Log in</a><a class="drawer-trial" href="https://my.hospitalityapp.co.uk/signup">Start free trial</a><a class="button small drawer-cta" href="/demo/">Book a 15-min demo <span>↗</span></a></nav><button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">Menu <span>+</span></button><div class="nav-actions"><a class="login" href="https://my.hospitalityapp.co.uk/login">Log in</a><a class="trial-link" href="https://my.hospitalityapp.co.uk/signup">Start free trial</a><a class="button small" href="/demo/">Book a 15-min demo <span>↗</span></a></div></header><div class="nav-scrim" hidden></div>"""
+<header><a class="brand" href="/" aria-label="Hospitality App home"><img class="brand-logo" src="/assets/logo.png" alt="Hospitality App" width="645" height="84" decoding="async"></a><nav id="site-nav" aria-label="Main navigation">{solution_nav()}<a href="/pricing/">Pricing</a><a href="/multi-site/">Multi-site</a><a href="/venues/">For venues</a><a href="/blog/">Journal</a><a href="/help/"{help_attr}>Help</a><a class="drawer-login" href="https://my.hospitalityapp.co.uk/login">Log in</a><a class="drawer-trial" href="https://my.hospitalityapp.co.uk/signup">Start free trial</a><a class="button small drawer-cta" href="/demo/">Book a 15-min demo <span>↗</span></a></nav><button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">Menu <span>+</span></button><div class="nav-actions"><a class="login" href="https://my.hospitalityapp.co.uk/login">Log in</a><a class="trial-link" href="https://my.hospitalityapp.co.uk/signup">Start free trial</a><a class="button small" href="/demo/">Book a 15-min demo <span>↗</span></a></div></header><div class="nav-scrim" hidden></div>"""
 
 
 def footer():
     return """<footer id="site-footer" class="site-footer"><div class="wrap footer-shell"><div class="footer-main"><div class="footer-brand"><a class="footer-logo" href="/" aria-label="Hospitality App home"><img src="/assets/logo.png" alt="Hospitality App" width="645" height="84" loading="lazy" decoding="async"></a><p>More hospitality. Less admin.<br>Connected tools for the people<br>who make great venues happen.</p><a class="parent-brand" href="https://psychemeta.com"><span>A PRODUCT BY</span><strong>Psychemeta<span aria-hidden="true">↗</span></strong></a><div class="footer-social" aria-label="Follow Hospitality App"><a href="https://www.linkedin.com/company/hospitalityapp" aria-label="Hospitality App on LinkedIn">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://x.com/hospitalityapp" aria-label="Hospitality App on X">X <span aria-hidden="true">↗</span></a></div></div><nav class="footer-column" aria-label="Product links"><h2>Product</h2><ul><li><a href="/solution/">The solution</a></li><li><a href="/features/spaces/">Spaces &amp; function rooms</a></li><li><a href="/features/rooms/">Room management</a></li><li><a href="/features/events-tickets/">Events &amp; tickets</a></li><li><a href="/features/loyalty/">Loyalty</a></li><li><a href="/pricing/">Pricing</a></li><li><a href="/multi-site/">Multi-site</a></li><li><a href="/blog/">Journal</a></li><li><a href="/guides/">Guides</a></li><li><a href="/tools/rota-template">Free rota templates</a></li><li><a href="/compare/">Compare software</a></li><li><a href="https://my.hospitalityapp.co.uk/login">Sign in</a></li></ul></nav><nav class="footer-column" aria-label="Venue links"><h2>For your venue</h2><ul><li><a href="/venues/pubs-and-bars/">Pubs &amp; bars</a></li><li><a href="/venues/restaurants/">Restaurants</a></li><li><a href="/venues/cafes/">Cafés &amp; coffee shops</a></li><li><a href="/venues/hotels/">Hotels</a></li><li><a href="/venues/bnbs/">B&amp;Bs</a></li><li><a href="/venues/">All venues</a></li></ul></nav><nav class="footer-column" aria-label="Company links"><h2>Company</h2><ul><li><a href="/help/" aria-current="page">Help centre</a></li><li><a href="/about/">About Hospitality App</a></li><li><a href="/contact/">Contact the team</a></li><li><a href="/demo/">Book a 15-min demo</a></li><li><a href="https://psychemeta.com">Explore Psychemeta</a></li><li><a href="/privacy/">Privacy policy</a></li><li><a href="/terms/">Terms of service</a></li></ul></nav></div><div class="footer-apps"><div><h2>Your venue, wherever you are.</h2><p>iPhone &amp; Android for your team. Windows for your till.</p></div><div class="store-badges" aria-label="Get Hospitality App"><a href="https://apps.apple.com/gb/app/hospitalityappuk/id6768234673" aria-label="Download Hospitality App on the Apple App Store"><img src="/assets/app-store-badge.svg" alt="Download on the App Store" width="150" height="40" decoding="async"></a><a href="https://play.google.com/store/apps/details?id=co.uk.hospitalities.staff" aria-label="Get Hospitality App for Android on Google Play"><img src="/assets/google-play-badge.svg" alt="Get it on Google Play" width="150" height="40" decoding="async"></a><a href="/till-windows" aria-label="Get Hospitality App Till for Windows"><img src="/assets/windows-badge.svg" alt="Get the till for Windows" width="150" height="40" decoding="async"></a></div></div><div class="footer-bottom"><p>© 2026 Psychemeta Ltd. All rights reserved.</p><p>Hospitality App is a <a href="https://psychemeta.com">Psychemeta</a> product.</p><a href="#main">Back to top <span aria-hidden="true">↑</span></a></div></div></footer>
-<script src="/app.js?v=20260928c"></script>"""
+<script src="/app.js?v=20261016b"></script>"""
 
 
 def page(title, description, canonical, main, json_ld):
