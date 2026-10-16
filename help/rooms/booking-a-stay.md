@@ -29,7 +29,7 @@ On the deposit step, choose one of three:
 - **Pay deposit now.** The guest pays a deposit by card when they book.
 - **Pay in full now.** The guest pays the whole stay by card when they book.
 
-![The deposit step of a new room booking, with no deposit, pay deposit now, or pay in full now. Example data.](/assets/help/rooms-deposit.png)
+![The guest’s pay step on the room booking page, when a deposit is due. Example data for The Cock Inn. Nothing is charged.](/assets/help/rooms-deposit.png)
 
 The card payment goes to your own Stripe account. Hospitality App takes no commission. Stripe’s own fees still apply. [Connect card payments](/help/settings/connect-card-payments/) before you choose a card option.
 
