@@ -22,4 +22,4 @@ Filter the list by status, or show every room. Rooms with an early arrival are m
 
 Choose **Start cleaning** when the room is begun. When something is wrong, use **Report a problem** and attach a photo. Repairs, with a priority and any out-of-order dates, are logged under [Maintenance](/help/rooms/logging-a-repair/).
 
-![Housekeeping on a phone: rooms still to clean, an early arrival, and one room open with its status. Example data from the Crown & Anchor pilot.](/assets/help/rooms-housekeeping.png)
+![Housekeeping on a phone: rooms still to clean, an early arrival at 14:00, and one room already clean. Example data.](/assets/help/rooms-housekeeping.png)

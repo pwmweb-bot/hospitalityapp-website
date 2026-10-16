@@ -34,7 +34,7 @@ ROOT = Path(__file__).resolve().parents[2]
 HELP = ROOT / "help"
 SITEMAP = ROOT / "sitemap.xml"
 SITE = "https://hospitalityapp.co.uk"
-CSS = "/style.css?v=20261016c"
+CSS = "/style.css?v=20261016d"
 
 # Feature pages in the "The solution" nav. Descriptions are shortened from each page.
 # Icons are decorative Lucide strokes (https://lucide.dev), drawn at 20px.

@@ -317,7 +317,7 @@ header nav[data-open=true] .drawer-cta{min-height:44px}
 .fp-split li{padding:10px 0 10px 26px;position:relative;border-bottom:1px solid var(--line);font-size:15px}
 .fp-split li:before{content:'✓';position:absolute;left:0;color:#697959;font-weight:700}
 .fp-phones{display:flex;gap:22px;justify-content:center;align-items:flex-start}
-.fp-phones img{width:min(220px,30%);border:7px solid #352c23;border-radius:28px;box-shadow:0 23px 40px #332e2830;display:block;background:#fff}
+.fp-phones img{width:min(220px,30%);height:auto;object-fit:contain;border:7px solid #352c23;border-radius:28px;box-shadow:0 23px 40px #332e2830;display:block;background:#fff}
 .fp-phones img:nth-child(2){margin-top:36px}
 .fp-answers{display:grid;grid-template-columns:1fr 1fr;gap:8px 48px}
 .fp-answers article{border-bottom:1px solid var(--line);padding:18px 0}
@@ -346,7 +346,7 @@ header nav[data-open=true] .drawer-cta{min-height:44px}
 .hc-side h2{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .hc-side a{white-space:nowrap;border:1px solid var(--line);border-radius:100px}
 .fp-phones{flex-wrap:wrap}
-.fp-phones img{width:min(180px,46%)}
+.fp-phones img{width:min(180px,46%);height:auto;object-fit:contain}
 .fp-grid.three{grid-template-columns:1fr}
 .hc-search kbd{display:none}
 }
@@ -381,4 +381,45 @@ header nav[data-open=true] .nav-drop>a{flex:1 1 auto;min-height:44px}
 header nav[data-open=true] .nav-drop-toggle{width:44px;height:44px;margin:0}
 header nav[data-open=true] .nav-sub{position:static;display:none;width:100%;grid-template-columns:1fr;padding:4px 0 8px 12px;margin:0;background:transparent;border:0;border-radius:0;box-shadow:none}
 header nav[data-open=true] .nav-drop.is-open .nav-sub{display:grid}
+}
+
+/* Older guides (pub till, HACCP, Tips Act) use the shared header and footer.
+   Their article classes stay, scoped so they do not pick up the homepage hero. */
+.guide-page{padding-bottom:20px}
+.guide-page .hero{display:block;min-height:0;padding:36px 0 8px}
+.guide-page .hero__title{font-size:clamp(36px,5vw,58px);letter-spacing:-1.4px;line-height:1.05;margin:0 0 14px;max-width:16ch}
+.guide-page .hero__sub{max-width:740px;color:var(--muted);font-size:18px;line-height:1.55}
+.guide-page .hero__cta{display:flex;flex-wrap:wrap;gap:12px 16px;margin-top:22px;align-items:center}
+.guide-page .container{max-width:1240px;margin:auto;padding-left:40px;padding-right:40px}
+.guide-page .section{padding:42px 0}
+.guide-page .section-tight{padding:28px 0}
+.guide-page .section-head{display:block;margin-bottom:18px}
+.guide-page .section-head h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.8px;margin:0 0 12px}
+.guide-page .section-head p,.guide-page .hero__sub{color:var(--muted)}
+.guide-page .section-head>p{max-width:760px;margin-bottom:0}
+.guide-page .modules{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:8px}
+.guide-page .module-card{border:1px solid var(--line);border-radius:8px;padding:20px 22px;background:#fff}
+.guide-page .module-card h3{font-size:18px;margin:0 0 8px}
+.guide-page .module-card p{color:var(--muted);font-size:15px;margin:0}
+.guide-page .module-card a{display:inline-block;margin-top:14px;color:var(--accent-ink);border-bottom:1px solid var(--accent-edge);padding-bottom:2px}
+.guide-page .faq details{border-top:1px solid var(--line)}
+.guide-page .faq details:last-child{border-bottom:1px solid var(--line)}
+.guide-page .faq summary{cursor:pointer;font-weight:650;min-height:48px;display:flex;align-items:center}
+.guide-page .faq details p{color:var(--muted);margin:0 0 16px}
+.guide-page .feature-row__list{max-width:760px;padding-left:1.2em}
+.guide-page .feature-row__list li{margin:8px 0}
+.guide-page .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:12px 18px;border-radius:6px;background:var(--ink);color:#fff;font-size:14px;font-weight:650}
+.guide-page .btn-secondary{background:transparent;color:var(--ink);border:1px solid #aea295}
+.guide-page .btn:hover{color:#fff}
+.guide-page .btn-secondary:hover{color:var(--accent-ink)}
+.guide-page .cta-band{background:#221E18;color:#fbf5ef;border-radius:8px;padding:36px 32px}
+.guide-page .cta-band h2,.guide-page .cta-band p{color:#fbf5ef}
+.guide-page .cta-band p{max-width:640px;color:#d9d0c6}
+.guide-page .cta-band .btn{background:var(--orange);color:#221E18}
+.guide-page figure.guide-shot{margin:8px 0 0;text-align:center}
+.guide-page figure.guide-shot img{width:min(100%,560px);height:auto;display:block;margin:0 auto;border:1px solid var(--line);border-radius:8px;background:#fff}
+.guide-page figcaption{margin-top:12px;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+@media(max-width:760px){
+.guide-page .container{padding-left:24px;padding-right:24px}
+.guide-page .cta-band{padding:28px 20px}
 }
