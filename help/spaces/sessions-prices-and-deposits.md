@@ -15,7 +15,7 @@ A space can be booked in sessions, by the hour, or both. The price can be room h
 
 A session is a named block of time, such as morning, afternoon or evening, with a start and an end. Guests only see sessions that are still free.
 
-![Choosing a date and a session for the Function Room. Morning, afternoon and evening, with prices. Example data for The Crown & Anchor.](/assets/help/spaces-guest-when.png)
+![Choosing a date and a session for the Snug. Morning is unavailable. Afternoon and evening show a price. Example data for The Crown & Anchor.](/assets/help/spaces-guest-when.png)
 
 On that screen the guest picks the date, then a session. A session that is already taken is not offered.
 

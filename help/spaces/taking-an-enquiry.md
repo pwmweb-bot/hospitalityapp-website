@@ -15,8 +15,6 @@ A space can take a firm booking, or an enquiry that you confirm. Use an enquiry 
 
 On the space, choose enquiry rather than instant booking. Guests can still pick the room, the date and the session. They are told the request needs confirming, and they are not charged yet.
 
-![A date and session screen that says the space takes enquiries and will be confirmed by the venue. Example data.](/assets/help/spaces-guest-when.png)
-
 ## Confirm it
 
 The request arrives with the guest’s name, the space, the date, the session and the party size. Confirm it to hold the room, or decline it so the session stays free for someone else.

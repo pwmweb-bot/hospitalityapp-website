@@ -24,7 +24,7 @@ Per person is multiplied by the party size. Per booking is charged once, however
 
 Extras appear on the same screen as the deposit. The guest ticks the ones they want, and the total updates before they pay.
 
-![Extras on a function-room booking, priced per person or per booking, with the deposit underneath. Example data.](/assets/help/spaces-guest-pay.png)
+![Extras on a Snug booking: tea and coffee per person, a late finish per booking, and the deposit underneath. Example data.](/assets/help/spaces-guest-pay.png)
 
 Food or drink you would rather take on the day can stay off this list. Anything you do list is agreed, and paid with the deposit, at the time of booking.
 
