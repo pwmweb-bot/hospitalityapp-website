@@ -11,7 +11,7 @@ RewriteEngine On
 # SSH host, port and user), the share-card generator, the README and .gitignore.
 # The web root is a git checkout, so everything committed is otherwise served.
 # (/.git/ itself is already refused by the host.)
-RewriteRule ^(scripts(/|$)|README\.md$|\.gitignore$) - [R=404,L]
+RewriteRule ^(scripts(/|$)|README\.md$|\.gitignore$|.*\.md$) - [R=404,L]
 
 # Force HTTPS (20i terminates TLS at the edge; HTTP_X_FORWARDED_PROTO
 # tells us the original scheme).
@@ -146,6 +146,19 @@ AddType text/csv .csv
 </IfModule>
 
 <IfModule mod_headers.c>
+# The ? drawer on the app (my.hospitalityapp.co.uk) fetches
+# /help/help-index.json. That is a cross-origin GET of a public file, so
+# answer with the requesting origin when it is the app or a local dev server.
+# A bare Access-Control-Allow-Origin: * is not used: the header is omitted for
+# every other origin. Vary is required because the value depends on Origin.
+<Files "help-index.json">
+  SetEnvIf Origin "^https://my\.hospitalityapp\.co\.uk$" CORS_ORIGIN=$0
+  SetEnvIf Origin "^https?://(localhost|127\.0\.0\.1)(:[0-9]+)?$" CORS_ORIGIN=$0
+  Header always set Access-Control-Allow-Origin "%{CORS_ORIGIN}e" env=CORS_ORIGIN
+  Header always set Vary "Origin" env=CORS_ORIGIN
+  Header always set Access-Control-Allow-Methods "GET, HEAD, OPTIONS" env=CORS_ORIGIN
+</Files>
+
 # AASA: must be served as application/json, no extension.
 <Files "apple-app-site-association">
   Header set Content-Type "application/json"
