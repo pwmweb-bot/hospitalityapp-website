@@ -19,7 +19,7 @@ Connect payments before you:
 - take a [deposit or full payment on a room stay](/help/rooms/booking-a-stay/)
 - sell a [paid ticket](/help/tickets/create-your-first-event/)
 
-A table-reservation deposit uses the same connection. It is included in Complete Plus. The guest gets a deposit-paid email, and taking that deposit off the bill shows as deposits on the Z.
+A room deposit and a function-room deposit are included on every plan. A table-reservation deposit uses the same connection. It is included in Complete Plus. The guest gets a deposit-paid email, and taking that deposit off the bill shows as deposits on the Z.
 
 ## What it is not for
 
