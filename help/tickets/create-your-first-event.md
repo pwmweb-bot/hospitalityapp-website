@@ -31,6 +31,6 @@ The review step shows the public page before you publish. You can also set the w
 
 Paid tickets go to your own Stripe account, including a booking fee you set for the venue and the VAT on that fee. Hospitality App takes no commission. Stripe’s own fees still apply. [Connect card payments](/help/settings/connect-card-payments/) first.
 
-Events and tickets are not on the published plan prices.
+Events and tickets are included on every plan. No ticket fee from us.
 
 Food or drink included in the ticket can be rung on the till at £0, so the kitchen and the bar still see the order.
