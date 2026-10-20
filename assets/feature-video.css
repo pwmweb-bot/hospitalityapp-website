@@ -1,0 +1,6 @@
+/* Feature page animations (muted looping walkthroughs) */
+.fa-section{padding-bottom:20px}
+.fa-frame{margin:0 auto;max-width:1040px;border:1px solid #d7cfc6;border-radius:9px;background:#F5F1E8;overflow:hidden;box-shadow:0 23px 40px #332e2826}
+.fa-video{display:block;width:100%;height:auto;aspect-ratio:1200/750;background:#F5F1E8}
+.fa-section .scene-disclosure{text-align:center;margin-top:14px}
+@media(max-width:760px){.fa-section{padding-bottom:8px}.fa-frame{border-radius:7px}}
