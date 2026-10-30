@@ -37,10 +37,7 @@
       "headline": "Run your venue, not your spreadsheets.",
       "sub": "Rota, compliance, till, takings & payroll — one app for UK hospitality.",
       "url": "hospitalityapp.co.uk",
-      "pages": [
-        "privacy/index.html",
-        "terms/index.html"
-      ]
+      "pages": []
     },
     {
       "id": "about",
@@ -351,6 +348,437 @@
       "maxLines": 4,
       "pages": [
         "compare/epos-now-alternative.html"
+      ]
+    },
+    {
+      "id": "pub-with-rooms-software",
+      "eyebrow": "Guide · Rooms",
+      "headline": "The till and the bedrooms, in one system.",
+      "sub": "Bar and food on the room bill. From £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/guides/pub-with-rooms-software",
+      "pages": [
+        "guides/pub-with-rooms-software.html"
+      ]
+    },
+    {
+      "id": "pub-event-tickets-apple-google-wallet",
+      "eyebrow": "Guide · Tickets",
+      "headline": "Tickets in Apple Wallet and Google Wallet.",
+      "sub": "No ticket fee from us. From £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/guides/pub-event-tickets-apple-google-wallet",
+      "pages": [
+        "guides/pub-event-tickets-apple-google-wallet.html"
+      ]
+    },
+    {
+      "id": "function-room-booking-software",
+      "eyebrow": "Guide · Function rooms",
+      "headline": "Book the function room, and take the deposit.",
+      "sub": "On every plan, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/guides/function-room-booking-software",
+      "pages": [
+        "guides/function-room-booking-software.html"
+      ]
+    },
+    {
+      "id": "pub-loyalty-app",
+      "eyebrow": "Guide · Loyalty",
+      "headline": "Loyalty that works with the till.",
+      "sub": "Points per £ of the bill. Tips never do.",
+      "url": "hospitalityapp.co.uk/guides/pub-loyalty-app",
+      "pages": [
+        "guides/pub-loyalty-app.html"
+      ]
+    },
+    {
+      "id": "kitchen-display-system-small-pub",
+      "eyebrow": "Guide · Kitchen display",
+      "headline": "A kitchen display for a small pub.",
+      "sub": "On Complete Plus, £199 a month + VAT. No fee per screen.",
+      "url": "hospitalityapp.co.uk/guides/kitchen-display-system-small-pub",
+      "pages": [
+        "guides/kitchen-display-system-small-pub.html"
+      ]
+    },
+    {
+      "id": "square-alternative",
+      "eyebrow": "Compare · Square",
+      "headline": "A Square alternative for UK pubs.",
+      "sub": "Buy them for tap-to-pay. Buy us for till, rota and compliance.",
+      "url": "hospitalityapp.co.uk/compare/square-alternative",
+      "pages": [
+        "compare/square-alternative.html"
+      ]
+    },
+    {
+      "id": "lightspeed-alternative",
+      "eyebrow": "Compare · Lightspeed",
+      "headline": "A Lightspeed alternative for pubs.",
+      "sub": "Their card integration, or our till with the rota.",
+      "url": "hospitalityapp.co.uk/compare/lightspeed-alternative",
+      "pages": [
+        "compare/lightspeed-alternative.html"
+      ]
+    },
+    {
+      "id": "tabology-alternative",
+      "eyebrow": "Compare · Tabology",
+      "headline": "A Tabology alternative for pubs.",
+      "sub": "They publish the extras. We include the second till.",
+      "url": "hospitalityapp.co.uk/compare/tabology-alternative",
+      "pages": [
+        "compare/tabology-alternative.html"
+      ]
+    },
+    {
+      "id": "help",
+      "headline": "Help centre",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help",
+      "pages": [
+        "help/index.html"
+      ]
+    },
+    {
+      "id": "terms",
+      "headline": "Terms of Service",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/terms",
+      "pages": [
+        "terms/index.html"
+      ]
+    },
+    {
+      "id": "privacy",
+      "headline": "Privacy Policy",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/privacy",
+      "pages": [
+        "privacy/index.html"
+      ]
+    },
+    {
+      "id": "help-till",
+      "headline": "Till &amp; orders help",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/till",
+      "pages": [
+        "help/till/index.html"
+      ]
+    },
+    {
+      "id": "help-tickets",
+      "headline": "Tickets help",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/tickets",
+      "pages": [
+        "help/tickets/index.html"
+      ]
+    },
+    {
+      "id": "help-staff",
+      "headline": "Staff &amp; pay help",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/staff",
+      "pages": [
+        "help/staff/index.html"
+      ]
+    },
+    {
+      "id": "help-rooms",
+      "headline": "Rooms help",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/rooms",
+      "pages": [
+        "help/rooms/index.html"
+      ]
+    },
+    {
+      "id": "help-spaces",
+      "headline": "Spaces help",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/spaces",
+      "pages": [
+        "help/spaces/index.html"
+      ]
+    },
+    {
+      "id": "help-settings",
+      "headline": "Settings help",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/settings",
+      "pages": [
+        "help/settings/index.html"
+      ]
+    },
+    {
+      "id": "help-till-tabs-and-split-bills",
+      "headline": "Tabs and split bills",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/till/tabs-and-split-bills",
+      "pages": [
+        "help/till/tabs-and-split-bills/index.html"
+      ]
+    },
+    {
+      "id": "help-till-take-your-first-order",
+      "headline": "Take your first order",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/till/take-your-first-order",
+      "pages": [
+        "help/till/take-your-first-order/index.html"
+      ]
+    },
+    {
+      "id": "help-till-close-the-till",
+      "headline": "Close the till",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/till/close-the-till",
+      "pages": [
+        "help/till/close-the-till/index.html"
+      ]
+    },
+    {
+      "id": "help-tickets-scan-tickets-at-the-door",
+      "headline": "Scan tickets at the door",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/tickets/scan-tickets-at-the-door",
+      "pages": [
+        "help/tickets/scan-tickets-at-the-door/index.html"
+      ]
+    },
+    {
+      "id": "help-tickets-create-your-first-event",
+      "headline": "Create your first event",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/tickets/create-your-first-event",
+      "pages": [
+        "help/tickets/create-your-first-event/index.html"
+      ]
+    },
+    {
+      "id": "help-tickets-checkout-questions",
+      "headline": "Checkout questions",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/tickets/checkout-questions",
+      "pages": [
+        "help/tickets/checkout-questions/index.html"
+      ]
+    },
+    {
+      "id": "help-tickets-ticket-types-and-limits",
+      "headline": "Ticket types and limits",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/tickets/ticket-types-and-limits",
+      "pages": [
+        "help/tickets/ticket-types-and-limits/index.html"
+      ]
+    },
+    {
+      "id": "help-staff-build-next-weeks-rota",
+      "headline": "Build next week’s rota",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/staff/build-next-weeks-rota",
+      "pages": [
+        "help/staff/build-next-weeks-rota/index.html"
+      ]
+    },
+    {
+      "id": "help-staff-clock-in",
+      "headline": "Clock in",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/staff/clock-in",
+      "pages": [
+        "help/staff/clock-in/index.html"
+      ]
+    },
+    {
+      "id": "help-staff-tips",
+      "headline": "Pay tips fairly",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/staff/tips",
+      "pages": [
+        "help/staff/tips/index.html"
+      ]
+    },
+    {
+      "id": "help-rooms-using-the-room-diary",
+      "headline": "Using the room diary",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/rooms/using-the-room-diary",
+      "pages": [
+        "help/rooms/using-the-room-diary/index.html"
+      ]
+    },
+    {
+      "id": "help-rooms-logging-a-repair",
+      "headline": "Logging a repair",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/rooms/logging-a-repair",
+      "pages": [
+        "help/rooms/logging-a-repair/index.html"
+      ]
+    },
+    {
+      "id": "help-rooms-room-bill",
+      "headline": "The room bill",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/rooms/room-bill",
+      "pages": [
+        "help/rooms/room-bill/index.html"
+      ]
+    },
+    {
+      "id": "help-rooms-housekeeping-on-a-phone",
+      "headline": "Housekeeping on a phone",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/rooms/housekeeping-on-a-phone",
+      "pages": [
+        "help/rooms/housekeeping-on-a-phone/index.html"
+      ]
+    },
+    {
+      "id": "help-rooms-setting-up-rooms",
+      "headline": "Setting up rooms",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/rooms/setting-up-rooms",
+      "pages": [
+        "help/rooms/setting-up-rooms/index.html"
+      ]
+    },
+    {
+      "id": "help-rooms-booking-a-stay",
+      "headline": "Booking a stay",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/rooms/booking-a-stay",
+      "pages": [
+        "help/rooms/booking-a-stay/index.html"
+      ]
+    },
+    {
+      "id": "help-rooms-arrivals-and-departures",
+      "headline": "Today: arrivals and departures",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/rooms/arrivals-and-departures",
+      "pages": [
+        "help/rooms/arrivals-and-departures/index.html"
+      ]
+    },
+    {
+      "id": "help-rooms-capacity-for-the-week",
+      "headline": "Capacity for the week",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/rooms/capacity-for-the-week",
+      "pages": [
+        "help/rooms/capacity-for-the-week/index.html"
+      ]
+    },
+    {
+      "id": "help-spaces-the-booking-confirmation",
+      "headline": "The booking confirmation",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/spaces/the-booking-confirmation",
+      "pages": [
+        "help/spaces/the-booking-confirmation/index.html"
+      ]
+    },
+    {
+      "id": "help-spaces-adding-extras",
+      "headline": "Adding extras",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/spaces/adding-extras",
+      "pages": [
+        "help/spaces/adding-extras/index.html"
+      ]
+    },
+    {
+      "id": "help-spaces-online-booking",
+      "headline": "Turning on online booking",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/spaces/online-booking",
+      "pages": [
+        "help/spaces/online-booking/index.html"
+      ]
+    },
+    {
+      "id": "help-spaces-blocking-dates",
+      "headline": "Blocking dates",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/spaces/blocking-dates",
+      "pages": [
+        "help/spaces/blocking-dates/index.html"
+      ]
+    },
+    {
+      "id": "help-spaces-setting-up-a-function-room",
+      "headline": "Setting up a function room",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/spaces/setting-up-a-function-room",
+      "pages": [
+        "help/spaces/setting-up-a-function-room/index.html"
+      ]
+    },
+    {
+      "id": "help-spaces-taking-an-enquiry",
+      "headline": "Taking an enquiry instead of a booking",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/spaces/taking-an-enquiry",
+      "pages": [
+        "help/spaces/taking-an-enquiry/index.html"
+      ]
+    },
+    {
+      "id": "help-spaces-sessions-prices-and-deposits",
+      "headline": "Sessions, prices and deposits",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/spaces/sessions-prices-and-deposits",
+      "pages": [
+        "help/spaces/sessions-prices-and-deposits/index.html"
+      ]
+    },
+    {
+      "id": "help-spaces-changing-or-cancelling-a-booking",
+      "headline": "Changing or cancelling a booking",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/spaces/changing-or-cancelling-a-booking",
+      "pages": [
+        "help/spaces/changing-or-cancelling-a-booking/index.html"
+      ]
+    },
+    {
+      "id": "help-settings-connect-card-payments",
+      "headline": "Connect card payments",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/settings/connect-card-payments",
+      "pages": [
+        "help/settings/connect-card-payments/index.html"
+      ]
+    },
+    {
+      "id": "help-settings-getting-started",
+      "headline": "Getting started",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/settings/getting-started",
+      "pages": [
+        "help/settings/getting-started/index.html"
+      ]
+    },
+    {
+      "id": "help-settings-add-a-manager",
+      "headline": "Add a manager",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/help/settings/add-a-manager",
+      "pages": [
+        "help/settings/add-a-manager/index.html"
+      ]
+    },
+    {
+      "id": "features-spaces",
+      "headline": "Function Rooms and Bookable Spaces",
+      "sub": "UK hospitality software, from £49 a month + VAT.",
+      "url": "hospitalityapp.co.uk/features/spaces",
+      "pages": [
+        "features/spaces/index.html"
       ]
     }
   ]
