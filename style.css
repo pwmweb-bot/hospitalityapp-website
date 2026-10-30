@@ -423,3 +423,13 @@ header nav[data-open=true] .nav-drop.is-open .nav-sub{display:grid}
 .guide-page .container{padding-left:24px;padding-right:24px}
 .guide-page .cta-band{padding:28px 20px}
 }
+
+.quick-answer{background:#F5F1E8;color:#221E18;border-left:4px solid #E59134;border-radius:8px;padding:18px 20px;margin:0}
+.quick-answer p{margin:0;font-size:16px;line-height:1.6}
+.quick-answer p.quick-answer__label{margin:0 0 8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#4B2A02}
+.epos-fact{max-width:640px;font-size:17px;line-height:1.65;margin:0 0 18px;color:#221E18}
+.hero-badges{min-height:40px}
+.hero-badges a{display:block;width:150px;height:40px;flex:0 0 150px}
+.hero-badges img{width:150px;height:40px;aspect-ratio:150/40}
+@media(max-width:760px){.hero .hero-badges{min-height:90px}}
+#quick-answer.section{padding-top:4px;padding-bottom:28px}
