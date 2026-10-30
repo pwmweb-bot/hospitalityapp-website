@@ -1,0 +1,15 @@
+Montserrat
+Copyright 2011 The Montserrat Project Authors
+Licensed under the SIL Open Font License, Version 1.1. See OFL.txt.
+
+Inter Tight
+Copyright 2020 The Inter Project Authors
+Licensed under the SIL Open Font License, Version 1.1.
+
+JetBrains Mono
+Copyright 2020 The JetBrains Mono Project Authors
+Licensed under the SIL Open Font License, Version 1.1.
+
+These files are the Latin (and, for Montserrat, Latin Extended) variable
+fonts used by the marketing site. font-display is swap. The roman Latin
+Montserrat file is preloaded.

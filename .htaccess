@@ -144,6 +144,9 @@ AddType text/csv .csv
 # Feature page animations; older Apache mime.types may lack these.
 AddType video/webm .webm
 AddType video/mp4 .mp4
+# Self-hosted fonts. Preload uses crossorigin, so the file needs this header
+# or the browser downloads it twice.
+AddType font/woff2 .woff2
 # Apple's AASA file has no extension. Use SetEnvIf + Header to fix the
 # content type on this exact path.
 </IfModule>
@@ -178,6 +181,9 @@ Header always set Permissions-Policy "geolocation=(), camera=(), microphone=()"
 # and keeps the site fresh on deploys).
 <FilesMatch "\.(css|js|svg|png|jpg|jpeg|webp|ico|woff2)$">
   Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+<FilesMatch "\.woff2$">
+  Header set Access-Control-Allow-Origin "*"
 </FilesMatch>
 <FilesMatch "\.html$">
   Header set Cache-Control "public, max-age=0, must-revalidate"
